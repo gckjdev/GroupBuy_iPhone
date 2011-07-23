@@ -23,6 +23,7 @@
 @class MessageService;
 @class PostService;
 @class AppService;
+@class ProductService;
 @class ReviewRequest;
 
 #define _THREE20_		1
@@ -45,7 +46,8 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     PlaceSNSService     *snsService;
     MessageService      *messageService;
     PostService         *postService;
-    AppService          *appService;
+    AppService          *appService;    
+    ProductService      *productService;
     
     ReviewRequest           *reviewRequest;
     EnterPlaceAppController *enterController;    
@@ -64,6 +66,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 @property (nonatomic, retain) MessageService                *messageService;
 @property (nonatomic, retain) PostService                   *postService;
 @property (nonatomic, retain) AppService                    *appService;
+@property (nonatomic, retain) ProductService                *productService;
 @property (nonatomic, retain) RegisterController            *registerController;
 @property (nonatomic, retain) EnterPlaceAppController       *enterController;    
 @property (nonatomic, retain) NSString                      *dataForRegistration;

@@ -32,12 +32,15 @@
 #import "MessageService.h"
 #import "PostService.h"
 #import "AppService.h"
+#import "ProductService.h"
+
+#import "GroupBuyNetworkRequest.h"
 
 #define kDbFileName			@"AppDB"
 
 NSString* GlobalGetServerURL()
 {
-    return @"http://192.168.1.188:8000/api/i?";
+    return @"http://192.168.1.188:8003/api/i?";
 }
 
 AppService* GlobalGetAppService()
@@ -89,7 +92,11 @@ NSString* GlobalGetPlaceAppId()
     return @"FRIEND";
 }
 
-
+ProductService* GlobalGetProductService()
+{
+    groupbuyAppDelegate* delegate = (groupbuyAppDelegate*)[[UIApplication sharedApplication] delegate];    
+    return [delegate productService];   
+}
 
 @implementation groupbuyAppDelegate
 
@@ -106,6 +113,7 @@ NSString* GlobalGetPlaceAppId()
 @synthesize messageService;
 @synthesize postService;
 @synthesize appService;
+@synthesize productService;
 @synthesize reviewRequest;
 
 #pragma mark -
@@ -194,6 +202,10 @@ NSString* GlobalGetPlaceAppId()
     self.appService = [[AppService alloc] init];
 }
 
+- (void)initProductService
+{
+    self.productService = [[ProductService alloc] init];
+}
 
 - (void)showViewByUserStatus
 {
@@ -217,6 +229,7 @@ NSString* GlobalGetPlaceAppId()
     [self initMessageService];
     [self initPostService];
     [self initAppService];    
+    [self initProductService];
     
     [self showViewByUserStatus];
     
@@ -228,6 +241,9 @@ NSString* GlobalGetPlaceAppId()
     
 	// Ask For Review
 	self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
+    
+    // For Test
+    // [GroupBuyNetworkRequest findAllProductsWithPrice:SERVER_URL appId:@"GroupBuy" startOffset:0 city:@"北京"];
     
     return YES;
 }
@@ -471,6 +487,7 @@ NSString* GlobalGetPlaceAppId()
     [messageService release];
     [appService release];
     [reviewRequest release];
+    [productService release];
 	
     [super dealloc];
 }
