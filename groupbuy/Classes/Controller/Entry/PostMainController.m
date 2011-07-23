@@ -16,11 +16,11 @@
 #import "PublicTimelinePostController.h"
 
 enum SELECT_POST_TYPE {
-    SELECT_NEARBY = 0,
-    SELECT_LATEST,
-    SELECT_PRIVATE_MESSAGE,
-    SELECT_FOLLOW,                  // not used, reserved
-    SELECT_MINE,
+    SELECT_CATEGORY = 0,
+    SELECT_PRICE,
+    SELECT_REBATE,
+    SELECT_BOUGHT,                  // not used, reserved
+    SELECT_DISTANCE,
     };
 
 @implementation PostMainController
@@ -136,13 +136,13 @@ enum SELECT_POST_TYPE {
     
     [self createNavigationTitleToolbar:
                     [NSArray arrayWithObjects:
-                     NSLS(@"kNearbyPost"),
-                     NSLS(@"kLatestPost"),
-//                     NSLS(@"kFollowPost"),
-//                     NSLS(@"kAtMePost"),
-                     NSLS(@"kMyPrivateMessage"),
+                     @"分类",
+                     @"最便宜",
+                     @"最划算",
+                     @"最热销",
+                     @"最方便",
                      nil]
-                    defaultSelectIndex:SELECT_NEARBY];    
+                    defaultSelectIndex:SELECT_CATEGORY];    
 
     [super viewDidLoad];
     [self showNearbyPost];
@@ -190,16 +190,16 @@ enum SELECT_POST_TYPE {
 - (void)clickSegControl:(id)sender
 {
     UISegmentedControl* segControl = sender;
-    if (segControl.selectedSegmentIndex == SELECT_FOLLOW){
+    if (segControl.selectedSegmentIndex == SELECT_BOUGHT){
         [self showFollowPost];
     }
-    else if (segControl.selectedSegmentIndex == SELECT_NEARBY){
+    else if (segControl.selectedSegmentIndex == SELECT_CATEGORY){
         [self showNearbyPost];
     }
-    else if (segControl.selectedSegmentIndex == SELECT_LATEST){
+    else if (segControl.selectedSegmentIndex == SELECT_PRICE){
         [self showLatestPost];
     }    
-    else if (segControl.selectedSegmentIndex == SELECT_MINE){
+    else if (segControl.selectedSegmentIndex == SELECT_DISTANCE){
         [self showAtMePost];
     }
     else{

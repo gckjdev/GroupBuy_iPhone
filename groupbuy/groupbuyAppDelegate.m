@@ -115,23 +115,23 @@ NSString* GlobalGetPlaceAppId()
 {
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
-	[UIUtils addViewController:[NewMakeFriendPostMainController alloc]
-					 viewTitle:NSLS(@"kNewPost")
+	[UIUtils addViewController:[PostMainController alloc]
+					 viewTitle:@"首页"
 					 viewImage:@"app_globe_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
-	[UIUtils addViewController:[PostMainController alloc]
-					 viewTitle:NSLS(@"Follow")				 
-					 viewImage:@"comment_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
+//	[UIUtils addViewController:[PostMainController alloc]
+//					 viewTitle:NSLS(@"Follow")				 
+//					 viewImage:@"comment_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
     
-	[UIUtils addViewController:[MyInfoController alloc]
-					 viewTitle:NSLS(@"Setting")				 
-					 viewImage:@"man_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
+//	[UIUtils addViewController:[MyInfoController alloc]
+//					 viewTitle:NSLS(@"Setting")				 
+//					 viewImage:@"man_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
     
 	[UIUtils addViewController:[InviteController alloc]
 					 viewTitle:NSLS(@"Invite")				 
@@ -287,8 +287,6 @@ NSString* GlobalGetPlaceAppId()
 	NSLog(@"applicationWillEnterForeground");	
 	
 	[self initMobClick];
-    [localDataService requestDataWhileEnterForeground];
-    
     [appService startAppUpdate];
     
 }

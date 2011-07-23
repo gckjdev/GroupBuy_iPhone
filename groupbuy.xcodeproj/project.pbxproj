@@ -15,6 +15,8 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		CA55024C13D9BAAB0016DDD6 /* ProductMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA55024A13D9BAAA0016DDD6 /* ProductMainController.m */; };
+		CA55024D13D9BAAB0016DDD6 /* ProductMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA55024B13D9BAAA0016DDD6 /* ProductMainController.xib */; };
 		CA5D136A13D55A9F003CB28C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D136913D55A9F003CB28C /* UIKit.framework */; };
 		CA5D136C13D55A9F003CB28C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D136B13D55A9F003CB28C /* Foundation.framework */; };
 		CA5D136E13D55A9F003CB28C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D136D13D55A9F003CB28C /* CoreGraphics.framework */; };
@@ -127,17 +129,6 @@
 		CA6079F613D55EE200E0D0DC /* PPLoationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60760813D55EE200E0D0DC /* PPLoationManager.m */; };
 		CA6079F713D55EE200E0D0DC /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60760C13D55EE200E0D0DC /* AppManager.m */; };
 		CA6079F813D55EE200E0D0DC /* CommonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60760E13D55EE200E0D0DC /* CommonManager.m */; };
-		CA6079F913D55EE200E0D0DC /* MainDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA60760F13D55EE200E0D0DC /* MainDataModel.xcdatamodeld */; };
-		CA6079FA13D55EE200E0D0DC /* PrivateMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60761413D55EE200E0D0DC /* PrivateMessage.m */; };
-		CA6079FB13D55EE200E0D0DC /* PrivateMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60761613D55EE200E0D0DC /* PrivateMessageManager.m */; };
-		CA6079FC13D55EE200E0D0DC /* PrivateMessageUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60761813D55EE200E0D0DC /* PrivateMessageUser.m */; };
-		CA6079FD13D55EE200E0D0DC /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60761B13D55EE200E0D0DC /* Place.m */; };
-		CA6079FE13D55EE200E0D0DC /* PlaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60761D13D55EE200E0D0DC /* PlaceManager.m */; };
-		CA6079FF13D55EE200E0D0DC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60762013D55EE200E0D0DC /* Post.m */; };
-		CA607A0013D55EE200E0D0DC /* PostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60762213D55EE200E0D0DC /* PostManager.m */; };
-		CA607A0113D55EE200E0D0DC /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60762513D55EE200E0D0DC /* Friend.m */; };
-		CA607A0213D55EE200E0D0DC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60762713D55EE200E0D0DC /* User.m */; };
-		CA607A0313D55EE200E0D0DC /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60762913D55EE200E0D0DC /* UserManager.m */; };
 		CA607A0413D55EE200E0D0DC /* GetAppUpdateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60762D13D55EE200E0D0DC /* GetAppUpdateRequest.m */; };
 		CA607A0513D55EE200E0D0DC /* NetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60763113D55EE200E0D0DC /* NetworkRequest.m */; };
 		CA607A0613D55EE200E0D0DC /* ResultUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60763513D55EE200E0D0DC /* ResultUtils.m */; };
@@ -165,13 +156,8 @@
 		CA607A1C13D55EE200E0D0DC /* RegisterUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60766513D55EE200E0D0DC /* RegisterUserRequest.m */; };
 		CA607A1D13D55EE200E0D0DC /* UpdateUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60766713D55EE200E0D0DC /* UpdateUserRequest.m */; };
 		CA607A1E13D55EE200E0D0DC /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60766A13D55EE200E0D0DC /* AppService.m */; };
-		CA607A1F13D55EE200E0D0DC /* LocalDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60766C13D55EE200E0D0DC /* LocalDataService.m */; };
 		CA607A2013D55EE200E0D0DC /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60766E13D55EE200E0D0DC /* LocationService.m */; };
-		CA607A2113D55EE200E0D0DC /* MessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60767013D55EE200E0D0DC /* MessageService.m */; };
 		CA607A2213D55EE200E0D0DC /* PlaceSNSService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60767213D55EE200E0D0DC /* PlaceSNSService.m */; };
-		CA607A2313D55EE200E0D0DC /* PostService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60767413D55EE200E0D0DC /* PostService.m */; };
-		CA607A2413D55EE200E0D0DC /* QQService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60767613D55EE200E0D0DC /* QQService.m */; };
-		CA607A2513D55EE200E0D0DC /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60767813D55EE200E0D0DC /* UserService.m */; };
 		CA607A2713D55EE200E0D0DC /* barbg.png in Resources */ = {isa = PBXBuildFile; fileRef = CA60767F13D55EE200E0D0DC /* barbg.png */; };
 		CA607A2813D55EE200E0D0DC /* barbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = CA60768013D55EE200E0D0DC /* barbutton.png */; };
 		CA607A2913D55EE200E0D0DC /* blackbg.png in Resources */ = {isa = PBXBuildFile; fileRef = CA60768113D55EE200E0D0DC /* blackbg.png */; };
@@ -333,8 +319,6 @@
 		CA607B5513D562B700E0D0DC /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA607B0713D562B700E0D0DC /* RegisterController.m */; };
 		CA607B5613D562B700E0D0DC /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA607B0813D562B700E0D0DC /* RegisterController.xib */; };
 		CA607B5713D562B700E0D0DC /* SinaService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA607B0A13D562B700E0D0DC /* SinaService.m */; };
-		CA607B5813D562B700E0D0DC /* FriendPostExampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA607B0D13D562B700E0D0DC /* FriendPostExampleManager.m */; };
-		CA607B5913D562B700E0D0DC /* PostHelpQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA607B0F13D562B700E0D0DC /* PostHelpQuestionManager.m */; };
 		CA607BF613D5634800E0D0DC /* app_globe_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CA607BCA13D5634800E0D0DC /* app_globe_24.png */; };
 		CA607BF713D5634800E0D0DC /* app_globe_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA607BCB13D5634800E0D0DC /* app_globe_24@2x.png */; };
 		CA607BF813D5634800E0D0DC /* app_globe_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CA607BCC13D5634800E0D0DC /* app_globe_64.png */; };
@@ -370,6 +354,26 @@
 		CA607C1613D5634800E0D0DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEC13D5634800E0D0DC /* InfoPlist.strings */; };
 		CA607C1713D5634800E0D0DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEE13D5634800E0D0DC /* Localizable.strings */; };
 		CA607E4013D563A000E0D0DC /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA607C3B13D5639D00E0D0DC /* libMobClickLibrary.a */; };
+		CADF6B6B13DA99B50060F438 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B6A13DA99B50060F438 /* CommonService.m */; };
+		CADF6B7213DA9B110060F438 /* PPNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B7113DA9B110060F438 /* PPNetworkRequest.m */; };
+		CADF6B7613DA9CD00060F438 /* GroupBuyNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B7513DA9CD00060F438 /* GroupBuyNetworkRequest.m */; };
+		CADF6B7D13DAA0A90060F438 /* ProductService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B7C13DAA0A90060F438 /* ProductService.m */; };
+		CADF6B9913DAA1460060F438 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B8013DAA1450060F438 /* Friend.m */; };
+		CADF6B9A13DAA1460060F438 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B8213DAA1450060F438 /* User.m */; };
+		CADF6B9B13DAA1460060F438 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B8413DAA1450060F438 /* UserManager.m */; };
+		CADF6B9C13DAA1460060F438 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B8713DAA1450060F438 /* Post.m */; };
+		CADF6B9D13DAA1460060F438 /* PostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B8913DAA1450060F438 /* PostManager.m */; };
+		CADF6B9E13DAA1460060F438 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B8C13DAA1450060F438 /* Place.m */; };
+		CADF6B9F13DAA1460060F438 /* PlaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B8E13DAA1450060F438 /* PlaceManager.m */; };
+		CADF6BA013DAA1460060F438 /* PrivateMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B9113DAA1460060F438 /* PrivateMessage.m */; };
+		CADF6BA113DAA1460060F438 /* PrivateMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B9313DAA1460060F438 /* PrivateMessageManager.m */; };
+		CADF6BA213DAA1460060F438 /* PrivateMessageUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B9513DAA1460060F438 /* PrivateMessageUser.m */; };
+		CADF6BAE13DAA16B0060F438 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BA413DAA16A0060F438 /* UserService.m */; };
+		CADF6BAF13DAA16B0060F438 /* QQService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BA613DAA16A0060F438 /* QQService.m */; };
+		CADF6BB013DAA16B0060F438 /* PostService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BA813DAA16A0060F438 /* PostService.m */; };
+		CADF6BB113DAA16B0060F438 /* MessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BAA13DAA16B0060F438 /* MessageService.m */; };
+		CADF6BB213DAA16B0060F438 /* LocalDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BAC13DAA16B0060F438 /* LocalDataService.m */; };
+		CADF6BBA13DAA2360060F438 /* MainDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BB713DAA2360060F438 /* MainDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -552,6 +556,9 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CA55024913D9BAAA0016DDD6 /* ProductMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductMainController.h; sourceTree = "<group>"; };
+		CA55024A13D9BAAA0016DDD6 /* ProductMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductMainController.m; sourceTree = "<group>"; };
+		CA55024B13D9BAAA0016DDD6 /* ProductMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductMainController.xib; sourceTree = "<group>"; };
 		CA5D136513D55A9F003CB28C /* groupbuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = groupbuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5D136913D55A9F003CB28C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA5D136B13D55A9F003CB28C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -740,28 +747,6 @@
 		CA60760C13D55EE200E0D0DC /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
 		CA60760D13D55EE200E0D0DC /* CommonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonManager.h; sourceTree = "<group>"; };
 		CA60760E13D55EE200E0D0DC /* CommonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonManager.m; sourceTree = "<group>"; };
-		CA60761013D55EE200E0D0DC /* MainDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MainDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
-		CA60761113D55EE200E0D0DC /* MainDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainDataModel.xcdatamodel; sourceTree = "<group>"; };
-		CA60761313D55EE200E0D0DC /* PrivateMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateMessage.h; sourceTree = "<group>"; };
-		CA60761413D55EE200E0D0DC /* PrivateMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateMessage.m; sourceTree = "<group>"; };
-		CA60761513D55EE200E0D0DC /* PrivateMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateMessageManager.h; sourceTree = "<group>"; };
-		CA60761613D55EE200E0D0DC /* PrivateMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateMessageManager.m; sourceTree = "<group>"; };
-		CA60761713D55EE200E0D0DC /* PrivateMessageUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateMessageUser.h; sourceTree = "<group>"; };
-		CA60761813D55EE200E0D0DC /* PrivateMessageUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateMessageUser.m; sourceTree = "<group>"; };
-		CA60761A13D55EE200E0D0DC /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
-		CA60761B13D55EE200E0D0DC /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
-		CA60761C13D55EE200E0D0DC /* PlaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceManager.h; sourceTree = "<group>"; };
-		CA60761D13D55EE200E0D0DC /* PlaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceManager.m; sourceTree = "<group>"; };
-		CA60761F13D55EE200E0D0DC /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
-		CA60762013D55EE200E0D0DC /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
-		CA60762113D55EE200E0D0DC /* PostManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostManager.h; sourceTree = "<group>"; };
-		CA60762213D55EE200E0D0DC /* PostManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostManager.m; sourceTree = "<group>"; };
-		CA60762413D55EE200E0D0DC /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
-		CA60762513D55EE200E0D0DC /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
-		CA60762613D55EE200E0D0DC /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		CA60762713D55EE200E0D0DC /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		CA60762813D55EE200E0D0DC /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
-		CA60762913D55EE200E0D0DC /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		CA60762C13D55EE200E0D0DC /* GetAppUpdateRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAppUpdateRequest.h; sourceTree = "<group>"; };
 		CA60762D13D55EE200E0D0DC /* GetAppUpdateRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetAppUpdateRequest.m; sourceTree = "<group>"; };
 		CA60762F13D55EE200E0D0DC /* InterfaceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceConstants.h; sourceTree = "<group>"; };
@@ -819,20 +804,10 @@
 		CA60766713D55EE200E0D0DC /* UpdateUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateUserRequest.m; sourceTree = "<group>"; };
 		CA60766913D55EE200E0D0DC /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
 		CA60766A13D55EE200E0D0DC /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
-		CA60766B13D55EE200E0D0DC /* LocalDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDataService.h; sourceTree = "<group>"; };
-		CA60766C13D55EE200E0D0DC /* LocalDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalDataService.m; sourceTree = "<group>"; };
 		CA60766D13D55EE200E0D0DC /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		CA60766E13D55EE200E0D0DC /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
-		CA60766F13D55EE200E0D0DC /* MessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageService.h; sourceTree = "<group>"; };
-		CA60767013D55EE200E0D0DC /* MessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageService.m; sourceTree = "<group>"; };
 		CA60767113D55EE200E0D0DC /* PlaceSNSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceSNSService.h; sourceTree = "<group>"; };
 		CA60767213D55EE200E0D0DC /* PlaceSNSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceSNSService.m; sourceTree = "<group>"; };
-		CA60767313D55EE200E0D0DC /* PostService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostService.h; sourceTree = "<group>"; };
-		CA60767413D55EE200E0D0DC /* PostService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostService.m; sourceTree = "<group>"; };
-		CA60767513D55EE200E0D0DC /* QQService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQService.h; sourceTree = "<group>"; };
-		CA60767613D55EE200E0D0DC /* QQService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQService.m; sourceTree = "<group>"; };
-		CA60767713D55EE200E0D0DC /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
-		CA60767813D55EE200E0D0DC /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		CA60767F13D55EE200E0D0DC /* barbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barbg.png; sourceTree = "<group>"; };
 		CA60768013D55EE200E0D0DC /* barbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barbutton.png; sourceTree = "<group>"; };
 		CA60768113D55EE200E0D0DC /* blackbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackbg.png; sourceTree = "<group>"; };
@@ -1102,10 +1077,6 @@
 		CA607B0813D562B700E0D0DC /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
 		CA607B0913D562B700E0D0DC /* SinaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaService.h; sourceTree = "<group>"; };
 		CA607B0A13D562B700E0D0DC /* SinaService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaService.m; sourceTree = "<group>"; };
-		CA607B0C13D562B700E0D0DC /* FriendPostExampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendPostExampleManager.h; sourceTree = "<group>"; };
-		CA607B0D13D562B700E0D0DC /* FriendPostExampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendPostExampleManager.m; sourceTree = "<group>"; };
-		CA607B0E13D562B700E0D0DC /* PostHelpQuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHelpQuestionManager.h; sourceTree = "<group>"; };
-		CA607B0F13D562B700E0D0DC /* PostHelpQuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHelpQuestionManager.m; sourceTree = "<group>"; };
 		CA607BCA13D5634800E0D0DC /* app_globe_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_globe_24.png; sourceTree = "<group>"; };
 		CA607BCB13D5634800E0D0DC /* app_globe_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_globe_24@2x.png"; sourceTree = "<group>"; };
 		CA607BCC13D5634800E0D0DC /* app_globe_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_globe_64.png; sourceTree = "<group>"; };
@@ -1148,6 +1119,47 @@
 		CA607BF513D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA607C3B13D5639D00E0D0DC /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		CA607C3C13D5639D00E0D0DC /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		CADF6B6913DA99B50060F438 /* CommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonService.h; sourceTree = "<group>"; };
+		CADF6B6A13DA99B50060F438 /* CommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonService.m; sourceTree = "<group>"; };
+		CADF6B7013DA9B110060F438 /* PPNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNetworkRequest.h; sourceTree = "<group>"; };
+		CADF6B7113DA9B110060F438 /* PPNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNetworkRequest.m; sourceTree = "<group>"; };
+		CADF6B7313DA9C650060F438 /* PPNetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNetworkConstants.h; sourceTree = "<group>"; };
+		CADF6B7413DA9CD00060F438 /* GroupBuyNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyNetworkRequest.h; sourceTree = "<group>"; };
+		CADF6B7513DA9CD00060F438 /* GroupBuyNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuyNetworkRequest.m; sourceTree = "<group>"; };
+		CADF6B7713DA9D150060F438 /* GroupBuyNetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyNetworkConstants.h; sourceTree = "<group>"; };
+		CADF6B7B13DAA0A90060F438 /* ProductService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductService.h; sourceTree = "<group>"; };
+		CADF6B7C13DAA0A90060F438 /* ProductService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductService.m; sourceTree = "<group>"; };
+		CADF6B7F13DAA1450060F438 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		CADF6B8013DAA1450060F438 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		CADF6B8113DAA1450060F438 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		CADF6B8213DAA1450060F438 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		CADF6B8313DAA1450060F438 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		CADF6B8413DAA1450060F438 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		CADF6B8613DAA1450060F438 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		CADF6B8713DAA1450060F438 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		CADF6B8813DAA1450060F438 /* PostManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostManager.h; sourceTree = "<group>"; };
+		CADF6B8913DAA1450060F438 /* PostManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostManager.m; sourceTree = "<group>"; };
+		CADF6B8B13DAA1450060F438 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		CADF6B8C13DAA1450060F438 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		CADF6B8D13DAA1450060F438 /* PlaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceManager.h; sourceTree = "<group>"; };
+		CADF6B8E13DAA1450060F438 /* PlaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceManager.m; sourceTree = "<group>"; };
+		CADF6B9013DAA1460060F438 /* PrivateMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateMessage.h; sourceTree = "<group>"; };
+		CADF6B9113DAA1460060F438 /* PrivateMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateMessage.m; sourceTree = "<group>"; };
+		CADF6B9213DAA1460060F438 /* PrivateMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateMessageManager.h; sourceTree = "<group>"; };
+		CADF6B9313DAA1460060F438 /* PrivateMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateMessageManager.m; sourceTree = "<group>"; };
+		CADF6B9413DAA1460060F438 /* PrivateMessageUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateMessageUser.h; sourceTree = "<group>"; };
+		CADF6B9513DAA1460060F438 /* PrivateMessageUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateMessageUser.m; sourceTree = "<group>"; };
+		CADF6BA413DAA16A0060F438 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		CADF6BA513DAA16A0060F438 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		CADF6BA613DAA16A0060F438 /* QQService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQService.m; sourceTree = "<group>"; };
+		CADF6BA713DAA16A0060F438 /* QQService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQService.h; sourceTree = "<group>"; };
+		CADF6BA813DAA16A0060F438 /* PostService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostService.m; sourceTree = "<group>"; };
+		CADF6BA913DAA16A0060F438 /* PostService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostService.h; sourceTree = "<group>"; };
+		CADF6BAA13DAA16B0060F438 /* MessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageService.m; sourceTree = "<group>"; };
+		CADF6BAB13DAA16B0060F438 /* MessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageService.h; sourceTree = "<group>"; };
+		CADF6BAC13DAA16B0060F438 /* LocalDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalDataService.m; sourceTree = "<group>"; };
+		CADF6BAD13DAA16B0060F438 /* LocalDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDataService.h; sourceTree = "<group>"; };
+		CADF6BB913DAA2360060F438 /* MainDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1364,6 +1376,7 @@
 		CA6071C313D55EE000E0D0DC /* Common_Iphone */ = {
 			isa = PBXGroup;
 			children = (
+				CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */,
 				CA60751713D55EE200E0D0DC /* AddressBookUtils */,
 				CA60751A13D55EE200E0D0DC /* Application */,
 				CA60753013D55EE200E0D0DC /* Components */,
@@ -1417,6 +1430,11 @@
 				CA60752B13D55EE200E0D0DC /* TestPPViewController.h */,
 				CA60752C13D55EE200E0D0DC /* TestPPViewController.m */,
 				CA60752D13D55EE200E0D0DC /* TestPPViewController.xib */,
+				CADF6B6913DA99B50060F438 /* CommonService.h */,
+				CADF6B6A13DA99B50060F438 /* CommonService.m */,
+				CADF6B7013DA9B110060F438 /* PPNetworkRequest.h */,
+				CADF6B7113DA9B110060F438 /* PPNetworkRequest.m */,
+				CADF6B7313DA9C650060F438 /* PPNetworkConstants.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1770,65 +1788,17 @@
 		CA60760A13D55EE200E0D0DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CADF6BB713DAA2360060F438 /* MainDataModel.xcdatamodeld */,
+				CADF6B7E13DAA1450060F438 /* User */,
+				CADF6B8513DAA1450060F438 /* Post */,
+				CADF6B8A13DAA1450060F438 /* Place */,
+				CADF6B8F13DAA1450060F438 /* Message */,
 				CA60760B13D55EE200E0D0DC /* AppManager.h */,
 				CA60760C13D55EE200E0D0DC /* AppManager.m */,
 				CA60760D13D55EE200E0D0DC /* CommonManager.h */,
 				CA60760E13D55EE200E0D0DC /* CommonManager.m */,
-				CA60760F13D55EE200E0D0DC /* MainDataModel.xcdatamodeld */,
-				CA60761213D55EE200E0D0DC /* Message */,
-				CA60761913D55EE200E0D0DC /* Place */,
-				CA60761E13D55EE200E0D0DC /* Post */,
-				CA60762313D55EE200E0D0DC /* User */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CA60761213D55EE200E0D0DC /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				CA60761313D55EE200E0D0DC /* PrivateMessage.h */,
-				CA60761413D55EE200E0D0DC /* PrivateMessage.m */,
-				CA60761513D55EE200E0D0DC /* PrivateMessageManager.h */,
-				CA60761613D55EE200E0D0DC /* PrivateMessageManager.m */,
-				CA60761713D55EE200E0D0DC /* PrivateMessageUser.h */,
-				CA60761813D55EE200E0D0DC /* PrivateMessageUser.m */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
-		CA60761913D55EE200E0D0DC /* Place */ = {
-			isa = PBXGroup;
-			children = (
-				CA60761A13D55EE200E0D0DC /* Place.h */,
-				CA60761B13D55EE200E0D0DC /* Place.m */,
-				CA60761C13D55EE200E0D0DC /* PlaceManager.h */,
-				CA60761D13D55EE200E0D0DC /* PlaceManager.m */,
-			);
-			path = Place;
-			sourceTree = "<group>";
-		};
-		CA60761E13D55EE200E0D0DC /* Post */ = {
-			isa = PBXGroup;
-			children = (
-				CA60761F13D55EE200E0D0DC /* Post.h */,
-				CA60762013D55EE200E0D0DC /* Post.m */,
-				CA60762113D55EE200E0D0DC /* PostManager.h */,
-				CA60762213D55EE200E0D0DC /* PostManager.m */,
-			);
-			path = Post;
-			sourceTree = "<group>";
-		};
-		CA60762313D55EE200E0D0DC /* User */ = {
-			isa = PBXGroup;
-			children = (
-				CA60762413D55EE200E0D0DC /* Friend.h */,
-				CA60762513D55EE200E0D0DC /* Friend.m */,
-				CA60762613D55EE200E0D0DC /* User.h */,
-				CA60762713D55EE200E0D0DC /* User.m */,
-				CA60762813D55EE200E0D0DC /* UserManager.h */,
-				CA60762913D55EE200E0D0DC /* UserManager.m */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		CA60762A13D55EE200E0D0DC /* Network */ = {
@@ -1944,22 +1914,22 @@
 		CA60766813D55EE200E0D0DC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CADF6BA413DAA16A0060F438 /* UserService.m */,
+				CADF6BA513DAA16A0060F438 /* UserService.h */,
+				CADF6BA613DAA16A0060F438 /* QQService.m */,
+				CADF6BA713DAA16A0060F438 /* QQService.h */,
+				CADF6BA813DAA16A0060F438 /* PostService.m */,
+				CADF6BA913DAA16A0060F438 /* PostService.h */,
+				CADF6BAA13DAA16B0060F438 /* MessageService.m */,
+				CADF6BAB13DAA16B0060F438 /* MessageService.h */,
+				CADF6BAC13DAA16B0060F438 /* LocalDataService.m */,
+				CADF6BAD13DAA16B0060F438 /* LocalDataService.h */,
 				CA60766913D55EE200E0D0DC /* AppService.h */,
 				CA60766A13D55EE200E0D0DC /* AppService.m */,
-				CA60766B13D55EE200E0D0DC /* LocalDataService.h */,
-				CA60766C13D55EE200E0D0DC /* LocalDataService.m */,
 				CA60766D13D55EE200E0D0DC /* LocationService.h */,
 				CA60766E13D55EE200E0D0DC /* LocationService.m */,
-				CA60766F13D55EE200E0D0DC /* MessageService.h */,
-				CA60767013D55EE200E0D0DC /* MessageService.m */,
 				CA60767113D55EE200E0D0DC /* PlaceSNSService.h */,
 				CA60767213D55EE200E0D0DC /* PlaceSNSService.m */,
-				CA60767313D55EE200E0D0DC /* PostService.h */,
-				CA60767413D55EE200E0D0DC /* PostService.m */,
-				CA60767513D55EE200E0D0DC /* QQService.h */,
-				CA60767613D55EE200E0D0DC /* QQService.m */,
-				CA60767713D55EE200E0D0DC /* UserService.h */,
-				CA60767813D55EE200E0D0DC /* UserService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -2261,6 +2231,9 @@
 				CA607AA913D562B700E0D0DC /* PostMainController.h */,
 				CA607AAA13D562B700E0D0DC /* PostMainController.m */,
 				CA607AAB13D562B700E0D0DC /* PostMainController.xib */,
+				CA55024913D9BAAA0016DDD6 /* ProductMainController.h */,
+				CA55024A13D9BAAA0016DDD6 /* ProductMainController.m */,
+				CA55024B13D9BAAA0016DDD6 /* ProductMainController.xib */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -2391,10 +2364,6 @@
 		CA607B0B13D562B700E0D0DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CA607B0C13D562B700E0D0DC /* FriendPostExampleManager.h */,
-				CA607B0D13D562B700E0D0DC /* FriendPostExampleManager.m */,
-				CA607B0E13D562B700E0D0DC /* PostHelpQuestionManager.h */,
-				CA607B0F13D562B700E0D0DC /* PostHelpQuestionManager.m */,
 			);
 			name = Model;
 			path = Classes/Model;
@@ -2481,6 +2450,90 @@
 			);
 			name = MobClick;
 			path = Analytics_iPhone_SDK_1.6_for_iOS3.2.x_iOS4.x;
+			sourceTree = "<group>";
+		};
+		CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6B6D13DA9ACB0060F438 /* Model */,
+				CADF6B6E13DA9ACB0060F438 /* Network */,
+				CADF6B6F13DA9ACB0060F438 /* Service */,
+			);
+			path = GroupBuyCommon;
+			sourceTree = "<group>";
+		};
+		CADF6B6D13DA9ACB0060F438 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CADF6B6E13DA9ACB0060F438 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6B7413DA9CD00060F438 /* GroupBuyNetworkRequest.h */,
+				CADF6B7513DA9CD00060F438 /* GroupBuyNetworkRequest.m */,
+				CADF6B7713DA9D150060F438 /* GroupBuyNetworkConstants.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CADF6B6F13DA9ACB0060F438 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6B7B13DAA0A90060F438 /* ProductService.h */,
+				CADF6B7C13DAA0A90060F438 /* ProductService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CADF6B7E13DAA1450060F438 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6B7F13DAA1450060F438 /* Friend.h */,
+				CADF6B8013DAA1450060F438 /* Friend.m */,
+				CADF6B8113DAA1450060F438 /* User.h */,
+				CADF6B8213DAA1450060F438 /* User.m */,
+				CADF6B8313DAA1450060F438 /* UserManager.h */,
+				CADF6B8413DAA1450060F438 /* UserManager.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		CADF6B8513DAA1450060F438 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6B8613DAA1450060F438 /* Post.h */,
+				CADF6B8713DAA1450060F438 /* Post.m */,
+				CADF6B8813DAA1450060F438 /* PostManager.h */,
+				CADF6B8913DAA1450060F438 /* PostManager.m */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		CADF6B8A13DAA1450060F438 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6B8B13DAA1450060F438 /* Place.h */,
+				CADF6B8C13DAA1450060F438 /* Place.m */,
+				CADF6B8D13DAA1450060F438 /* PlaceManager.h */,
+				CADF6B8E13DAA1450060F438 /* PlaceManager.m */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		CADF6B8F13DAA1450060F438 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6B9013DAA1460060F438 /* PrivateMessage.h */,
+				CADF6B9113DAA1460060F438 /* PrivateMessage.m */,
+				CADF6B9213DAA1460060F438 /* PrivateMessageManager.h */,
+				CADF6B9313DAA1460060F438 /* PrivateMessageManager.m */,
+				CADF6B9413DAA1460060F438 /* PrivateMessageUser.h */,
+				CADF6B9513DAA1460060F438 /* PrivateMessageUser.m */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2830,6 +2883,7 @@
 				CA607C1513D5634800E0D0DC /* touxiang.png in Resources */,
 				CA607C1613D5634800E0D0DC /* InfoPlist.strings in Resources */,
 				CA607C1713D5634800E0D0DC /* Localizable.strings in Resources */,
+				CA55024D13D9BAAB0016DDD6 /* ProductMainController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2930,17 +2984,6 @@
 				CA6079F613D55EE200E0D0DC /* PPLoationManager.m in Sources */,
 				CA6079F713D55EE200E0D0DC /* AppManager.m in Sources */,
 				CA6079F813D55EE200E0D0DC /* CommonManager.m in Sources */,
-				CA6079F913D55EE200E0D0DC /* MainDataModel.xcdatamodeld in Sources */,
-				CA6079FA13D55EE200E0D0DC /* PrivateMessage.m in Sources */,
-				CA6079FB13D55EE200E0D0DC /* PrivateMessageManager.m in Sources */,
-				CA6079FC13D55EE200E0D0DC /* PrivateMessageUser.m in Sources */,
-				CA6079FD13D55EE200E0D0DC /* Place.m in Sources */,
-				CA6079FE13D55EE200E0D0DC /* PlaceManager.m in Sources */,
-				CA6079FF13D55EE200E0D0DC /* Post.m in Sources */,
-				CA607A0013D55EE200E0D0DC /* PostManager.m in Sources */,
-				CA607A0113D55EE200E0D0DC /* Friend.m in Sources */,
-				CA607A0213D55EE200E0D0DC /* User.m in Sources */,
-				CA607A0313D55EE200E0D0DC /* UserManager.m in Sources */,
 				CA607A0413D55EE200E0D0DC /* GetAppUpdateRequest.m in Sources */,
 				CA607A0513D55EE200E0D0DC /* NetworkRequest.m in Sources */,
 				CA607A0613D55EE200E0D0DC /* ResultUtils.m in Sources */,
@@ -2967,13 +3010,8 @@
 				CA607A1C13D55EE200E0D0DC /* RegisterUserRequest.m in Sources */,
 				CA607A1D13D55EE200E0D0DC /* UpdateUserRequest.m in Sources */,
 				CA607A1E13D55EE200E0D0DC /* AppService.m in Sources */,
-				CA607A1F13D55EE200E0D0DC /* LocalDataService.m in Sources */,
 				CA607A2013D55EE200E0D0DC /* LocationService.m in Sources */,
-				CA607A2113D55EE200E0D0DC /* MessageService.m in Sources */,
 				CA607A2213D55EE200E0D0DC /* PlaceSNSService.m in Sources */,
-				CA607A2313D55EE200E0D0DC /* PostService.m in Sources */,
-				CA607A2413D55EE200E0D0DC /* QQService.m in Sources */,
-				CA607A2513D55EE200E0D0DC /* UserService.m in Sources */,
 				CA607A3513D55EE200E0D0DC /* BasicSearch.m in Sources */,
 				CA607A3613D55EE200E0D0DC /* ImageSearch.m in Sources */,
 				CA607A3713D55EE200E0D0DC /* ImageSearchResult.m in Sources */,
@@ -3075,8 +3113,27 @@
 				CA607B5213D562B700E0D0DC /* EnterPlaceAppController.m in Sources */,
 				CA607B5513D562B700E0D0DC /* RegisterController.m in Sources */,
 				CA607B5713D562B700E0D0DC /* SinaService.m in Sources */,
-				CA607B5813D562B700E0D0DC /* FriendPostExampleManager.m in Sources */,
-				CA607B5913D562B700E0D0DC /* PostHelpQuestionManager.m in Sources */,
+				CA55024C13D9BAAB0016DDD6 /* ProductMainController.m in Sources */,
+				CADF6B6B13DA99B50060F438 /* CommonService.m in Sources */,
+				CADF6B7213DA9B110060F438 /* PPNetworkRequest.m in Sources */,
+				CADF6B7613DA9CD00060F438 /* GroupBuyNetworkRequest.m in Sources */,
+				CADF6B7D13DAA0A90060F438 /* ProductService.m in Sources */,
+				CADF6B9913DAA1460060F438 /* Friend.m in Sources */,
+				CADF6B9A13DAA1460060F438 /* User.m in Sources */,
+				CADF6B9B13DAA1460060F438 /* UserManager.m in Sources */,
+				CADF6B9C13DAA1460060F438 /* Post.m in Sources */,
+				CADF6B9D13DAA1460060F438 /* PostManager.m in Sources */,
+				CADF6B9E13DAA1460060F438 /* Place.m in Sources */,
+				CADF6B9F13DAA1460060F438 /* PlaceManager.m in Sources */,
+				CADF6BA013DAA1460060F438 /* PrivateMessage.m in Sources */,
+				CADF6BA113DAA1460060F438 /* PrivateMessageManager.m in Sources */,
+				CADF6BA213DAA1460060F438 /* PrivateMessageUser.m in Sources */,
+				CADF6BAE13DAA16B0060F438 /* UserService.m in Sources */,
+				CADF6BAF13DAA16B0060F438 /* QQService.m in Sources */,
+				CADF6BB013DAA16B0060F438 /* PostService.m in Sources */,
+				CADF6BB113DAA16B0060F438 /* MessageService.m in Sources */,
+				CADF6BB213DAA16B0060F438 /* LocalDataService.m in Sources */,
+				CADF6BBA13DAA2360060F438 /* MainDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3396,13 +3453,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CA60760F13D55EE200E0D0DC /* MainDataModel.xcdatamodeld */ = {
+		CADF6BB713DAA2360060F438 /* MainDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CA60761013D55EE200E0D0DC /* MainDataModel 2.xcdatamodel */,
-				CA60761113D55EE200E0D0DC /* MainDataModel.xcdatamodel */,
+				CADF6BB913DAA2360060F438 /* MainDataModel.xcdatamodel */,
 			);
-			currentVersion = CA60761113D55EE200E0D0DC /* MainDataModel.xcdatamodel */;
+			currentVersion = CADF6BB913DAA2360060F438 /* MainDataModel.xcdatamodel */;
 			path = MainDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
