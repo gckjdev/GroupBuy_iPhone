@@ -15,6 +15,7 @@
 #import "PrivateMessageUserController.h"
 #import "PublicTimelinePostController.h"
 #import "CommonProductListController.h"
+#import "ProductPriceDataLoader.h"
 
 enum SELECT_POST_TYPE {
     SELECT_CATEGORY = 0,
@@ -32,6 +33,11 @@ enum SELECT_POST_TYPE {
 @synthesize atMePostController;
 @synthesize latestPostController;
 @synthesize priceController;
+@synthesize categoryController;
+@synthesize distanceController;
+@synthesize rebateController;
+@synthesize boughtController;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +56,10 @@ enum SELECT_POST_TYPE {
     [atMePostController release];
     [latestPostController release];
     [priceController release];
+    [categoryController release];
+    [distanceController release];
+    [boughtController release];
+    [rebateController release];
     [super dealloc];
 }
 
@@ -133,9 +143,10 @@ enum SELECT_POST_TYPE {
 - (void)showProductByPrice
 {
     if (self.priceController == nil){
-        self.priceController = [[CommonProductListController alloc] init];
+        self.priceController = [[CommonProductListController alloc] init];        
         self.priceController.superController = self;
         self.priceController.view.frame = self.view.bounds;        
+        self.priceController.dataLoader = [[ProductPriceDataLoader alloc] init];
         [self.view addSubview:priceController.view];                
     }
     

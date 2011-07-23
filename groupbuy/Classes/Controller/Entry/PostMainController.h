@@ -25,6 +25,11 @@
     PublicTimelinePostController *latestPostController;
     
     CommonProductListController *priceController;
+    CommonProductListController *rebateController;
+    CommonProductListController *boughtController;
+    CommonProductListController *distanceController;
+    CommonProductListController *categoryController;
+    
 }
 
 @property (nonatomic, retain) NearbyPostController    *nearbyPostController;
@@ -34,5 +39,9 @@
 @property (nonatomic, retain) PublicTimelinePostController *latestPostController;
 
 @property (nonatomic, retain) CommonProductListController *priceController;
+@property (nonatomic, retain) CommonProductListController *rebateController;
+@property (nonatomic, retain) CommonProductListController *boughtController;
+@property (nonatomic, retain) CommonProductListController *distanceController;
+@property (nonatomic, retain) CommonProductListController *categoryController;
 
 @end

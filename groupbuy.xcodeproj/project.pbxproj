@@ -382,6 +382,7 @@
 		CADF6BCB13DAAB0A0060F438 /* FriendPostExampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BC813DAAB0A0060F438 /* FriendPostExampleManager.m */; };
 		CADF6BCE13DAB0320060F438 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BCD13DAB0320060F438 /* Product.m */; };
 		CADF6BD113DAB0990060F438 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BD013DAB0990060F438 /* ProductManager.m */; };
+		CADF6BDA13DB00CD0060F438 /* ProductPriceDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1182,6 +1183,8 @@
 		CADF6BCD13DAB0320060F438 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		CADF6BCF13DAB0990060F438 /* ProductManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductManager.h; sourceTree = "<group>"; };
 		CADF6BD013DAB0990060F438 /* ProductManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductManager.m; sourceTree = "<group>"; };
+		CADF6BD813DB00CC0060F438 /* ProductPriceDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductPriceDataLoader.h; sourceTree = "<group>"; };
+		CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductPriceDataLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2576,6 +2579,8 @@
 				CADF6BC113DAA5770060F438 /* ProductTextCell.h */,
 				CADF6BC213DAA5770060F438 /* ProductTextCell.m */,
 				CADF6BC313DAA5770060F438 /* ProductTextCell.xib */,
+				CADF6BD813DB00CC0060F438 /* ProductPriceDataLoader.h */,
+				CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3186,6 +3191,7 @@
 				CADF6BCB13DAAB0A0060F438 /* FriendPostExampleManager.m in Sources */,
 				CADF6BCE13DAB0320060F438 /* Product.m in Sources */,
 				CADF6BD113DAB0990060F438 /* ProductManager.m in Sources */,
+				CADF6BDA13DB00CD0060F438 /* ProductPriceDataLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
