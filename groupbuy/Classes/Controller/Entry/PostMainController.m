@@ -14,6 +14,7 @@
 #import "CreatePostController.h"
 #import "PrivateMessageUserController.h"
 #import "PublicTimelinePostController.h"
+#import "CommonProductListController.h"
 
 enum SELECT_POST_TYPE {
     SELECT_CATEGORY = 0,
@@ -30,6 +31,7 @@ enum SELECT_POST_TYPE {
 @synthesize privateMessageController;
 @synthesize atMePostController;
 @synthesize latestPostController;
+@synthesize priceController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +49,7 @@ enum SELECT_POST_TYPE {
     [privateMessageController release];
     [atMePostController release];
     [latestPostController release];
+    [priceController release];
     [super dealloc];
 }
 
@@ -127,6 +130,20 @@ enum SELECT_POST_TYPE {
 
 }
 
+- (void)showProductByPrice
+{
+    if (self.priceController == nil){
+        self.priceController = [[CommonProductListController alloc] init];
+        self.priceController.superController = self;
+        self.priceController.view.frame = self.view.bounds;        
+        [self.view addSubview:priceController.view];                
+    }
+    
+    [self.view bringSubviewToFront:priceController.view];
+    [priceController viewDidAppear:NO];
+    
+}
+
 - (void)viewDidLoad
 {
     // set right button
@@ -191,19 +208,22 @@ enum SELECT_POST_TYPE {
 {
     UISegmentedControl* segControl = sender;
     if (segControl.selectedSegmentIndex == SELECT_BOUGHT){
-        [self showFollowPost];
+//        [self showFollowPost];
     }
     else if (segControl.selectedSegmentIndex == SELECT_CATEGORY){
-        [self showNearbyPost];
+        
+        
+//        [self showNearbyPost];
     }
     else if (segControl.selectedSegmentIndex == SELECT_PRICE){
-        [self showLatestPost];
+        [self showProductByPrice];
+//        [self showLatestPost];
     }    
     else if (segControl.selectedSegmentIndex == SELECT_DISTANCE){
-        [self showAtMePost];
+//        [self showAtMePost];
     }
     else{
-        [self showPrivateMessage];
+//        [self showPrivateMessage];
     }
 }
 

@@ -374,6 +374,14 @@
 		CADF6BB113DAA16B0060F438 /* MessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BAA13DAA16B0060F438 /* MessageService.m */; };
 		CADF6BB213DAA16B0060F438 /* LocalDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BAC13DAA16B0060F438 /* LocalDataService.m */; };
 		CADF6BBA13DAA2360060F438 /* MainDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BB713DAA2360060F438 /* MainDataModel.xcdatamodeld */; };
+		CADF6BBF13DAA5190060F438 /* CommonProductListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BBD13DAA5190060F438 /* CommonProductListController.m */; };
+		CADF6BC013DAA5190060F438 /* CommonProductListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADF6BBE13DAA5190060F438 /* CommonProductListController.xib */; };
+		CADF6BC413DAA5770060F438 /* ProductTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BC213DAA5770060F438 /* ProductTextCell.m */; };
+		CADF6BC513DAA5770060F438 /* ProductTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADF6BC313DAA5770060F438 /* ProductTextCell.xib */; };
+		CADF6BCA13DAAB0A0060F438 /* PostHelpQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BC613DAAB0A0060F438 /* PostHelpQuestionManager.m */; };
+		CADF6BCB13DAAB0A0060F438 /* FriendPostExampleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BC813DAAB0A0060F438 /* FriendPostExampleManager.m */; };
+		CADF6BCE13DAB0320060F438 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BCD13DAB0320060F438 /* Product.m */; };
+		CADF6BD113DAB0990060F438 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BD013DAB0990060F438 /* ProductManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1160,6 +1168,20 @@
 		CADF6BAC13DAA16B0060F438 /* LocalDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalDataService.m; sourceTree = "<group>"; };
 		CADF6BAD13DAA16B0060F438 /* LocalDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDataService.h; sourceTree = "<group>"; };
 		CADF6BB913DAA2360060F438 /* MainDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainDataModel.xcdatamodel; sourceTree = "<group>"; };
+		CADF6BBC13DAA5190060F438 /* CommonProductListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProductListController.h; sourceTree = "<group>"; };
+		CADF6BBD13DAA5190060F438 /* CommonProductListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonProductListController.m; sourceTree = "<group>"; };
+		CADF6BBE13DAA5190060F438 /* CommonProductListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonProductListController.xib; sourceTree = "<group>"; };
+		CADF6BC113DAA5770060F438 /* ProductTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTextCell.h; sourceTree = "<group>"; };
+		CADF6BC213DAA5770060F438 /* ProductTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTextCell.m; sourceTree = "<group>"; };
+		CADF6BC313DAA5770060F438 /* ProductTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTextCell.xib; sourceTree = "<group>"; };
+		CADF6BC613DAAB0A0060F438 /* PostHelpQuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHelpQuestionManager.m; sourceTree = "<group>"; };
+		CADF6BC713DAAB0A0060F438 /* PostHelpQuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHelpQuestionManager.h; sourceTree = "<group>"; };
+		CADF6BC813DAAB0A0060F438 /* FriendPostExampleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendPostExampleManager.m; sourceTree = "<group>"; };
+		CADF6BC913DAAB0A0060F438 /* FriendPostExampleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendPostExampleManager.h; sourceTree = "<group>"; };
+		CADF6BCC13DAB0320060F438 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		CADF6BCD13DAB0320060F438 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		CADF6BCF13DAB0990060F438 /* ProductManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductManager.h; sourceTree = "<group>"; };
+		CADF6BD013DAB0990060F438 /* ProductManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2364,6 +2386,10 @@
 		CA607B0B13D562B700E0D0DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CADF6BC613DAAB0A0060F438 /* PostHelpQuestionManager.m */,
+				CADF6BC713DAAB0A0060F438 /* PostHelpQuestionManager.h */,
+				CADF6BC813DAAB0A0060F438 /* FriendPostExampleManager.m */,
+				CADF6BC913DAAB0A0060F438 /* FriendPostExampleManager.h */,
 			);
 			name = Model;
 			path = Classes/Model;
@@ -2455,6 +2481,7 @@
 		CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */ = {
 			isa = PBXGroup;
 			children = (
+				CADF6BBB13DAA4810060F438 /* Controller */,
 				CADF6B6D13DA9ACB0060F438 /* Model */,
 				CADF6B6E13DA9ACB0060F438 /* Network */,
 				CADF6B6F13DA9ACB0060F438 /* Service */,
@@ -2465,6 +2492,10 @@
 		CADF6B6D13DA9ACB0060F438 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CADF6BCC13DAB0320060F438 /* Product.h */,
+				CADF6BCD13DAB0320060F438 /* Product.m */,
+				CADF6BCF13DAB0990060F438 /* ProductManager.h */,
+				CADF6BD013DAB0990060F438 /* ProductManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2534,6 +2565,19 @@
 				CADF6B9513DAA1460060F438 /* PrivateMessageUser.m */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		CADF6BBB13DAA4810060F438 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6BBC13DAA5190060F438 /* CommonProductListController.h */,
+				CADF6BBD13DAA5190060F438 /* CommonProductListController.m */,
+				CADF6BBE13DAA5190060F438 /* CommonProductListController.xib */,
+				CADF6BC113DAA5770060F438 /* ProductTextCell.h */,
+				CADF6BC213DAA5770060F438 /* ProductTextCell.m */,
+				CADF6BC313DAA5770060F438 /* ProductTextCell.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2884,6 +2928,8 @@
 				CA607C1613D5634800E0D0DC /* InfoPlist.strings in Resources */,
 				CA607C1713D5634800E0D0DC /* Localizable.strings in Resources */,
 				CA55024D13D9BAAB0016DDD6 /* ProductMainController.xib in Resources */,
+				CADF6BC013DAA5190060F438 /* CommonProductListController.xib in Resources */,
+				CADF6BC513DAA5770060F438 /* ProductTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3134,6 +3180,12 @@
 				CADF6BB113DAA16B0060F438 /* MessageService.m in Sources */,
 				CADF6BB213DAA16B0060F438 /* LocalDataService.m in Sources */,
 				CADF6BBA13DAA2360060F438 /* MainDataModel.xcdatamodeld in Sources */,
+				CADF6BBF13DAA5190060F438 /* CommonProductListController.m in Sources */,
+				CADF6BC413DAA5770060F438 /* ProductTextCell.m in Sources */,
+				CADF6BCA13DAAB0A0060F438 /* PostHelpQuestionManager.m in Sources */,
+				CADF6BCB13DAAB0A0060F438 /* FriendPostExampleManager.m in Sources */,
+				CADF6BCE13DAB0320060F438 /* Product.m in Sources */,
+				CADF6BD113DAB0990060F438 /* ProductManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@
 
 @class PrivateMessageUserController;
 @class PublicTimelinePostController;
+@class CommonProductListController;
 
 @interface PostMainController : PPViewController {
     NearbyPostController    *nearbyPostController;
@@ -22,6 +23,8 @@
     AtMePostController      *atMePostController;
     PrivateMessageUserController *privateMessageController;
     PublicTimelinePostController *latestPostController;
+    
+    CommonProductListController *priceController;
 }
 
 @property (nonatomic, retain) NearbyPostController    *nearbyPostController;
@@ -29,4 +32,7 @@
 @property (nonatomic, retain) PrivateMessageUserController *privateMessageController;
 @property (nonatomic, retain) AtMePostController      *atMePostController;
 @property (nonatomic, retain) PublicTimelinePostController *latestPostController;
+
+@property (nonatomic, retain) CommonProductListController *priceController;
+
 @end
