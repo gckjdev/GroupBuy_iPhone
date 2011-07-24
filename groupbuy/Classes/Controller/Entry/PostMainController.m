@@ -155,6 +155,21 @@ enum SELECT_POST_TYPE {
     
 }
 
+- (void)showProductByRebate
+{
+    if (self.rebateController == nil){
+        self.rebateController = [[CommonProductListController alloc] init];        
+        self.rebateController.superController = self;
+        self.rebateController.view.frame = self.view.bounds;        
+        self.rebateController.dataLoader = [[ProductRebateDataLoader alloc] init];
+        [self.view addSubview:rebateController.view];                
+    }
+    
+    [self.view bringSubviewToFront:rebateController.view];
+    [rebateController viewDidAppear:NO];
+    
+}
+
 - (void)viewDidLoad
 {
     // set right button
@@ -234,7 +249,7 @@ enum SELECT_POST_TYPE {
 //        [self showAtMePost];
     }
     else{
-//        [self showPrivateMessage];
+        [self showProductByRebate];
     }
 }
 
