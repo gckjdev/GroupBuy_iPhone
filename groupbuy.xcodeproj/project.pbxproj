@@ -353,7 +353,6 @@
 		CA607C1513D5634800E0D0DC /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEA13D5634800E0D0DC /* touxiang.png */; };
 		CA607C1613D5634800E0D0DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEC13D5634800E0D0DC /* InfoPlist.strings */; };
 		CA607C1713D5634800E0D0DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEE13D5634800E0D0DC /* Localizable.strings */; };
-		CA607E4013D563A000E0D0DC /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA607C3B13D5639D00E0D0DC /* libMobClickLibrary.a */; };
 		CADF6B6B13DA99B50060F438 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B6A13DA99B50060F438 /* CommonService.m */; };
 		CADF6B7213DA9B110060F438 /* PPNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B7113DA9B110060F438 /* PPNetworkRequest.m */; };
 		CADF6B7613DA9CD00060F438 /* GroupBuyNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B7513DA9CD00060F438 /* GroupBuyNetworkRequest.m */; };
@@ -383,6 +382,7 @@
 		CADF6BCE13DAB0320060F438 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BCD13DAB0320060F438 /* Product.m */; };
 		CADF6BD113DAB0990060F438 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BD013DAB0990060F438 /* ProductManager.m */; };
 		CADF6BDA13DB00CD0060F438 /* ProductPriceDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */; };
+		CAF550B213DBFF3000ACD519 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF550B013DBFF3000ACD519 /* libMobClickLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1126,8 +1126,6 @@
 		CA607BF313D5634800E0D0DC /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = zh_Hans.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA607BF413D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA607BF513D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CA607C3B13D5639D00E0D0DC /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
-		CA607C3C13D5639D00E0D0DC /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		CADF6B6913DA99B50060F438 /* CommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonService.h; sourceTree = "<group>"; };
 		CADF6B6A13DA99B50060F438 /* CommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonService.m; sourceTree = "<group>"; };
 		CADF6B7013DA9B110060F438 /* PPNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNetworkRequest.h; sourceTree = "<group>"; };
@@ -1185,6 +1183,8 @@
 		CADF6BD013DAB0990060F438 /* ProductManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductManager.m; sourceTree = "<group>"; };
 		CADF6BD813DB00CC0060F438 /* ProductPriceDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductPriceDataLoader.h; sourceTree = "<group>"; };
 		CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductPriceDataLoader.m; sourceTree = "<group>"; };
+		CAF550B013DBFF3000ACD519 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		CAF550B113DBFF3000ACD519 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1214,7 +1214,7 @@
 				CA5D136A13D55A9F003CB28C /* UIKit.framework in Frameworks */,
 				CA5D136C13D55A9F003CB28C /* Foundation.framework in Frameworks */,
 				CA5D136E13D55A9F003CB28C /* CoreGraphics.framework in Frameworks */,
-				CA607E4013D563A000E0D0DC /* libMobClickLibrary.a in Frameworks */,
+				CAF550B213DBFF3000ACD519 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2465,20 +2465,10 @@
 		CA607C1813D5639D00E0D0DC /* 3PP */ = {
 			isa = PBXGroup;
 			children = (
-				CA607C3A13D5639D00E0D0DC /* MobClick */,
+				CAF550AF13DBFF3000ACD519 /* Analytics_iPhone_SDK_1.6_for_iOS3.2.x_iOS4.x */,
 			);
 			name = 3PP;
 			path = ../../3PP;
-			sourceTree = "<group>";
-		};
-		CA607C3A13D5639D00E0D0DC /* MobClick */ = {
-			isa = PBXGroup;
-			children = (
-				CA607C3B13D5639D00E0D0DC /* libMobClickLibrary.a */,
-				CA607C3C13D5639D00E0D0DC /* MobClick.h */,
-			);
-			name = MobClick;
-			path = Analytics_iPhone_SDK_1.6_for_iOS3.2.x_iOS4.x;
 			sourceTree = "<group>";
 		};
 		CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */ = {
@@ -2583,6 +2573,15 @@
 				CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CAF550AF13DBFF3000ACD519 /* Analytics_iPhone_SDK_1.6_for_iOS3.2.x_iOS4.x */ = {
+			isa = PBXGroup;
+			children = (
+				CAF550B013DBFF3000ACD519 /* libMobClickLibrary.a */,
+				CAF550B113DBFF3000ACD519 /* MobClick.h */,
+			);
+			path = Analytics_iPhone_SDK_1.6_for_iOS3.2.x_iOS4.x;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
