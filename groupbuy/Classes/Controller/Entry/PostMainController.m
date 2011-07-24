@@ -170,6 +170,36 @@ enum SELECT_POST_TYPE {
     
 }
 
+- (void)showProductByDistance
+{
+    if (self.distanceController == nil){
+        self.distanceController = [[CommonProductListController alloc] init];        
+        self.distanceController.superController = self;
+        self.distanceController.view.frame = self.view.bounds;        
+        self.distanceController.dataLoader = [[ProductDistanceDataLoader alloc] init];
+        [self.view addSubview:distanceController.view];                
+    }
+    
+    [self.view bringSubviewToFront:distanceController.view];
+    [distanceController viewDidAppear:NO];
+    
+}
+
+- (void)showProductByBought
+{
+    if (self.boughtController == nil){
+        self.boughtController = [[CommonProductListController alloc] init];        
+        self.boughtController.superController = self;
+        self.boughtController.view.frame = self.view.bounds;        
+        self.boughtController.dataLoader = [[ProductBoughtDataLoader alloc] init];
+        [self.view addSubview:boughtController.view];                
+    }
+    
+    [self.view bringSubviewToFront:boughtController.view];
+    [boughtController viewDidAppear:NO];
+    
+}
+
 - (void)viewDidLoad
 {
     // set right button
@@ -234,19 +264,15 @@ enum SELECT_POST_TYPE {
 {
     UISegmentedControl* segControl = sender;
     if (segControl.selectedSegmentIndex == SELECT_BOUGHT){
-//        [self showFollowPost];
+        [self showProductByBought];
     }
     else if (segControl.selectedSegmentIndex == SELECT_CATEGORY){
-        
-        
-//        [self showNearbyPost];
     }
     else if (segControl.selectedSegmentIndex == SELECT_PRICE){
         [self showProductByPrice];
-//        [self showLatestPost];
     }    
     else if (segControl.selectedSegmentIndex == SELECT_DISTANCE){
-//        [self showAtMePost];
+        [self showProductByDistance];
     }
     else{
         [self showProductByRebate];
@@ -263,3 +289,5 @@ enum SELECT_POST_TYPE {
 }
 
 @end
+
+
