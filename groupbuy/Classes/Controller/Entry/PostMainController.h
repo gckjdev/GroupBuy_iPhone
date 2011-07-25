@@ -16,6 +16,7 @@
 @class PrivateMessageUserController;
 @class PublicTimelinePostController;
 @class CommonProductListController;
+@class ProductCategoryController;
 
 @interface PostMainController : PPViewController {
     NearbyPostController    *nearbyPostController;
@@ -28,7 +29,7 @@
     CommonProductListController *rebateController;
     CommonProductListController *boughtController;
     CommonProductListController *distanceController;
-    CommonProductListController *categoryController;
+    ProductCategoryController *categoryController;
     
 }
 
@@ -42,6 +43,6 @@
 @property (nonatomic, retain) CommonProductListController *rebateController;
 @property (nonatomic, retain) CommonProductListController *boughtController;
 @property (nonatomic, retain) CommonProductListController *distanceController;
-@property (nonatomic, retain) CommonProductListController *categoryController;
+@property (nonatomic, retain) ProductCategoryController *categoryController;
 
 @end

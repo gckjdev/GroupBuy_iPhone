@@ -16,6 +16,7 @@
 #import "PublicTimelinePostController.h"
 #import "CommonProductListController.h"
 #import "ProductPriceDataLoader.h"
+#import "ProductCategoryController.h"
 
 enum SELECT_POST_TYPE {
     SELECT_CATEGORY = 0,
@@ -145,8 +146,8 @@ enum SELECT_POST_TYPE {
     if (self.priceController == nil){
         self.priceController = [[CommonProductListController alloc] init];        
         self.priceController.superController = self;
-        self.priceController.view.frame = self.view.bounds;        
         self.priceController.dataLoader = [[ProductPriceDataLoader alloc] init];
+        self.priceController.view.frame = self.view.bounds;        
         [self.view addSubview:priceController.view];                
     }
     
@@ -160,8 +161,8 @@ enum SELECT_POST_TYPE {
     if (self.rebateController == nil){
         self.rebateController = [[CommonProductListController alloc] init];        
         self.rebateController.superController = self;
-        self.rebateController.view.frame = self.view.bounds;        
         self.rebateController.dataLoader = [[ProductRebateDataLoader alloc] init];
+        self.rebateController.view.frame = self.view.bounds;        
         [self.view addSubview:rebateController.view];                
     }
     
@@ -175,8 +176,8 @@ enum SELECT_POST_TYPE {
     if (self.distanceController == nil){
         self.distanceController = [[CommonProductListController alloc] init];        
         self.distanceController.superController = self;
-        self.distanceController.view.frame = self.view.bounds;        
         self.distanceController.dataLoader = [[ProductDistanceDataLoader alloc] init];
+        self.distanceController.view.frame = self.view.bounds;        
         [self.view addSubview:distanceController.view];                
     }
     
@@ -190,13 +191,27 @@ enum SELECT_POST_TYPE {
     if (self.boughtController == nil){
         self.boughtController = [[CommonProductListController alloc] init];        
         self.boughtController.superController = self;
-        self.boughtController.view.frame = self.view.bounds;        
         self.boughtController.dataLoader = [[ProductBoughtDataLoader alloc] init];
+        self.boughtController.view.frame = self.view.bounds;        
         [self.view addSubview:boughtController.view];                
     }
     
     [self.view bringSubviewToFront:boughtController.view];
     [boughtController viewDidAppear:NO];
+    
+}
+
+- (void)showProductByCategory
+{
+    if (self.categoryController == nil){
+        self.categoryController = [[ProductCategoryController alloc] init];        
+        self.categoryController.superController = self;
+        self.categoryController.view.frame = self.view.bounds;        
+        [self.view addSubview:categoryController.view];                
+    }
+    
+    [self.view bringSubviewToFront:categoryController.view];
+    [categoryController viewDidAppear:NO];
     
 }
 
@@ -267,6 +282,7 @@ enum SELECT_POST_TYPE {
         [self showProductByBought];
     }
     else if (segControl.selectedSegmentIndex == SELECT_CATEGORY){
+        [self showProductByCategory];
     }
     else if (segControl.selectedSegmentIndex == SELECT_PRICE){
         [self showProductByPrice];

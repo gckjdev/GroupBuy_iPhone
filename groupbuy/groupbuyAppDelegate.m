@@ -21,6 +21,7 @@
 #import "FeedbackController.h"
 #import "NewMakeFriendPostMainController.h"
 #import "PostMainController.h"
+#import "CommonProductListController.h"
 
 #import "CommonManager.h"
 #import "UserManager.h"
@@ -33,6 +34,8 @@
 #import "PostService.h"
 #import "AppService.h"
 #import "ProductService.h"
+
+#import "ProductPriceDataLoader.h"
 
 #import "GroupBuyNetworkRequest.h"
 
@@ -129,11 +132,12 @@ ProductService* GlobalGetProductService()
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
-//	[UIUtils addViewController:[PostMainController alloc]
-//					 viewTitle:NSLS(@"Follow")				 
-//					 viewImage:@"comment_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
+	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+					 viewTitle:@"历史"				 
+					 viewImage:@"comment_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+    historyController.dataLoader = [[ProductHistoryDataLoader alloc] init];
     
 //	[UIUtils addViewController:[MyInfoController alloc]
 //					 viewTitle:NSLS(@"Setting")				 
