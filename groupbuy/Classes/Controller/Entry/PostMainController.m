@@ -233,7 +233,7 @@ enum SELECT_POST_TYPE {
                     defaultSelectIndex:SELECT_CATEGORY];    
 
     [super viewDidLoad];
-    [self showNearbyPost];
+    [self showProductByCategory];
 }
 
 - (void)viewDidAppear:(BOOL)animated
