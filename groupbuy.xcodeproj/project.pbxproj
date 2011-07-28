@@ -229,7 +229,6 @@
 		CA607A6613D55EE200E0D0DC /* UIHideButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076FF13D55EE200E0D0DC /* UIHideButton.m */; };
 		CA607A6713D55EE200E0D0DC /* UIIconSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60770113D55EE200E0D0DC /* UIIconSelectView.m */; };
 		CA607A6813D55EE200E0D0DC /* UIIconSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60770313D55EE200E0D0DC /* UIIconSelectViewController.m */; };
-		CA607A6913D55EE200E0D0DC /* UINavigationBarExt.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60770513D55EE200E0D0DC /* UINavigationBarExt.m */; };
 		CA607A6A13D55EE200E0D0DC /* UINavigationItemExt.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60770713D55EE200E0D0DC /* UINavigationItemExt.m */; };
 		CA607A6B13D55EE200E0D0DC /* UINavTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60770913D55EE200E0D0DC /* UINavTableViewController.m */; };
 		CA607A6C13D55EE200E0D0DC /* UINumberAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60770B13D55EE200E0D0DC /* UINumberAccessoryView.m */; };
@@ -959,8 +958,6 @@
 		CA60770113D55EE200E0D0DC /* UIIconSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIIconSelectView.m; sourceTree = "<group>"; };
 		CA60770213D55EE200E0D0DC /* UIIconSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIIconSelectViewController.h; sourceTree = "<group>"; };
 		CA60770313D55EE200E0D0DC /* UIIconSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIIconSelectViewController.m; sourceTree = "<group>"; };
-		CA60770413D55EE200E0D0DC /* UINavigationBarExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarExt.h; sourceTree = "<group>"; };
-		CA60770513D55EE200E0D0DC /* UINavigationBarExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarExt.m; sourceTree = "<group>"; };
 		CA60770613D55EE200E0D0DC /* UINavigationItemExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationItemExt.h; sourceTree = "<group>"; };
 		CA60770713D55EE200E0D0DC /* UINavigationItemExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationItemExt.m; sourceTree = "<group>"; };
 		CA60770813D55EE200E0D0DC /* UINavTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavTableViewController.h; sourceTree = "<group>"; };
@@ -2215,8 +2212,6 @@
 				CA60770113D55EE200E0D0DC /* UIIconSelectView.m */,
 				CA60770213D55EE200E0D0DC /* UIIconSelectViewController.h */,
 				CA60770313D55EE200E0D0DC /* UIIconSelectViewController.m */,
-				CA60770413D55EE200E0D0DC /* UINavigationBarExt.h */,
-				CA60770513D55EE200E0D0DC /* UINavigationBarExt.m */,
 				CA60770613D55EE200E0D0DC /* UINavigationItemExt.h */,
 				CA60770713D55EE200E0D0DC /* UINavigationItemExt.m */,
 				CA60770813D55EE200E0D0DC /* UINavTableViewController.h */,
@@ -3190,7 +3185,6 @@
 				CA607A6613D55EE200E0D0DC /* UIHideButton.m in Sources */,
 				CA607A6713D55EE200E0D0DC /* UIIconSelectView.m in Sources */,
 				CA607A6813D55EE200E0D0DC /* UIIconSelectViewController.m in Sources */,
-				CA607A6913D55EE200E0D0DC /* UINavigationBarExt.m in Sources */,
 				CA607A6A13D55EE200E0D0DC /* UINavigationItemExt.m in Sources */,
 				CA607A6B13D55EE200E0D0DC /* UINavTableViewController.m in Sources */,
 				CA607A6C13D55EE200E0D0DC /* UINumberAccessoryView.m in Sources */,

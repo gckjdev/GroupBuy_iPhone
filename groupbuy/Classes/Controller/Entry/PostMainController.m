@@ -19,7 +19,8 @@
 #import "ProductCategoryController.h"
 
 enum SELECT_POST_TYPE {
-    SELECT_CATEGORY = 0,
+    SELECT_TODAY = 0,
+    SELECT_CATEGORY,
     SELECT_PRICE,
     SELECT_REBATE,
     SELECT_BOUGHT,                  // not used, reserved
@@ -38,7 +39,7 @@ enum SELECT_POST_TYPE {
 @synthesize distanceController;
 @synthesize rebateController;
 @synthesize boughtController;
-
+@synthesize todayController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,6 +62,7 @@ enum SELECT_POST_TYPE {
     [distanceController release];
     [boughtController release];
     [rebateController release];
+    [todayController release];
     [super dealloc];
 }
 
@@ -215,6 +217,21 @@ enum SELECT_POST_TYPE {
     
 }
 
+- (void)showProductByToday
+{
+    if (self.todayController == nil){
+        self.todayController = [[ProductCategoryController alloc] init];        
+        self.todayController.superController = self;
+        self.todayController.todayOnly = YES;
+        self.todayController.view.frame = self.view.bounds;        
+        [self.view addSubview:todayController.view];                
+    }
+    
+    [self.view bringSubviewToFront:todayController.view];
+    [todayController viewDidAppear:NO];
+    
+}
+
 - (void)viewDidLoad
 {
     // set right button
@@ -224,16 +241,17 @@ enum SELECT_POST_TYPE {
     
     [self createNavigationTitleToolbar:
                     [NSArray arrayWithObjects:
-                     @"分类",
+                     @"今日",
+                     @"所有",
                      @"最便宜",
                      @"最划算",
                      @"最热销",
                      @"最方便",
                      nil]
-                    defaultSelectIndex:SELECT_CATEGORY];    
+                    defaultSelectIndex:0];    
 
     [super viewDidLoad];
-    [self showProductByCategory];
+    [self showProductByToday];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -280,6 +298,9 @@ enum SELECT_POST_TYPE {
     UISegmentedControl* segControl = sender;
     if (segControl.selectedSegmentIndex == SELECT_BOUGHT){
         [self showProductByBought];
+    }
+    else if (segControl.selectedSegmentIndex == SELECT_TODAY){
+        [self showProductByToday];
     }
     else if (segControl.selectedSegmentIndex == SELECT_CATEGORY){
         [self showProductByCategory];

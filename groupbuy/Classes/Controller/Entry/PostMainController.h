@@ -30,6 +30,7 @@
     CommonProductListController *boughtController;
     CommonProductListController *distanceController;
     ProductCategoryController *categoryController;
+    ProductCategoryController *todayController;
     
 }
 
@@ -44,5 +45,7 @@
 @property (nonatomic, retain) CommonProductListController *boughtController;
 @property (nonatomic, retain) CommonProductListController *distanceController;
 @property (nonatomic, retain) ProductCategoryController *categoryController;
+@property (nonatomic, retain) ProductCategoryController *todayController;
+
 
 @end
