@@ -15,6 +15,8 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		CA0AAEBE13E3BA840050F143 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0AAEBC13E3BA840050F143 /* background.png */; };
+		CA0AAEBF13E3BA840050F143 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0AAEBD13E3BA840050F143 /* background@2x.png */; };
 		CA1A9D7D13DD4E1F0072926A /* ProductDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1A9D7B13DD4E1F0072926A /* ProductDetailController.m */; };
 		CA1A9D7E13DD4E1F0072926A /* ProductDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D7C13DD4E1F0072926A /* ProductDetailController.xib */; };
 		CA1A9D8313DD68790072926A /* PPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1A9D8113DD68790072926A /* PPWebViewController.m */; };
@@ -579,6 +581,8 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CA0AAEBC13E3BA840050F143 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		CA0AAEBD13E3BA840050F143 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		CA1A9D7A13DD4E1F0072926A /* ProductDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailController.h; sourceTree = "<group>"; };
 		CA1A9D7B13DD4E1F0072926A /* ProductDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailController.m; sourceTree = "<group>"; };
 		CA1A9D7C13DD4E1F0072926A /* ProductDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailController.xib; sourceTree = "<group>"; };
@@ -1324,6 +1328,15 @@
 				CA60718013D55E4300E0D0DC /* UIUnitTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CA0AAEBB13E3BA830050F143 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CA0AAEBC13E3BA840050F143 /* background.png */,
+				CA0AAEBD13E3BA840050F143 /* background@2x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		CA1A9D7F13DD68790072926A /* WebView */ = {
@@ -2514,6 +2527,7 @@
 		CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */ = {
 			isa = PBXGroup;
 			children = (
+				CA0AAEBB13E3BA830050F143 /* Resource */,
 				CADF6BBB13DAA4810060F438 /* Controller */,
 				CADF6B6D13DA9ACB0060F438 /* Model */,
 				CADF6B6E13DA9ACB0060F438 /* Network */,
@@ -3008,6 +3022,8 @@
 				CAE655D213DEBCB200182C79 /* reload_24.png in Resources */,
 				CAE655D313DEBCB200182C79 /* reload_48.png in Resources */,
 				CAE655D413DEBCB200182C79 /* reload_64.png in Resources */,
+				CA0AAEBE13E3BA840050F143 /* background.png in Resources */,
+				CA0AAEBF13E3BA840050F143 /* background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
