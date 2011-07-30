@@ -3500,8 +3500,6 @@
 				INFOPLIST_FILE = "groupbuy/groupbuy-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/3PP/Analytics_iPhone_SDK_1.6_for_iOS3.2.x_iOS4.x,
-					/3PP/MobClick,
 					"\"$(SRCROOT)/../Common_Iphone/MobClick\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3519,8 +3517,6 @@
 				INFOPLIST_FILE = "groupbuy/groupbuy-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/3PP/Analytics_iPhone_SDK_1.6_for_iOS3.2.x_iOS4.x,
-					/3PP/MobClick,
 					"\"$(SRCROOT)/../Common_Iphone/MobClick\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
