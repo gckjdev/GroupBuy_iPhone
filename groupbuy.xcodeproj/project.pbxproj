@@ -23,6 +23,7 @@
 		CA1A9D8413DD68790072926A /* PPWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D8213DD68790072926A /* PPWebViewController.xib */; };
 		CA1A9D8813DD6D420072926A /* ProductCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1A9D8613DD6D410072926A /* ProductCategoryController.m */; };
 		CA1A9D8913DD6D420072926A /* ProductCategoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D8713DD6D420072926A /* ProductCategoryController.xib */; };
+		CA3E547013E530240013C33C /* GroupBuyReport.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3E546F13E530240013C33C /* GroupBuyReport.m */; };
 		CA55024C13D9BAAB0016DDD6 /* ProductMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA55024A13D9BAAA0016DDD6 /* ProductMainController.m */; };
 		CA55024D13D9BAAB0016DDD6 /* ProductMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA55024B13D9BAAA0016DDD6 /* ProductMainController.xib */; };
 		CA5D136A13D55A9F003CB28C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D136913D55A9F003CB28C /* UIKit.framework */; };
@@ -599,6 +600,8 @@
 		CA1A9D8513DD6D410072926A /* ProductCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategoryController.h; sourceTree = "<group>"; };
 		CA1A9D8613DD6D410072926A /* ProductCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategoryController.m; sourceTree = "<group>"; };
 		CA1A9D8713DD6D420072926A /* ProductCategoryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCategoryController.xib; sourceTree = "<group>"; };
+		CA3E546E13E530240013C33C /* GroupBuyReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyReport.h; sourceTree = "<group>"; };
+		CA3E546F13E530240013C33C /* GroupBuyReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuyReport.m; sourceTree = "<group>"; };
 		CA55024913D9BAAA0016DDD6 /* ProductMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductMainController.h; sourceTree = "<group>"; };
 		CA55024A13D9BAAA0016DDD6 /* ProductMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductMainController.m; sourceTree = "<group>"; };
 		CA55024B13D9BAAA0016DDD6 /* ProductMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductMainController.xib; sourceTree = "<group>"; };
@@ -1366,6 +1369,15 @@
 				CA1A9D8213DD68790072926A /* PPWebViewController.xib */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		CA3E546D13E530010013C33C /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E546E13E530240013C33C /* GroupBuyReport.h */,
+				CA3E546F13E530240013C33C /* GroupBuyReport.m */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 		CA5D135A13D55A9F003CB28C = {
@@ -2560,6 +2572,7 @@
 		CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */ = {
 			isa = PBXGroup;
 			children = (
+				CA3E546D13E530010013C33C /* Report */,
 				CA0AAEBB13E3BA830050F143 /* Resource */,
 				CADF6BBB13DAA4810060F438 /* Controller */,
 				CADF6B6D13DA9ACB0060F438 /* Model */,
@@ -3323,6 +3336,7 @@
 				CA1A9D8813DD6D420072926A /* ProductCategoryController.m in Sources */,
 				CA9204CA13E4FB7D00DBA17C /* CityPickerManager.m in Sources */,
 				CA9204CB13E4FB7D00DBA17C /* CityPickerViewController.m in Sources */,
+				CA3E547013E530240013C33C /* GroupBuyReport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

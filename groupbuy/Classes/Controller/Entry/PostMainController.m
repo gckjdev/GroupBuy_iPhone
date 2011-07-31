@@ -17,6 +17,7 @@
 #import "CommonProductListController.h"
 #import "ProductPriceDataLoader.h"
 #import "ProductCategoryController.h"
+#import "GroupBuyReport.h"
 
 enum SELECT_POST_TYPE {
     SELECT_TODAY = 0,
@@ -295,7 +296,11 @@ enum SELECT_POST_TYPE {
 
 - (void)clickSegControl:(id)sender
 {
+    
     UISegmentedControl* segControl = sender;
+    
+    [GroupBuyReport reportSegControlClick:segControl];
+
     if (segControl.selectedSegmentIndex == SELECT_BOUGHT){
         [self showProductByBought];
     }
