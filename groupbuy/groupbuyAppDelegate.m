@@ -39,6 +39,8 @@
 
 #import "GroupBuyNetworkRequest.h"
 
+#import "CityPickerViewController.h"
+
 #define kDbFileName			@"AppDB"
 
 NSString* GlobalGetServerURL()
@@ -348,6 +350,14 @@ ProductService* GlobalGetProductService()
 - (void)checkDeviceResult:(int)result
 {
     [self addMainView];
+
+    NSString *defaultCity = [locationService getDefaultCity];    
+    if (defaultCity == nil) {
+        CityPickerViewController *cityController = [[CityPickerViewController alloc]initWithCityName:defaultCity hasLeftButton:NO];
+        cityController.delegate = locationService;
+        [[[tabBarController viewControllers] objectAtIndex:0] pushViewController:cityController animated:YES];  
+        [cityController release];
+    }
 }
 
 - (void)loginUserResult:(int)result
