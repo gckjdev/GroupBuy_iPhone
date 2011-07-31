@@ -10,7 +10,6 @@
 #import "groupbuyAppDelegate.h"
 #import "PlaceSNSService.h"
 #import "TextEditorViewController.h"
-#import "CityPickerViewController.h"
 enum{
     ACTION_SEND_APPLINK,
     ACTION_SNS_LIKE
@@ -21,7 +20,6 @@ enum{
 @synthesize sendAppLinkButton;
 @synthesize snsLikeLabel;
 @synthesize snsLikeButton;
-@synthesize cityPickerButton;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -41,7 +39,6 @@ enum{
     // TODO GUI localization
     
     [super viewDidLoad];
-    selectedCity = @"广州";
 }
 
 /*
@@ -64,7 +61,6 @@ enum{
     [self setSendAppLinkButton:nil];
     [self setSnsLikeLabel:nil];
     [self setSnsLikeButton:nil];
-    [self setCityPickerButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -76,7 +72,6 @@ enum{
     [sendAppLinkButton release];
     [snsLikeLabel release];
     [snsLikeButton release];
-    [cityPickerButton release];
     [super dealloc];
 }
 
