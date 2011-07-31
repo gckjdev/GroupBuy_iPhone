@@ -10,7 +10,6 @@
 #import "groupbuyAppDelegate.h"
 #import "PlaceSNSService.h"
 #import "TextEditorViewController.h"
-
 enum{
     ACTION_SEND_APPLINK,
     ACTION_SNS_LIKE
@@ -167,6 +166,8 @@ enum{
     }
 
 }
+
+
 
 
 

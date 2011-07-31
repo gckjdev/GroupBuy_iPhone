@@ -360,6 +360,11 @@
 		CA607C1513D5634800E0D0DC /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEA13D5634800E0D0DC /* touxiang.png */; };
 		CA607C1613D5634800E0D0DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEC13D5634800E0D0DC /* InfoPlist.strings */; };
 		CA607C1713D5634800E0D0DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEE13D5634800E0D0DC /* Localizable.strings */; };
+		CA9204C913E4FB7D00DBA17C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C213E4FB7D00DBA17C /* city.plist */; };
+		CA9204CA13E4FB7D00DBA17C /* CityPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9204C413E4FB7D00DBA17C /* CityPickerManager.m */; };
+		CA9204CB13E4FB7D00DBA17C /* CityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9204C613E4FB7D00DBA17C /* CityPickerViewController.m */; };
+		CA9204CC13E4FB7D00DBA17C /* CityPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C713E4FB7D00DBA17C /* CityPickerViewController.xib */; };
+		CA9204CD13E4FB7D00DBA17C /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C813E4FB7D00DBA17C /* province.plist */; };
 		CADDC6D613E438D70030F9FC /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D413E438D70030F9FC /* button.png */; };
 		CADDC6D713E438D70030F9FC /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D513E438D70030F9FC /* button@2x.png */; };
 		CADF6B6B13DA99B50060F438 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B6A13DA99B50060F438 /* CommonService.m */; };
@@ -1153,6 +1158,13 @@
 		CA607BF313D5634800E0D0DC /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = zh_Hans.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA607BF413D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA607BF513D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CA9204C213E4FB7D00DBA17C /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = city.plist; sourceTree = "<group>"; };
+		CA9204C313E4FB7D00DBA17C /* CityPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerManager.h; sourceTree = "<group>"; };
+		CA9204C413E4FB7D00DBA17C /* CityPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerManager.m; sourceTree = "<group>"; };
+		CA9204C513E4FB7D00DBA17C /* CityPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerViewController.h; sourceTree = "<group>"; };
+		CA9204C613E4FB7D00DBA17C /* CityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerViewController.m; sourceTree = "<group>"; };
+		CA9204C713E4FB7D00DBA17C /* CityPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityPickerViewController.xib; sourceTree = "<group>"; };
+		CA9204C813E4FB7D00DBA17C /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = province.plist; sourceTree = "<group>"; };
 		CADDC6D413E438D70030F9FC /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		CADDC6D513E438D70030F9FC /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		CADF6B6913DA99B50060F438 /* CommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonService.h; sourceTree = "<group>"; };
@@ -1529,6 +1541,7 @@
 		CA60753013D55EE200E0D0DC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CA9204C113E4FB7D00DBA17C /* CityPicker */,
 				CA60753113D55EE200E0D0DC /* About */,
 				CA60754C13D55EE200E0D0DC /* Contact */,
 				CA60755013D55EE200E0D0DC /* CountryPicker */,
@@ -2530,6 +2543,20 @@
 			path = ../../3PP;
 			sourceTree = "<group>";
 		};
+		CA9204C113E4FB7D00DBA17C /* CityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CA9204C213E4FB7D00DBA17C /* city.plist */,
+				CA9204C313E4FB7D00DBA17C /* CityPickerManager.h */,
+				CA9204C413E4FB7D00DBA17C /* CityPickerManager.m */,
+				CA9204C513E4FB7D00DBA17C /* CityPickerViewController.h */,
+				CA9204C613E4FB7D00DBA17C /* CityPickerViewController.m */,
+				CA9204C713E4FB7D00DBA17C /* CityPickerViewController.xib */,
+				CA9204C813E4FB7D00DBA17C /* province.plist */,
+			);
+			path = CityPicker;
+			sourceTree = "<group>";
+		};
 		CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */ = {
 			isa = PBXGroup;
 			children = (
@@ -3032,6 +3059,9 @@
 				CA0AAEBF13E3BA840050F143 /* background@2x.png in Resources */,
 				CADDC6D613E438D70030F9FC /* button.png in Resources */,
 				CADDC6D713E438D70030F9FC /* button@2x.png in Resources */,
+				CA9204C913E4FB7D00DBA17C /* city.plist in Resources */,
+				CA9204CC13E4FB7D00DBA17C /* CityPickerViewController.xib in Resources */,
+				CA9204CD13E4FB7D00DBA17C /* province.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3291,6 +3321,8 @@
 				CA1A9D7D13DD4E1F0072926A /* ProductDetailController.m in Sources */,
 				CA1A9D8313DD68790072926A /* PPWebViewController.m in Sources */,
 				CA1A9D8813DD6D420072926A /* ProductCategoryController.m in Sources */,
+				CA9204CA13E4FB7D00DBA17C /* CityPickerManager.m in Sources */,
+				CA9204CB13E4FB7D00DBA17C /* CityPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
