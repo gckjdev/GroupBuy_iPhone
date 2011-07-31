@@ -34,8 +34,10 @@
 #import "PostService.h"
 #import "AppService.h"
 #import "ProductService.h"
+#import "ProductManager.h"
 
 #import "ProductPriceDataLoader.h"
+#import "GroupBuyReport.h"
 
 #import "GroupBuyNetworkRequest.h"
 
@@ -271,6 +273,12 @@ ProductService* GlobalGetProductService()
 	}	
 }
 
+- (void)cleanUpDeleteData
+{
+    int timeStamp = time(0) - 3600; // before 1 hour
+    [ProductManager cleanData:timeStamp];
+}
+
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
@@ -294,7 +302,7 @@ ProductService* GlobalGetProductService()
     
     NSLog(@"Background Task Remaining Time = %f", [application backgroundTimeRemaining]);
     if (UIBackgroundTaskInvalid != backgroundTask) {
-        [CommonManager cleanUpDeleteData];
+        [self cleanUpDeleteData];
     }		
 }
 
@@ -455,12 +463,11 @@ ProductService* GlobalGetProductService()
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController 
 {
-	
+    [GroupBuyReport reportTabBarControllerClick:self.tabBarController];
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed 
-{
-    
+{    
 }
 
 
