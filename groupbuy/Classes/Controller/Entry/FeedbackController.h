@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PPViewController.h"
 
-@interface FeedbackController : PPViewController {
+@interface FeedbackController : PPViewController <UIActionSheetDelegate> {
  
     UILabel *feedbackLabel;
     UIButton *feedbackButton;
@@ -18,5 +18,5 @@
 @property (nonatomic, retain) IBOutlet UIButton *feedbackButton;
 
 - (IBAction)clickFeedback:(id)sender;
-
+- (IBAction)clickSendAppLink:(id)sender;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "FeedbackController.h"
-
+#import "groupbuyAppDelegate.h"
 
 @implementation FeedbackController
 @synthesize feedbackLabel;
@@ -27,6 +27,9 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+    
+    [self setBackgroundImageName:@"background.png"];
+    
 	feedbackLabel.text = NSLS(@"kFeedbackLabel");
 	[feedbackButton setTitle:NSLS(@"kFeedbackButton") forState:UIControlStateNormal];		
 
@@ -72,6 +75,45 @@
 				 body:NSLS(@"") 
 			   isHTML:NO 
 			 delegate:self];
+}
+
+- (IBAction)clickSendAppLink:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:NSLS(@"Cancel") destructiveButtonTitle:nil otherButtonTitles:NSLS(@"kSendBySMS"), NSLS(@"kSendByEmail"), nil];
+    
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+    [actionSheet release];
+}
+
+- (void)handleSendAppLinkClick:(NSInteger)buttonIndex
+{
+    NSString* appLink = [UIUtils getAppLink:kAppId];
+    NSString* body = [NSString stringWithFormat:NSLS(@"kSendAppLinkBody"), appLink];
+    NSString* subject = NSLS(@"kSendAppLinkSubject");
+    
+    enum{
+        BUTTON_SEND_BY_SMS,
+        BUTTON_SEND_BY_EMAIL,
+        BUTTON_CANCEL
+    };
+    
+    switch (buttonIndex) {
+        case BUTTON_SEND_BY_SMS:
+            [self sendSms:@"" body:body];
+            break;
+            
+        case BUTTON_SEND_BY_EMAIL:
+            [self sendEmailTo:nil ccRecipients:nil bccRecipients:nil subject:subject body:body isHTML:NO delegate:self];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self handleSendAppLinkClick:buttonIndex];
 }
 
 @end
