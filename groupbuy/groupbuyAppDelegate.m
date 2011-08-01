@@ -36,6 +36,7 @@
 #import "AppService.h"
 #import "ProductService.h"
 #import "ProductManager.h"
+#import "GroupBuyUserService.h"
 
 #import "ProductPriceDataLoader.h"
 #import "GroupBuyReport.h"
@@ -218,7 +219,7 @@ ProductService* GlobalGetProductService()
 
 - (void)showViewByUserStatus
 {
-    [userService checkDevice];    
+    [userService groupBuyCheckDevice];    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
@@ -250,9 +251,6 @@ ProductService* GlobalGetProductService()
     
 	// Ask For Review
 	self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
-    
-    // For Test
-    // [GroupBuyNetworkRequest findAllProductsWithPrice:SERVER_URL appId:@"GroupBuy" startOffset:0 city:@"北京"];
     
     return YES;
 }

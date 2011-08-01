@@ -361,6 +361,7 @@
 		CA607C1513D5634800E0D0DC /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEA13D5634800E0D0DC /* touxiang.png */; };
 		CA607C1613D5634800E0D0DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEC13D5634800E0D0DC /* InfoPlist.strings */; };
 		CA607C1713D5634800E0D0DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEE13D5634800E0D0DC /* Localizable.strings */; };
+		CA7C0B1413E6B3B5001121C3 /* GroupBuyUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C0B1313E6B3B5001121C3 /* GroupBuyUserService.m */; };
 		CA9204C913E4FB7D00DBA17C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C213E4FB7D00DBA17C /* city.plist */; };
 		CA9204CA13E4FB7D00DBA17C /* CityPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9204C413E4FB7D00DBA17C /* CityPickerManager.m */; };
 		CA9204CB13E4FB7D00DBA17C /* CityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9204C613E4FB7D00DBA17C /* CityPickerViewController.m */; };
@@ -1173,6 +1174,8 @@
 		CA607BF313D5634800E0D0DC /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = zh_Hans.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA607BF413D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA607BF513D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CA7C0B1213E6B3B5001121C3 /* GroupBuyUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyUserService.h; sourceTree = "<group>"; };
+		CA7C0B1313E6B3B5001121C3 /* GroupBuyUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuyUserService.m; sourceTree = "<group>"; };
 		CA9204C213E4FB7D00DBA17C /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = city.plist; sourceTree = "<group>"; };
 		CA9204C313E4FB7D00DBA17C /* CityPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerManager.h; sourceTree = "<group>"; };
 		CA9204C413E4FB7D00DBA17C /* CityPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerManager.m; sourceTree = "<group>"; };
@@ -2665,6 +2668,8 @@
 			children = (
 				CADF6B7B13DAA0A90060F438 /* ProductService.h */,
 				CADF6B7C13DAA0A90060F438 /* ProductService.m */,
+				CA7C0B1213E6B3B5001121C3 /* GroupBuyUserService.h */,
+				CA7C0B1313E6B3B5001121C3 /* GroupBuyUserService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -3405,6 +3410,7 @@
 				CADE8F3513E6789B00B48DB8 /* AnnotationPin.m in Sources */,
 				CADE8F3613E6789B00B48DB8 /* ShowAddressViewController.m in Sources */,
 				CA08742013E679F100F808E3 /* TelPickerViewController.m in Sources */,
+				CA7C0B1413E6B3B5001121C3 /* GroupBuyUserService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
