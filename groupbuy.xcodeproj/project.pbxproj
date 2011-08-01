@@ -15,6 +15,8 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		CA08742013E679F100F808E3 /* TelPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA08741E13E679F100F808E3 /* TelPickerViewController.m */; };
+		CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA08741F13E679F100F808E3 /* TelPickerViewController.xib */; };
 		CA0AAEBE13E3BA840050F143 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0AAEBC13E3BA840050F143 /* background.png */; };
 		CA0AAEBF13E3BA840050F143 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0AAEBD13E3BA840050F143 /* background@2x.png */; };
 		CA1A9D7D13DD4E1F0072926A /* ProductDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1A9D7B13DD4E1F0072926A /* ProductDetailController.m */; };
@@ -374,6 +376,9 @@
 		CAA01A5213E658890002986A /* home_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4C13E658890002986A /* home_24@2x.png */; };
 		CADDC6D613E438D70030F9FC /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D413E438D70030F9FC /* button.png */; };
 		CADDC6D713E438D70030F9FC /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D513E438D70030F9FC /* button@2x.png */; };
+		CADE8F3513E6789B00B48DB8 /* AnnotationPin.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE8F3113E6789B00B48DB8 /* AnnotationPin.m */; };
+		CADE8F3613E6789B00B48DB8 /* ShowAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE8F3313E6789B00B48DB8 /* ShowAddressViewController.m */; };
+		CADE8F3713E6789B00B48DB8 /* ShowAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADE8F3413E6789B00B48DB8 /* ShowAddressViewController.xib */; };
 		CADF6B6B13DA99B50060F438 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B6A13DA99B50060F438 /* CommonService.m */; };
 		CADF6B7213DA9B110060F438 /* PPNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B7113DA9B110060F438 /* PPNetworkRequest.m */; };
 		CADF6B7613DA9CD00060F438 /* GroupBuyNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6B7513DA9CD00060F438 /* GroupBuyNetworkRequest.m */; };
@@ -595,6 +600,9 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CA08741D13E679F100F808E3 /* TelPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelPickerViewController.h; sourceTree = "<group>"; };
+		CA08741E13E679F100F808E3 /* TelPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelPickerViewController.m; sourceTree = "<group>"; };
+		CA08741F13E679F100F808E3 /* TelPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelPickerViewController.xib; sourceTree = "<group>"; };
 		CA0AAEBC13E3BA840050F143 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		CA0AAEBD13E3BA840050F143 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		CA1A9D7A13DD4E1F0072926A /* ProductDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailController.h; sourceTree = "<group>"; };
@@ -1183,6 +1191,11 @@
 		CAA01A4C13E658890002986A /* home_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_24@2x.png"; sourceTree = "<group>"; };
 		CADDC6D413E438D70030F9FC /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		CADDC6D513E438D70030F9FC /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
+		CADE8F3013E6789B00B48DB8 /* AnnotationPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationPin.h; sourceTree = "<group>"; };
+		CADE8F3113E6789B00B48DB8 /* AnnotationPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationPin.m; sourceTree = "<group>"; };
+		CADE8F3213E6789B00B48DB8 /* ShowAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAddressViewController.h; sourceTree = "<group>"; };
+		CADE8F3313E6789B00B48DB8 /* ShowAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAddressViewController.m; sourceTree = "<group>"; };
+		CADE8F3413E6789B00B48DB8 /* ShowAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowAddressViewController.xib; sourceTree = "<group>"; };
 		CADF6B6913DA99B50060F438 /* CommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonService.h; sourceTree = "<group>"; };
 		CADF6B6A13DA99B50060F438 /* CommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonService.m; sourceTree = "<group>"; };
 		CADF6B7013DA9B110060F438 /* PPNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNetworkRequest.h; sourceTree = "<group>"; };
@@ -1360,6 +1373,16 @@
 				CA60718013D55E4300E0D0DC /* UIUnitTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CA08741C13E679F100F808E3 /* TelPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CA08741D13E679F100F808E3 /* TelPickerViewController.h */,
+				CA08741E13E679F100F808E3 /* TelPickerViewController.m */,
+				CA08741F13E679F100F808E3 /* TelPickerViewController.xib */,
+			);
+			path = TelPicker;
 			sourceTree = "<group>";
 		};
 		CA0AAEBB13E3BA830050F143 /* Resource */ = {
@@ -1566,6 +1589,8 @@
 		CA60753013D55EE200E0D0DC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CA08741C13E679F100F808E3 /* TelPicker */,
+				CADE8F2F13E6789B00B48DB8 /* ShowAddress */,
 				CA9204C113E4FB7D00DBA17C /* CityPicker */,
 				CA60753113D55EE200E0D0DC /* About */,
 				CA60754C13D55EE200E0D0DC /* Contact */,
@@ -2589,6 +2614,18 @@
 			path = CityPicker;
 			sourceTree = "<group>";
 		};
+		CADE8F2F13E6789B00B48DB8 /* ShowAddress */ = {
+			isa = PBXGroup;
+			children = (
+				CADE8F3013E6789B00B48DB8 /* AnnotationPin.h */,
+				CADE8F3113E6789B00B48DB8 /* AnnotationPin.m */,
+				CADE8F3213E6789B00B48DB8 /* ShowAddressViewController.h */,
+				CADE8F3313E6789B00B48DB8 /* ShowAddressViewController.m */,
+				CADE8F3413E6789B00B48DB8 /* ShowAddressViewController.xib */,
+			);
+			path = ShowAddress;
+			sourceTree = "<group>";
+		};
 		CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */ = {
 			isa = PBXGroup;
 			children = (
@@ -3100,6 +3137,8 @@
 				CAA01A5013E658890002986A /* gear_24@2x.png in Resources */,
 				CAA01A5113E658890002986A /* home_24.png in Resources */,
 				CAA01A5213E658890002986A /* home_24@2x.png in Resources */,
+				CADE8F3713E6789B00B48DB8 /* ShowAddressViewController.xib in Resources */,
+				CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3363,6 +3402,9 @@
 				CA9204CB13E4FB7D00DBA17C /* CityPickerViewController.m in Sources */,
 				CA3E547013E530240013C33C /* GroupBuyReport.m in Sources */,
 				CAA01A4513E64D640002986A /* SettingsController.m in Sources */,
+				CADE8F3513E6789B00B48DB8 /* AnnotationPin.m in Sources */,
+				CADE8F3613E6789B00B48DB8 /* ShowAddressViewController.m in Sources */,
+				CA08742013E679F100F808E3 /* TelPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
