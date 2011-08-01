@@ -15,6 +15,7 @@
 #import "PPViewController.h"
 #import "TestPPViewController.h"
 #import "SelectItemViewController.h"
+#import "SettingsController.h"
 
 #import "MyInfoController.h"
 #import "InviteController.h"
@@ -96,7 +97,7 @@ PlaceSNSService* GlobalGetSNSService()
 
 NSString* GlobalGetPlaceAppId()
 {
-    return @"FRIEND";
+    return @"GROUPBUY";
 }
 
 ProductService* GlobalGetProductService()
@@ -132,13 +133,13 @@ ProductService* GlobalGetProductService()
     
 	[UIUtils addViewController:[PostMainController alloc]
 					 viewTitle:@"首页"
-					 viewImage:@"app_globe_24.png"
+					 viewImage:@"home_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 					 viewTitle:@"历史"				 
-					 viewImage:@"comment_24.png"
+					 viewImage:@"folder_bookmark_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
     historyController.dataLoader = [[ProductHistoryDataLoader alloc] init];
@@ -149,14 +150,14 @@ ProductService* GlobalGetProductService()
 //			  hasNavController:YES			
 //			   viewControllers:controllers];	
     
-	[UIUtils addViewController:[InviteController alloc]
-					 viewTitle:NSLS(@"Invite")				 
-					 viewImage:@"mail_24.png"
+	[UIUtils addViewController:[SettingsController alloc]
+					 viewTitle:@"设置"				 
+					 viewImage:@"gear_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
     
 	[UIUtils addViewController:[FeedbackController alloc]
-					 viewTitle:NSLS(@"Feedback")				 
+					 viewTitle:@"反馈"
 					 viewImage:@"help_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
