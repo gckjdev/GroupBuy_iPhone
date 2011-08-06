@@ -3606,7 +3606,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../../three20",
 					../three20/Build/Products/three20,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphonesimulator4.1;
 			};
