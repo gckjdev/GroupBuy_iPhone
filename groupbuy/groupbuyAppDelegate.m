@@ -17,6 +17,7 @@
 #import "SelectItemViewController.h"
 #import "SettingsController.h"
 
+#import "SearchProductController.h"
 #import "MyInfoController.h"
 #import "InviteController.h"
 #import "FeedbackController.h"
@@ -150,9 +151,15 @@ ProductService* GlobalGetProductService()
 //					 viewImage:@"man_24.png"
 //			  hasNavController:YES			
 //			   viewControllers:controllers];	
-    
-	[UIUtils addViewController:[SettingsController alloc]
+
+    [UIUtils addViewController:[SettingsController alloc]
 					 viewTitle:@"设置"				 
+					 viewImage:@"gear_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+    
+	[UIUtils addViewController:[SearchProductController alloc]
+					 viewTitle:@"搜索"				 
 					 viewImage:@"gear_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
