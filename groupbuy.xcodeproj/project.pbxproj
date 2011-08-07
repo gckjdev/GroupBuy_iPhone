@@ -15,6 +15,9 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		88770BBB13EE8B5100835E52 /* HotKeyword.m in Sources */ = {isa = PBXBuildFile; fileRef = 88770BBA13EE8B5100835E52 /* HotKeyword.m */; };
+		88770BC013EE8C6C00835E52 /* HotKeywordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88770BBF13EE8C6C00835E52 /* HotKeywordManager.m */; };
+		8899B5ED13EE40B700D039A8 /* libMSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8899B5DF13EE40B700D039A8 /* libMSC.a */; };
 		CA08742013E679F100F808E3 /* TelPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA08741E13E679F100F808E3 /* TelPickerViewController.m */; };
 		CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA08741F13E679F100F808E3 /* TelPickerViewController.xib */; };
 		CA0AAEBE13E3BA840050F143 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0AAEBC13E3BA840050F143 /* background.png */; };
@@ -604,6 +607,20 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		88770BB913EE8B4F00835E52 /* HotKeyword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotKeyword.h; path = ../Common_Iphone/PlaceCommon/Model/HotKeyword.h; sourceTree = SOURCE_ROOT; };
+		88770BBA13EE8B5100835E52 /* HotKeyword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotKeyword.m; path = ../Common_Iphone/PlaceCommon/Model/HotKeyword.m; sourceTree = SOURCE_ROOT; };
+		88770BBE13EE8C6C00835E52 /* HotKeywordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKeywordManager.h; sourceTree = "<group>"; };
+		88770BBF13EE8C6C00835E52 /* HotKeywordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKeywordManager.m; sourceTree = "<group>"; };
+		8899B5DF13EE40B700D039A8 /* libMSC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMSC.a; sourceTree = "<group>"; };
+		8899B5E413EE40B700D039A8 /* iFly_TTS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iFly_TTS.h; sourceTree = "<group>"; };
+		8899B5E513EE40B700D039A8 /* isr_ep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isr_ep.h; sourceTree = "<group>"; };
+		8899B5E613EE40B700D039A8 /* isr_errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isr_errors.h; sourceTree = "<group>"; };
+		8899B5E713EE40B700D039A8 /* isr_rec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isr_rec.h; sourceTree = "<group>"; };
+		8899B5E813EE40B700D039A8 /* isr_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isr_types.h; sourceTree = "<group>"; };
+		8899B5E913EE40B700D039A8 /* msp_errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msp_errors.h; sourceTree = "<group>"; };
+		8899B5EA13EE40B700D039A8 /* qisr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qisr.h; sourceTree = "<group>"; };
+		8899B5EB13EE40B700D039A8 /* qtts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qtts.h; sourceTree = "<group>"; };
+		8899B5EC13EE40B700D039A8 /* TTSErrcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSErrcode.h; sourceTree = "<group>"; };
 		CA08741D13E679F100F808E3 /* TelPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelPickerViewController.h; sourceTree = "<group>"; };
 		CA08741E13E679F100F808E3 /* TelPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelPickerViewController.m; sourceTree = "<group>"; };
 		CA08741F13E679F100F808E3 /* TelPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelPickerViewController.xib; sourceTree = "<group>"; };
@@ -1305,6 +1322,7 @@
 				CA5D136C13D55A9F003CB28C /* Foundation.framework in Frameworks */,
 				CA5D136E13D55A9F003CB28C /* CoreGraphics.framework in Frameworks */,
 				CAE655C113DE982400182C79 /* libMobClickLibrary.a in Frameworks */,
+				8899B5ED13EE40B700D039A8 /* libMSC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1384,6 +1402,39 @@
 				CA60718013D55E4300E0D0DC /* UIUnitTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8899B5DD13EE40B700D039A8 /* iFly */ = {
+			isa = PBXGroup;
+			children = (
+				8899B5DE13EE40B700D039A8 /* bin */,
+				8899B5E313EE40B700D039A8 /* include */,
+			);
+			path = iFly;
+			sourceTree = "<group>";
+		};
+		8899B5DE13EE40B700D039A8 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				8899B5DF13EE40B700D039A8 /* libMSC.a */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		8899B5E313EE40B700D039A8 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8899B5E413EE40B700D039A8 /* iFly_TTS.h */,
+				8899B5E513EE40B700D039A8 /* isr_ep.h */,
+				8899B5E613EE40B700D039A8 /* isr_errors.h */,
+				8899B5E713EE40B700D039A8 /* isr_rec.h */,
+				8899B5E813EE40B700D039A8 /* isr_types.h */,
+				8899B5E913EE40B700D039A8 /* msp_errors.h */,
+				8899B5EA13EE40B700D039A8 /* qisr.h */,
+				8899B5EB13EE40B700D039A8 /* qtts.h */,
+				8899B5EC13EE40B700D039A8 /* TTSErrcode.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		CA08741C13E679F100F808E3 /* TelPicker */ = {
@@ -1532,6 +1583,7 @@
 		CA6071C313D55EE000E0D0DC /* Common_Iphone */ = {
 			isa = PBXGroup;
 			children = (
+				8899B5DD13EE40B700D039A8 /* iFly */,
 				CAE655BE13DE982400182C79 /* MobClick */,
 				CA1A9D7F13DD68790072926A /* WebView */,
 				CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */,
@@ -2659,6 +2711,10 @@
 				CABCB5A013ED100C00F9BD2A /* SearchHistory.m */,
 				CABCB59913ED0F5900F9BD2A /* SearchHistoryManager.h */,
 				CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */,
+				88770BB913EE8B4F00835E52 /* HotKeyword.h */,
+				88770BBA13EE8B5100835E52 /* HotKeyword.m */,
+				88770BBE13EE8C6C00835E52 /* HotKeywordManager.h */,
+				88770BBF13EE8C6C00835E52 /* HotKeywordManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3427,6 +3483,8 @@
 				CA3D08F913ED08D8003778D6 /* SearchProductController.m in Sources */,
 				CABCB59B13ED0F5900F9BD2A /* SearchHistoryManager.m in Sources */,
 				CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */,
+				88770BBB13EE8B5100835E52 /* HotKeyword.m in Sources */,
+				88770BC013EE8C6C00835E52 /* HotKeywordManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3645,6 +3703,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Common_Iphone/MobClick\"",
+					"\"$(SRCROOT)/../Common_Iphone/iFly/bin\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -3662,6 +3721,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Common_Iphone/MobClick\"",
+					"\"$(SRCROOT)/../Common_Iphone/iFly/bin\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
