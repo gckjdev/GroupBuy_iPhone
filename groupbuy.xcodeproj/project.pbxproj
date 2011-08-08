@@ -371,6 +371,8 @@
 		CA9204CB13E4FB7D00DBA17C /* CityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9204C613E4FB7D00DBA17C /* CityPickerViewController.m */; };
 		CA9204CC13E4FB7D00DBA17C /* CityPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C713E4FB7D00DBA17C /* CityPickerViewController.xib */; };
 		CA9204CD13E4FB7D00DBA17C /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C813E4FB7D00DBA17C /* province.plist */; };
+		CA943D3113EF803E001ED96D /* magnifier_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CA943D2F13EF803E001ED96D /* magnifier_24.png */; };
+		CA943D3213EF803E001ED96D /* magnifier_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA943D3013EF803E001ED96D /* magnifier_24@2x.png */; };
 		CAA01A4513E64D640002986A /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA01A4313E64D630002986A /* SettingsController.m */; };
 		CAA01A4613E64D640002986A /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4413E64D630002986A /* SettingsController.xib */; };
 		CAA01A4D13E658890002986A /* folder_bookmark_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4713E658880002986A /* folder_bookmark_24.png */; };
@@ -1204,6 +1206,8 @@
 		CA9204C613E4FB7D00DBA17C /* CityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerViewController.m; sourceTree = "<group>"; };
 		CA9204C713E4FB7D00DBA17C /* CityPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityPickerViewController.xib; sourceTree = "<group>"; };
 		CA9204C813E4FB7D00DBA17C /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = province.plist; sourceTree = "<group>"; };
+		CA943D2F13EF803E001ED96D /* magnifier_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifier_24.png; sourceTree = "<group>"; };
+		CA943D3013EF803E001ED96D /* magnifier_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifier_24@2x.png"; sourceTree = "<group>"; };
 		CAA01A4213E64D630002986A /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		CAA01A4313E64D630002986A /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		CAA01A4413E64D630002986A /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
@@ -2597,6 +2601,8 @@
 		CA607BC913D5634800E0D0DC /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				CA943D2F13EF803E001ED96D /* magnifier_24.png */,
+				CA943D3013EF803E001ED96D /* magnifier_24@2x.png */,
 				CAA01A4713E658880002986A /* folder_bookmark_24.png */,
 				CAA01A4813E658880002986A /* folder_bookmark_24@2x.png */,
 				CAA01A4913E658880002986A /* gear_24.png */,
@@ -3214,6 +3220,8 @@
 				CADE8F3713E6789B00B48DB8 /* ShowAddressViewController.xib in Resources */,
 				CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */,
 				CA3D08FA13ED08D8003778D6 /* SearchProductController.xib in Resources */,
+				CA943D3113EF803E001ED96D /* magnifier_24.png in Resources */,
+				CA943D3213EF803E001ED96D /* magnifier_24@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

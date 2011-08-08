@@ -138,6 +138,12 @@ ProductService* GlobalGetProductService()
 					 viewImage:@"home_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
+
+	[UIUtils addViewController:[SearchProductController alloc]
+					 viewTitle:@"搜索"				 
+					 viewImage:@"magnifier_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 					 viewTitle:@"历史"				 
@@ -157,13 +163,7 @@ ProductService* GlobalGetProductService()
 					 viewImage:@"gear_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
-    
-	[UIUtils addViewController:[SearchProductController alloc]
-					 viewTitle:@"搜索"				 
-					 viewImage:@"gear_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
-    
+        
 	[UIUtils addViewController:[FeedbackController alloc]
 					 viewTitle:@"反馈"
 					 viewImage:@"help_24.png"
