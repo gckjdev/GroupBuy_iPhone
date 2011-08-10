@@ -70,6 +70,8 @@ enum SELECT_POST_TYPE {
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
+    NSLog(@"didReceiveMemoryWarning");
+
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
@@ -80,7 +82,7 @@ enum SELECT_POST_TYPE {
 - (void)showNearbyPost
 {
     if (self.nearbyPostController == nil){
-        self.nearbyPostController = [[NearbyPostController alloc] init];
+        self.nearbyPostController = [[[NearbyPostController alloc] init] autorelease];
         self.nearbyPostController.superController = self;
         self.nearbyPostController.view.frame = self.view.bounds;        
         [self.view addSubview:nearbyPostController.view];                
@@ -93,7 +95,7 @@ enum SELECT_POST_TYPE {
 - (void)showLatestPost
 {
     if (self.latestPostController == nil){
-        self.latestPostController = [[PublicTimelinePostController alloc] init];
+        self.latestPostController = [[[PublicTimelinePostController alloc] init] autorelease];
         self.latestPostController.superController = self;
         self.latestPostController.view.frame = self.view.bounds;        
         [self.view addSubview:latestPostController.view];                
@@ -106,7 +108,7 @@ enum SELECT_POST_TYPE {
 - (void)showFollowPost
 {
     if (self.followPostController == nil){
-        self.followPostController = [[FollowPostController alloc] init];
+        self.followPostController = [[[FollowPostController alloc] init] autorelease];
         self.followPostController.superController = self;
         self.followPostController.view.frame = self.view.bounds;        
         [self.view addSubview:followPostController.view];        
@@ -119,7 +121,7 @@ enum SELECT_POST_TYPE {
 - (void)showAtMePost
 {
     if (self.atMePostController == nil){
-        self.atMePostController = [[AtMePostController alloc] init];
+        self.atMePostController = [[[AtMePostController alloc] init] autorelease];
         self.atMePostController.superController = self;
         self.atMePostController.view.frame = self.view.bounds;        
         [self.view addSubview:atMePostController.view];                
@@ -133,7 +135,7 @@ enum SELECT_POST_TYPE {
 - (void)showPrivateMessage
 {
     if (self.privateMessageController == nil){
-        self.privateMessageController = [[PrivateMessageUserController alloc] init];
+        self.privateMessageController = [[[PrivateMessageUserController alloc] init] autorelease];
         self.privateMessageController.superController = self;
         self.privateMessageController.view.frame = self.view.bounds;        
         [self.view addSubview:privateMessageController.view];                
@@ -147,9 +149,9 @@ enum SELECT_POST_TYPE {
 - (void)showProductByPrice
 {
     if (self.priceController == nil){
-        self.priceController = [[CommonProductListController alloc] init];        
+        self.priceController = [[[CommonProductListController alloc] init] autorelease];        
         self.priceController.superController = self;
-        self.priceController.dataLoader = [[ProductPriceDataLoader alloc] init];
+        self.priceController.dataLoader = [[[ProductPriceDataLoader alloc] init] autorelease];
         self.priceController.view.frame = self.view.bounds;        
         [self.view addSubview:priceController.view];                
     }
@@ -162,9 +164,9 @@ enum SELECT_POST_TYPE {
 - (void)showProductByRebate
 {
     if (self.rebateController == nil){
-        self.rebateController = [[CommonProductListController alloc] init];        
+        self.rebateController = [[[CommonProductListController alloc] init] autorelease];        
         self.rebateController.superController = self;
-        self.rebateController.dataLoader = [[ProductRebateDataLoader alloc] init];
+        self.rebateController.dataLoader = [[[ProductRebateDataLoader alloc] init] autorelease];
         self.rebateController.view.frame = self.view.bounds;        
         [self.view addSubview:rebateController.view];                
     }
@@ -177,9 +179,9 @@ enum SELECT_POST_TYPE {
 - (void)showProductByDistance
 {
     if (self.distanceController == nil){
-        self.distanceController = [[CommonProductListController alloc] init];        
+        self.distanceController = [[[CommonProductListController alloc] init] autorelease];        
         self.distanceController.superController = self;
-        self.distanceController.dataLoader = [[ProductDistanceDataLoader alloc] init];
+        self.distanceController.dataLoader = [[[ProductDistanceDataLoader alloc] init] autorelease];
         self.distanceController.view.frame = self.view.bounds;        
         [self.view addSubview:distanceController.view];                
     }
@@ -192,9 +194,9 @@ enum SELECT_POST_TYPE {
 - (void)showProductByBought
 {
     if (self.boughtController == nil){
-        self.boughtController = [[CommonProductListController alloc] init];        
+        self.boughtController = [[[CommonProductListController alloc] init] autorelease];        
         self.boughtController.superController = self;
-        self.boughtController.dataLoader = [[ProductBoughtDataLoader alloc] init];
+        self.boughtController.dataLoader = [[[ProductBoughtDataLoader alloc] init] autorelease];
         self.boughtController.view.frame = self.view.bounds;        
         [self.view addSubview:boughtController.view];                
     }
@@ -207,7 +209,7 @@ enum SELECT_POST_TYPE {
 - (void)showProductByCategory
 {
     if (self.categoryController == nil){
-        self.categoryController = [[ProductCategoryController alloc] init];        
+        self.categoryController = [[[ProductCategoryController alloc] init] autorelease];        
         self.categoryController.superController = self;
         self.categoryController.view.frame = self.view.bounds;        
         [self.view addSubview:categoryController.view];                
@@ -221,7 +223,7 @@ enum SELECT_POST_TYPE {
 - (void)showProductByToday
 {
     if (self.todayController == nil){
-        self.todayController = [[ProductCategoryController alloc] init];        
+        self.todayController = [[[ProductCategoryController alloc] init] autorelease];        
         self.todayController.superController = self;
         self.todayController.todayOnly = YES;
         self.todayController.view.frame = self.view.bounds;        
@@ -264,6 +266,14 @@ enum SELECT_POST_TYPE {
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
+    self.priceController = nil;
+    self.categoryController = nil;
+    self.todayController = nil;
+    self.rebateController = nil;
+    self.distanceController = nil;
+    self.boughtController = nil;
+    
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
