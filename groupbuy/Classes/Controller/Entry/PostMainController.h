@@ -47,5 +47,6 @@
 @property (nonatomic, retain) ProductCategoryController *categoryController;
 @property (nonatomic, retain) ProductCategoryController *todayController;
 
+- (void)clickSegControl:(id)sender;
 
 @end

@@ -252,11 +252,12 @@ enum SELECT_POST_TYPE {
                     defaultSelectIndex:0];    
 
     [super viewDidLoad];
-    [self showProductByToday];
+//    [self showProductByToday];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [self clickSegControl:self.titleSegControl];
     [super viewDidAppear:animated];
 }
 
