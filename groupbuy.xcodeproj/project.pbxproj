@@ -33,6 +33,8 @@
 		CA3D08F913ED08D8003778D6 /* SearchProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3D08F713ED08D8003778D6 /* SearchProductController.m */; };
 		CA3D08FA13ED08D8003778D6 /* SearchProductController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3D08F813ED08D8003778D6 /* SearchProductController.xib */; };
 		CA3E547013E530240013C33C /* GroupBuyReport.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3E546F13E530240013C33C /* GroupBuyReport.m */; };
+		CA52117A13F2A8BB0001F16E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CA52117813F2A8BB0001F16E /* Default.png */; };
+		CA52117B13F2A8BB0001F16E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA52117913F2A8BB0001F16E /* Default@2x.png */; };
 		CA55024C13D9BAAB0016DDD6 /* ProductMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA55024A13D9BAAA0016DDD6 /* ProductMainController.m */; };
 		CA55024D13D9BAAB0016DDD6 /* ProductMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA55024B13D9BAAA0016DDD6 /* ProductMainController.xib */; };
 		CA5D136A13D55A9F003CB28C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5D136913D55A9F003CB28C /* UIKit.framework */; };
@@ -648,6 +650,8 @@
 		CA3D08F813ED08D8003778D6 /* SearchProductController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchProductController.xib; sourceTree = "<group>"; };
 		CA3E546E13E530240013C33C /* GroupBuyReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyReport.h; sourceTree = "<group>"; };
 		CA3E546F13E530240013C33C /* GroupBuyReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuyReport.m; sourceTree = "<group>"; };
+		CA52117813F2A8BB0001F16E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CA52117913F2A8BB0001F16E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CA55024913D9BAAA0016DDD6 /* ProductMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductMainController.h; sourceTree = "<group>"; };
 		CA55024A13D9BAAA0016DDD6 /* ProductMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductMainController.m; sourceTree = "<group>"; };
 		CA55024B13D9BAAA0016DDD6 /* ProductMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductMainController.xib; sourceTree = "<group>"; };
@@ -2600,6 +2604,8 @@
 		CA607BC813D5634800E0D0DC /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				CA52117813F2A8BB0001F16E /* Default.png */,
+				CA52117913F2A8BB0001F16E /* Default@2x.png */,
 				CA334C9013F170AC00F89E2F /* 57.png */,
 				CA334C9113F170AC00F89E2F /* 57@2x.png */,
 				CA607BC913D5634800E0D0DC /* Icon */,
@@ -3236,6 +3242,8 @@
 				CA943D3613EFCC42001ED96D /* Localizable.strings in Resources */,
 				CA334C9213F170AC00F89E2F /* 57.png in Resources */,
 				CA334C9313F170AC00F89E2F /* 57@2x.png in Resources */,
+				CA52117A13F2A8BB0001F16E /* Default.png in Resources */,
+				CA52117B13F2A8BB0001F16E /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
