@@ -27,10 +27,10 @@
 @class ReviewRequest;
 
 #define _THREE20_		1
-#define kAppId			@"388419035"					// To be changed for each project
+#define kAppId			@"456494464"					// To be changed for each project
 #define kMobClickKey	@"4e2d3cc0431fe371c3000029"		// To be changed for each project
 
-#define MAKE_FRIEND_PLACEID @"MakeFriendPlaceID"
+#define MAKE_FRIEND_PLACEID @"GroupBuy"
 
 @interface groupbuyAppDelegate : PPApplication <UIApplicationDelegate, UITabBarControllerDelegate, MobClickDelegate, EnterPlaceAppDelegate,
 LocalDataServiceDelegate, UserServiceDelegate> {

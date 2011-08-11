@@ -387,6 +387,8 @@
 		CAA01A5013E658890002986A /* gear_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4A13E658880002986A /* gear_24@2x.png */; };
 		CAA01A5113E658890002986A /* home_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4B13E658880002986A /* home_24.png */; };
 		CAA01A5213E658890002986A /* home_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4C13E658890002986A /* home_24@2x.png */; };
+		CAA46EF013F3734B00688E64 /* libMobClickLibrary_1.6.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */; };
+		CAA46EF213F3743000688E64 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA46EF113F3743000688E64 /* libz.1.2.3.dylib */; };
 		CABCB59B13ED0F5900F9BD2A /* SearchHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */; };
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
 		CADDC6D613E438D70030F9FC /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D413E438D70030F9FC /* button.png */; };
@@ -423,7 +425,6 @@
 		CADF6BCE13DAB0320060F438 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BCD13DAB0320060F438 /* Product.m */; };
 		CADF6BD113DAB0990060F438 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BD013DAB0990060F438 /* ProductManager.m */; };
 		CADF6BDA13DB00CD0060F438 /* ProductPriceDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */; };
-		CAE655C113DE982400182C79 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE655BF13DE982400182C79 /* libMobClickLibrary.a */; };
 		CAE655CC13DEBCB200182C79 /* arrow_left_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C313DEBCB200182C79 /* arrow_left_24.png */; };
 		CAE655CD13DEBCB200182C79 /* arrow_left_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C413DEBCB200182C79 /* arrow_left_24@2x.png */; };
 		CAE655CE13DEBCB200182C79 /* arrow_left_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C513DEBCB200182C79 /* arrow_left_64.png */; };
@@ -1229,6 +1230,8 @@
 		CAA01A4A13E658880002986A /* gear_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear_24@2x.png"; sourceTree = "<group>"; };
 		CAA01A4B13E658880002986A /* home_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_24.png; sourceTree = "<group>"; };
 		CAA01A4C13E658890002986A /* home_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_24@2x.png"; sourceTree = "<group>"; };
+		CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary_1.6.4.a; sourceTree = "<group>"; };
+		CAA46EF113F3743000688E64 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = /usr/lib/libz.1.2.3.dylib; sourceTree = "<absolute>"; };
 		CABCB59913ED0F5900F9BD2A /* SearchHistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryManager.h; sourceTree = "<group>"; };
 		CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryManager.m; sourceTree = "<group>"; };
 		CABCB59F13ED100C00F9BD2A /* SearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistory.h; sourceTree = "<group>"; };
@@ -1297,7 +1300,6 @@
 		CADF6BD013DAB0990060F438 /* ProductManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductManager.m; sourceTree = "<group>"; };
 		CADF6BD813DB00CC0060F438 /* ProductPriceDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductPriceDataLoader.h; sourceTree = "<group>"; };
 		CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductPriceDataLoader.m; sourceTree = "<group>"; };
-		CAE655BF13DE982400182C79 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		CAE655C013DE982400182C79 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		CAE655C313DEBCB200182C79 /* arrow_left_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_24.png; sourceTree = "<group>"; };
 		CAE655C413DEBCB200182C79 /* arrow_left_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left_24@2x.png"; sourceTree = "<group>"; };
@@ -1315,6 +1317,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA46EF213F3743000688E64 /* libz.1.2.3.dylib in Frameworks */,
 				CA607A9213D561CC00E0D0DC /* AVFoundation.framework in Frameworks */,
 				CA607A8F13D5615400E0D0DC /* AudioToolbox.framework in Frameworks */,
 				CA607A8C13D5613B00E0D0DC /* CoreAudio.framework in Frameworks */,
@@ -1337,8 +1340,8 @@
 				CA5D136A13D55A9F003CB28C /* UIKit.framework in Frameworks */,
 				CA5D136C13D55A9F003CB28C /* Foundation.framework in Frameworks */,
 				CA5D136E13D55A9F003CB28C /* CoreGraphics.framework in Frameworks */,
-				CAE655C113DE982400182C79 /* libMobClickLibrary.a in Frameworks */,
 				8899B5ED13EE40B700D039A8 /* libMSC.a in Frameworks */,
+				CAA46EF013F3734B00688E64 /* libMobClickLibrary_1.6.4.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1518,6 +1521,7 @@
 		CA5D136813D55A9F003CB28C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAA46EF113F3743000688E64 /* libz.1.2.3.dylib */,
 				CA607A9113D561CC00E0D0DC /* AVFoundation.framework */,
 				CA607A8D13D5615400E0D0DC /* AudioToolbox.framework */,
 				CA607A8E13D5615400E0D0DC /* AudioUnit.framework */,
@@ -2837,7 +2841,7 @@
 		CAE655BE13DE982400182C79 /* MobClick */ = {
 			isa = PBXGroup;
 			children = (
-				CAE655BF13DE982400182C79 /* libMobClickLibrary.a */,
+				CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */,
 				CAE655C013DE982400182C79 /* MobClick.h */,
 			);
 			path = MobClick;
@@ -3716,7 +3720,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../../three20",
 					../three20/Build/Products/three20,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -3809,6 +3813,71 @@
 			};
 			name = Release;
 		};
+		CAA46EF313F37EDE00688E64 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20",
+					"$(BUILT_PRODUCTS_DIR)/../../three20",
+					../three20/Build/Products/three20,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		CAA46EF413F37EDE00688E64 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "groupbuy/groupbuy-Prefix.pch";
+				INFOPLIST_FILE = "groupbuy/groupbuy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Common_Iphone/MobClick\"",
+					"\"$(SRCROOT)/../Common_Iphone/iFly/bin\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		CAA46EF513F37EDE00688E64 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/groupbuy.app/groupbuy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "groupbuyTests/groupbuyTests-Prefix.pch";
+				INFOPLIST_FILE = "groupbuyTests/groupbuyTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3817,6 +3886,7 @@
 			buildConfigurations = (
 				CA5D13A013D55A9F003CB28C /* Debug */,
 				CA5D13A113D55A9F003CB28C /* Release */,
+				CAA46EF313F37EDE00688E64 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3826,6 +3896,7 @@
 			buildConfigurations = (
 				CA5D13A313D55A9F003CB28C /* Debug */,
 				CA5D13A413D55A9F003CB28C /* Release */,
+				CAA46EF413F37EDE00688E64 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3835,6 +3906,7 @@
 			buildConfigurations = (
 				CA5D13A613D55A9F003CB28C /* Debug */,
 				CA5D13A713D55A9F003CB28C /* Release */,
+				CAA46EF513F37EDE00688E64 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

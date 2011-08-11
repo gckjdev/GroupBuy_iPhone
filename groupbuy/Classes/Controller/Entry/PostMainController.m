@@ -152,6 +152,8 @@ enum SELECT_POST_TYPE {
         self.priceController = [[[CommonProductListController alloc] init] autorelease];        
         self.priceController.superController = self;
         self.priceController.dataLoader = [[[ProductPriceDataLoader alloc] init] autorelease];
+        self.priceController.type = [titleSegControl titleForSegmentAtIndex:
+                                                titleSegControl.selectedSegmentIndex];
         self.priceController.view.frame = self.view.bounds;        
         [self.view addSubview:priceController.view];                
     }
@@ -167,6 +169,8 @@ enum SELECT_POST_TYPE {
         self.rebateController = [[[CommonProductListController alloc] init] autorelease];        
         self.rebateController.superController = self;
         self.rebateController.dataLoader = [[[ProductRebateDataLoader alloc] init] autorelease];
+        self.rebateController.type = [titleSegControl titleForSegmentAtIndex:
+                                     titleSegControl.selectedSegmentIndex];        
         self.rebateController.view.frame = self.view.bounds;        
         [self.view addSubview:rebateController.view];                
     }
@@ -182,6 +186,8 @@ enum SELECT_POST_TYPE {
         self.distanceController = [[[CommonProductListController alloc] init] autorelease];        
         self.distanceController.superController = self;
         self.distanceController.dataLoader = [[[ProductDistanceDataLoader alloc] init] autorelease];
+        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
+                                      titleSegControl.selectedSegmentIndex];        
         self.distanceController.view.frame = self.view.bounds;        
         [self.view addSubview:distanceController.view];                
     }
@@ -197,6 +203,8 @@ enum SELECT_POST_TYPE {
         self.boughtController = [[[CommonProductListController alloc] init] autorelease];        
         self.boughtController.superController = self;
         self.boughtController.dataLoader = [[[ProductBoughtDataLoader alloc] init] autorelease];
+        self.boughtController.type = [titleSegControl titleForSegmentAtIndex:
+                                        titleSegControl.selectedSegmentIndex];                
         self.boughtController.view.frame = self.view.bounds;        
         [self.view addSubview:boughtController.view];                
     }

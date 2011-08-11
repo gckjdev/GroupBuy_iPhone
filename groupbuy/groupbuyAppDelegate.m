@@ -132,6 +132,8 @@ ProductService* GlobalGetProductService()
 
 - (void)initTabViewControllers
 {
+    tabBarController.delegate = self;
+    
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
 	[UIUtils addViewController:[PostMainController alloc]
@@ -140,11 +142,11 @@ ProductService* GlobalGetProductService()
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
-	[UIUtils addViewController:[SearchProductController alloc]
-					 viewTitle:@"搜索"				 
-					 viewImage:@"magnifier_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
+//	[UIUtils addViewController:[SearchProductController alloc]
+//					 viewTitle:@"搜索"				 
+//					 viewImage:@"magnifier_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 					 viewTitle:@"历史"				 
@@ -178,7 +180,8 @@ ProductService* GlobalGetProductService()
 
 - (void)initMobClick
 {
-	[MobClick setDelegate:self];
+//	[MobClick setDelegate:self];
+    [MobClick setDelegate:self reportPolicy:REALTIME];
 	[MobClick appLaunched];	
 }
 
