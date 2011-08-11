@@ -51,7 +51,7 @@
 NSString* GlobalGetServerURL()
 {
 //    return @"http://192.168.1.101:8000/api/i?";
-    return @"http://dipan100.com:8000/api/i?";
+    return @"http://www.dipan100.com:8000/api/i?";
 }
 
 AppService* GlobalGetAppService()
@@ -180,9 +180,7 @@ ProductService* GlobalGetProductService()
 
 - (void)initMobClick
 {
-//	[MobClick setDelegate:self];
-    [MobClick setDelegate:self reportPolicy:REALTIME];
-	[MobClick appLaunched];	
+    [MobClick setDelegate:self reportPolicy:BATCH];
 }
 
 - (void)initLocalDataService
@@ -325,8 +323,7 @@ ProductService* GlobalGetProductService()
      */
 	
 	NSLog(@"applicationWillEnterForeground");	
-	
-	[self initMobClick];
+	[MobClick appLaunched];
     [appService startAppUpdate];
     
 }
