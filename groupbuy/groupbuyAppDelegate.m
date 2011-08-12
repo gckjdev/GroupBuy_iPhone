@@ -142,11 +142,11 @@ ProductService* GlobalGetProductService()
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
-//	[UIUtils addViewController:[SearchProductController alloc]
-//					 viewTitle:@"搜索"				 
-//					 viewImage:@"magnifier_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
+	[UIUtils addViewController:[SearchProductController alloc]
+					 viewTitle:@"搜索"				 
+					 viewImage:@"magnifier_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 					 viewTitle:@"历史"				 
