@@ -50,8 +50,8 @@
 
 NSString* GlobalGetServerURL()
 {
-//    return @"http://192.168.1.101:8000/api/i?";
-    return @"http://www.dipan100.com:8000/api/i?";
+    return @"http://192.168.1.188:8000/api/i?";
+//    return @"http://www.dipan100.com:8000/api/i?";
 }
 
 AppService* GlobalGetAppService()
@@ -255,8 +255,9 @@ ProductService* GlobalGetProductService()
     
     [window makeKeyAndVisible];
 	
-    // update app version
+    // update config data
     [appService startAppUpdate];
+    [productService updateKeywords];
     
 	// Ask For Review
 	self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
