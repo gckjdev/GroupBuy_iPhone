@@ -149,11 +149,11 @@ ProductService* GlobalGetProductService()
 			   viewControllers:controllers];	
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
-					 viewTitle:@"历史"				 
+					 viewTitle:@"收藏"				 
 					 viewImage:@"folder_bookmark_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
-    historyController.dataLoader = [[ProductHistoryDataLoader alloc] init];
+    historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
     
 //	[UIUtils addViewController:[MyInfoController alloc]
 //					 viewTitle:NSLS(@"Setting")				 
