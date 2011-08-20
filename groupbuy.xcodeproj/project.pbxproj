@@ -10,6 +10,10 @@
 		320AF8492C47A4D819F7C451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320AF8492C47A4D819F7C450 /* QuartzCore.framework */; };
 		88770BBB13EE8B5100835E52 /* HotKeyword.m in Sources */ = {isa = PBXBuildFile; fileRef = 88770BBA13EE8B5100835E52 /* HotKeyword.m */; };
 		88770BC013EE8C6C00835E52 /* HotKeywordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88770BBF13EE8C6C00835E52 /* HotKeywordManager.m */; };
+		887A5C8513FF89CC00FF3457 /* AddShoppingItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C8313FF89CC00FF3457 /* AddShoppingItemController.m */; };
+		887A5C8613FF89CC00FF3457 /* AddShoppingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C8413FF89CC00FF3457 /* AddShoppingItemController.xib */; };
+		887A5C8A13FF89EF00FF3457 /* ShoppingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C8813FF89EF00FF3457 /* ShoppingListController.m */; };
+		887A5C8B13FF89EF00FF3457 /* ShoppingListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */; };
 		8899B5ED13EE40B700D039A8 /* libMSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8899B5DF13EE40B700D039A8 /* libMSC.a */; };
 		CA08742013E679F100F808E3 /* TelPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA08741E13E679F100F808E3 /* TelPickerViewController.m */; };
 		CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA08741F13E679F100F808E3 /* TelPickerViewController.xib */; };
@@ -510,6 +514,12 @@
 		88770BBA13EE8B5100835E52 /* HotKeyword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotKeyword.m; path = ../Common_Iphone/PlaceCommon/Model/HotKeyword.m; sourceTree = SOURCE_ROOT; };
 		88770BBE13EE8C6C00835E52 /* HotKeywordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKeywordManager.h; sourceTree = "<group>"; };
 		88770BBF13EE8C6C00835E52 /* HotKeywordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKeywordManager.m; sourceTree = "<group>"; };
+		887A5C8213FF89CC00FF3457 /* AddShoppingItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShoppingItemController.h; sourceTree = "<group>"; };
+		887A5C8313FF89CC00FF3457 /* AddShoppingItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShoppingItemController.m; sourceTree = "<group>"; };
+		887A5C8413FF89CC00FF3457 /* AddShoppingItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddShoppingItemController.xib; sourceTree = "<group>"; };
+		887A5C8713FF89EF00FF3457 /* ShoppingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListController.h; sourceTree = "<group>"; };
+		887A5C8813FF89EF00FF3457 /* ShoppingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListController.m; sourceTree = "<group>"; };
+		887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingListController.xib; sourceTree = "<group>"; };
 		8899B5DF13EE40B700D039A8 /* libMSC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMSC.a; sourceTree = "<group>"; };
 		8899B5E413EE40B700D039A8 /* iFly_TTS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iFly_TTS.h; sourceTree = "<group>"; };
 		8899B5E513EE40B700D039A8 /* isr_ep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isr_ep.h; sourceTree = "<group>"; };
@@ -2773,6 +2783,12 @@
 				CA3D08F613ED08D8003778D6 /* SearchProductController.h */,
 				CA3D08F713ED08D8003778D6 /* SearchProductController.m */,
 				CA3D08F813ED08D8003778D6 /* SearchProductController.xib */,
+				887A5C8213FF89CC00FF3457 /* AddShoppingItemController.h */,
+				887A5C8313FF89CC00FF3457 /* AddShoppingItemController.m */,
+				887A5C8413FF89CC00FF3457 /* AddShoppingItemController.xib */,
+				887A5C8713FF89EF00FF3457 /* ShoppingListController.h */,
+				887A5C8813FF89EF00FF3457 /* ShoppingListController.m */,
+				887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3230,6 +3246,8 @@
 				CAE169A913FE0A3F00A9C202 /* LICENSE.txt in Resources */,
 				CAE169AA13FE0A3F00A9C202 /* README.txt in Resources */,
 				CAE169E813FE0A3F00A9C202 /* TapkuLibrary.bundle in Resources */,
+				887A5C8613FF89CC00FF3457 /* AddShoppingItemController.xib in Resources */,
+				887A5C8B13FF89EF00FF3457 /* ShoppingListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3561,6 +3579,8 @@
 				CAE169E513FE0A3F00A9C202 /* UIScrollview+TKCategory.m in Sources */,
 				CAE169E613FE0A3F00A9C202 /* UIToolbar+TKCategory.m in Sources */,
 				CAE169E713FE0A3F00A9C202 /* UIView+TKCategory.m in Sources */,
+				887A5C8513FF89CC00FF3457 /* AddShoppingItemController.m in Sources */,
+				887A5C8A13FF89EF00FF3457 /* ShoppingListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
