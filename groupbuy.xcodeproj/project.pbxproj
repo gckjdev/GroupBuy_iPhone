@@ -14,6 +14,14 @@
 		887A5C8613FF89CC00FF3457 /* AddShoppingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C8413FF89CC00FF3457 /* AddShoppingItemController.xib */; };
 		887A5C8A13FF89EF00FF3457 /* ShoppingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C8813FF89EF00FF3457 /* ShoppingListController.m */; };
 		887A5C8B13FF89EF00FF3457 /* ShoppingListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */; };
+		887A5C9013FF94C600FF3457 /* ShoppingCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C8E13FF94C600FF3457 /* ShoppingCategoryCell.m */; };
+		887A5C9113FF94C600FF3457 /* ShoppingCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C8F13FF94C600FF3457 /* ShoppingCategoryCell.xib */; };
+		887A5C9513FF95EB00FF3457 /* ShoppingKeywordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9313FF95EB00FF3457 /* ShoppingKeywordCell.m */; };
+		887A5C9613FF95EB00FF3457 /* ShoppingKeywordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9413FF95EB00FF3457 /* ShoppingKeywordCell.xib */; };
+		887A5C9A13FF961900FF3457 /* ShoppingEffectiveDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9813FF961900FF3457 /* ShoppingEffectiveDateCell.m */; };
+		887A5C9B13FF961900FF3457 /* ShoppingEffectiveDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9913FF961900FF3457 /* ShoppingEffectiveDateCell.xib */; };
+		887A5C9F13FF964C00FF3457 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9D13FF964C00FF3457 /* SliderCell.m */; };
+		887A5CA013FF964C00FF3457 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9E13FF964C00FF3457 /* SliderCell.xib */; };
 		8899B5ED13EE40B700D039A8 /* libMSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8899B5DF13EE40B700D039A8 /* libMSC.a */; };
 		CA08742013E679F100F808E3 /* TelPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA08741E13E679F100F808E3 /* TelPickerViewController.m */; };
 		CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA08741F13E679F100F808E3 /* TelPickerViewController.xib */; };
@@ -520,6 +528,18 @@
 		887A5C8713FF89EF00FF3457 /* ShoppingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListController.h; sourceTree = "<group>"; };
 		887A5C8813FF89EF00FF3457 /* ShoppingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListController.m; sourceTree = "<group>"; };
 		887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingListController.xib; sourceTree = "<group>"; };
+		887A5C8D13FF94C600FF3457 /* ShoppingCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCategoryCell.h; sourceTree = "<group>"; };
+		887A5C8E13FF94C600FF3457 /* ShoppingCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCategoryCell.m; sourceTree = "<group>"; };
+		887A5C8F13FF94C600FF3457 /* ShoppingCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCategoryCell.xib; sourceTree = "<group>"; };
+		887A5C9213FF95EB00FF3457 /* ShoppingKeywordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingKeywordCell.h; sourceTree = "<group>"; };
+		887A5C9313FF95EB00FF3457 /* ShoppingKeywordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingKeywordCell.m; sourceTree = "<group>"; };
+		887A5C9413FF95EB00FF3457 /* ShoppingKeywordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingKeywordCell.xib; sourceTree = "<group>"; };
+		887A5C9713FF961900FF3457 /* ShoppingEffectiveDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingEffectiveDateCell.h; sourceTree = "<group>"; };
+		887A5C9813FF961900FF3457 /* ShoppingEffectiveDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingEffectiveDateCell.m; sourceTree = "<group>"; };
+		887A5C9913FF961900FF3457 /* ShoppingEffectiveDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingEffectiveDateCell.xib; sourceTree = "<group>"; };
+		887A5C9C13FF964C00FF3457 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
+		887A5C9D13FF964C00FF3457 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
+		887A5C9E13FF964C00FF3457 /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		8899B5DF13EE40B700D039A8 /* libMSC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMSC.a; sourceTree = "<group>"; };
 		8899B5E413EE40B700D039A8 /* iFly_TTS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iFly_TTS.h; sourceTree = "<group>"; };
 		8899B5E513EE40B700D039A8 /* isr_ep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isr_ep.h; sourceTree = "<group>"; };
@@ -2789,6 +2809,18 @@
 				887A5C8713FF89EF00FF3457 /* ShoppingListController.h */,
 				887A5C8813FF89EF00FF3457 /* ShoppingListController.m */,
 				887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */,
+				887A5C8D13FF94C600FF3457 /* ShoppingCategoryCell.h */,
+				887A5C8E13FF94C600FF3457 /* ShoppingCategoryCell.m */,
+				887A5C8F13FF94C600FF3457 /* ShoppingCategoryCell.xib */,
+				887A5C9213FF95EB00FF3457 /* ShoppingKeywordCell.h */,
+				887A5C9313FF95EB00FF3457 /* ShoppingKeywordCell.m */,
+				887A5C9713FF961900FF3457 /* ShoppingEffectiveDateCell.h */,
+				887A5C9813FF961900FF3457 /* ShoppingEffectiveDateCell.m */,
+				887A5C9913FF961900FF3457 /* ShoppingEffectiveDateCell.xib */,
+				887A5C9413FF95EB00FF3457 /* ShoppingKeywordCell.xib */,
+				887A5C9C13FF964C00FF3457 /* SliderCell.h */,
+				887A5C9D13FF964C00FF3457 /* SliderCell.m */,
+				887A5C9E13FF964C00FF3457 /* SliderCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3248,6 +3280,10 @@
 				CAE169E813FE0A3F00A9C202 /* TapkuLibrary.bundle in Resources */,
 				887A5C8613FF89CC00FF3457 /* AddShoppingItemController.xib in Resources */,
 				887A5C8B13FF89EF00FF3457 /* ShoppingListController.xib in Resources */,
+				887A5C9113FF94C600FF3457 /* ShoppingCategoryCell.xib in Resources */,
+				887A5C9613FF95EB00FF3457 /* ShoppingKeywordCell.xib in Resources */,
+				887A5C9B13FF961900FF3457 /* ShoppingEffectiveDateCell.xib in Resources */,
+				887A5CA013FF964C00FF3457 /* SliderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3581,6 +3617,10 @@
 				CAE169E713FE0A3F00A9C202 /* UIView+TKCategory.m in Sources */,
 				887A5C8513FF89CC00FF3457 /* AddShoppingItemController.m in Sources */,
 				887A5C8A13FF89EF00FF3457 /* ShoppingListController.m in Sources */,
+				887A5C9013FF94C600FF3457 /* ShoppingCategoryCell.m in Sources */,
+				887A5C9513FF95EB00FF3457 /* ShoppingKeywordCell.m in Sources */,
+				887A5C9A13FF961900FF3457 /* ShoppingEffectiveDateCell.m in Sources */,
+				887A5C9F13FF964C00FF3457 /* SliderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
