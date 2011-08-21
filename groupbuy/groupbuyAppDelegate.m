@@ -24,6 +24,7 @@
 #import "NewMakeFriendPostMainController.h"
 #import "PostMainController.h"
 #import "CommonProductListController.h"
+#import "AddShoppingItemController.h"
 
 #import "CommonManager.h"
 #import "UserManager.h"
@@ -147,6 +148,12 @@ ProductService* GlobalGetProductService()
 					 viewImage:@"magnifier_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
+	
+	[UIUtils addViewController:[AddShoppingItemController alloc]
+					 viewTitle:@"清单"				 
+					 viewImage:@"magnifier_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 					 viewTitle:@"收藏"				 
