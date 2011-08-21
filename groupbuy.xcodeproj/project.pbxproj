@@ -18,8 +18,8 @@
 		887A5C9113FF94C600FF3457 /* ShoppingCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C8F13FF94C600FF3457 /* ShoppingCategoryCell.xib */; };
 		887A5C9513FF95EB00FF3457 /* ShoppingKeywordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9313FF95EB00FF3457 /* ShoppingKeywordCell.m */; };
 		887A5C9613FF95EB00FF3457 /* ShoppingKeywordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9413FF95EB00FF3457 /* ShoppingKeywordCell.xib */; };
-		887A5C9A13FF961900FF3457 /* ShoppingEffectiveDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9813FF961900FF3457 /* ShoppingEffectiveDateCell.m */; };
-		887A5C9B13FF961900FF3457 /* ShoppingEffectiveDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9913FF961900FF3457 /* ShoppingEffectiveDateCell.xib */; };
+		887A5C9A13FF961900FF3457 /* ShoppingValidPeriodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9813FF961900FF3457 /* ShoppingValidPeriodCell.m */; };
+		887A5C9B13FF961900FF3457 /* ShoppingValidPeriodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9913FF961900FF3457 /* ShoppingValidPeriodCell.xib */; };
 		887A5C9F13FF964C00FF3457 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9D13FF964C00FF3457 /* SliderCell.m */; };
 		887A5CA013FF964C00FF3457 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9E13FF964C00FF3457 /* SliderCell.xib */; };
 		8899B5ED13EE40B700D039A8 /* libMSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8899B5DF13EE40B700D039A8 /* libMSC.a */; };
@@ -534,9 +534,9 @@
 		887A5C9213FF95EB00FF3457 /* ShoppingKeywordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingKeywordCell.h; sourceTree = "<group>"; };
 		887A5C9313FF95EB00FF3457 /* ShoppingKeywordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingKeywordCell.m; sourceTree = "<group>"; };
 		887A5C9413FF95EB00FF3457 /* ShoppingKeywordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingKeywordCell.xib; sourceTree = "<group>"; };
-		887A5C9713FF961900FF3457 /* ShoppingEffectiveDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingEffectiveDateCell.h; sourceTree = "<group>"; };
-		887A5C9813FF961900FF3457 /* ShoppingEffectiveDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingEffectiveDateCell.m; sourceTree = "<group>"; };
-		887A5C9913FF961900FF3457 /* ShoppingEffectiveDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingEffectiveDateCell.xib; sourceTree = "<group>"; };
+		887A5C9713FF961900FF3457 /* ShoppingValidPeriodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingValidPeriodCell.h; sourceTree = "<group>"; };
+		887A5C9813FF961900FF3457 /* ShoppingValidPeriodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingValidPeriodCell.m; sourceTree = "<group>"; };
+		887A5C9913FF961900FF3457 /* ShoppingValidPeriodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingValidPeriodCell.xib; sourceTree = "<group>"; };
 		887A5C9C13FF964C00FF3457 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
 		887A5C9D13FF964C00FF3457 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
 		887A5C9E13FF964C00FF3457 /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
@@ -2816,9 +2816,9 @@
 				887A5C9213FF95EB00FF3457 /* ShoppingKeywordCell.h */,
 				887A5C9313FF95EB00FF3457 /* ShoppingKeywordCell.m */,
 				887A5C9413FF95EB00FF3457 /* ShoppingKeywordCell.xib */,
-				887A5C9713FF961900FF3457 /* ShoppingEffectiveDateCell.h */,
-				887A5C9813FF961900FF3457 /* ShoppingEffectiveDateCell.m */,
-				887A5C9913FF961900FF3457 /* ShoppingEffectiveDateCell.xib */,
+				887A5C9713FF961900FF3457 /* ShoppingValidPeriodCell.h */,
+				887A5C9813FF961900FF3457 /* ShoppingValidPeriodCell.m */,
+				887A5C9913FF961900FF3457 /* ShoppingValidPeriodCell.xib */,
 				887A5C9C13FF964C00FF3457 /* SliderCell.h */,
 				887A5C9D13FF964C00FF3457 /* SliderCell.m */,
 				887A5C9E13FF964C00FF3457 /* SliderCell.xib */,
@@ -3283,7 +3283,7 @@
 				887A5C8B13FF89EF00FF3457 /* ShoppingListController.xib in Resources */,
 				887A5C9113FF94C600FF3457 /* ShoppingCategoryCell.xib in Resources */,
 				887A5C9613FF95EB00FF3457 /* ShoppingKeywordCell.xib in Resources */,
-				887A5C9B13FF961900FF3457 /* ShoppingEffectiveDateCell.xib in Resources */,
+				887A5C9B13FF961900FF3457 /* ShoppingValidPeriodCell.xib in Resources */,
 				887A5CA013FF964C00FF3457 /* SliderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3620,7 +3620,7 @@
 				887A5C8A13FF89EF00FF3457 /* ShoppingListController.m in Sources */,
 				887A5C9013FF94C600FF3457 /* ShoppingCategoryCell.m in Sources */,
 				887A5C9513FF95EB00FF3457 /* ShoppingKeywordCell.m in Sources */,
-				887A5C9A13FF961900FF3457 /* ShoppingEffectiveDateCell.m in Sources */,
+				887A5C9A13FF961900FF3457 /* ShoppingValidPeriodCell.m in Sources */,
 				887A5C9F13FF964C00FF3457 /* SliderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
