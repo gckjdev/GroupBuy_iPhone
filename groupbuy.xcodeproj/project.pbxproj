@@ -3811,7 +3811,7 @@
 					"\"$(SRCROOT)/../Common_Iphone/iFly/bin\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DA9A8AF0-6AB4-4ACE-8D8B-B8A9C784F3FA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0786A49F-72CD-44A2-A4FC-7CB42678D2FE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

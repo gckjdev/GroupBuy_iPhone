@@ -51,8 +51,8 @@
 
 NSString* GlobalGetServerURL()
 {
-//    return @"http://192.168.1.188:8000/api/i?";
-    return @"http://www.dipan100.com:8000/api/i?";
+    return @"http://192.168.1.188:8000/api/i?";
+//    return @"http://www.dipan100.com:8000/api/i?";
 }
 
 AppService* GlobalGetAppService()
@@ -268,6 +268,10 @@ ProductService* GlobalGetProductService()
     
 	// Ask For Review
 	// self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
+    
+    if (![self isPushNotificationEnable]){
+        [self bindDevice];
+    }
     
     return YES;
 }
@@ -541,6 +545,83 @@ ProductService* GlobalGetProductService()
 {
     NSLog(@"<followPlaceDataRefresh>");
 }
+
+#pragma mark -
+#pragma mark Device Notification Delegate
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+	
+//	if ([application enabledRemoteNotificationTypes] == UIRemoteNotificationTypeNone){
+//        [UIUtils alert:@"由于您未同意接受推送通知功能，团购购物推送通知功能无法正常使用"];
+//		return;
+//	}
+	
+    // Get a hex string from the device token with no spaces or < >	
+	[self saveDeviceToken:deviceToken];    
+    
+    if ([userService user] == nil){
+        // user not registered yet, device token will be carried by registration request        
+    }
+    else{
+        // user already register
+        [userService updateGroupBuyUserDeviceToken:[self getDeviceToken]];
+    }
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
+	NSString *message = [error localizedDescription];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"错误"
+													message: message
+                                                   delegate: nil
+                                          cancelButtonTitle: @"确认"
+                                          otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+	
+	// try again
+	// [self bindDevice];
+}
+
+- (void)showNotification:(NSDictionary*)payload
+{
+	NSDictionary *dict = [[payload objectForKey:@"aps"] objectForKey:@"alert"];
+	NSString* msg = [dict valueForKey:@"loc-key"];
+	NSArray*  args = [dict objectForKey:@"loc-args"];
+	
+	if (args != nil && [args count] >= 2){
+		NSString* from = nil; //[args objectAtIndex:0];
+		NSString* text = nil; //[args objectAtIndex:1];		
+		[UIUtils alert:[NSString stringWithFormat:NSLS(msg), from, text]];
+	}	
+}
+
+- (void)playNotificationSound
+{
+	if (self.player == nil){
+		[self initAudioPlayer:@"Voicemail"];
+	}
+	
+	if ([self.player isPlaying]){
+		[self.player stop];
+	}
+	
+	[self.player play];	
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+	NSDictionary *payload = userInfo;
+	NSLog(@"receive push notification, payload=%@", [payload description]);
+	if (nil != payload) {
+        
+//		newSmsFlag = YES;		// for UI update
+		[self playNotificationSound];		
+		
+//		NSString *smsId = [[payload objectForKey:@"aps"] valueForKey:@"mid"];				
+//		NSString* userId = [UserManager getUserId];
+//		[SmsLocalService handleNewSmsReceived:smsId userId:userId appId:kAppId workingQueue:workingQueue delegate:self];				
+	}	
+}
+
 
 
 @end
