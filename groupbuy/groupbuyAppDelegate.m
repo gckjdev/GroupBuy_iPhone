@@ -37,6 +37,7 @@
 #import "PostService.h"
 #import "AppService.h"
 #import "ProductService.h"
+#import "UserShopItemService.h"
 #import "ProductManager.h"
 #import "GroupBuyUserService.h"
 
@@ -51,8 +52,8 @@
 
 NSString* GlobalGetServerURL()
 {
-    return @"http://192.168.1.188:8000/api/i?";
-//    return @"http://www.dipan100.com:8000/api/i?";
+//    return @"http://192.168.1.188:8000/api/i?";
+    return @"http://www.dipan100.com:8000/api/i?";
 }
 
 AppService* GlobalGetAppService()
@@ -110,6 +111,12 @@ ProductService* GlobalGetProductService()
     return [delegate productService];   
 }
 
+UserShopItemService* GlobalGetUserShopItemService()
+{
+    groupbuyAppDelegate* delegate = (groupbuyAppDelegate*)[[UIApplication sharedApplication] delegate];    
+    return [delegate userShopService];       
+}
+
 @implementation groupbuyAppDelegate
 
 @synthesize window;
@@ -126,6 +133,7 @@ ProductService* GlobalGetProductService()
 @synthesize postService;
 @synthesize appService;
 @synthesize productService;
+@synthesize userShopService;
 @synthesize reviewRequest;
 
 #pragma mark -
@@ -233,6 +241,11 @@ ProductService* GlobalGetProductService()
     self.productService = [[ProductService alloc] init];
 }
 
+- (void)initUserShopService
+{
+    self.userShopService = [[UserShopItemService alloc] init];
+}
+
 - (void)showViewByUserStatus
 {
     [userService groupBuyCheckDevice];    
@@ -256,6 +269,7 @@ ProductService* GlobalGetProductService()
     [self initPostService];
     [self initAppService];    
     [self initProductService];
+    [self initUserShopService];
     
     [self showViewByUserStatus];
     
@@ -528,6 +542,7 @@ ProductService* GlobalGetProductService()
     [appService release];
     [reviewRequest release];
     [productService release];
+    [userShopService release];
 	
     [super dealloc];
 }

@@ -25,6 +25,7 @@
 @class AppService;
 @class ProductService;
 @class ReviewRequest;
+@class UserShopItemService;
 
 #define _THREE20_		1
 #define kAppId			@"456494464"					// To be changed for each project
@@ -48,6 +49,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     PostService         *postService;
     AppService          *appService;    
     ProductService      *productService;
+    UserShopItemService *userShopService;
     
     ReviewRequest           *reviewRequest;
     EnterPlaceAppController *enterController;    
@@ -67,6 +69,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 @property (nonatomic, retain) PostService                   *postService;
 @property (nonatomic, retain) AppService                    *appService;
 @property (nonatomic, retain) ProductService                *productService;
+@property (nonatomic, retain) UserShopItemService           *userShopService;
 @property (nonatomic, retain) RegisterController            *registerController;
 @property (nonatomic, retain) EnterPlaceAppController       *enterController;    
 @property (nonatomic, retain) NSString                      *dataForRegistration;

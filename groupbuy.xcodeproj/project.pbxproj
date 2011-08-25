@@ -377,6 +377,7 @@
 		CA707B651406061200FB9990 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B5F1406061200FB9990 /* SBJsonWriter.m */; };
 		CA707B671406064500FB9990 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B661406064500FB9990 /* Reachability.m */; };
 		CA707B691406232F00FB9990 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA707B681406232F00FB9990 /* libz.1.1.3.dylib */; };
+		CA79216B14068E9900F336C5 /* UserShopItemService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA79216A14068E9900F336C5 /* UserShopItemService.m */; };
 		CA7C0B1413E6B3B5001121C3 /* GroupBuyUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C0B1313E6B3B5001121C3 /* GroupBuyUserService.m */; };
 		CA9204C913E4FB7D00DBA17C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C213E4FB7D00DBA17C /* city.plist */; };
 		CA9204CA13E4FB7D00DBA17C /* CityPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9204C413E4FB7D00DBA17C /* CityPickerManager.m */; };
@@ -1117,6 +1118,8 @@
 		CA707B5F1406061200FB9990 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		CA707B661406064500FB9990 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CA707B681406232F00FB9990 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = /usr/lib/libz.1.1.3.dylib; sourceTree = "<absolute>"; };
+		CA79216914068E9900F336C5 /* UserShopItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserShopItemService.h; sourceTree = "<group>"; };
+		CA79216A14068E9900F336C5 /* UserShopItemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserShopItemService.m; sourceTree = "<group>"; };
 		CA7A1ECA1403AE84005651D6 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		CA7A1ECB1403AE84005651D6 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		CA7A1ECD1403AE84005651D6 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
@@ -2695,6 +2698,8 @@
 				CADF6B7C13DAA0A90060F438 /* ProductService.m */,
 				CA7C0B1213E6B3B5001121C3 /* GroupBuyUserService.h */,
 				CA7C0B1313E6B3B5001121C3 /* GroupBuyUserService.m */,
+				CA79216914068E9900F336C5 /* UserShopItemService.h */,
+				CA79216A14068E9900F336C5 /* UserShopItemService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -3588,6 +3593,7 @@
 				CA707B641406061200FB9990 /* SBJsonParser.m in Sources */,
 				CA707B651406061200FB9990 /* SBJsonWriter.m in Sources */,
 				CA707B671406064500FB9990 /* Reachability.m in Sources */,
+				CA79216B14068E9900F336C5 /* UserShopItemService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
