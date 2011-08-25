@@ -369,7 +369,6 @@
 		CA607C1513D5634800E0D0DC /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEA13D5634800E0D0DC /* touxiang.png */; };
 		CA607C1613D5634800E0D0DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEC13D5634800E0D0DC /* InfoPlist.strings */; };
 		CA607C1713D5634800E0D0DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEE13D5634800E0D0DC /* Localizable.strings */; };
-		CA7A1EC51403A82A005651D6 /* iFlyISR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7A1EC41403A82A005651D6 /* iFlyISR.framework */; };
 		CA7A1EC81403A991005651D6 /* ASREngine.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7A1EC71403A991005651D6 /* ASREngine.m */; };
 		CA7C0B1413E6B3B5001121C3 /* GroupBuyUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C0B1313E6B3B5001121C3 /* GroupBuyUserService.m */; };
 		CA9204C913E4FB7D00DBA17C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C213E4FB7D00DBA17C /* city.plist */; };
@@ -393,6 +392,7 @@
 		CAA46EF213F3743000688E64 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA46EF113F3743000688E64 /* libz.1.2.3.dylib */; };
 		CABCB59B13ED0F5900F9BD2A /* SearchHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */; };
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
+		CAC053581405F2F70081FEF1 /* iFlyISR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC053571405F2F70081FEF1 /* iFlyISR.framework */; };
 		CADDC6D613E438D70030F9FC /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D413E438D70030F9FC /* button.png */; };
 		CADDC6D713E438D70030F9FC /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D513E438D70030F9FC /* button@2x.png */; };
 		CADE8F3513E6789B00B48DB8 /* AnnotationPin.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE8F3113E6789B00B48DB8 /* AnnotationPin.m */; };
@@ -1104,7 +1104,6 @@
 		CA607BF313D5634800E0D0DC /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = zh_Hans.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA607BF413D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA607BF513D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CA7A1EC41403A82A005651D6 /* iFlyISR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iFlyISR.framework; path = ../../../3PP/IFly/lib/iFlyISR.framework; sourceTree = "<group>"; };
 		CA7A1EC61403A991005651D6 /* ASREngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASREngine.h; sourceTree = "<group>"; };
 		CA7A1EC71403A991005651D6 /* ASREngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASREngine.m; sourceTree = "<group>"; };
 		CA7A1ECA1403AE84005651D6 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -1143,6 +1142,7 @@
 		CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryManager.m; sourceTree = "<group>"; };
 		CABCB59F13ED100C00F9BD2A /* SearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistory.h; sourceTree = "<group>"; };
 		CABCB5A013ED100C00F9BD2A /* SearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistory.m; sourceTree = "<group>"; };
+		CAC053571405F2F70081FEF1 /* iFlyISR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iFlyISR.framework; sourceTree = "<group>"; };
 		CACC311E1400B1FE00EAD9F0 /* MainDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MainDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
 		CADDC6D413E438D70030F9FC /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		CADDC6D513E438D70030F9FC /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
@@ -1368,7 +1368,7 @@
 				CA5D136C13D55A9F003CB28C /* Foundation.framework in Frameworks */,
 				CA5D136E13D55A9F003CB28C /* CoreGraphics.framework in Frameworks */,
 				CAA46EF013F3734B00688E64 /* libMobClickLibrary_1.6.4.a in Frameworks */,
-				CA7A1EC51403A82A005651D6 /* iFlyISR.framework in Frameworks */,
+				CAC053581405F2F70081FEF1 /* iFlyISR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1388,7 +1388,7 @@
 		8899B5DD13EE40B700D039A8 /* iFly */ = {
 			isa = PBXGroup;
 			children = (
-				CA7A1EC41403A82A005651D6 /* iFlyISR.framework */,
+				CAC053571405F2F70081FEF1 /* iFlyISR.framework */,
 				CA7A1EC61403A991005651D6 /* ASREngine.h */,
 				CA7A1EC71403A991005651D6 /* ASREngine.m */,
 			);
@@ -3761,6 +3761,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/3PP/IFly/lib,
+					"\"$(SRCROOT)/../Common_Iphone/iFly\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3787,6 +3788,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/3PP/IFly/lib,
+					"\"$(SRCROOT)/../Common_Iphone/iFly\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "groupbuy/groupbuy-Prefix.pch";
@@ -3883,6 +3885,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/3PP/IFly/lib,
+					"\"$(SRCROOT)/../Common_Iphone/iFly\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "groupbuy/groupbuy-Prefix.pch";
