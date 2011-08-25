@@ -369,7 +369,13 @@
 		CA607C1513D5634800E0D0DC /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEA13D5634800E0D0DC /* touxiang.png */; };
 		CA607C1613D5634800E0D0DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEC13D5634800E0D0DC /* InfoPlist.strings */; };
 		CA607C1713D5634800E0D0DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEE13D5634800E0D0DC /* Localizable.strings */; };
-		CA7A1EC81403A991005651D6 /* ASREngine.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7A1EC71403A991005651D6 /* ASREngine.m */; };
+		CA707B601406061200FB9990 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B5A1406061200FB9990 /* NSObject+SBJSON.m */; };
+		CA707B611406061200FB9990 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B5B1406061200FB9990 /* NSString+SBJSON.m */; };
+		CA707B621406061200FB9990 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B5C1406061200FB9990 /* SBJSON.m */; };
+		CA707B631406061200FB9990 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B5D1406061200FB9990 /* SBJsonBase.m */; };
+		CA707B641406061200FB9990 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B5E1406061200FB9990 /* SBJsonParser.m */; };
+		CA707B651406061200FB9990 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B5F1406061200FB9990 /* SBJsonWriter.m */; };
+		CA707B671406064500FB9990 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CA707B661406064500FB9990 /* Reachability.m */; };
 		CA7C0B1413E6B3B5001121C3 /* GroupBuyUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C0B1313E6B3B5001121C3 /* GroupBuyUserService.m */; };
 		CA9204C913E4FB7D00DBA17C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9204C213E4FB7D00DBA17C /* city.plist */; };
 		CA9204CA13E4FB7D00DBA17C /* CityPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9204C413E4FB7D00DBA17C /* CityPickerManager.m */; };
@@ -392,7 +398,6 @@
 		CAA46EF213F3743000688E64 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA46EF113F3743000688E64 /* libz.1.2.3.dylib */; };
 		CABCB59B13ED0F5900F9BD2A /* SearchHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */; };
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
-		CAC053581405F2F70081FEF1 /* iFlyISR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC053571405F2F70081FEF1 /* iFlyISR.framework */; };
 		CADDC6D613E438D70030F9FC /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D413E438D70030F9FC /* button.png */; };
 		CADDC6D713E438D70030F9FC /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D513E438D70030F9FC /* button@2x.png */; };
 		CADE8F3513E6789B00B48DB8 /* AnnotationPin.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE8F3113E6789B00B48DB8 /* AnnotationPin.m */; };
@@ -1104,8 +1109,13 @@
 		CA607BF313D5634800E0D0DC /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = zh_Hans.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA607BF413D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA607BF513D5634800E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CA7A1EC61403A991005651D6 /* ASREngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASREngine.h; sourceTree = "<group>"; };
-		CA7A1EC71403A991005651D6 /* ASREngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASREngine.m; sourceTree = "<group>"; };
+		CA707B5A1406061200FB9990 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		CA707B5B1406061200FB9990 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		CA707B5C1406061200FB9990 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		CA707B5D1406061200FB9990 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		CA707B5E1406061200FB9990 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		CA707B5F1406061200FB9990 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		CA707B661406064500FB9990 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CA7A1ECA1403AE84005651D6 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		CA7A1ECB1403AE84005651D6 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		CA7A1ECD1403AE84005651D6 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
@@ -1142,7 +1152,6 @@
 		CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryManager.m; sourceTree = "<group>"; };
 		CABCB59F13ED100C00F9BD2A /* SearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistory.h; sourceTree = "<group>"; };
 		CABCB5A013ED100C00F9BD2A /* SearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistory.m; sourceTree = "<group>"; };
-		CAC053571405F2F70081FEF1 /* iFlyISR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iFlyISR.framework; sourceTree = "<group>"; };
 		CACC311E1400B1FE00EAD9F0 /* MainDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MainDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
 		CADDC6D413E438D70030F9FC /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		CADDC6D513E438D70030F9FC /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
@@ -1368,7 +1377,6 @@
 				CA5D136C13D55A9F003CB28C /* Foundation.framework in Frameworks */,
 				CA5D136E13D55A9F003CB28C /* CoreGraphics.framework in Frameworks */,
 				CAA46EF013F3734B00688E64 /* libMobClickLibrary_1.6.4.a in Frameworks */,
-				CAC053581405F2F70081FEF1 /* iFlyISR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1385,16 +1393,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8899B5DD13EE40B700D039A8 /* iFly */ = {
-			isa = PBXGroup;
-			children = (
-				CAC053571405F2F70081FEF1 /* iFlyISR.framework */,
-				CA7A1EC61403A991005651D6 /* ASREngine.h */,
-				CA7A1EC71403A991005651D6 /* ASREngine.m */,
-			);
-			path = iFly;
-			sourceTree = "<group>";
-		};
 		CA08741C13E679F100F808E3 /* TelPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1540,7 +1538,6 @@
 			isa = PBXGroup;
 			children = (
 				CA7A1EC91403AE84005651D6 /* JSON */,
-				8899B5DD13EE40B700D039A8 /* iFly */,
 				CAE655BE13DE982400182C79 /* MobClick */,
 				CA1A9D7F13DD68790072926A /* WebView */,
 				CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */,
@@ -2219,6 +2216,7 @@
 		CA6076BA13D55EE200E0D0DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CA707B661406064500FB9990 /* Reachability.m */,
 				CA6076BB13D55EE200E0D0DC /* ActionSelector.h */,
 				CA6076BC13D55EE200E0D0DC /* ActionSelector.m */,
 				CA6076BD13D55EE200E0D0DC /* ArrayOfCharacters.h */,
@@ -2605,6 +2603,12 @@
 		CA7A1EC91403AE84005651D6 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				CA707B5A1406061200FB9990 /* NSObject+SBJSON.m */,
+				CA707B5B1406061200FB9990 /* NSString+SBJSON.m */,
+				CA707B5C1406061200FB9990 /* SBJSON.m */,
+				CA707B5D1406061200FB9990 /* SBJsonBase.m */,
+				CA707B5E1406061200FB9990 /* SBJsonParser.m */,
+				CA707B5F1406061200FB9990 /* SBJsonWriter.m */,
 				CA7A1ECA1403AE84005651D6 /* JSON.h */,
 				CA7A1ECB1403AE84005651D6 /* NSObject+SBJSON.h */,
 				CA7A1ECD1403AE84005651D6 /* NSString+SBJSON.h */,
@@ -3577,7 +3581,13 @@
 				887A5C9513FF95EB00FF3457 /* ShoppingKeywordCell.m in Sources */,
 				887A5C9A13FF961900FF3457 /* ShoppingValidPeriodCell.m in Sources */,
 				887A5C9F13FF964C00FF3457 /* SliderCell.m in Sources */,
-				CA7A1EC81403A991005651D6 /* ASREngine.m in Sources */,
+				CA707B601406061200FB9990 /* NSObject+SBJSON.m in Sources */,
+				CA707B611406061200FB9990 /* NSString+SBJSON.m in Sources */,
+				CA707B621406061200FB9990 /* SBJSON.m in Sources */,
+				CA707B631406061200FB9990 /* SBJsonBase.m in Sources */,
+				CA707B641406061200FB9990 /* SBJsonParser.m in Sources */,
+				CA707B651406061200FB9990 /* SBJsonWriter.m in Sources */,
+				CA707B671406064500FB9990 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3772,9 +3782,11 @@
 					"\"$(SRCROOT)/../Common_Iphone/MobClick\"",
 					"\"$(SRCROOT)/../Common_Iphone/iFly/bin\"",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0786A49F-72CD-44A2-A4FC-7CB42678D2FE";
-				VALID_ARCHS = armv6;
+				SDKROOT = iphoneos4.1;
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3798,9 +3810,11 @@
 					"\"$(SRCROOT)/../Common_Iphone/MobClick\"",
 					"\"$(SRCROOT)/../Common_Iphone/iFly/bin\"",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = armv6;
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3895,10 +3909,12 @@
 					"\"$(SRCROOT)/../Common_Iphone/MobClick\"",
 					"\"$(SRCROOT)/../Common_Iphone/iFly/bin\"",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6D9C9550-F7EF-4784-A1B3-C3F3B6DA4191";
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = armv6;
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
