@@ -402,6 +402,8 @@
 		CAA46EF013F3734B00688E64 /* libMobClickLibrary_1.6.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */; };
 		CABCB59B13ED0F5900F9BD2A /* SearchHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */; };
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
+		CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACECC931408ECAE00C90A99 /* ShoppingListCell.m */; };
+		CACECC961408ECAE00C90A99 /* ShoppingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */; };
 		CADDC6D613E438D70030F9FC /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D413E438D70030F9FC /* button.png */; };
 		CADDC6D713E438D70030F9FC /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D513E438D70030F9FC /* button@2x.png */; };
 		CADE8F3513E6789B00B48DB8 /* AnnotationPin.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE8F3113E6789B00B48DB8 /* AnnotationPin.m */; };
@@ -1164,6 +1166,9 @@
 		CABCB59F13ED100C00F9BD2A /* SearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistory.h; sourceTree = "<group>"; };
 		CABCB5A013ED100C00F9BD2A /* SearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistory.m; sourceTree = "<group>"; };
 		CACC311E1400B1FE00EAD9F0 /* MainDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MainDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
+		CACECC921408ECAE00C90A99 /* ShoppingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListCell.h; sourceTree = "<group>"; };
+		CACECC931408ECAE00C90A99 /* ShoppingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListCell.m; sourceTree = "<group>"; };
+		CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingListCell.xib; sourceTree = "<group>"; };
 		CADDC6D413E438D70030F9FC /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		CADDC6D513E438D70030F9FC /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		CADE8F3013E6789B00B48DB8 /* AnnotationPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationPin.h; sourceTree = "<group>"; };
@@ -2788,6 +2793,9 @@
 				887A5C8713FF89EF00FF3457 /* ShoppingListController.h */,
 				887A5C8813FF89EF00FF3457 /* ShoppingListController.m */,
 				887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */,
+				CACECC921408ECAE00C90A99 /* ShoppingListCell.h */,
+				CACECC931408ECAE00C90A99 /* ShoppingListCell.m */,
+				CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */,
 				887A5C8D13FF94C600FF3457 /* ShoppingCategoryCell.h */,
 				887A5C8E13FF94C600FF3457 /* ShoppingCategoryCell.m */,
 				887A5C8F13FF94C600FF3457 /* ShoppingCategoryCell.xib */,
@@ -3270,6 +3278,7 @@
 				CA3D8D5E1405E75000C3763F /* down.png in Resources */,
 				CA3D8D5F1405E75000C3763F /* up.png in Resources */,
 				CA134589140743D80009C5C6 /* ShoppingSubCategoryCell.xib in Resources */,
+				CACECC961408ECAE00C90A99 /* ShoppingListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3610,6 +3619,7 @@
 				CA79216B14068E9900F336C5 /* UserShopItemService.m in Sources */,
 				CA13458414073BF30009C5C6 /* UserShoppItemManager.m in Sources */,
 				CA134588140743D80009C5C6 /* ShoppingSubCategoryCell.m in Sources */,
+				CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
