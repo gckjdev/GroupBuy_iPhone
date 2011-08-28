@@ -26,6 +26,7 @@
 		CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA08741F13E679F100F808E3 /* TelPickerViewController.xib */; };
 		CA0AAEBE13E3BA840050F143 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0AAEBC13E3BA840050F143 /* background.png */; };
 		CA0AAEBF13E3BA840050F143 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0AAEBD13E3BA840050F143 /* background@2x.png */; };
+		CA12C5781409ED6D004F04C5 /* CategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA12C5771409ED6D004F04C5 /* CategoryManager.m */; };
 		CA13458414073BF30009C5C6 /* UserShoppItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13458314073BF30009C5C6 /* UserShoppItemManager.m */; };
 		CA134588140743D80009C5C6 /* ShoppingSubCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA134586140743D80009C5C6 /* ShoppingSubCategoryCell.m */; };
 		CA134589140743D80009C5C6 /* ShoppingSubCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA134587140743D80009C5C6 /* ShoppingSubCategoryCell.xib */; };
@@ -553,6 +554,8 @@
 		CA08741F13E679F100F808E3 /* TelPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelPickerViewController.xib; sourceTree = "<group>"; };
 		CA0AAEBC13E3BA840050F143 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		CA0AAEBD13E3BA840050F143 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		CA12C5761409ED6D004F04C5 /* CategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryManager.h; sourceTree = "<group>"; };
+		CA12C5771409ED6D004F04C5 /* CategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryManager.m; sourceTree = "<group>"; };
 		CA13458214073BF30009C5C6 /* UserShoppItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserShoppItemManager.h; sourceTree = "<group>"; };
 		CA13458314073BF30009C5C6 /* UserShoppItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserShoppItemManager.m; sourceTree = "<group>"; };
 		CA134585140743D70009C5C6 /* ShoppingSubCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingSubCategoryCell.h; sourceTree = "<group>"; };
@@ -2692,6 +2695,8 @@
 				88770BBF13EE8C6C00835E52 /* HotKeywordManager.m */,
 				CA13458214073BF30009C5C6 /* UserShoppItemManager.h */,
 				CA13458314073BF30009C5C6 /* UserShoppItemManager.m */,
+				CA12C5761409ED6D004F04C5 /* CategoryManager.h */,
+				CA12C5771409ED6D004F04C5 /* CategoryManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3620,6 +3625,7 @@
 				CA13458414073BF30009C5C6 /* UserShoppItemManager.m in Sources */,
 				CA134588140743D80009C5C6 /* ShoppingSubCategoryCell.m in Sources */,
 				CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */,
+				CA12C5781409ED6D004F04C5 /* CategoryManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
