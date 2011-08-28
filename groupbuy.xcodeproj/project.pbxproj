@@ -516,6 +516,10 @@
 		CAE655D213DEBCB200182C79 /* reload_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C913DEBCB200182C79 /* reload_24.png */; };
 		CAE655D313DEBCB200182C79 /* reload_48.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CA13DEBCB200182C79 /* reload_48.png */; };
 		CAE655D413DEBCB200182C79 /* reload_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CB13DEBCB200182C79 /* reload_64.png */; };
+		FBF99458140A454500BEAB24 /* ProductCommentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF99453140A454500BEAB24 /* ProductCommentsController.m */; };
+		FBF99459140A454500BEAB24 /* ProductCommentsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF99454140A454500BEAB24 /* ProductCommentsController.xib */; };
+		FBF9945A140A454500BEAB24 /* ProductWriteCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF99456140A454500BEAB24 /* ProductWriteCommentController.m */; };
+		FBF9945B140A454500BEAB24 /* ProductWriteCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF99457140A454500BEAB24 /* ProductWriteCommentController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1379,6 +1383,12 @@
 		CAE655C913DEBCB200182C79 /* reload_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_24.png; sourceTree = "<group>"; };
 		CAE655CA13DEBCB200182C79 /* reload_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_48.png; sourceTree = "<group>"; };
 		CAE655CB13DEBCB200182C79 /* reload_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_64.png; sourceTree = "<group>"; };
+		FBF99452140A454500BEAB24 /* ProductCommentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCommentsController.h; sourceTree = "<group>"; };
+		FBF99453140A454500BEAB24 /* ProductCommentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCommentsController.m; sourceTree = "<group>"; };
+		FBF99454140A454500BEAB24 /* ProductCommentsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCommentsController.xib; sourceTree = "<group>"; };
+		FBF99455140A454500BEAB24 /* ProductWriteCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductWriteCommentController.h; sourceTree = "<group>"; };
+		FBF99456140A454500BEAB24 /* ProductWriteCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductWriteCommentController.m; sourceTree = "<group>"; };
+		FBF99457140A454500BEAB24 /* ProductWriteCommentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductWriteCommentController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2785,6 +2795,12 @@
 		CADF6BBB13DAA4810060F438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FBF99452140A454500BEAB24 /* ProductCommentsController.h */,
+				FBF99453140A454500BEAB24 /* ProductCommentsController.m */,
+				FBF99454140A454500BEAB24 /* ProductCommentsController.xib */,
+				FBF99455140A454500BEAB24 /* ProductWriteCommentController.h */,
+				FBF99456140A454500BEAB24 /* ProductWriteCommentController.m */,
+				FBF99457140A454500BEAB24 /* ProductWriteCommentController.xib */,
 				CADF6BBC13DAA5190060F438 /* CommonProductListController.h */,
 				CADF6BBD13DAA5190060F438 /* CommonProductListController.m */,
 				CADF6BBE13DAA5190060F438 /* CommonProductListController.xib */,
@@ -3305,6 +3321,8 @@
 				CACECC961408ECAE00C90A99 /* ShoppingListCell.xib in Resources */,
 				CAE1A0BE140A120600B40023 /* donedown.png in Resources */,
 				CAE1A0BF140A120600B40023 /* doneup.png in Resources */,
+				FBF99459140A454500BEAB24 /* ProductCommentsController.xib in Resources */,
+				FBF9945B140A454500BEAB24 /* ProductWriteCommentController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3648,6 +3666,8 @@
 				CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */,
 				CA12C5781409ED6D004F04C5 /* CategoryManager.m in Sources */,
 				CAE1A0BA140A10BF00B40023 /* PPViewController+NumPadReturn.m in Sources */,
+				FBF99458140A454500BEAB24 /* ProductCommentsController.m in Sources */,
+				FBF9945A140A454500BEAB24 /* ProductWriteCommentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
