@@ -152,13 +152,13 @@ UserShopItemService* GlobalGetUserShopItemService()
 			   viewControllers:controllers];	
 
 	[UIUtils addViewController:[SearchProductController alloc]
-					 viewTitle:@"搜索"				 
+					 viewTitle:@"热门"				 
 					 viewImage:@"magnifier_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
 	[UIUtils addViewController:[AddShoppingItemController alloc]
-					 viewTitle:@"清单"				 
+					 viewTitle:@"我要团"				 
 					 viewImage:@"magnifier_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
