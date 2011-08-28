@@ -23,12 +23,40 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Place/Client/Common_Iphone/GroupBuyCommon/Controller/AddShoppingItemController.m"
-         timestampString = "336204124.494323"
+         timestampString = "336218007.748171"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "296"
-         endingLineNumber = "296"
+         startingLineNumber = "313"
+         endingLineNumber = "313"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Place/Client/Common_Iphone/GroupBuyCommon/Controller/AddShoppingItemController.m"
+         timestampString = "336218007.748171"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "260"
+         endingLineNumber = "260"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Place/Client/Common_Iphone/GroupBuyCommon/Controller/AddShoppingItemController.m"
+         timestampString = "336218007.748171"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "449"
+         endingLineNumber = "449"
+         landmarkName = "-selectCategory:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
