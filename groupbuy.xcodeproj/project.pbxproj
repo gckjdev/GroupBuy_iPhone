@@ -504,6 +504,9 @@
 		CAE169E613FE0A3F00A9C202 /* UIToolbar+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE1693313FE0A3F00A9C202 /* UIToolbar+TKCategory.m */; };
 		CAE169E713FE0A3F00A9C202 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE1693513FE0A3F00A9C202 /* UIView+TKCategory.m */; };
 		CAE169E813FE0A3F00A9C202 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CAE1693613FE0A3F00A9C202 /* TapkuLibrary.bundle */; };
+		CAE1A0BA140A10BF00B40023 /* PPViewController+NumPadReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE1A0B9140A10BF00B40023 /* PPViewController+NumPadReturn.m */; };
+		CAE1A0BE140A120600B40023 /* donedown.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE1A0BC140A120600B40023 /* donedown.png */; };
+		CAE1A0BF140A120600B40023 /* doneup.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE1A0BD140A120600B40023 /* doneup.png */; };
 		CAE655CC13DEBCB200182C79 /* arrow_left_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C313DEBCB200182C79 /* arrow_left_24.png */; };
 		CAE655CD13DEBCB200182C79 /* arrow_left_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C413DEBCB200182C79 /* arrow_left_24@2x.png */; };
 		CAE655CE13DEBCB200182C79 /* arrow_left_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C513DEBCB200182C79 /* arrow_left_64.png */; };
@@ -1362,6 +1365,10 @@
 		CAE1693413FE0A3F00A9C202 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKCategory.h"; sourceTree = "<group>"; };
 		CAE1693513FE0A3F00A9C202 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
 		CAE1693613FE0A3F00A9C202 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapkuLibrary.bundle; sourceTree = "<group>"; };
+		CAE1A0B8140A10BF00B40023 /* PPViewController+NumPadReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPViewController+NumPadReturn.h"; sourceTree = "<group>"; };
+		CAE1A0B9140A10BF00B40023 /* PPViewController+NumPadReturn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PPViewController+NumPadReturn.m"; sourceTree = "<group>"; };
+		CAE1A0BC140A120600B40023 /* donedown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donedown.png; sourceTree = "<group>"; };
+		CAE1A0BD140A120600B40023 /* doneup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneup.png; sourceTree = "<group>"; };
 		CAE655C013DE982400182C79 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		CAE655C313DEBCB200182C79 /* arrow_left_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_24.png; sourceTree = "<group>"; };
 		CAE655C413DEBCB200182C79 /* arrow_left_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left_24@2x.png"; sourceTree = "<group>"; };
@@ -1593,6 +1600,7 @@
 		CA60751A13D55EE200E0D0DC /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CAE1A0BB140A120600B40023 /* Resource */,
 				CA60751B13D55EE200E0D0DC /* CustomIndexView.h */,
 				CA60751C13D55EE200E0D0DC /* CustomIndexView.m */,
 				CA60751D13D55EE200E0D0DC /* EnhanceUIApplication.h */,
@@ -1617,6 +1625,8 @@
 				CADF6B7013DA9B110060F438 /* PPNetworkRequest.h */,
 				CADF6B7113DA9B110060F438 /* PPNetworkRequest.m */,
 				CADF6B7313DA9C650060F438 /* PPNetworkConstants.h */,
+				CAE1A0B8140A10BF00B40023 /* PPViewController+NumPadReturn.h */,
+				CAE1A0B9140A10BF00B40023 /* PPViewController+NumPadReturn.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -3010,6 +3020,15 @@
 			path = TapkuLibrary;
 			sourceTree = "<group>";
 		};
+		CAE1A0BB140A120600B40023 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CAE1A0BC140A120600B40023 /* donedown.png */,
+				CAE1A0BD140A120600B40023 /* doneup.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		CAE655BE13DE982400182C79 /* MobClick */ = {
 			isa = PBXGroup;
 			children = (
@@ -3284,6 +3303,8 @@
 				CA3D8D5F1405E75000C3763F /* up.png in Resources */,
 				CA134589140743D80009C5C6 /* ShoppingSubCategoryCell.xib in Resources */,
 				CACECC961408ECAE00C90A99 /* ShoppingListCell.xib in Resources */,
+				CAE1A0BE140A120600B40023 /* donedown.png in Resources */,
+				CAE1A0BF140A120600B40023 /* doneup.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3626,6 +3647,7 @@
 				CA134588140743D80009C5C6 /* ShoppingSubCategoryCell.m in Sources */,
 				CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */,
 				CA12C5781409ED6D004F04C5 /* CategoryManager.m in Sources */,
+				CAE1A0BA140A10BF00B40023 /* PPViewController+NumPadReturn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
