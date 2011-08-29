@@ -52,7 +52,7 @@
 
 NSString* GlobalGetServerURL()
 {
-    return @"http://localhost:8000/api/i?";
+    return @"http://192.168.1.188:8000/api/i?";
 //    return @"http://www.dipan100.com:8000/api/i?";
 }
 
@@ -159,7 +159,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 	
 	[UIUtils addViewController:[AddShoppingItemController alloc]
 					 viewTitle:@"我要团"				 
-					 viewImage:@"magnifier_24.png"
+					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
 	
