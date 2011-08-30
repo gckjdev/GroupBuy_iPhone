@@ -146,25 +146,25 @@ UserShopItemService* GlobalGetUserShopItemService()
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
 	[UIUtils addViewController:[PostMainController alloc]
-					 viewTitle:@"é¦–é¡µ"
+					 viewTitle:@"é¦?¡µ"
 					 viewImage:@"home_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
 	[UIUtils addViewController:[SearchProductController alloc]
-					 viewTitle:@"çƒ­é—¨"				 
+					 viewTitle:@"???"				 
 					 viewImage:@"magnifier_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
 	[UIUtils addViewController:[AddShoppingItemController alloc]
-					 viewTitle:@"æˆ‘è¦å›¢"				 
+					 viewTitle:@"?????				 
 					 viewImage:@"magnifier_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
-					 viewTitle:@"æ”¶è—"				 
+					 viewTitle:@"?¶è?"				 
 					 viewImage:@"folder_bookmark_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
@@ -183,7 +183,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 			   viewControllers:controllers];	
         
 	[UIUtils addViewController:[FeedbackController alloc]
-					 viewTitle:@"åé¦ˆ"
+					 viewTitle:@"???"
 					 viewImage:@"help_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
@@ -567,7 +567,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	
 //	if ([application enabledRemoteNotificationTypes] == UIRemoteNotificationTypeNone){
-//        [UIUtils alert:@"ç”±äºæ‚¨æœªåŒæ„æ¥å—æ¨é€é€šçŸ¥åŠŸèƒ½ï¼Œå›¢è´­è´­ç‰©æ¨é€é€šçŸ¥åŠŸèƒ½æ— æ³•æ­£å¸¸ä½¿ç”¨"];
+//        [UIUtils alert:@"?±ä??¨æ?????¥å??¨é???????ï¼??è´?´­?©æ?????¥å??½æ?æ³??å¸¸ä½¿??];
 //		return;
 //	}
 	
@@ -585,10 +585,10 @@ UserShopItemService* GlobalGetUserShopItemService()
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
 	NSString *message = [error localizedDescription];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"é”™è¯¯"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"???"
 													message: message
                                                    delegate: nil
-                                          cancelButtonTitle: @"ç¡®è®¤"
+                                          cancelButtonTitle: @"ç¡??"
                                           otherButtonTitles: nil];
     [alert show];
     [alert release];
