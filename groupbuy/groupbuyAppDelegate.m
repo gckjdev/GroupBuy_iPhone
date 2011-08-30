@@ -47,6 +47,7 @@
 #import "GroupBuyNetworkRequest.h"
 
 #import "CityPickerViewController.h"
+#import "ShoppingListController.h"
 
 #define kDbFileName			@"AppDB"
 
@@ -157,8 +158,8 @@ UserShopItemService* GlobalGetUserShopItemService()
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
-	[UIUtils addViewController:[AddShoppingItemController alloc]
-					 viewTitle:@"我要团"				 
+	[UIUtils addViewController:[ShoppingListController alloc]
+					 viewTitle:@"订阅"				 
 					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
