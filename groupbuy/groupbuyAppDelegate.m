@@ -52,7 +52,7 @@
 
 NSString* GlobalGetServerURL()
 {
-    return @"http://localhost:8000/api/i?";
+    return @"http://192.168.1.188:8000/api/i?";
 //    return @"http://www.dipan100.com:8000/api/i?";
 }
 
@@ -146,25 +146,25 @@ UserShopItemService* GlobalGetUserShopItemService()
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
 	[UIUtils addViewController:[PostMainController alloc]
-					 viewTitle:@"È¶?°µ"
+					 viewTitle:@"È¶ñÈ°µ"
 					 viewImage:@"home_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
 	[UIUtils addViewController:[SearchProductController alloc]
-					 viewTitle:@"???"				 
+					 viewTitle:@"ÁÉ≠Èó®"				 
 					 viewImage:@"magnifier_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
 	[UIUtils addViewController:[AddShoppingItemController alloc]
-					 viewTitle:@"?????				 
-					 viewImage:@"magnifier_24.png"
+					 viewTitle:@"ÊàëË¶ÅÂõ¢"				 
+					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
-					 viewTitle:@"?∂Ë?"				 
+					 viewTitle:@"Êî∂Ëóè"				 
 					 viewImage:@"folder_bookmark_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
@@ -183,7 +183,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 			   viewControllers:controllers];	
         
 	[UIUtils addViewController:[FeedbackController alloc]
-					 viewTitle:@"???"
+					 viewTitle:@"ÂèçÈ¶à"
 					 viewImage:@"help_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
@@ -567,7 +567,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	
 //	if ([application enabledRemoteNotificationTypes] == UIRemoteNotificationTypeNone){
-//        [UIUtils alert:@"?±‰??®Ê?????•Â??®È???????Ôº??Ë¥?¥≠?©Ê?????•Â??ΩÊ?Ê≥??Â∏∏‰Ωø??];
+//        [UIUtils alert:@"Áî±‰∫éÊÇ®Êú™ÂêåÊÑèÊé•ÂèóÊé®ÈÄÅÈÄöÁü•ÂäüËÉΩÔºåÂõ¢Ë¥≠Ë¥≠Áâ©Êé®ÈÄÅÈÄöÁü•ÂäüËÉΩÊó†Ê≥ïÊ≠£Â∏∏‰ΩøÁî®"];
 //		return;
 //	}
 	
@@ -585,10 +585,10 @@ UserShopItemService* GlobalGetUserShopItemService()
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
 	NSString *message = [error localizedDescription];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"???"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"ÈîôËØØ"
 													message: message
                                                    delegate: nil
-                                          cancelButtonTitle: @"Á°??"
+                                          cancelButtonTitle: @"Á°ÆËÆ§"
                                           otherButtonTitles: nil];
     [alert show];
     [alert release];
