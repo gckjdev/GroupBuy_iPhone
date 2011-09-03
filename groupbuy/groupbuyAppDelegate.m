@@ -47,12 +47,13 @@
 #import "GroupBuyNetworkRequest.h"
 
 #import "CityPickerViewController.h"
+#import "ShoppingListController.h"
 
 #define kDbFileName			@"AppDB"
 
 NSString* GlobalGetServerURL()
 {
-    return @"http://localhost:8000/api/i?";
+    return @"http://192.168.1.188:8000/api/i?";
 //    return @"http://www.dipan100.com:8000/api/i?";
 }
 
@@ -157,9 +158,9 @@ UserShopItemService* GlobalGetUserShopItemService()
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
-	[UIUtils addViewController:[AddShoppingItemController alloc]
-					 viewTitle:@"我要团"				 
-					 viewImage:@"magnifier_24.png"
+	[UIUtils addViewController:[ShoppingListController alloc]
+					 viewTitle:@"订阅"				 
+					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
 	
