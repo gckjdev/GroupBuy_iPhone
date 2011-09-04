@@ -519,6 +519,8 @@
 		CAE655D213DEBCB200182C79 /* reload_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C913DEBCB200182C79 /* reload_24.png */; };
 		CAE655D313DEBCB200182C79 /* reload_48.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CA13DEBCB200182C79 /* reload_48.png */; };
 		CAE655D413DEBCB200182C79 /* reload_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CB13DEBCB200182C79 /* reload_64.png */; };
+		FB70BF0914134FA000ACA7A1 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */; };
+		FB70BF0C1413500200ACA7A1 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */; };
 		FBF99458140A454500BEAB24 /* ProductCommentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF99453140A454500BEAB24 /* ProductCommentsController.m */; };
 		FBF99459140A454500BEAB24 /* ProductCommentsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF99454140A454500BEAB24 /* ProductCommentsController.xib */; };
 		FBF9945A140A454500BEAB24 /* ProductWriteCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF99456140A454500BEAB24 /* ProductWriteCommentController.m */; };
@@ -1390,6 +1392,9 @@
 		CAE655C913DEBCB200182C79 /* reload_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_24.png; sourceTree = "<group>"; };
 		CAE655CA13DEBCB200182C79 /* reload_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_48.png; sourceTree = "<group>"; };
 		CAE655CB13DEBCB200182C79 /* reload_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_64.png; sourceTree = "<group>"; };
+		FB70BF0714134FA000ACA7A1 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		FBF99452140A454500BEAB24 /* ProductCommentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCommentsController.h; sourceTree = "<group>"; };
 		FBF99453140A454500BEAB24 /* ProductCommentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCommentsController.m; sourceTree = "<group>"; };
 		FBF99454140A454500BEAB24 /* ProductCommentsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCommentsController.xib; sourceTree = "<group>"; };
@@ -2806,6 +2811,9 @@
 		CADF6BBB13DAA4810060F438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FB70BF0714134FA000ACA7A1 /* CommentTableViewCell.h */,
+				FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */,
+				FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */,
 				FBF99452140A454500BEAB24 /* ProductCommentsController.h */,
 				FBF99453140A454500BEAB24 /* ProductCommentsController.m */,
 				FBF99454140A454500BEAB24 /* ProductCommentsController.xib */,
@@ -3336,6 +3344,7 @@
 				FBF9945B140A454500BEAB24 /* ProductWriteCommentController.xib in Resources */,
 				CAE09DFA140A804800BFD51D /* cart_24.png in Resources */,
 				CAE09DFB140A804800BFD51D /* cart_24@2x.png in Resources */,
+				FB70BF0C1413500200ACA7A1 /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3682,6 +3691,7 @@
 				FBF9945A140A454500BEAB24 /* ProductWriteCommentController.m in Sources */,
 				CA8F787C140C948800A77529 /* UserShoppingItem.m in Sources */,
 				CA8F787F140C984600A77529 /* UserShopItemManager.m in Sources */,
+				FB70BF0914134FA000ACA7A1 /* CommentTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,6 +53,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     
     ReviewRequest           *reviewRequest;
     EnterPlaceAppController *enterController;    
+    UIViewController        *shoppingListController;
     NSString                *dataForRegistration;
     
     UIBackgroundTaskIdentifier backgroundTask;
