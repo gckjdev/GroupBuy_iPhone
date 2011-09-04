@@ -53,8 +53,8 @@
 
 NSString* GlobalGetServerURL()
 {
-    return @"http://192.168.1.188:8000/api/i?";
-//    return @"http://www.dipan100.com:8000/api/i?";
+//    return @"http://192.168.1.188:8000/api/i?";
+    return @"http://www.dipan100.com:8000/api/i?";
 }
 
 AppService* GlobalGetAppService()
@@ -158,7 +158,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
-	[UIUtils addViewController:[ShoppingListController alloc]
+	shoppingListController = [UIUtils addViewController:[ShoppingListController alloc]
 					 viewTitle:@"订阅"				 
 					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
@@ -273,8 +273,8 @@ UserShopItemService* GlobalGetUserShopItemService()
     [self initUserShopService];
     
     [self showViewByUserStatus];
-    
-    
+        
+    [self handleRemoteNotification:application launchOptions:launchOptions];    
     [window makeKeyAndVisible];
 	
     // update config data
@@ -508,6 +508,10 @@ UserShopItemService* GlobalGetUserShopItemService()
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController 
 {
     [GroupBuyReport reportTabBarControllerClick:self.tabBarController];
+    
+    if (viewController == shoppingListController){
+        shoppingListController.tabBarItem.badgeValue = nil;
+    }
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed 
@@ -629,12 +633,13 @@ UserShopItemService* GlobalGetUserShopItemService()
 	NSLog(@"receive push notification, payload=%@", [payload description]);
 	if (nil != payload) {
         
-//		newSmsFlag = YES;		// for UI update
-		[self playNotificationSound];		
-		
-//		NSString *smsId = [[payload objectForKey:@"aps"] valueForKey:@"mid"];				
-//		NSString* userId = [UserManager getUserId];
-//		[SmsLocalService handleNewSmsReceived:smsId userId:userId appId:kAppId workingQueue:workingQueue delegate:self];				
+		NSString *productId = [[payload objectForKey:@"aps"] valueForKey:@"p"];				
+        if ([productId length] > 0){
+            // update tab badget
+            shoppingListController.tabBarItem.badgeValue = @"新产品";		
+            
+            // fetch product ???
+        }
 	}	
 }
 
