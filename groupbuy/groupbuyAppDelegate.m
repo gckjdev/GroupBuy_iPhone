@@ -53,8 +53,9 @@
 
 NSString* GlobalGetServerURL()
 {
-    return @"http://192.168.1.188:8000/api/i?";
+//    return @"http://192.168.1.188:8000/api/i?";
 //    return @"http://www.dipan100.com:8000/api/i?";
+    return @"http://192.168.1.104:8000/api/i?";
 }
 
 AppService* GlobalGetAppService()
