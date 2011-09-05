@@ -161,7 +161,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 			   viewControllers:controllers];	
 	
 	[UIUtils addViewController:[ShoppingListController alloc]
-					 viewTitle:@"订阅"				 
+					 viewTitle:@"团购通知"				 
 					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
