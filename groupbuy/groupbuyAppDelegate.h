@@ -26,6 +26,7 @@
 @class ProductService;
 @class ReviewRequest;
 @class UserShopItemService;
+@class PPTableViewController;
 
 #define _THREE20_		1
 #define kAppId			@"456494464"					// To be changed for each project
@@ -53,7 +54,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     
     ReviewRequest           *reviewRequest;
     EnterPlaceAppController *enterController;    
-    UIViewController        *shoppingListController;
+    PPTableViewController   *shoppingListController;
     NSString                *dataForRegistration;
     
     UIBackgroundTaskIdentifier backgroundTask;

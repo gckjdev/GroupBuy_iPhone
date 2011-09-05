@@ -142,6 +142,11 @@ UserShopItemService* GlobalGetUserShopItemService()
 #pragma mark -
 #pragma mark Application lifecycle
 
+enum
+{
+    TAB_SHOPPING = 2,    
+};
+
 - (void)initTabViewControllers
 {
     tabBarController.delegate = self;
@@ -160,11 +165,12 @@ UserShopItemService* GlobalGetUserShopItemService()
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
-	[UIUtils addViewController:[ShoppingListController alloc]
+	shoppingListController = (PPTableViewController*)[UIUtils addViewController:[ShoppingListController alloc]
 					 viewTitle:@"团购通知"				 
 					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
+    
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 					 viewTitle:@"收藏"				 
@@ -483,6 +489,10 @@ UserShopItemService* GlobalGetUserShopItemService()
     [self addMainView];
 }
 
+- (void)updateShoppingTabBadge:(NSString*)value
+{
+    [[[[self.tabBarController tabBar] items] objectAtIndex:TAB_SHOPPING] setBadgeValue:value];
+}
 
 #pragma mark Local Notification Handler
 
@@ -510,6 +520,8 @@ UserShopItemService* GlobalGetUserShopItemService()
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController 
 {
     [GroupBuyReport reportTabBarControllerClick:self.tabBarController];
+    [self updateShoppingTabBadge:nil];        
+
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed 
@@ -631,10 +643,13 @@ UserShopItemService* GlobalGetUserShopItemService()
 	NSLog(@"receive push notification, payload=%@", [payload description]);
 	if (nil != payload) {
         
+        NSString *itemId = [[payload objectForKey:@"aps"] valueForKey:@"ii"];				
+        [self updateShoppingTabBadge:@"新"];        
+        [userShopService requestItemMatchCount:itemId tableViewController:shoppingListController];
+        
 //		newSmsFlag = YES;		// for UI update
-		[self playNotificationSound];		
+//		[self playNotificationSound];		
 		
-//		NSString *smsId = [[payload objectForKey:@"aps"] valueForKey:@"mid"];				
 //		NSString* userId = [UserManager getUserId];
 //		[SmsLocalService handleNewSmsReceived:smsId userId:userId appId:kAppId workingQueue:workingQueue delegate:self];				
 	}	
