@@ -165,11 +165,13 @@ enum
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
-	shoppingListController = (PPTableViewController*)[UIUtils addViewController:[ShoppingListController alloc]
+	shoppingListController = (ShoppingListController*)[UIUtils addViewController:[ShoppingListController alloc]
 					 viewTitle:@"团购通知"				 
 					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
+    
+    shoppingListController.tabIndex = TAB_SHOPPING;
     
 	
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
@@ -491,7 +493,8 @@ enum
 
 - (void)updateShoppingTabBadge:(NSString*)value
 {
-    [[[[self.tabBarController tabBar] items] objectAtIndex:TAB_SHOPPING] setBadgeValue:value];
+    [shoppingListController updateTabBadge:value];
+    //[[[[self.tabBarController tabBar] items] objectAtIndex:TAB_SHOPPING] setBadgeValue:value];
 }
 
 #pragma mark Local Notification Handler
@@ -517,11 +520,12 @@ enum
 #pragma mark -
 #pragma mark UITabBarControllerDelegate methods
 
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController 
+- (void)tabBarController:(UITabBarController *)tc didSelectViewController:(UIViewController *)viewController 
 {
     [GroupBuyReport reportTabBarControllerClick:self.tabBarController];
-    [self updateShoppingTabBadge:nil];        
-
+    
+    if (tc.selectedIndex == TAB_SHOPPING)
+        [self updateShoppingTabBadge:nil];        
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed 
@@ -640,18 +644,17 @@ enum
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 	NSDictionary *payload = userInfo;
+    
+#ifdef DEBUG    
 	NSLog(@"receive push notification, payload=%@", [payload description]);
+#endif
+    
 	if (nil != payload) {
         
         NSString *itemId = [[payload objectForKey:@"aps"] valueForKey:@"ii"];				
         [self updateShoppingTabBadge:@"新"];        
         [userShopService requestItemMatchCount:itemId tableViewController:shoppingListController];
         
-//		newSmsFlag = YES;		// for UI update
-//		[self playNotificationSound];		
-		
-//		NSString* userId = [UserManager getUserId];
-//		[SmsLocalService handleNewSmsReceived:smsId userId:userId appId:kAppId workingQueue:workingQueue delegate:self];				
 	}	
 }
 
