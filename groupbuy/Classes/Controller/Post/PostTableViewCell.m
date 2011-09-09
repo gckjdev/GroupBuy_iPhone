@@ -10,7 +10,6 @@
 #import "Post.h"
 #import "ResultUtils.h"
 #import "LocaleUtils.h"
-#import <Three20/Three20.h>
 #import "HJManagedImageV.h"
 #import "groupbuyAppDelegate.h"
 #import "TimeUtils.h"
