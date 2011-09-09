@@ -402,6 +402,8 @@
 		CAA01A5113E658890002986A /* home_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4B13E658880002986A /* home_24.png */; };
 		CAA01A5213E658890002986A /* home_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4C13E658890002986A /* home_24@2x.png */; };
 		CAA46EF013F3734B00688E64 /* libMobClickLibrary_1.6.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */; };
+		CAB6A705141A6792007E6253 /* TopScoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A703141A6792007E6253 /* TopScoreController.m */; };
+		CAB6A706141A6792007E6253 /* TopScoreController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB6A704141A6792007E6253 /* TopScoreController.xib */; };
 		CABCB59B13ED0F5900F9BD2A /* SearchHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */; };
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
 		CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACECC931408ECAE00C90A99 /* ShoppingListCell.m */; };
@@ -1178,6 +1180,9 @@
 		CAA01A4B13E658880002986A /* home_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_24.png; sourceTree = "<group>"; };
 		CAA01A4C13E658890002986A /* home_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_24@2x.png"; sourceTree = "<group>"; };
 		CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary_1.6.4.a; sourceTree = "<group>"; };
+		CAB6A702141A6792007E6253 /* TopScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopScoreController.h; sourceTree = "<group>"; };
+		CAB6A703141A6792007E6253 /* TopScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopScoreController.m; sourceTree = "<group>"; };
+		CAB6A704141A6792007E6253 /* TopScoreController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopScoreController.xib; sourceTree = "<group>"; };
 		CABCB59913ED0F5900F9BD2A /* SearchHistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryManager.h; sourceTree = "<group>"; };
 		CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryManager.m; sourceTree = "<group>"; };
 		CABCB59F13ED100C00F9BD2A /* SearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistory.h; sourceTree = "<group>"; };
@@ -2430,6 +2435,9 @@
 				CAA01A4213E64D630002986A /* SettingsController.h */,
 				CAA01A4313E64D630002986A /* SettingsController.m */,
 				CAA01A4413E64D630002986A /* SettingsController.xib */,
+				CAB6A702141A6792007E6253 /* TopScoreController.h */,
+				CAB6A703141A6792007E6253 /* TopScoreController.m */,
+				CAB6A704141A6792007E6253 /* TopScoreController.xib */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -3345,6 +3353,7 @@
 				CAE09DFA140A804800BFD51D /* cart_24.png in Resources */,
 				CAE09DFB140A804800BFD51D /* cart_24@2x.png in Resources */,
 				FB70BF0C1413500200ACA7A1 /* CommentTableViewCell.xib in Resources */,
+				CAB6A706141A6792007E6253 /* TopScoreController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3692,6 +3701,7 @@
 				CA8F787C140C948800A77529 /* UserShoppingItem.m in Sources */,
 				CA8F787F140C984600A77529 /* UserShopItemManager.m in Sources */,
 				FB70BF0914134FA000ACA7A1 /* CommentTableViewCell.m in Sources */,
+				CAB6A705141A6792007E6253 /* TopScoreController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
