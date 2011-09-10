@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "PPViewController.h"
+#import "CommonProductListController.h"
 
 @interface TopScoreController : PPViewController {
-    
+    CommonProductListController *belowTenController;
+    CommonProductListController *aboveTenController;
+    CommonProductListController *topNewController;
 }
+
+@property (nonatomic, retain) CommonProductListController *belowTenController;
+@property (nonatomic, retain) CommonProductListController *aboveTenController;
+@property (nonatomic, retain) CommonProductListController *topNewController;
 
 - (void)clickSegControl:(id)sender;
 

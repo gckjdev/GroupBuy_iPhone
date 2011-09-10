@@ -154,11 +154,11 @@ enum
     
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
-//	[UIUtils addViewController:[PostMainController alloc]
-//					 viewTitle:@"首页"
-//					 viewImage:@"home_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
+	[UIUtils addViewController:[PostMainController alloc]
+					 viewTitle:@"首页"
+					 viewImage:@"home_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
 
 	[UIUtils addViewController:[TopScoreController alloc]
 					 viewTitle:@"排行榜"
