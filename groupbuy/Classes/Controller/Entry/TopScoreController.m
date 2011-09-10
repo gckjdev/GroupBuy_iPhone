@@ -9,6 +9,12 @@
 #import "TopScoreController.h"
 
 
+enum TOP_SCORE_TYPE {
+    TOP_0_10,
+    TOP_10,
+    TOP_NEW,
+};
+
 @implementation TopScoreController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,8 +43,16 @@
 
 - (void)viewDidLoad
 {
+    [self createNavigationTitleToolbar:
+     [NSArray arrayWithObjects:
+      @"0－10元排名",
+      @"10元以上排名",
+      @"发布日期",
+      nil]
+    defaultSelectIndex:0];    
+
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
@@ -52,6 +66,36 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)showTopZeroTen
+{
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self clickSegControl:self.titleSegControl];
+    [super viewDidAppear:animated];
+}
+
+- (void)clickSegControl:(id)sender
+{
+    
+    UISegmentedControl* segControl = sender;
+    
+    
+    
+    switch (segControl.selectedSegmentIndex) {
+
+        case TOP_0_10:
+            [self showTopZeroTen];
+            break;
+            
+            
+        default:
+            break;
+    }
 }
 
 @end

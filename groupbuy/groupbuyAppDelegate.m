@@ -48,6 +48,7 @@
 
 #import "CityPickerViewController.h"
 #import "ShoppingListController.h"
+#import "TopScoreController.h"
 
 #define kDbFileName			@"AppDB"
 
@@ -153,12 +154,18 @@ enum
     
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
-	[UIUtils addViewController:[PostMainController alloc]
-					 viewTitle:@"首页"
+//	[UIUtils addViewController:[PostMainController alloc]
+//					 viewTitle:@"首页"
+//					 viewImage:@"home_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
+
+	[UIUtils addViewController:[TopScoreController alloc]
+					 viewTitle:@"排行榜"
 					 viewImage:@"home_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
-
+    
 	[UIUtils addViewController:[SearchProductController alloc]
 					 viewTitle:@"热门"				 
 					 viewImage:@"magnifier_24.png"

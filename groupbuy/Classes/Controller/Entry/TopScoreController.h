@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPViewController.h"
 
-
-@interface TopScoreController : UIViewController {
+@interface TopScoreController : PPViewController {
     
 }
+
+- (void)clickSegControl:(id)sender;
 
 @end
