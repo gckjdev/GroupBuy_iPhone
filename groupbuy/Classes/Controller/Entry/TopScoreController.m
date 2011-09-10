@@ -139,8 +139,10 @@ enum TOP_SCORE_TYPE {
             break;
         case TOP_10:
             [self showTopTen];
+            break;
         case TOP_NEW:
             [self showTopNew];
+            break;
         default:
             break;
     }
