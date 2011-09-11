@@ -181,6 +181,12 @@ enum
     shoppingListController.tabIndex = TAB_SHOPPING;
     
 	
+	[UIUtils addViewController:[RegisterController alloc]
+					 viewTitle:@"我"
+					 viewImage:@"man_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 					 viewTitle:@"收藏"				 
 					 viewImage:@"folder_bookmark_24.png"
@@ -188,11 +194,6 @@ enum
 			   viewControllers:controllers];	
     historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
     
-//	[UIUtils addViewController:[MyInfoController alloc]
-//					 viewTitle:NSLS(@"Setting")				 
-//					 viewImage:@"man_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
 
     [UIUtils addViewController:[SettingsController alloc]
 					 viewTitle:@"设置"				 
