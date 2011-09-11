@@ -523,6 +523,10 @@
 		CAE655D413DEBCB200182C79 /* reload_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CB13DEBCB200182C79 /* reload_64.png */; };
 		FB70BF0914134FA000ACA7A1 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */; };
 		FB70BF0C1413500200ACA7A1 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */; };
+		FBB014F0141C6A75003A31A8 /* CategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB014EE141C6A74003A31A8 /* CategoryController.m */; };
+		FBB014F1141C6A75003A31A8 /* CategoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB014EF141C6A75003A31A8 /* CategoryController.xib */; };
+		FBB014F6141C98C9003A31A8 /* CategoryTopScoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB014F4141C98C7003A31A8 /* CategoryTopScoreController.m */; };
+		FBB014F7141C98C9003A31A8 /* CategoryTopScoreController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB014F5141C98C8003A31A8 /* CategoryTopScoreController.xib */; };
 		FBF99458140A454500BEAB24 /* ProductCommentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF99453140A454500BEAB24 /* ProductCommentsController.m */; };
 		FBF99459140A454500BEAB24 /* ProductCommentsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF99454140A454500BEAB24 /* ProductCommentsController.xib */; };
 		FBF9945A140A454500BEAB24 /* ProductWriteCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF99456140A454500BEAB24 /* ProductWriteCommentController.m */; };
@@ -1400,6 +1404,12 @@
 		FB70BF0714134FA000ACA7A1 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
 		FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 		FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		FBB014ED141C6A74003A31A8 /* CategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryController.h; sourceTree = "<group>"; };
+		FBB014EE141C6A74003A31A8 /* CategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryController.m; sourceTree = "<group>"; };
+		FBB014EF141C6A75003A31A8 /* CategoryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryController.xib; sourceTree = "<group>"; };
+		FBB014F3141C98C7003A31A8 /* CategoryTopScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTopScoreController.h; sourceTree = "<group>"; };
+		FBB014F4141C98C7003A31A8 /* CategoryTopScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTopScoreController.m; sourceTree = "<group>"; };
+		FBB014F5141C98C8003A31A8 /* CategoryTopScoreController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTopScoreController.xib; sourceTree = "<group>"; };
 		FBF99452140A454500BEAB24 /* ProductCommentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCommentsController.h; sourceTree = "<group>"; };
 		FBF99453140A454500BEAB24 /* ProductCommentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCommentsController.m; sourceTree = "<group>"; };
 		FBF99454140A454500BEAB24 /* ProductCommentsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCommentsController.xib; sourceTree = "<group>"; };
@@ -2438,6 +2448,12 @@
 				CAB6A702141A6792007E6253 /* TopScoreController.h */,
 				CAB6A703141A6792007E6253 /* TopScoreController.m */,
 				CAB6A704141A6792007E6253 /* TopScoreController.xib */,
+				FBB014ED141C6A74003A31A8 /* CategoryController.h */,
+				FBB014EE141C6A74003A31A8 /* CategoryController.m */,
+				FBB014EF141C6A75003A31A8 /* CategoryController.xib */,
+				FBB014F3141C98C7003A31A8 /* CategoryTopScoreController.h */,
+				FBB014F4141C98C7003A31A8 /* CategoryTopScoreController.m */,
+				FBB014F5141C98C8003A31A8 /* CategoryTopScoreController.xib */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -3354,6 +3370,8 @@
 				CAE09DFB140A804800BFD51D /* cart_24@2x.png in Resources */,
 				FB70BF0C1413500200ACA7A1 /* CommentTableViewCell.xib in Resources */,
 				CAB6A706141A6792007E6253 /* TopScoreController.xib in Resources */,
+				FBB014F1141C6A75003A31A8 /* CategoryController.xib in Resources */,
+				FBB014F7141C98C9003A31A8 /* CategoryTopScoreController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3702,6 +3720,8 @@
 				CA8F787F140C984600A77529 /* UserShopItemManager.m in Sources */,
 				FB70BF0914134FA000ACA7A1 /* CommentTableViewCell.m in Sources */,
 				CAB6A705141A6792007E6253 /* TopScoreController.m in Sources */,
+				FBB014F0141C6A75003A31A8 /* CategoryController.m in Sources */,
+				FBB014F6141C98C9003A31A8 /* CategoryTopScoreController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
