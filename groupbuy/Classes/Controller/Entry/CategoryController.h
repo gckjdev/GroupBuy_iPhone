@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPTableViewController.h"
+#import "CategoryManager.h"
 
-@interface CategoryController : UIViewController
+@interface CategoryController : PPTableViewController
 
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "CategoryController.h"
+#import "CommonProductListController.h"
+#import "ProductPriceDataLoader.h"
+#import "CategoryTopScoreController.h"
 
 @implementation CategoryController
 
@@ -33,6 +36,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.dataList = [CategoryManager getAllGroupBuyCategories];
 }
 
 - (void)viewDidUnload
@@ -46,6 +50,37 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)showProductByCategory:(NSString *)categoryName
+{
+    NSString* categoryId = [CategoryManager getGroupBuyCategoryIdByName:categoryName];
+    
+    CategoryTopScoreController *controller = [[[CategoryTopScoreController alloc] init] autorelease];
+           
+    controller.categoryId = categoryId;
+    controller.categoryName = categoryName;
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+	UITableViewCell *cell = [theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    cell.textLabel.text = [self.dataList objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *categoryName = [self.dataList objectAtIndex:indexPath.row];
+    [self showProductByCategory:categoryName];
 }
 
 @end

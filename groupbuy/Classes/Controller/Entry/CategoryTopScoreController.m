@@ -1,12 +1,12 @@
 //
-//  TopScoreController.m
+//  CategoryTopScoreController.m
 //  groupbuy
 //
-//  Created by qqn_pipi on 11-9-9.
-//  Copyright 2011年 __MyCompanyName__. All rights reserved.
+//  Created by  on 11-9-11.
+//  Copyright (c) 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "TopScoreController.h"
+#import "CategoryTopScoreController.h"
 #import "ProductPriceDataLoader.h"
 
 
@@ -17,8 +17,9 @@ enum TOP_SCORE_TYPE {
     TOP_DISTANCE
 };
 
-@implementation TopScoreController
+@implementation CategoryTopScoreController
 
+@synthesize categoryName;
 @synthesize categoryId;
 @synthesize belowTenController;
 @synthesize aboveTenController;
@@ -54,17 +55,21 @@ enum TOP_SCORE_TYPE {
 
 - (void)viewDidLoad
 {
-    [self createNavigationTitleToolbar:
-     [NSArray arrayWithObjects:
-      @"0－10元",
-      @"10元以上",
-      @"发布日期",
-      @"距离远近",
-      nil]
-    defaultSelectIndex:0];    
-
-    
     [super viewDidLoad];
+    
+    self.navigationItem.title = self.categoryName;
+    
+    NSArray *titleArray = [NSArray arrayWithObjects:@"0－10元", @"10元以上", @"发布日期", @"距离远近", nil];
+    self.titleSegControl = [[[UISegmentedControl alloc] initWithItems:titleArray] autorelease];
+    titleSegControl.segmentedControlStyle = UISegmentedControlStyleBar;
+    titleSegControl.selectedSegmentIndex = 0;
+    [titleSegControl addTarget:self 
+                        action:@selector(clickSegControl:) 
+              forControlEvents:UIControlEventValueChanged];
+    CGRect frame = self.titleSegControl.frame;
+    frame = CGRectMake(31, 10, frame.size.width, frame.size.height);
+    self.titleSegControl.frame = frame;
+    [self.view addSubview:self.titleSegControl];
 }
 
 - (void)viewDidUnload
@@ -93,7 +98,8 @@ enum TOP_SCORE_TYPE {
         self.belowTenController.dataLoader = dataLoader;
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];
-        self.belowTenController.view.frame = self.view.bounds;        
+        CGRect bounds = self.view.bounds;
+        self.belowTenController.view.frame = CGRectMake(0, 50, bounds.size.width, bounds.size.height);        
         [self.view addSubview:self.belowTenController.view];                
     }
     
@@ -111,7 +117,8 @@ enum TOP_SCORE_TYPE {
         self.aboveTenController.dataLoader = dataLoader;
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];
-        self.aboveTenController.view.frame = self.view.bounds;        
+        CGRect bounds = self.view.bounds;
+        self.aboveTenController.view.frame = CGRectMake(0, 50, bounds.size.width, bounds.size.height);         
         [self.view addSubview:self.aboveTenController.view];                
     }
     
@@ -129,7 +136,8 @@ enum TOP_SCORE_TYPE {
         self.topNewController.dataLoader = dataLoader;
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];
-        self.topNewController.view.frame = self.view.bounds;        
+        CGRect bounds = self.view.bounds;
+        self.topNewController.view.frame = CGRectMake(0, 50, bounds.size.width, bounds.size.height);        
         [self.view addSubview:self.topNewController.view];                
     }
     
@@ -147,7 +155,8 @@ enum TOP_SCORE_TYPE {
         self.distanceController.dataLoader = dataLoader;
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];        
-        self.distanceController.view.frame = self.view.bounds;        
+        CGRect bounds = self.view.bounds;
+        self.distanceController.view.frame = CGRectMake(0, 50, bounds.size.width, bounds.size.height);         
         [self.view addSubview:distanceController.view];                
     }
     
@@ -168,7 +177,7 @@ enum TOP_SCORE_TYPE {
     UISegmentedControl* segControl = sender;
     
     switch (segControl.selectedSegmentIndex) {
-
+            
         case TOP_0_10:
             [self showTopZeroTen];
             break;
@@ -187,3 +196,4 @@ enum TOP_SCORE_TYPE {
 }
 
 @end
+

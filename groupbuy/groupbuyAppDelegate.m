@@ -50,6 +50,8 @@
 #import "ShoppingListController.h"
 #import "TopScoreController.h"
 
+#import "CategoryController.h"
+
 #define kDbFileName			@"AppDB"
 
 NSString* GlobalGetServerURL()
@@ -154,8 +156,8 @@ enum
     
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
-	[UIUtils addViewController:[PostMainController alloc]
-					 viewTitle:@"首页"
+	[UIUtils addViewController:[CategoryController alloc]
+					 viewTitle:@"分类"
 					 viewImage:@"home_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
