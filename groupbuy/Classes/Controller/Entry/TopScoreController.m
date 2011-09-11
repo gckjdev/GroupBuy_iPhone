@@ -14,6 +14,7 @@ enum TOP_SCORE_TYPE {
     TOP_0_10,
     TOP_10,
     TOP_NEW,
+    TOP_DISTANCE
 };
 
 @implementation TopScoreController
@@ -21,6 +22,7 @@ enum TOP_SCORE_TYPE {
 @synthesize belowTenController;
 @synthesize aboveTenController;
 @synthesize topNewController;
+@synthesize distanceController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,9 +55,10 @@ enum TOP_SCORE_TYPE {
 {
     [self createNavigationTitleToolbar:
      [NSArray arrayWithObjects:
-      @"0－10元排名",
-      @"10元以上排名",
+      @"0－10元",
+      @"10元以上",
       @"发布日期",
+      @"距离远近",
       nil]
     defaultSelectIndex:0];    
 
@@ -85,6 +88,8 @@ enum TOP_SCORE_TYPE {
         self.belowTenController = [[[CommonProductListController alloc] init] autorelease];        
         self.belowTenController.superController = self;
         self.belowTenController.dataLoader = [[[ProductTopScoreBelowTenDataLoader alloc] init] autorelease];
+        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
+                                        titleSegControl.selectedSegmentIndex];
         self.belowTenController.view.frame = self.view.bounds;        
         [self.view addSubview:self.belowTenController.view];                
     }
@@ -99,6 +104,8 @@ enum TOP_SCORE_TYPE {
         self.aboveTenController = [[[CommonProductListController alloc] init] autorelease];        
         self.aboveTenController.superController = self;
         self.aboveTenController.dataLoader = [[[ProductTopScoreAboveTenDataLoader alloc] init] autorelease];
+        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
+                                        titleSegControl.selectedSegmentIndex];
         self.aboveTenController.view.frame = self.view.bounds;        
         [self.view addSubview:self.aboveTenController.view];                
     }
@@ -113,12 +120,31 @@ enum TOP_SCORE_TYPE {
         self.topNewController = [[[CommonProductListController alloc] init] autorelease];        
         self.topNewController.superController = self;
         self.topNewController.dataLoader = [[[ProductStartDateDataLoader alloc] init] autorelease];
+        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
+                                        titleSegControl.selectedSegmentIndex];
         self.topNewController.view.frame = self.view.bounds;        
         [self.view addSubview:self.topNewController.view];                
     }
     
     [self.view bringSubviewToFront:self.topNewController.view];
     [self.topNewController viewDidAppear:NO];
+}
+
+- (void)showProductByDistance
+{
+    if (self.distanceController == nil){
+        self.distanceController = [[[CommonProductListController alloc] init] autorelease];        
+        self.distanceController.superController = self;
+        self.distanceController.dataLoader = [[[ProductDistanceDataLoader alloc] init] autorelease];
+        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
+                                        titleSegControl.selectedSegmentIndex];        
+        self.distanceController.view.frame = self.view.bounds;        
+        [self.view addSubview:distanceController.view];                
+    }
+    
+    [self.view bringSubviewToFront:distanceController.view];
+    [distanceController viewDidAppear:NO];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -142,6 +168,9 @@ enum TOP_SCORE_TYPE {
             break;
         case TOP_NEW:
             [self showTopNew];
+            break;
+        case TOP_DISTANCE:
+            [self showProductByDistance];
             break;
         default:
             break;

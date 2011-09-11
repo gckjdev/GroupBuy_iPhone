@@ -14,11 +14,13 @@
     CommonProductListController *belowTenController;
     CommonProductListController *aboveTenController;
     CommonProductListController *topNewController;
+    CommonProductListController *distanceController;
 }
 
 @property (nonatomic, retain) CommonProductListController *belowTenController;
 @property (nonatomic, retain) CommonProductListController *aboveTenController;
 @property (nonatomic, retain) CommonProductListController *topNewController;
+@property (nonatomic, retain) CommonProductListController *distanceController;
 
 - (void)clickSegControl:(id)sender;
 
