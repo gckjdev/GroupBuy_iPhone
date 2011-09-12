@@ -153,7 +153,6 @@ enum{
 - (BOOL)verifyField
 {
     if ([self.loginIdField.text length] <= 0){
-        [self 
         return NO;
     }
     
