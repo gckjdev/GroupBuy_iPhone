@@ -47,7 +47,7 @@
 					<object class="IBUIButton" id="644856886">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 61}, {72, 58}}</string>
+						<string key="NSFrame">{{25, 61}, {76, 66}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="416067045"/>
@@ -60,8 +60,6 @@
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">新浪微博</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="560972460">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -74,11 +72,15 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">sinaico_big.png</string>
+						</object>
 					</object>
 					<object class="IBUIButton" id="416067045">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{115, 61}, {80, 58}}</string>
+						<string key="NSFrame">{{126, 61}, {76, 66}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="913718415"/>
@@ -87,14 +89,16 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="863573851"/>
-						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">腾讯微博</string>
 						<reference key="IBUIHighlightedTitleColor" ref="560972460"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="543393790"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">qqico_big.png</string>
+						</object>
 					</object>
 					<object class="IBUIButton" id="718723126">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -112,10 +116,17 @@
 						<string key="IBUINormalTitle">登录</string>
 						<reference key="IBUIHighlightedTitleColor" ref="560972460"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<object class="NSColorSpace" key="NSCustomColorSpace" id="455636844">
+								<int key="NSID">2</int>
+							</object>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="543393790"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="779758943">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">button2.png</string>
+						</object>
 					</object>
 					<object class="IBUIButton" id="825354608">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -133,10 +144,12 @@
 						<string key="IBUINormalTitle">注册新帐号</string>
 						<reference key="IBUIHighlightedTitleColor" ref="560972460"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<reference key="NSCustomColorSpace" ref="455636844"/>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="543393790"/>
+						<reference key="IBUINormalBackgroundImage" ref="779758943"/>
 					</object>
 					<object class="IBUITextField" id="98092141">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -155,9 +168,12 @@
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="455636844">
-								<int key="NSID">2</int>
-							</object>
+							<reference key="NSCustomColorSpace" ref="455636844"/>
+						</object>
+						<object class="NSFont" key="IBUIFont" id="571145632">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">14</double>
+							<int key="NSfFlags">16</int>
 						</object>
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
@@ -180,14 +196,14 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">使用咕噜团购帐号登录</string>
-						<object class="NSFont" key="IBUIFont" id="891998859">
+						<object class="NSFont" key="IBUIFont" id="937502121">
 							<string key="NSName">STHeitiSC-Light</string>
-							<double key="NSSize">17</double>
+							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<object class="NSColor" key="IBUITextColor" id="52096628">
+						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAAA</bytes>
+							<bytes key="NSRGB">MCAwLjI1MDk4MDQwNyAwLjUwMTk2MDgxNAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -206,8 +222,11 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">使用已有账户登录</string>
-						<reference key="IBUIFont" ref="891998859"/>
-						<reference key="IBUITextColor" ref="52096628"/>
+						<reference key="IBUIFont" ref="937502121"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MCAwLjI1MDk4MDQwNyAwLjUwMTk2MDgxNAA</bytes>
+						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -231,6 +250,7 @@
 							<bytes key="NSWhite">MAA</bytes>
 							<reference key="NSCustomColorSpace" ref="455636844"/>
 						</object>
+						<reference key="IBUIFont" ref="571145632"/>
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -390,14 +410,14 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="416067045"/>
-							<reference ref="644856886"/>
 							<reference ref="913718415"/>
 							<reference ref="1052728240"/>
 							<reference ref="98092141"/>
 							<reference ref="791602247"/>
 							<reference ref="825354608"/>
 							<reference ref="718723126"/>
+							<reference ref="416067045"/>
+							<reference ref="644856886"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -548,14 +568,12 @@
 							<string>clickQQLogin:</string>
 							<string>clickRegister:</string>
 							<string>clickSinaLogin:</string>
-							<string>genderChange:</string>
 							<string>textFieldDidBeginEditing:</string>
 							<string>textFieldDidEndEditing:</string>
 							<string>textFieldDoneEditing:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -575,7 +593,6 @@
 							<string>clickQQLogin:</string>
 							<string>clickRegister:</string>
 							<string>clickSinaLogin:</string>
-							<string>genderChange:</string>
 							<string>textFieldDidBeginEditing:</string>
 							<string>textFieldDidEndEditing:</string>
 							<string>textFieldDoneEditing:</string>
@@ -600,10 +617,6 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">clickSinaLogin:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">genderChange:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -685,6 +698,21 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>button2.png</string>
+				<string>qqico_big.png</string>
+				<string>sinaico_big.png</string>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{298, 48}</string>
+				<string>{76, 66}</string>
+				<string>{76, 66}</string>
+			</object>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">300</string>
 	</data>
 </archive>

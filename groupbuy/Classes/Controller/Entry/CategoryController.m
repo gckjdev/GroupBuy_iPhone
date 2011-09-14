@@ -34,6 +34,7 @@
 
 - (void)viewDidLoad
 {
+    [self setBackgroundImageName:@"background.png"];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.dataList = [CategoryManager getAllGroupBuyCategories];

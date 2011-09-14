@@ -17,6 +17,8 @@ enum TOP_SCORE_TYPE {
     TOP_DISTANCE
 };
 
+#define TOP_Y       40
+
 @implementation CategoryTopScoreController
 
 @synthesize categoryName;
@@ -55,6 +57,8 @@ enum TOP_SCORE_TYPE {
 
 - (void)viewDidLoad
 {
+    [self setBackgroundImageName:@"background.png"];
+
     [super viewDidLoad];
     
     self.navigationItem.title = self.categoryName;
@@ -67,7 +71,7 @@ enum TOP_SCORE_TYPE {
                         action:@selector(clickSegControl:) 
               forControlEvents:UIControlEventValueChanged];
     CGRect frame = self.titleSegControl.frame;
-    frame = CGRectMake(31, 10, frame.size.width, frame.size.height);
+    frame = CGRectMake(10, 10, 300, frame.size.height);
     self.titleSegControl.frame = frame;
     [self.view addSubview:self.titleSegControl];
 }
@@ -99,7 +103,7 @@ enum TOP_SCORE_TYPE {
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];
         CGRect bounds = self.view.bounds;
-        self.belowTenController.view.frame = CGRectMake(0, 50, bounds.size.width, bounds.size.height);        
+        self.belowTenController.view.frame = CGRectMake(0, TOP_Y, bounds.size.width, bounds.size.height - TOP_Y);        
         [self.view addSubview:self.belowTenController.view];                
     }
     
@@ -118,7 +122,7 @@ enum TOP_SCORE_TYPE {
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];
         CGRect bounds = self.view.bounds;
-        self.aboveTenController.view.frame = CGRectMake(0, 50, bounds.size.width, bounds.size.height);         
+        self.aboveTenController.view.frame = CGRectMake(0, TOP_Y, bounds.size.width, bounds.size.height - TOP_Y);         
         [self.view addSubview:self.aboveTenController.view];                
     }
     
@@ -137,7 +141,7 @@ enum TOP_SCORE_TYPE {
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];
         CGRect bounds = self.view.bounds;
-        self.topNewController.view.frame = CGRectMake(0, 50, bounds.size.width, bounds.size.height);        
+        self.topNewController.view.frame = CGRectMake(0, TOP_Y, bounds.size.width, bounds.size.height - TOP_Y);        
         [self.view addSubview:self.topNewController.view];                
     }
     
@@ -156,7 +160,7 @@ enum TOP_SCORE_TYPE {
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];        
         CGRect bounds = self.view.bounds;
-        self.distanceController.view.frame = CGRectMake(0, 50, bounds.size.width, bounds.size.height);         
+        self.distanceController.view.frame = CGRectMake(0, TOP_Y, bounds.size.width, bounds.size.height - TOP_Y);         
         [self.view addSubview:distanceController.view];                
     }
     

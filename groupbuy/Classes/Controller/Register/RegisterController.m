@@ -18,7 +18,7 @@ enum{
     SELECT_GIRL
 };
 
-#define DEFAULT_Y                       10
+#define DEFAULT_Y                       0
 
 @implementation RegisterController
 @synthesize loginPasswordTextField;
@@ -44,6 +44,8 @@ enum{
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 
+    [self setBackgroundImageName:@"background.png"];
+    
     CGRect frame = self.view.frame;
     frame.origin.y = DEFAULT_Y;
     self.view.frame = frame;
