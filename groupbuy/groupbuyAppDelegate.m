@@ -147,6 +147,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 
 enum
 {
+    TAB_TOP_SCORE = 0,
     TAB_SHOPPING = 3,    
 };
 
@@ -156,15 +157,15 @@ enum
     
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
-	[UIUtils addViewController:[CategoryController alloc]
-					 viewTitle:@"分类"
-					 viewImage:@"app_globe_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
-
 	[UIUtils addViewController:[TopScoreController alloc]
 					 viewTitle:@"排行榜"
 					 viewImage:@"chart_bar_down.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+
+	[UIUtils addViewController:[CategoryController alloc]
+					 viewTitle:@"分类"
+					 viewImage:@"app_globe_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
     
@@ -189,27 +190,28 @@ enum
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
-	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
-					 viewTitle:@"收藏"				 
-					 viewImage:@"folder_bookmark_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
-    historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
-    
-
-    [UIUtils addViewController:[SettingsController alloc]
-					 viewTitle:@"设置"				 
-					 viewImage:@"gear_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
-        
-	[UIUtils addViewController:[FeedbackController alloc]
-					 viewTitle:@"反馈"
-					 viewImage:@"help_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
+//	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+//					 viewTitle:@"收藏"				 
+//					 viewImage:@"folder_bookmark_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
+//    historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
+//    
+//
+//    [UIUtils addViewController:[SettingsController alloc]
+//					 viewTitle:@"设置"				 
+//					 viewImage:@"gear_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
+//        
+//	[UIUtils addViewController:[FeedbackController alloc]
+//					 viewTitle:@"反馈"
+//					 viewImage:@"help_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
 	
 	tabBarController.viewControllers = controllers;
+    tabBarController.selectedIndex = TAB_TOP_SCORE;
 	
 	[controllers release];
 }

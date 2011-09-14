@@ -33,6 +33,8 @@
 - (IBAction)clickQQLogin:(id)sender;
 - (IBAction)clickLogin:(id)sender;
 
+- (BOOL)verifyField;
+
 @property (nonatomic, retain) IBOutlet UISegmentedControl *genderSegControl;
 @property (nonatomic, retain) IBOutlet UILabel *genderLabel;
 @property (nonatomic, retain) NSString *gender;

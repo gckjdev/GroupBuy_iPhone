@@ -11,6 +11,7 @@
 #import "PlaceSNSService.h"
 #import "StringUtil.h"
 #import "GroupBuyUserService.h"
+#import "NewUserRegisterController.h"
 
 enum{
     SELECT_BOY,
@@ -94,6 +95,10 @@ enum{
 
 - (IBAction)textFieldDoneEditing:(id)sender {
     
+    if ([self isAlreadyScroll] == NO){
+        return;
+    }
+    
 	[loginIdField resignFirstResponder];
     CATransition *animation = [CATransition animation];
     [animation setDuration:0.5f];
@@ -134,8 +139,15 @@ enum{
 
 - (IBAction)clickRegister:(id)sender {
     
-    UserService* userService = GlobalGetUserService();
-    [userService loginUserWithLoginId:loginIdField.text gender:gender viewController:self];     
+    [self.view endEditing:YES];
+    [self textFieldDoneEditing:nil];
+    
+//    UserService* userService = GlobalGetUserService();
+//    [userService registerUser:loginIdField.text password:loginPasswordTextField.text viewController:self];     
+    
+    [NewUserRegisterController showController:loginIdField.text
+                                     password:loginPasswordTextField.text
+                              superController:self];
 }
 
 - (IBAction)clickSinaLogin:(id)sender
@@ -170,7 +182,10 @@ enum{
     }
     
     [self.view endEditing:YES];
-    [UserService loginUser:loginIdField.text password:loginPasswordTextField.text];
+    [self textFieldDoneEditing:nil];
+    
+    UserService* userService = GlobalGetUserService();
+    [userService loginUserWithEmail:loginIdField.text password:loginPasswordTextField.text viewController:self];
 }
 
 @end
