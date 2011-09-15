@@ -392,6 +392,8 @@
 		CA73499D1420E893005C3CEE /* sinaico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7349931420E893005C3CEE /* sinaico@2x.png */; };
 		CA73499E1420E893005C3CEE /* sinaico_big.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7349941420E893005C3CEE /* sinaico_big.png */; };
 		CA73499F1420E893005C3CEE /* sinaico_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7349951420E893005C3CEE /* sinaico_big@2x.png */; };
+		CA734A151421E012005C3CEE /* SNSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA734A131421E012005C3CEE /* SNSWebViewController.m */; };
+		CA734A161421E012005C3CEE /* SNSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA734A141421E012005C3CEE /* SNSWebViewController.xib */; };
 		CA79216B14068E9900F336C5 /* UserShopItemService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA79216A14068E9900F336C5 /* UserShopItemService.m */; };
 		CA7C0B1413E6B3B5001121C3 /* GroupBuyUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C0B1313E6B3B5001121C3 /* GroupBuyUserService.m */; };
 		CA8F787C140C948800A77529 /* UserShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8F787B140C948800A77529 /* UserShoppingItem.m */; };
@@ -1182,6 +1184,9 @@
 		CA7349931420E893005C3CEE /* sinaico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sinaico@2x.png"; sourceTree = "<group>"; };
 		CA7349941420E893005C3CEE /* sinaico_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sinaico_big.png; sourceTree = "<group>"; };
 		CA7349951420E893005C3CEE /* sinaico_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sinaico_big@2x.png"; sourceTree = "<group>"; };
+		CA734A121421E012005C3CEE /* SNSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSWebViewController.h; sourceTree = "<group>"; };
+		CA734A131421E012005C3CEE /* SNSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSWebViewController.m; sourceTree = "<group>"; };
+		CA734A141421E012005C3CEE /* SNSWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SNSWebViewController.xib; sourceTree = "<group>"; };
 		CA79216914068E9900F336C5 /* UserShopItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserShopItemService.h; sourceTree = "<group>"; };
 		CA79216A14068E9900F336C5 /* UserShopItemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserShopItemService.m; sourceTree = "<group>"; };
 		CA7A1ECA1403AE84005651D6 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -2284,6 +2289,9 @@
 				CA6076A113D55EE200E0D0DC /* SNSConstants.h */,
 				CA6076A213D55EE200E0D0DC /* SNSServiceHandler.h */,
 				CA6076A313D55EE200E0D0DC /* SNSServiceHandler.m */,
+				CA734A121421E012005C3CEE /* SNSWebViewController.h */,
+				CA734A131421E012005C3CEE /* SNSWebViewController.m */,
+				CA734A141421E012005C3CEE /* SNSWebViewController.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -3469,6 +3477,7 @@
 				CA73499D1420E893005C3CEE /* sinaico@2x.png in Resources */,
 				CA73499E1420E893005C3CEE /* sinaico_big.png in Resources */,
 				CA73499F1420E893005C3CEE /* sinaico_big@2x.png in Resources */,
+				CA734A161421E012005C3CEE /* SNSWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3820,6 +3829,7 @@
 				FBB014F0141C6A75003A31A8 /* CategoryController.m in Sources */,
 				FBB014F6141C98C9003A31A8 /* CategoryTopScoreController.m in Sources */,
 				CA73498914208D04005C3CEE /* NewUserRegisterController.m in Sources */,
+				CA734A151421E012005C3CEE /* SNSWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

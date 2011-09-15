@@ -141,7 +141,7 @@ enum{
 
 - (IBAction)clickRegister:(id)sender {
     
-    [self.view endEditing:YES];
+//    [self.view endEditing:YES];
     [self textFieldDoneEditing:nil];
     
 //    UserService* userService = GlobalGetUserService();
@@ -166,16 +166,27 @@ enum{
 
 - (BOOL)verifyField
 {
-    if ([self.loginIdField.text length] <= 0){
+    if ([loginIdField.text length] == 0){
+        [UIUtils alert:@"电子邮件地址不能为空"];
+        [loginIdField becomeFirstResponder];
         return NO;
     }
     
-    if ([self.loginPasswordTextField.text length] <= 0){
-        return NO;
+    if (NSStringIsValidEmail(loginIdField.text) == NO){
+        [UIUtils alert:@"输入的电子邮件地址不合法，请重新输入"];
+        [loginIdField becomeFirstResponder];
+        return NO;        
     }
-
+    
+    if ([loginPasswordTextField.text length] == 0){
+        [UIUtils alert:@"密码不能为空"];
+        [loginPasswordTextField becomeFirstResponder];
+        return NO;
+    }         
+    
     return YES;
 }
+
 
 - (IBAction)clickLogin:(id)sender
 {
