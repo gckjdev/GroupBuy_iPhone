@@ -61,7 +61,7 @@ enum TOP_SCORE_TYPE {
       @"发布日期",
       @"距离远近",
       nil]
-    defaultSelectIndex:0];    
+    defaultSelectIndex:1];    
 
     
     [super viewDidLoad];

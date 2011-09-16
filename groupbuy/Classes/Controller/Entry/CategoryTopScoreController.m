@@ -66,7 +66,7 @@ enum TOP_SCORE_TYPE {
     NSArray *titleArray = [NSArray arrayWithObjects:@"0－10元", @"10元以上", @"发布日期", @"距离远近", nil];
     self.titleSegControl = [[[UISegmentedControl alloc] initWithItems:titleArray] autorelease];
     titleSegControl.segmentedControlStyle = UISegmentedControlStyleBar;
-    titleSegControl.selectedSegmentIndex = 0;
+    titleSegControl.selectedSegmentIndex = 1;
     [titleSegControl addTarget:self 
                         action:@selector(clickSegControl:) 
               forControlEvents:UIControlEventValueChanged];
