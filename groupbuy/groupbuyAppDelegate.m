@@ -123,6 +123,12 @@ UserShopItemService* GlobalGetUserShopItemService()
     return [delegate userShopService];       
 }
 
+CategoryService *GlobalGetCategoryService()
+{
+    groupbuyAppDelegate* delegate = (groupbuyAppDelegate*)[[UIApplication sharedApplication] delegate];    
+    return delegate.categoryService;
+}
+
 @implementation groupbuyAppDelegate
 
 @synthesize window;
@@ -139,6 +145,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 @synthesize postService;
 @synthesize appService;
 @synthesize productService;
+@synthesize categoryService;
 @synthesize userShopService;
 @synthesize reviewRequest;
 
@@ -223,50 +230,55 @@ enum
 
 - (void)initLocalDataService
 {
-    self.localDataService = [[LocalDataService alloc] initWithDelegate:self];
+    self.localDataService = [[[LocalDataService alloc] initWithDelegate:self] autorelease];
 }
 
 - (void)initLocationService
 {
-    self.locationService = [[LocationService alloc] init];
+    self.locationService = [[[LocationService alloc] init] autorelease];
     [locationService asyncGetLocation];        
 }
 
 - (void)initMessageService
 {
-    self.messageService = [[MessageService alloc] init];
+    self.messageService = [[[MessageService alloc] init] autorelease];
 }
 
 
 - (void)initUserService
 {
-    self.userService = [[UserService alloc] init];
+    self.userService = [[[UserService alloc] init] autorelease];
     userService.delegate = self;
 }
 
 - (void)initSNSService
 {
-    self.snsService = [[PlaceSNSService alloc] init];
+    self.snsService = [[[PlaceSNSService alloc] init] autorelease];
 }
 
 - (void)initPostService
 {
-    self.postService = [[PostService alloc] init];
+    self.postService = [[[PostService alloc] init] autorelease];
 }
 
 - (void)initAppService
 {
-    self.appService = [[AppService alloc] init];
+    self.appService = [[[AppService alloc] init] autorelease];
 }
 
 - (void)initProductService
 {
-    self.productService = [[ProductService alloc] init];
+    self.productService = [[[ProductService alloc] init] autorelease];
+}
+
+- (void)initCategoryService
+{
+    self.categoryService = [[[CategoryService alloc] init] autorelease];
 }
 
 - (void)initUserShopService
 {
-    self.userShopService = [[UserShopItemService alloc] init];
+    self.userShopService = [[[UserShopItemService alloc] init] autorelease];
 }
 
 - (void)showViewByUserStatus
@@ -292,6 +304,7 @@ enum
     [self initPostService];
     [self initAppService];    
     [self initProductService];
+    [self initCategoryService];
     [self initUserShopService];
     
     [self showViewByUserStatus];
@@ -573,6 +586,7 @@ enum
     [appService release];
     [reviewRequest release];
     [productService release];
+    [categoryService release];
     [userShopService release];
 	
     [super dealloc];

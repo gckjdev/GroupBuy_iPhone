@@ -10,6 +10,8 @@
 #import "CommonProductListController.h"
 #import "ProductPriceDataLoader.h"
 #import "CategoryTopScoreController.h"
+#import "GroupBuyNetworkConstants.h"
+#import "groupbuyAppDelegate.h"
 
 @implementation CategoryController
 
@@ -37,7 +39,9 @@
     [self setBackgroundImageName:@"background.png"];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.dataList = [CategoryManager getAllGroupBuyCategories];
+    //self.dataList = [CategoryManager getAllGroupBuyCategories];
+    CategoryService *service = GlobalGetCategoryService();
+    [service getAllCategory:self];
 }
 
 - (void)viewDidUnload
@@ -53,9 +57,18 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)showProductByCategory:(NSString *)categoryName
+- (void)getAllCategoryFinish:(int)result jsonArray:(NSArray *)jsonArray
 {
-    NSString* categoryId = [CategoryManager getGroupBuyCategoryIdByName:categoryName];
+    self.dataList = jsonArray;
+    [self.dataTableView reloadData];
+}
+
+- (void)showProductByCategory:(NSIndexPath *)indexPath
+{
+    NSDictionary *category = [self.dataList objectAtIndex:indexPath.row];
+    NSString *categoryName = [category objectForKey:PARA_CATEGORY_NAME];
+    NSString *categoryId = [category objectForKey:PARA_CATEGORY_ID];
+    //NSString *categoryId = [CategoryManager getGroupBuyCategoryIdByName:categoryName];
     
     CategoryTopScoreController *controller = [[[CategoryTopScoreController alloc] init] autorelease];
            
@@ -74,14 +87,17 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    cell.textLabel.text = [self.dataList objectAtIndex:indexPath.row];
+    NSDictionary *category = [self.dataList objectAtIndex:indexPath.row];
+    NSString *name = [category objectForKey:PARA_CATEGORY_NAME];
+    NSNumber *number = [category objectForKey:PARA_CATEGORY_PRODUCTS_NUM];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%d)", name, [number longValue]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *categoryName = [self.dataList objectAtIndex:indexPath.row];
-    [self showProductByCategory:categoryName];
+    [self showProductByCategory:indexPath];
 }
 
 @end

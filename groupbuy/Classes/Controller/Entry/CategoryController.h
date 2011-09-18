@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "PPTableViewController.h"
 #import "CategoryManager.h"
+#import "CategoryService.h"
 
-@interface CategoryController : PPTableViewController
+@interface CategoryController : PPTableViewController <CategoryServiceDelegate>
 
 @end
