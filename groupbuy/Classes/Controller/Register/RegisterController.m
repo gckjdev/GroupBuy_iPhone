@@ -7,38 +7,21 @@
 //
 
 #import "RegisterController.h"
-#import "UserManager.h"
 #import "groupbuyAppDelegate.h"
-#import "RegisterUserRequest.h"
-#import "BindUserRequest.h"
-#import "OAuthCore.h"
-#import "JSON.h"
 #import "PlaceSNSService.h"
-#import "VariableConstants.h"
+#import "StringUtil.h"
+#import "GroupBuyUserService.h"
+#import "NewUserRegisterController.h"
 
 enum{
     SELECT_BOY,
     SELECT_GIRL
 };
 
-#define sinaAppKey                      @"1528146353"
-#define sinaAppSecret                   @"4815b7938e960380395e6ac1fe645a5c"
-#define sinaRequestTokenUrl             @"http://api.t.sina.com.cn/oauth/request_token"
-#define sinaAuthorizeUrl                @"http://api.t.sina.com.cn/oauth/authorize"
-#define sinaAccessTokenUrl              @"http://api.t.sina.com.cn/oauth/access_token"
-#define sinaUserInfoUrl                 @"http://api.t.sina.com.cn/account/verify_credentials.json"
-
-#define qqAppKey                        @"7c78d5b42d514af8bb66f0200bc7c0fc"
-#define qqAppSecret                     @"6340ae28094e66d5388b4eb127a2af43"
-#define qqRequestTokenUrl               @"https://open.t.qq.com/cgi-bin/request_token"
-#define qqAuthorizeUrl                  @"https://open.t.qq.com/cgi-bin/authorize"
-#define qqAccessTokenUrl                @"https://open.t.qq.com/cgi-bin/access_token"
-#define qqUserInfoUrl                   @"http://open.t.qq.com/api/user/info"
-
-#define renrenAppKey                    @"cb2daa62b4ce4dc3948fa9246e4269ae"
-#define renrenAppSecret                 @"60d5fe4a88b847be80cd7bd126cdfed2"
+#define DEFAULT_Y                       0
 
 @implementation RegisterController
+@synthesize loginPasswordTextField;
 @synthesize genderSegControl;
 @synthesize genderLabel;
 @synthesize gender;
@@ -61,13 +44,12 @@ enum{
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 
+    [self setBackgroundImageName:@"background.png"];
+    
     CGRect frame = self.view.frame;
-    frame.origin.y = 20;
+    frame.origin.y = DEFAULT_Y;
     self.view.frame = frame;
-    
-    genderLabel.text = NSLS(@"kGenderLabel");
-    [self genderChange:self.genderSegControl];
-    
+        
     [super viewDidLoad];
 }
 
@@ -89,6 +71,7 @@ enum{
 - (void)viewDidUnload {
     [self setGenderSegControl:nil];
     [self setGenderLabel:nil];
+    [self setLoginPasswordTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -103,10 +86,21 @@ enum{
     [token release];
     [tokenSecret release];
     [gender release];
+    [loginPasswordTextField release];
     [super dealloc];
 }
 
+- (BOOL)isAlreadyScroll
+{
+    return (self.view.frame.origin.y < 0);
+}
+
 - (IBAction)textFieldDoneEditing:(id)sender {
+    
+    if ([self isAlreadyScroll] == NO){
+        return;
+    }
+    
 	[loginIdField resignFirstResponder];
     CATransition *animation = [CATransition animation];
     [animation setDuration:0.5f];
@@ -115,12 +109,16 @@ enum{
     [animation setSubtype:kCATransitionFromBottom];
     [self.view.layer addAnimation:animation forKey:@"Reveal"];
     CGRect frame = self.view.frame;
-    frame.origin.y = 20;
+    frame.origin.y = DEFAULT_Y;
     self.view.frame = frame;
 }
 
 - (IBAction)textFieldDidBeginEditing:(id)sender
 {
+    if ([self isAlreadyScroll]){
+        return;
+    }
+    
     CATransition *animation = [CATransition animation];
     [animation setDuration:0.5f];
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
@@ -129,7 +127,7 @@ enum{
     animation.fillMode = kCAFillModeRemoved;
     [self.view.layer addAnimation:animation forKey:@"Reveal"];
     CGRect frame = self.view.frame;
-    frame.origin.y = -195;
+    frame.origin.y = -165;
     self.view.frame = frame;
 }
 
@@ -143,8 +141,15 @@ enum{
 
 - (IBAction)clickRegister:(id)sender {
     
-    UserService* userService = GlobalGetUserService();
-    [userService loginUserWithLoginId:loginIdField.text gender:gender viewController:self];     
+//    [self.view endEditing:YES];
+    [self textFieldDoneEditing:nil];
+    
+//    UserService* userService = GlobalGetUserService();
+//    [userService registerUser:loginIdField.text password:loginPasswordTextField.text viewController:self];     
+    
+    [NewUserRegisterController showController:loginIdField.text
+                                     password:loginPasswordTextField.text
+                              superController:self];
 }
 
 - (IBAction)clickSinaLogin:(id)sender
@@ -159,14 +164,41 @@ enum{
     [snsService qqInitiateLogin:self];
 }
 
-- (IBAction)genderChange:(id)sender
+- (BOOL)verifyField
 {
-    if (genderSegControl.selectedSegmentIndex == SELECT_BOY){
-        self.gender = GENDER_MALE;
+    if ([loginIdField.text length] == 0){
+        [UIUtils alert:@"电子邮件地址不能为空"];
+        [loginIdField becomeFirstResponder];
+        return NO;
     }
-    else{
-        self.gender = GENDER_FEMALE;
+    
+    if (NSStringIsValidEmail(loginIdField.text) == NO){
+        [UIUtils alert:@"输入的电子邮件地址不合法，请重新输入"];
+        [loginIdField becomeFirstResponder];
+        return NO;        
     }
+    
+    if ([loginPasswordTextField.text length] == 0){
+        [UIUtils alert:@"密码不能为空"];
+        [loginPasswordTextField becomeFirstResponder];
+        return NO;
+    }         
+    
+    return YES;
+}
+
+
+- (IBAction)clickLogin:(id)sender
+{
+    if ([self verifyField] == NO){        
+        return;
+    }
+    
+    [self.view endEditing:YES];
+    [self textFieldDoneEditing:nil];
+    
+    UserService* userService = GlobalGetUserService();
+    [userService loginUserWithEmail:loginIdField.text password:loginPasswordTextField.text viewController:self];
 }
 
 @end

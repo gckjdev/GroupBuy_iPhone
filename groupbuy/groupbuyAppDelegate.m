@@ -50,12 +50,14 @@
 #import "ShoppingListController.h"
 #import "TopScoreController.h"
 
+#import "CategoryController.h"
+
 #define kDbFileName			@"AppDB"
 
 NSString* GlobalGetServerURL()
 {
 
-//   return @"http://192.168.1.101:8000/api/i?";
+//   return @"http://192.168.1.188:8000/api/i?";
     return @"http://www.dipan100.com:8000/api/i?";
 
 }
@@ -145,7 +147,8 @@ UserShopItemService* GlobalGetUserShopItemService()
 
 enum
 {
-    TAB_SHOPPING = 2,    
+    TAB_TOP_SCORE = 0,
+    TAB_SHOPPING = 3,    
 };
 
 - (void)initTabViewControllers
@@ -154,21 +157,21 @@ enum
     
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
-//	[UIUtils addViewController:[PostMainController alloc]
-//					 viewTitle:@"首页"
-//					 viewImage:@"home_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
-
 	[UIUtils addViewController:[TopScoreController alloc]
 					 viewTitle:@"排行榜"
-					 viewImage:@"home_24.png"
+					 viewImage:@"chart_bar_down.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+
+	[UIUtils addViewController:[CategoryController alloc]
+					 viewTitle:@"分类"
+					 viewImage:@"app_globe_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
     
 	[UIUtils addViewController:[SearchProductController alloc]
 					 viewTitle:@"热门"				 
-					 viewImage:@"magnifier_24.png"
+					 viewImage:@"brightness.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
@@ -181,6 +184,12 @@ enum
     shoppingListController.tabIndex = TAB_SHOPPING;
     
 	
+//	[UIUtils addViewController:[RegisterController alloc]
+//					 viewTitle:@"我"
+//					 viewImage:@"man_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
+
 	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 					 viewTitle:@"收藏"				 
 					 viewImage:@"folder_bookmark_24.png"
@@ -188,11 +197,6 @@ enum
 			   viewControllers:controllers];	
     historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
     
-//	[UIUtils addViewController:[MyInfoController alloc]
-//					 viewTitle:NSLS(@"Setting")				 
-//					 viewImage:@"man_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
 
     [UIUtils addViewController:[SettingsController alloc]
 					 viewTitle:@"设置"				 
@@ -207,6 +211,7 @@ enum
 			   viewControllers:controllers];	
 	
 	tabBarController.viewControllers = controllers;
+    tabBarController.selectedIndex = TAB_TOP_SCORE;
 	
 	[controllers release];
 }

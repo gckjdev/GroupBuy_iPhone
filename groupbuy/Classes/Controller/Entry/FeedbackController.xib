@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10K540</string>
+		<string key="IBDocument.SystemVersion">10K549</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -96,9 +96,9 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="349596329">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="223497513">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">button.png</string>
+							<string key="NSResourceName">button2.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="607727284">
@@ -122,7 +122,7 @@
 						<reference key="IBUIHighlightedTitleColor" ref="268723093"/>
 						<reference key="IBUINormalTitleColor" ref="268723093"/>
 						<reference key="IBUINormalTitleShadowColor" ref="949029484"/>
-						<reference key="IBUINormalBackgroundImage" ref="349596329"/>
+						<reference key="IBUINormalBackgroundImage" ref="223497513"/>
 					</object>
 					<object class="IBUILabel" id="791715304">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -397,7 +397,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">button.png</string>
+			<string key="NS.key.0">button2.png</string>
 			<string key="NS.object.0">{298, 48}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">300</string>
