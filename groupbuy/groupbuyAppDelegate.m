@@ -262,6 +262,7 @@ enum
 - (void)initUserShopService
 {
     self.userShopService = [[UserShopItemService alloc] init];
+    self.userShopService.userShopItemServiceDelegate = shoppingListController;
 }
 
 - (void)showViewByUserStatus

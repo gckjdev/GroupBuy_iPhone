@@ -393,6 +393,10 @@
 		CA943D3213EF803E001ED96D /* magnifier_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA943D3013EF803E001ED96D /* magnifier_24@2x.png */; };
 		CA943D3513EFCC42001ED96D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEC13D5634800E0D0DC /* InfoPlist.strings */; };
 		CA943D3613EFCC42001ED96D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEE13D5634800E0D0DC /* Localizable.strings */; };
+		CA9D3388141B09B3003BD2E9 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9D3386141B09B3003BD2E9 /* LocationCell.m */; };
+		CA9D3389141B09B3003BD2E9 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9D3387141B09B3003BD2E9 /* LocationCell.xib */; };
+		CA9D339E141B4D75003BD2E9 /* PPMKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9D339C141B4D75003BD2E9 /* PPMKMapViewController.m */; };
+		CA9D339F141B4D75003BD2E9 /* PPMKMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9D339D141B4D75003BD2E9 /* PPMKMapViewController.xib */; };
 		CAA01A4513E64D640002986A /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA01A4313E64D630002986A /* SettingsController.m */; };
 		CAA01A4613E64D640002986A /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4413E64D630002986A /* SettingsController.xib */; };
 		CAA01A4D13E658890002986A /* folder_bookmark_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4713E658880002986A /* folder_bookmark_24.png */; };
@@ -1170,6 +1174,12 @@
 		CA943D3013EF803E001ED96D /* magnifier_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifier_24@2x.png"; sourceTree = "<group>"; };
 		CA943D3313EFCC42001ED96D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = groupbuy/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		CA943D3413EFCC42001ED96D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = groupbuy/en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		CA9D3385141B09B3003BD2E9 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		CA9D3386141B09B3003BD2E9 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
+		CA9D3387141B09B3003BD2E9 /* LocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
+		CA9D339B141B4D75003BD2E9 /* PPMKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMKMapViewController.h; sourceTree = "<group>"; };
+		CA9D339C141B4D75003BD2E9 /* PPMKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMKMapViewController.m; sourceTree = "<group>"; };
+		CA9D339D141B4D75003BD2E9 /* PPMKMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPMKMapViewController.xib; sourceTree = "<group>"; };
 		CAA01A4213E64D630002986A /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		CAA01A4313E64D630002986A /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		CAA01A4413E64D630002986A /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
@@ -2819,6 +2829,9 @@
 		CADF6BBB13DAA4810060F438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CA9D339B141B4D75003BD2E9 /* PPMKMapViewController.h */,
+				CA9D339C141B4D75003BD2E9 /* PPMKMapViewController.m */,
+				CA9D339D141B4D75003BD2E9 /* PPMKMapViewController.xib */,
 				FB70BF0714134FA000ACA7A1 /* CommentTableViewCell.h */,
 				FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */,
 				FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */,
@@ -2869,6 +2882,9 @@
 				887A5C9C13FF964C00FF3457 /* SliderCell.h */,
 				887A5C9D13FF964C00FF3457 /* SliderCell.m */,
 				887A5C9E13FF964C00FF3457 /* SliderCell.xib */,
+				CA9D3385141B09B3003BD2E9 /* LocationCell.h */,
+				CA9D3386141B09B3003BD2E9 /* LocationCell.m */,
+				CA9D3387141B09B3003BD2E9 /* LocationCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3354,6 +3370,8 @@
 				CAE09DFB140A804800BFD51D /* cart_24@2x.png in Resources */,
 				FB70BF0C1413500200ACA7A1 /* CommentTableViewCell.xib in Resources */,
 				CAB6A706141A6792007E6253 /* TopScoreController.xib in Resources */,
+				CA9D3389141B09B3003BD2E9 /* LocationCell.xib in Resources */,
+				CA9D339F141B4D75003BD2E9 /* PPMKMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3702,6 +3720,8 @@
 				CA8F787F140C984600A77529 /* UserShopItemManager.m in Sources */,
 				FB70BF0914134FA000ACA7A1 /* CommentTableViewCell.m in Sources */,
 				CAB6A705141A6792007E6253 /* TopScoreController.m in Sources */,
+				CA9D3388141B09B3003BD2E9 /* LocationCell.m in Sources */,
+				CA9D339E141B4D75003BD2E9 /* PPMKMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
