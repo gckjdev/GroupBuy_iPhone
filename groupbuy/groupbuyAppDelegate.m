@@ -39,7 +39,9 @@
 #import "ProductService.h"
 #import "UserShopItemService.h"
 #import "ProductManager.h"
+
 #import "GroupBuyUserService.h"
+#import "GroupBuySNSService.h"
 
 #import "ProductPriceDataLoader.h"
 #import "GroupBuyReport.h"
@@ -57,8 +59,8 @@
 NSString* GlobalGetServerURL()
 {
 
-//   return @"http://192.168.1.188:8000/api/i?";
-    return @"http://www.dipan100.com:8000/api/i?";
+   return @"http://192.168.1.188:8000/api/i?";
+//    return @"http://www.dipan100.com:8000/api/i?";
 
 }
 
@@ -100,7 +102,7 @@ UserService* GlobalGetUserService()
     return [delegate userService];    
 }
 
-PlaceSNSService* GlobalGetSNSService()
+GroupBuySNSService* GlobalGetGroupBuySNSService()
 {
     groupbuyAppDelegate* delegate = (groupbuyAppDelegate*)[[UIApplication sharedApplication] delegate];    
     return [delegate snsService];    
@@ -109,6 +111,11 @@ PlaceSNSService* GlobalGetSNSService()
 NSString* GlobalGetPlaceAppId()
 {
     return @"GROUPBUY";
+}
+
+PlaceSNSService*   GlobalGetSNSService()
+{
+    return nil;
 }
 
 ProductService* GlobalGetProductService()
@@ -165,25 +172,25 @@ enum
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
 	[UIUtils addViewController:[TopScoreController alloc]
-					 viewTitle:@"排行榜"
+					 viewTitle:@"???�?
 					 viewImage:@"chart_bar_down.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
 	[UIUtils addViewController:[CategoryController alloc]
-					 viewTitle:@"分类"
+					 viewTitle:@"??��"
 					 viewImage:@"app_globe_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
     
 	[UIUtils addViewController:[SearchProductController alloc]
-					 viewTitle:@"热门"				 
+					 viewTitle:@"???"				 
 					 viewImage:@"brightness.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
 	shoppingListController = (ShoppingListController*)[UIUtils addViewController:[ShoppingListController alloc]
-					 viewTitle:@"团购通知"				 
+					 viewTitle:@"?�购???"				 
 					 viewImage:@"cart_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
@@ -191,31 +198,31 @@ enum
     shoppingListController.tabIndex = TAB_SHOPPING;
     
 	
-//	[UIUtils addViewController:[RegisterController alloc]
-//					 viewTitle:@"我"
-//					 viewImage:@"man_24.png"
+	[UIUtils addViewController:[RegisterController alloc]
+					 viewTitle:@"??
+					 viewImage:@"man_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+
+//	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+//					 viewTitle:@"?��?"				 
+//					 viewImage:@"folder_bookmark_24.png"
 //			  hasNavController:YES			
 //			   viewControllers:controllers];	
-
-	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
-					 viewTitle:@"收藏"				 
-					 viewImage:@"folder_bookmark_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
-    historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
-    
-
-    [UIUtils addViewController:[SettingsController alloc]
-					 viewTitle:@"设置"				 
-					 viewImage:@"gear_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
-        
-	[UIUtils addViewController:[FeedbackController alloc]
-					 viewTitle:@"反馈"
-					 viewImage:@"help_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
+//    historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
+//    
+//
+//    [UIUtils addViewController:[SettingsController alloc]
+//					 viewTitle:@"设置"				 
+//					 viewImage:@"gear_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
+//        
+//	[UIUtils addViewController:[FeedbackController alloc]
+//					 viewTitle:@"???"
+//					 viewImage:@"help_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
 	
 	tabBarController.viewControllers = controllers;
     tabBarController.selectedIndex = TAB_TOP_SCORE;
@@ -253,7 +260,7 @@ enum
 
 - (void)initSNSService
 {
-    self.snsService = [[[PlaceSNSService alloc] init] autorelease];
+    self.snsService = [[GroupBuySNSService alloc] init];
 }
 
 - (void)initPostService
@@ -278,7 +285,8 @@ enum
 
 - (void)initUserShopService
 {
-    self.userShopService = [[[UserShopItemService alloc] init] autorelease];
+    self.userShopService = [[UserShopItemService alloc] init];
+    self.userShopService.userShopItemServiceDelegate = shoppingListController;
 }
 
 - (void)showViewByUserStatus
@@ -612,7 +620,7 @@ enum
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	
 //	if ([application enabledRemoteNotificationTypes] == UIRemoteNotificationTypeNone){
-//        [UIUtils alert:@"由于您未同意接受推送通知功能，团购购物推送通知功能无法正常使用"];
+//        [UIUtils alert:@"?��??��?????��??��???????�??�?��?��?????��??��?�??常使??];
 //		return;
 //	}
 	
@@ -630,10 +638,10 @@ enum
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
 	NSString *message = [error localizedDescription];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"错误"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"???"
 													message: message
                                                    delegate: nil
-                                          cancelButtonTitle: @"确认"
+                                          cancelButtonTitle: @"�??"
                                           otherButtonTitles: nil];
     [alert show];
     [alert release];
@@ -678,7 +686,7 @@ enum
 	if (nil != payload) {
         
         NSString *itemId = [[payload objectForKey:@"aps"] valueForKey:@"ii"];				
-        [self updateShoppingTabBadge:@"新"];        
+        [self updateShoppingTabBadge:@"??];        
         [userShopService requestItemMatchCount:itemId tableViewController:shoppingListController];
         
 	}	

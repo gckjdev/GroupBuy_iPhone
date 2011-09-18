@@ -12,6 +12,7 @@
 #import "StringUtil.h"
 #import "GroupBuyUserService.h"
 #import "NewUserRegisterController.h"
+#import "GroupBuySNSService.h"
 
 enum{
     SELECT_BOY,
@@ -154,13 +155,13 @@ enum{
 
 - (IBAction)clickSinaLogin:(id)sender
 {
-    PlaceSNSService* snsService = GlobalGetSNSService();
+    GroupBuySNSService* snsService = GlobalGetGroupBuySNSService();
     [snsService sinaInitiateLogin:self];
 }
 
 - (IBAction)clickQQLogin:(id)sender
 {
-    PlaceSNSService* snsService = GlobalGetSNSService();
+    GroupBuySNSService* snsService = GlobalGetGroupBuySNSService();
     [snsService qqInitiateLogin:self];
 }
 

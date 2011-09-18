@@ -20,7 +20,7 @@
 
 // TODO remove all depedency class header files
 
-@class PlaceSNSService;
+@class GroupBuySNSService;
 @class MessageService;
 @class PostService;
 @class AppService;
@@ -46,7 +46,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     LocationService     *locationService;
     UserService         *userService;
     RegisterController  *registerController;
-    PlaceSNSService     *snsService;
+    GroupBuySNSService  *snsService;
     MessageService      *messageService;
     PostService         *postService;
     AppService          *appService;    
@@ -68,7 +68,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 @property (nonatomic, retain) LocalDataService              *localDataService;
 @property (nonatomic, retain) LocationService               *locationService;
 @property (nonatomic, retain) UserService                   *userService;
-@property (nonatomic, retain) PlaceSNSService               *snsService;
+@property (nonatomic, retain) GroupBuySNSService            *snsService;
 @property (nonatomic, retain) MessageService                *messageService;
 @property (nonatomic, retain) PostService                   *postService;
 @property (nonatomic, retain) AppService                    *appService;

@@ -35,6 +35,10 @@
 		CA1A9D8413DD68790072926A /* PPWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D8213DD68790072926A /* PPWebViewController.xib */; };
 		CA1A9D8813DD6D420072926A /* ProductCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1A9D8613DD6D410072926A /* ProductCategoryController.m */; };
 		CA1A9D8913DD6D420072926A /* ProductCategoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D8713DD6D420072926A /* ProductCategoryController.xib */; };
+		CA25E72B1425F50A0056EB11 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA25E7261425F50A0056EB11 /* LocationCell.m */; };
+		CA25E72C1425F50A0056EB11 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA25E7271425F50A0056EB11 /* LocationCell.xib */; };
+		CA25E72D1425F50A0056EB11 /* PPMKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA25E7291425F50A0056EB11 /* PPMKMapViewController.m */; };
+		CA25E72E1425F50A0056EB11 /* PPMKMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA25E72A1425F50A0056EB11 /* PPMKMapViewController.xib */; };
 		CA334C9213F170AC00F89E2F /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = CA334C9013F170AC00F89E2F /* 57.png */; };
 		CA334C9313F170AC00F89E2F /* 57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA334C9113F170AC00F89E2F /* 57@2x.png */; };
 		CA3D08F913ED08D8003778D6 /* SearchProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3D08F713ED08D8003778D6 /* SearchProductController.m */; };
@@ -610,6 +614,12 @@
 		CA1A9D8513DD6D410072926A /* ProductCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategoryController.h; sourceTree = "<group>"; };
 		CA1A9D8613DD6D410072926A /* ProductCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategoryController.m; sourceTree = "<group>"; };
 		CA1A9D8713DD6D420072926A /* ProductCategoryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCategoryController.xib; sourceTree = "<group>"; };
+		CA25E7251425F50A0056EB11 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		CA25E7261425F50A0056EB11 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
+		CA25E7271425F50A0056EB11 /* LocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
+		CA25E7281425F50A0056EB11 /* PPMKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMKMapViewController.h; sourceTree = "<group>"; };
+		CA25E7291425F50A0056EB11 /* PPMKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMKMapViewController.m; sourceTree = "<group>"; };
+		CA25E72A1425F50A0056EB11 /* PPMKMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPMKMapViewController.xib; sourceTree = "<group>"; };
 		CA334C9013F170AC00F89E2F /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
 		CA334C9113F170AC00F89E2F /* 57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "57@2x.png"; sourceTree = "<group>"; };
 		CA3D08F613ED08D8003778D6 /* SearchProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProductController.h; sourceTree = "<group>"; };
@@ -2920,6 +2930,12 @@
 		CADF6BBB13DAA4810060F438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CA25E7251425F50A0056EB11 /* LocationCell.h */,
+				CA25E7261425F50A0056EB11 /* LocationCell.m */,
+				CA25E7271425F50A0056EB11 /* LocationCell.xib */,
+				CA25E7281425F50A0056EB11 /* PPMKMapViewController.h */,
+				CA25E7291425F50A0056EB11 /* PPMKMapViewController.m */,
+				CA25E72A1425F50A0056EB11 /* PPMKMapViewController.xib */,
 				FB70BF0714134FA000ACA7A1 /* CommentTableViewCell.h */,
 				FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */,
 				FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */,
@@ -3480,6 +3496,8 @@
 				CA73499E1420E893005C3CEE /* sinaico_big.png in Resources */,
 				CA73499F1420E893005C3CEE /* sinaico_big@2x.png in Resources */,
 				CA734A161421E012005C3CEE /* SNSWebViewController.xib in Resources */,
+				CA25E72C1425F50A0056EB11 /* LocationCell.xib in Resources */,
+				CA25E72E1425F50A0056EB11 /* PPMKMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3833,7 +3851,12 @@
 				CA73498914208D04005C3CEE /* NewUserRegisterController.m in Sources */,
 				CA734A151421E012005C3CEE /* SNSWebViewController.m in Sources */,
 				CA734A191422E101005C3CEE /* GroupBuySNSService.m in Sources */,
+<<<<<<< HEAD
 				FB1FBC851425D55600CFDEC9 /* CategoryService.m in Sources */,
+=======
+				CA25E72B1425F50A0056EB11 /* LocationCell.m in Sources */,
+				CA25E72D1425F50A0056EB11 /* PPMKMapViewController.m in Sources */,
+>>>>>>> origin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
