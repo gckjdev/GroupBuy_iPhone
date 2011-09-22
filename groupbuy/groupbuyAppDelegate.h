@@ -16,6 +16,7 @@
 #import "EnterPlaceAppController.h"
 #import "AppManager.h"
 #import "UserService.h"
+#import "CategoryService.h"
 
 // TODO remove all depedency class header files
 
@@ -50,6 +51,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
     PostService         *postService;
     AppService          *appService;    
     ProductService      *productService;
+    CategoryService     *categoryService;
     UserShopItemService *userShopService;
     
     ReviewRequest           *reviewRequest;
@@ -71,6 +73,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 @property (nonatomic, retain) PostService                   *postService;
 @property (nonatomic, retain) AppService                    *appService;
 @property (nonatomic, retain) ProductService                *productService;
+@property (nonatomic, retain) CategoryService               *categoryService;
 @property (nonatomic, retain) UserShopItemService           *userShopService;
 @property (nonatomic, retain) RegisterController            *registerController;
 @property (nonatomic, retain) EnterPlaceAppController       *enterController;    
