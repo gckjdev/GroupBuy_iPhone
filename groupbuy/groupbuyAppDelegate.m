@@ -64,6 +64,12 @@ NSString* GlobalGetServerURL()
 
 }
 
+CategoryService *GlobalGetCategoryService()
+{
+    groupbuyAppDelegate* delegate = (groupbuyAppDelegate*)[[UIApplication sharedApplication] delegate];    
+    return delegate.categoryService;
+}
+
 AppService* GlobalGetAppService()
 {
     groupbuyAppDelegate* delegate = (groupbuyAppDelegate*)[[UIApplication sharedApplication] delegate];    
@@ -147,6 +153,7 @@ UserShopItemService* GlobalGetUserShopItemService()
 @synthesize appService;
 @synthesize productService;
 @synthesize userShopService;
+@synthesize categoryService;
 @synthesize reviewRequest;
 
 #pragma mark -
@@ -261,6 +268,11 @@ enum
     self.postService = [[PostService alloc] init];
 }
 
+- (void)initCategoryService
+{
+    self.categoryService = [[[CategoryService alloc] init] autorelease];
+}
+
 - (void)initAppService
 {
     self.appService = [[AppService alloc] init];
@@ -301,6 +313,7 @@ enum
     [self initAppService];    
     [self initProductService];
     [self initUserShopService];
+    [self initCategoryService];
     
     [self showViewByUserStatus];
     
@@ -574,6 +587,7 @@ enum
 	// release data objects
 	[dataManager release];
     [localDataService release];
+    [categoryService release];
     [locationService release];
     [snsService release];
     [dataForRegistration release];

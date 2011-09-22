@@ -96,7 +96,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *categoryName = [self.dataList objectAtIndex:indexPath.row];
+//    NSString *categoryName = [self.dataList objectAtIndex:indexPath.row];
     [self showProductByCategory:indexPath];
 }
 

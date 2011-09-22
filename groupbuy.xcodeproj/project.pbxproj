@@ -433,6 +433,7 @@
 		CABC3955141DEC3F001B33D1 /* storage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABC394F141DEC3F001B33D1 /* storage@2x.png */; };
 		CABC3958141DEF3B001B33D1 /* chart_pie.png in Resources */ = {isa = PBXBuildFile; fileRef = CABC3956141DEF3B001B33D1 /* chart_pie.png */; };
 		CABC3959141DEF3B001B33D1 /* chart_pie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABC3957141DEF3B001B33D1 /* chart_pie@2x.png */; };
+		CABC831C142B828C008037A0 /* CategoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = CABC831B142B828C008037A0 /* CategoryService.m */; };
 		CABCB59B13ED0F5900F9BD2A /* SearchHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */; };
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
 		CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACECC931408ECAE00C90A99 /* ShoppingListCell.m */; };
@@ -1255,6 +1256,8 @@
 		CABC394F141DEC3F001B33D1 /* storage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "storage@2x.png"; sourceTree = "<group>"; };
 		CABC3956141DEF3B001B33D1 /* chart_pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart_pie.png; sourceTree = "<group>"; };
 		CABC3957141DEF3B001B33D1 /* chart_pie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chart_pie@2x.png"; sourceTree = "<group>"; };
+		CABC831A142B828C008037A0 /* CategoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryService.h; sourceTree = "<group>"; };
+		CABC831B142B828C008037A0 /* CategoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryService.m; sourceTree = "<group>"; };
 		CABCB59913ED0F5900F9BD2A /* SearchHistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryManager.h; sourceTree = "<group>"; };
 		CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryManager.m; sourceTree = "<group>"; };
 		CABCB59F13ED100C00F9BD2A /* SearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistory.h; sourceTree = "<group>"; };
@@ -2886,6 +2889,8 @@
 		CADF6B6F13DA9ACB0060F438 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CABC831A142B828C008037A0 /* CategoryService.h */,
+				CABC831B142B828C008037A0 /* CategoryService.m */,
 				CADF6B7B13DAA0A90060F438 /* ProductService.h */,
 				CADF6B7C13DAA0A90060F438 /* ProductService.m */,
 				CA7C0B1213E6B3B5001121C3 /* GroupBuyUserService.h */,
@@ -3880,6 +3885,7 @@
 				CA25E72D1425F50A0056EB11 /* PPMKMapViewController.m in Sources */,
 				CAEACFB2142AE06800C67B9B /* TaobaoSearchController.m in Sources */,
 				CAEACFB7142AE08100C67B9B /* TaobaoSearchResultController.m in Sources */,
+				CABC831C142B828C008037A0 /* CategoryService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
