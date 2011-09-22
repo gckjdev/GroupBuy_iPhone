@@ -550,6 +550,11 @@
 		CAE655D213DEBCB200182C79 /* reload_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C913DEBCB200182C79 /* reload_24.png */; };
 		CAE655D313DEBCB200182C79 /* reload_48.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CA13DEBCB200182C79 /* reload_48.png */; };
 		CAE655D413DEBCB200182C79 /* reload_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CB13DEBCB200182C79 /* reload_64.png */; };
+		CAEACFAE142AE03600C67B9B /* TaobaoSearch in Resources */ = {isa = PBXBuildFile; fileRef = CAEACFAD142AE03600C67B9B /* TaobaoSearch */; };
+		CAEACFB2142AE06800C67B9B /* TaobaoSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEACFB0142AE06800C67B9B /* TaobaoSearchController.m */; };
+		CAEACFB3142AE06800C67B9B /* TaobaoSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEACFB1142AE06800C67B9B /* TaobaoSearchController.xib */; };
+		CAEACFB7142AE08100C67B9B /* TaobaoSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEACFB5142AE08100C67B9B /* TaobaoSearchResultController.m */; };
+		CAEACFB8142AE08100C67B9B /* TaobaoSearchResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEACFB6142AE08100C67B9B /* TaobaoSearchResultController.xib */; };
 		FB70BF0914134FA000ACA7A1 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */; };
 		FB70BF0C1413500200ACA7A1 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */; };
 		FBB014F0141C6A75003A31A8 /* CategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB014EE141C6A74003A31A8 /* CategoryController.m */; };
@@ -1464,6 +1469,13 @@
 		CAE655C913DEBCB200182C79 /* reload_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_24.png; sourceTree = "<group>"; };
 		CAE655CA13DEBCB200182C79 /* reload_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_48.png; sourceTree = "<group>"; };
 		CAE655CB13DEBCB200182C79 /* reload_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_64.png; sourceTree = "<group>"; };
+		CAEACFAD142AE03600C67B9B /* TaobaoSearch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TaobaoSearch; sourceTree = "<group>"; };
+		CAEACFAF142AE06800C67B9B /* TaobaoSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaobaoSearchController.h; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchController.h; sourceTree = "<group>"; };
+		CAEACFB0142AE06800C67B9B /* TaobaoSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaobaoSearchController.m; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchController.m; sourceTree = "<group>"; };
+		CAEACFB1142AE06800C67B9B /* TaobaoSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaobaoSearchController.xib; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchController.xib; sourceTree = "<group>"; };
+		CAEACFB4142AE08100C67B9B /* TaobaoSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaobaoSearchResultController.h; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultController.h; sourceTree = "<group>"; };
+		CAEACFB5142AE08100C67B9B /* TaobaoSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaobaoSearchResultController.m; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultController.m; sourceTree = "<group>"; };
+		CAEACFB6142AE08100C67B9B /* TaobaoSearchResultController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaobaoSearchResultController.xib; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultController.xib; sourceTree = "<group>"; };
 		FB70BF0714134FA000ACA7A1 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
 		FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 		FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
@@ -1568,6 +1580,12 @@
 		CA5D135A13D55A9F003CB28C = {
 			isa = PBXGroup;
 			children = (
+				CAEACFB4142AE08100C67B9B /* TaobaoSearchResultController.h */,
+				CAEACFB5142AE08100C67B9B /* TaobaoSearchResultController.m */,
+				CAEACFB6142AE08100C67B9B /* TaobaoSearchResultController.xib */,
+				CAEACFAF142AE06800C67B9B /* TaobaoSearchController.h */,
+				CAEACFB0142AE06800C67B9B /* TaobaoSearchController.m */,
+				CAEACFB1142AE06800C67B9B /* TaobaoSearchController.xib */,
 				CAE1688913FE0A3F00A9C202 /* tapkulibrary */,
 				CA607C1813D5639D00E0D0DC /* 3PP */,
 				CA6071C313D55EE000E0D0DC /* Common_Iphone */,
@@ -2931,6 +2949,7 @@
 		CADF6BBB13DAA4810060F438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CAEACFAD142AE03600C67B9B /* TaobaoSearch */,
 				CA25E7251425F50A0056EB11 /* LocationCell.h */,
 				CA25E7261425F50A0056EB11 /* LocationCell.m */,
 				CA25E7271425F50A0056EB11 /* LocationCell.xib */,
@@ -3501,6 +3520,9 @@
 				CA734A161421E012005C3CEE /* SNSWebViewController.xib in Resources */,
 				CA25E72C1425F50A0056EB11 /* LocationCell.xib in Resources */,
 				CA25E72E1425F50A0056EB11 /* PPMKMapViewController.xib in Resources */,
+				CAEACFAE142AE03600C67B9B /* TaobaoSearch in Resources */,
+				CAEACFB3142AE06800C67B9B /* TaobaoSearchController.xib in Resources */,
+				CAEACFB8142AE08100C67B9B /* TaobaoSearchResultController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3856,6 +3878,8 @@
 				CA734A191422E101005C3CEE /* GroupBuySNSService.m in Sources */,
 				CA25E72B1425F50A0056EB11 /* LocationCell.m in Sources */,
 				CA25E72D1425F50A0056EB11 /* PPMKMapViewController.m in Sources */,
+				CAEACFB2142AE06800C67B9B /* TaobaoSearchController.m in Sources */,
+				CAEACFB7142AE08100C67B9B /* TaobaoSearchResultController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
