@@ -103,17 +103,35 @@
 
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-	UITableViewCell *cell = [theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
+	UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
     NSDictionary *category = [self.dataList objectAtIndex:indexPath.row];
     NSString *name = [category objectForKey:PARA_CATEGORY_NAME];
-    NSNumber *number = [category objectForKey:PARA_CATEGORY_PRODUCTS_NUM];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%d)", name, [number longValue]];
+    NSNumber *n = [category objectForKey:PARA_CATEGORY_PRODUCTS_NUM];
+    NSString *number = [NSString stringWithFormat:@"(%@)", n];
+    //cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", name, number];
+    //cell.textLabel.text = name;
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"(%@)               ", number];
+    
+    UILabel *nameLabel = [[UILabel alloc] init];
+    nameLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
+    CGSize size = [name sizeWithFont:nameLabel.font];
+    CGFloat x = 10;
+    CGFloat y = (56 - size.height) / 2;
+    nameLabel.frame = CGRectMake(x, y, size.width, size.height);
+    nameLabel.text = name;
+    [cell.contentView addSubview:nameLabel];
+    
+    x = x + size.width + 5;
+    UILabel *numberLabel = [[UILabel alloc] init];
+    numberLabel.textColor = [UIColor grayColor];
+    size = [number sizeWithFont:numberLabel.font];
+    y = (56 - size.height) / 2;
+    numberLabel.frame = CGRectMake(x, y, size.width, size.height);
+    numberLabel.text = number;
+    [cell.contentView addSubview:numberLabel];
+    
     return cell;
 }
 
@@ -121,6 +139,11 @@
 {
 //    NSString *categoryName = [self.dataList objectAtIndex:indexPath.row];
     [self showProductByCategory:indexPath];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 56;
 }
 
 @end
