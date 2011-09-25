@@ -434,6 +434,8 @@
 		CABC3958141DEF3B001B33D1 /* chart_pie.png in Resources */ = {isa = PBXBuildFile; fileRef = CABC3956141DEF3B001B33D1 /* chart_pie.png */; };
 		CABC3959141DEF3B001B33D1 /* chart_pie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABC3957141DEF3B001B33D1 /* chart_pie@2x.png */; };
 		CABC831C142B828C008037A0 /* CategoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = CABC831B142B828C008037A0 /* CategoryService.m */; };
+		CABC8321142C57FD008037A0 /* TaobaoSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CABC831F142C57FD008037A0 /* TaobaoSearchResultCell.m */; };
+		CABC8322142C57FD008037A0 /* TaobaoSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABC8320142C57FD008037A0 /* TaobaoSearchResultCell.xib */; };
 		CABCB59B13ED0F5900F9BD2A /* SearchHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */; };
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
 		CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACECC931408ECAE00C90A99 /* ShoppingListCell.m */; };
@@ -551,11 +553,16 @@
 		CAE655D213DEBCB200182C79 /* reload_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C913DEBCB200182C79 /* reload_24.png */; };
 		CAE655D313DEBCB200182C79 /* reload_48.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CA13DEBCB200182C79 /* reload_48.png */; };
 		CAE655D413DEBCB200182C79 /* reload_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CB13DEBCB200182C79 /* reload_64.png */; };
-		CAEACFAE142AE03600C67B9B /* TaobaoSearch in Resources */ = {isa = PBXBuildFile; fileRef = CAEACFAD142AE03600C67B9B /* TaobaoSearch */; };
 		CAEACFB2142AE06800C67B9B /* TaobaoSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEACFB0142AE06800C67B9B /* TaobaoSearchController.m */; };
 		CAEACFB3142AE06800C67B9B /* TaobaoSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEACFB1142AE06800C67B9B /* TaobaoSearchController.xib */; };
 		CAEACFB7142AE08100C67B9B /* TaobaoSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEACFB5142AE08100C67B9B /* TaobaoSearchResultController.m */; };
 		CAEACFB8142AE08100C67B9B /* TaobaoSearchResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEACFB6142AE08100C67B9B /* TaobaoSearchResultController.xib */; };
+		CAF4CC2C142ECC6D001D5B4A /* TaobaoSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4CC24142ECC6D001D5B4A /* TaobaoSearchController.m */; };
+		CAF4CC2D142ECC6D001D5B4A /* TaobaoSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF4CC25142ECC6D001D5B4A /* TaobaoSearchController.xib */; };
+		CAF4CC2E142ECC6D001D5B4A /* TaobaoSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4CC27142ECC6D001D5B4A /* TaobaoSearchResultCell.m */; };
+		CAF4CC2F142ECC6D001D5B4A /* TaobaoSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF4CC28142ECC6D001D5B4A /* TaobaoSearchResultCell.xib */; };
+		CAF4CC30142ECC6D001D5B4A /* TaobaoSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4CC2A142ECC6D001D5B4A /* TaobaoSearchResultController.m */; };
+		CAF4CC31142ECC6D001D5B4A /* TaobaoSearchResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF4CC2B142ECC6D001D5B4A /* TaobaoSearchResultController.xib */; };
 		FB70BF0914134FA000ACA7A1 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */; };
 		FB70BF0C1413500200ACA7A1 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */; };
 		FBB014F0141C6A75003A31A8 /* CategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB014EE141C6A74003A31A8 /* CategoryController.m */; };
@@ -1258,6 +1265,10 @@
 		CABC3957141DEF3B001B33D1 /* chart_pie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chart_pie@2x.png"; sourceTree = "<group>"; };
 		CABC831A142B828C008037A0 /* CategoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryService.h; sourceTree = "<group>"; };
 		CABC831B142B828C008037A0 /* CategoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryService.m; sourceTree = "<group>"; };
+		CABC831D142C23BF008037A0 /* MainDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MainDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
+		CABC831E142C57FC008037A0 /* TaobaoSearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaobaoSearchResultCell.h; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultCell.h; sourceTree = "<group>"; };
+		CABC831F142C57FD008037A0 /* TaobaoSearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaobaoSearchResultCell.m; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultCell.m; sourceTree = "<group>"; };
+		CABC8320142C57FD008037A0 /* TaobaoSearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaobaoSearchResultCell.xib; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultCell.xib; sourceTree = "<group>"; };
 		CABCB59913ED0F5900F9BD2A /* SearchHistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryManager.h; sourceTree = "<group>"; };
 		CABCB59A13ED0F5900F9BD2A /* SearchHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryManager.m; sourceTree = "<group>"; };
 		CABCB59F13ED100C00F9BD2A /* SearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistory.h; sourceTree = "<group>"; };
@@ -1472,13 +1483,21 @@
 		CAE655C913DEBCB200182C79 /* reload_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_24.png; sourceTree = "<group>"; };
 		CAE655CA13DEBCB200182C79 /* reload_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_48.png; sourceTree = "<group>"; };
 		CAE655CB13DEBCB200182C79 /* reload_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_64.png; sourceTree = "<group>"; };
-		CAEACFAD142AE03600C67B9B /* TaobaoSearch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TaobaoSearch; sourceTree = "<group>"; };
 		CAEACFAF142AE06800C67B9B /* TaobaoSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaobaoSearchController.h; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchController.h; sourceTree = "<group>"; };
 		CAEACFB0142AE06800C67B9B /* TaobaoSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaobaoSearchController.m; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchController.m; sourceTree = "<group>"; };
 		CAEACFB1142AE06800C67B9B /* TaobaoSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaobaoSearchController.xib; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchController.xib; sourceTree = "<group>"; };
 		CAEACFB4142AE08100C67B9B /* TaobaoSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaobaoSearchResultController.h; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultController.h; sourceTree = "<group>"; };
 		CAEACFB5142AE08100C67B9B /* TaobaoSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaobaoSearchResultController.m; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultController.m; sourceTree = "<group>"; };
 		CAEACFB6142AE08100C67B9B /* TaobaoSearchResultController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaobaoSearchResultController.xib; path = ../Common_Iphone/GroupBuyCommon/Controller/TaobaoSearch/TaobaoSearchResultController.xib; sourceTree = "<group>"; };
+		CAF4CC23142ECC6D001D5B4A /* TaobaoSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaobaoSearchController.h; sourceTree = "<group>"; };
+		CAF4CC24142ECC6D001D5B4A /* TaobaoSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaobaoSearchController.m; sourceTree = "<group>"; };
+		CAF4CC25142ECC6D001D5B4A /* TaobaoSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaobaoSearchController.xib; sourceTree = "<group>"; };
+		CAF4CC26142ECC6D001D5B4A /* TaobaoSearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaobaoSearchResultCell.h; sourceTree = "<group>"; };
+		CAF4CC27142ECC6D001D5B4A /* TaobaoSearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaobaoSearchResultCell.m; sourceTree = "<group>"; };
+		CAF4CC28142ECC6D001D5B4A /* TaobaoSearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaobaoSearchResultCell.xib; sourceTree = "<group>"; };
+		CAF4CC29142ECC6D001D5B4A /* TaobaoSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaobaoSearchResultController.h; sourceTree = "<group>"; };
+		CAF4CC2A142ECC6D001D5B4A /* TaobaoSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaobaoSearchResultController.m; sourceTree = "<group>"; };
+		CAF4CC2B142ECC6D001D5B4A /* TaobaoSearchResultController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaobaoSearchResultController.xib; sourceTree = "<group>"; };
 		FB70BF0714134FA000ACA7A1 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
 		FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 		FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
@@ -1583,6 +1602,9 @@
 		CA5D135A13D55A9F003CB28C = {
 			isa = PBXGroup;
 			children = (
+				CABC831E142C57FC008037A0 /* TaobaoSearchResultCell.h */,
+				CABC831F142C57FD008037A0 /* TaobaoSearchResultCell.m */,
+				CABC8320142C57FD008037A0 /* TaobaoSearchResultCell.xib */,
 				CAEACFB4142AE08100C67B9B /* TaobaoSearchResultController.h */,
 				CAEACFB5142AE08100C67B9B /* TaobaoSearchResultController.m */,
 				CAEACFB6142AE08100C67B9B /* TaobaoSearchResultController.xib */,
@@ -2954,7 +2976,7 @@
 		CADF6BBB13DAA4810060F438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CAEACFAD142AE03600C67B9B /* TaobaoSearch */,
+				CAF4CC22142ECC6D001D5B4A /* TaobaoSearch */,
 				CA25E7251425F50A0056EB11 /* LocationCell.h */,
 				CA25E7261425F50A0056EB11 /* LocationCell.m */,
 				CA25E7271425F50A0056EB11 /* LocationCell.xib */,
@@ -3242,6 +3264,22 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		CAF4CC22142ECC6D001D5B4A /* TaobaoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				CAF4CC23142ECC6D001D5B4A /* TaobaoSearchController.h */,
+				CAF4CC24142ECC6D001D5B4A /* TaobaoSearchController.m */,
+				CAF4CC25142ECC6D001D5B4A /* TaobaoSearchController.xib */,
+				CAF4CC26142ECC6D001D5B4A /* TaobaoSearchResultCell.h */,
+				CAF4CC27142ECC6D001D5B4A /* TaobaoSearchResultCell.m */,
+				CAF4CC28142ECC6D001D5B4A /* TaobaoSearchResultCell.xib */,
+				CAF4CC29142ECC6D001D5B4A /* TaobaoSearchResultController.h */,
+				CAF4CC2A142ECC6D001D5B4A /* TaobaoSearchResultController.m */,
+				CAF4CC2B142ECC6D001D5B4A /* TaobaoSearchResultController.xib */,
+			);
+			path = TaobaoSearch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3525,9 +3563,12 @@
 				CA734A161421E012005C3CEE /* SNSWebViewController.xib in Resources */,
 				CA25E72C1425F50A0056EB11 /* LocationCell.xib in Resources */,
 				CA25E72E1425F50A0056EB11 /* PPMKMapViewController.xib in Resources */,
-				CAEACFAE142AE03600C67B9B /* TaobaoSearch in Resources */,
 				CAEACFB3142AE06800C67B9B /* TaobaoSearchController.xib in Resources */,
 				CAEACFB8142AE08100C67B9B /* TaobaoSearchResultController.xib in Resources */,
+				CABC8322142C57FD008037A0 /* TaobaoSearchResultCell.xib in Resources */,
+				CAF4CC2D142ECC6D001D5B4A /* TaobaoSearchController.xib in Resources */,
+				CAF4CC2F142ECC6D001D5B4A /* TaobaoSearchResultCell.xib in Resources */,
+				CAF4CC31142ECC6D001D5B4A /* TaobaoSearchResultController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3886,6 +3927,10 @@
 				CAEACFB2142AE06800C67B9B /* TaobaoSearchController.m in Sources */,
 				CAEACFB7142AE08100C67B9B /* TaobaoSearchResultController.m in Sources */,
 				CABC831C142B828C008037A0 /* CategoryService.m in Sources */,
+				CABC8321142C57FD008037A0 /* TaobaoSearchResultCell.m in Sources */,
+				CAF4CC2C142ECC6D001D5B4A /* TaobaoSearchController.m in Sources */,
+				CAF4CC2E142ECC6D001D5B4A /* TaobaoSearchResultCell.m in Sources */,
+				CAF4CC30142ECC6D001D5B4A /* TaobaoSearchResultController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4280,11 +4325,12 @@
 		CADF6BB713DAA2360060F438 /* MainDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				CABC831D142C23BF008037A0 /* MainDataModel 4.xcdatamodel */,
 				CACC311E1400B1FE00EAD9F0 /* MainDataModel 3.xcdatamodel */,
 				CA91BFFC13F6805C00A9E449 /* MainDataModel 2.xcdatamodel */,
 				CADF6BB913DAA2360060F438 /* MainDataModel.xcdatamodel */,
 			);
-			currentVersion = CACC311E1400B1FE00EAD9F0 /* MainDataModel 3.xcdatamodel */;
+			currentVersion = CABC831D142C23BF008037A0 /* MainDataModel 4.xcdatamodel */;
 			path = MainDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

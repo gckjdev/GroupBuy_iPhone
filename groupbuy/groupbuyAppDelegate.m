@@ -59,7 +59,7 @@
 NSString* GlobalGetServerURL()
 {
 
-   return @"http://192.168.1.188:8000/api/i?";
+   return @"http://192.168.1.101:8000/api/i?";
 //    return @"http://www.dipan100.com:8000/api/i?";
 
 }
@@ -172,7 +172,7 @@ enum
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
 	[UIUtils addViewController:[TopScoreController alloc]
-					 viewTitle:@"总排行榜"
+					 viewTitle:@"总排行"
 					 viewImage:@"chart_bar_down.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	

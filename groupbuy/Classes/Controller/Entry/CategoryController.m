@@ -34,14 +34,43 @@
 
 #pragma mark - View lifecycle
 
+- (void)loadCategory
+{
+    [self showActivityWithText:@"加载数据中..."];
+    CategoryService *service = GlobalGetCategoryService();
+    [service getAllCategory:self];    
+}
+
+- (void)getAllCategoryFinish:(int)result jsonArray:(NSArray *)jsonArray
+{
+    [self hideActivity];
+    
+    self.dataList = jsonArray;
+    [self.dataTableView reloadData];
+    
+    if (self.dataList == nil || [self.dataList count] == 0){
+        NSLog(@"<warning> no category data, result = %d", result);
+//        self.dataList = [CategoryManager getAllGroupBuyCategories];
+    }
+}
+
 - (void)viewDidLoad
 {
     [self setBackgroundImageName:@"background.png"];
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
-    //self.dataList = [CategoryManager getAllGroupBuyCategories];
-    CategoryService *service = GlobalGetCategoryService();
-    [service getAllCategory:self];
+    [self loadCategory];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (self.dataList == nil){
+        CategoryService *service = GlobalGetCategoryService();
+        [service getAllCategory:self];
+    }
+    
+    [super viewDidAppear:animated];
 }
 
 - (void)viewDidUnload
@@ -55,12 +84,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (void)getAllCategoryFinish:(int)result jsonArray:(NSArray *)jsonArray
-{
-    self.dataList = jsonArray;
-    [self.dataTableView reloadData];
 }
 
 - (void)showProductByCategory:(NSIndexPath *)indexPath
