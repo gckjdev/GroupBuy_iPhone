@@ -115,7 +115,7 @@
     //cell.detailTextLabel.text = [NSString stringWithFormat:@"(%@)               ", number];
     
     UILabel *nameLabel = [[UILabel alloc] init];
-    nameLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
+    nameLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:22];
     CGSize size = [name sizeWithFont:nameLabel.font];
     CGFloat x = 10;
     CGFloat y = (56 - size.height) / 2;
