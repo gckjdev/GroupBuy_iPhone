@@ -198,31 +198,37 @@ enum
     shoppingListController.tabIndex = TAB_SHOPPING;
     
 	
-	[UIUtils addViewController:[RegisterController alloc]
-					 viewTitle:@"我"
-					 viewImage:@"man_24.png"
+//	[UIUtils addViewController:[RegisterController alloc]
+//					 viewTitle:@"我"
+//					 viewImage:@"man_24.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
+
+	CommonProductListController* favorController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+					 viewTitle:@"收藏"				 
+					 viewImage:@"folder_bookmark_24.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
-
-//	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
-//					 viewTitle:@"收藏"				 
-//					 viewImage:@"folder_bookmark_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
-//    historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
-//    
-//
-//    [UIUtils addViewController:[SettingsController alloc]
-//					 viewTitle:@"设置"				 
-//					 viewImage:@"gear_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
-//        
-//	[UIUtils addViewController:[FeedbackController alloc]
-//					 viewTitle:@"反馈"
-//					 viewImage:@"help_24.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
+    favorController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
+    
+    CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+					 viewTitle:@"历史"				 
+					 viewImage:@"storage.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+    historyController.dataLoader = [[ProductHistoryDataLoader alloc] init];
+    
+    [UIUtils addViewController:[SettingsController alloc]
+					 viewTitle:@"设置"				 
+					 viewImage:@"gear_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
+        
+	[UIUtils addViewController:[FeedbackController alloc]
+					 viewTitle:@"反馈"
+					 viewImage:@"help_24.png"
+			  hasNavController:YES			
+			   viewControllers:controllers];	
 	
 	tabBarController.viewControllers = controllers;
     tabBarController.selectedIndex = TAB_TOP_SCORE;
