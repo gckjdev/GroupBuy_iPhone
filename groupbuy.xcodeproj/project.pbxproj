@@ -115,8 +115,6 @@
 		CA6079A713D55EE200E0D0DC /* countryTelPrefix.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA60755513D55EE200E0D0DC /* countryTelPrefix.plist */; };
 		CA6079A813D55EE200E0D0DC /* SelectCountryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60755713D55EE200E0D0DC /* SelectCountryController.m */; };
 		CA6079A913D55EE200E0D0DC /* SelectCountryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA60755813D55EE200E0D0DC /* SelectCountryController.xib */; };
-		CA6079AA13D55EE200E0D0DC /* CreateDesktopShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60755B13D55EE200E0D0DC /* CreateDesktopShortcut.m */; };
-		CA6079AB13D55EE200E0D0DC /* DesktopHTTPResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60755D13D55EE200E0D0DC /* DesktopHTTPResponseHandler.m */; };
 		CA6079AD13D55EE200E0D0DC /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60756313D55EE200E0D0DC /* PullToRefreshTableViewController.m */; };
 		CA6079AE13D55EE200E0D0DC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60756513D55EE200E0D0DC /* RootViewController.m */; };
 		CA6079AF13D55EE200E0D0DC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60756813D55EE200E0D0DC /* EGORefreshTableHeaderView.m */; };
@@ -162,9 +160,6 @@
 		CA6079E613D55EE200E0D0DC /* CoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6075E213D55EE200E0D0DC /* CoreDataUtil.m */; };
 		CA6079E713D55EE200E0D0DC /* PPDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6075E413D55EE200E0D0DC /* PPDataManager.m */; };
 		CA6079EB13D55EE200E0D0DC /* Help.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA6075EC13D55EE200E0D0DC /* Help.txt */; };
-		CA6079EC13D55EE200E0D0DC /* HTTPResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6075EF13D55EE200E0D0DC /* HTTPResponseHandler.m */; };
-		CA6079ED13D55EE200E0D0DC /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6075F113D55EE200E0D0DC /* HTTPServer.m */; };
-		CA6079F413D55EE200E0D0DC /* LiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60760313D55EE200E0D0DC /* LiteManager.m */; };
 		CA6079F513D55EE200E0D0DC /* MapViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60760613D55EE200E0D0DC /* MapViewUtil.m */; };
 		CA6079F613D55EE200E0D0DC /* PPLoationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60760813D55EE200E0D0DC /* PPLoationManager.m */; };
 		CA6079F713D55EE200E0D0DC /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60760C13D55EE200E0D0DC /* AppManager.m */; };
@@ -212,11 +207,6 @@
 		CA607A3213D55EE200E0D0DC /* papertop_74.png in Resources */ = {isa = PBXBuildFile; fileRef = CA60768B13D55EE200E0D0DC /* papertop_74.png */; };
 		CA607A3313D55EE200E0D0DC /* alert1.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA60768D13D55EE200E0D0DC /* alert1.caf */; };
 		CA607A3413D55EE200E0D0DC /* alert2.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA60768E13D55EE200E0D0DC /* alert2.caf */; };
-		CA607A3513D55EE200E0D0DC /* BasicSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60769113D55EE200E0D0DC /* BasicSearch.m */; };
-		CA607A3613D55EE200E0D0DC /* ImageSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60769313D55EE200E0D0DC /* ImageSearch.m */; };
-		CA607A3713D55EE200E0D0DC /* ImageSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60769513D55EE200E0D0DC /* ImageSearchResult.m */; };
-		CA607A3813D55EE200E0D0DC /* LocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60769713D55EE200E0D0DC /* LocalSearch.m */; };
-		CA607A3913D55EE200E0D0DC /* LocalSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60769913D55EE200E0D0DC /* LocalSearchResult.m */; };
 		CA607A3B13D55EE200E0D0DC /* CommonSNSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076A013D55EE200E0D0DC /* CommonSNSRequest.m */; };
 		CA607A3C13D55EE200E0D0DC /* SNSServiceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076A313D55EE200E0D0DC /* SNSServiceHandler.m */; };
 		CA607A3D13D55EE200E0D0DC /* QQWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076A613D55EE200E0D0DC /* QQWeiboRequest.m */; };
@@ -754,10 +744,6 @@
 		CA60755613D55EE200E0D0DC /* SelectCountryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCountryController.h; sourceTree = "<group>"; };
 		CA60755713D55EE200E0D0DC /* SelectCountryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCountryController.m; sourceTree = "<group>"; };
 		CA60755813D55EE200E0D0DC /* SelectCountryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectCountryController.xib; sourceTree = "<group>"; };
-		CA60755A13D55EE200E0D0DC /* CreateDesktopShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDesktopShortcut.h; sourceTree = "<group>"; };
-		CA60755B13D55EE200E0D0DC /* CreateDesktopShortcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDesktopShortcut.m; sourceTree = "<group>"; };
-		CA60755C13D55EE200E0D0DC /* DesktopHTTPResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopHTTPResponseHandler.h; sourceTree = "<group>"; };
-		CA60755D13D55EE200E0D0DC /* DesktopHTTPResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopHTTPResponseHandler.m; sourceTree = "<group>"; };
 		CA60756213D55EE200E0D0DC /* PullToRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableViewController.h; sourceTree = "<group>"; };
 		CA60756313D55EE200E0D0DC /* PullToRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableViewController.m; sourceTree = "<group>"; };
 		CA60756413D55EE200E0D0DC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -839,13 +825,6 @@
 		CA6075E313D55EE200E0D0DC /* PPDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDataManager.h; sourceTree = "<group>"; };
 		CA6075E413D55EE200E0D0DC /* PPDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDataManager.m; sourceTree = "<group>"; };
 		CA6075EC13D55EE200E0D0DC /* Help.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Help.txt; sourceTree = "<group>"; };
-		CA6075EE13D55EE200E0D0DC /* HTTPResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponseHandler.h; sourceTree = "<group>"; };
-		CA6075EF13D55EE200E0D0DC /* HTTPResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponseHandler.m; sourceTree = "<group>"; };
-		CA6075F013D55EE200E0D0DC /* HTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPServer.h; sourceTree = "<group>"; };
-		CA6075F113D55EE200E0D0DC /* HTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPServer.m; sourceTree = "<group>"; };
-		CA6075F213D55EE200E0D0DC /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
-		CA60760213D55EE200E0D0DC /* LiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiteManager.h; sourceTree = "<group>"; };
-		CA60760313D55EE200E0D0DC /* LiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiteManager.m; sourceTree = "<group>"; };
 		CA60760513D55EE200E0D0DC /* MapViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewUtil.h; sourceTree = "<group>"; };
 		CA60760613D55EE200E0D0DC /* MapViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewUtil.m; sourceTree = "<group>"; };
 		CA60760713D55EE200E0D0DC /* PPLoationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLoationManager.h; sourceTree = "<group>"; };
@@ -929,16 +908,6 @@
 		CA60768B13D55EE200E0D0DC /* papertop_74.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papertop_74.png; sourceTree = "<group>"; };
 		CA60768D13D55EE200E0D0DC /* alert1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alert1.caf; sourceTree = "<group>"; };
 		CA60768E13D55EE200E0D0DC /* alert2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alert2.caf; sourceTree = "<group>"; };
-		CA60769013D55EE200E0D0DC /* BasicSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSearch.h; sourceTree = "<group>"; };
-		CA60769113D55EE200E0D0DC /* BasicSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSearch.m; sourceTree = "<group>"; };
-		CA60769213D55EE200E0D0DC /* ImageSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSearch.h; sourceTree = "<group>"; };
-		CA60769313D55EE200E0D0DC /* ImageSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSearch.m; sourceTree = "<group>"; };
-		CA60769413D55EE200E0D0DC /* ImageSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSearchResult.h; sourceTree = "<group>"; };
-		CA60769513D55EE200E0D0DC /* ImageSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSearchResult.m; sourceTree = "<group>"; };
-		CA60769613D55EE200E0D0DC /* LocalSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalSearch.h; sourceTree = "<group>"; };
-		CA60769713D55EE200E0D0DC /* LocalSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalSearch.m; sourceTree = "<group>"; };
-		CA60769813D55EE200E0D0DC /* LocalSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalSearchResult.h; sourceTree = "<group>"; };
-		CA60769913D55EE200E0D0DC /* LocalSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalSearchResult.m; sourceTree = "<group>"; };
 		CA60769F13D55EE200E0D0DC /* CommonSNSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSNSRequest.h; sourceTree = "<group>"; };
 		CA6076A013D55EE200E0D0DC /* CommonSNSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSNSRequest.m; sourceTree = "<group>"; };
 		CA6076A113D55EE200E0D0DC /* SNSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSConstants.h; sourceTree = "<group>"; };
@@ -1279,6 +1248,7 @@
 		CAA01A4B13E658880002986A /* home_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_24.png; sourceTree = "<group>"; };
 		CAA01A4C13E658890002986A /* home_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_24@2x.png"; sourceTree = "<group>"; };
 		CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary_1.6.4.a; sourceTree = "<group>"; };
+		CAB1107F14354BAB009DBB8D /* MainDataModel 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MainDataModel 5.xcdatamodel"; sourceTree = "<group>"; };
 		CAB6A702141A6792007E6253 /* TopScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopScoreController.h; sourceTree = "<group>"; };
 		CAB6A703141A6792007E6253 /* TopScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopScoreController.m; sourceTree = "<group>"; };
 		CAB6A704141A6792007E6253 /* TopScoreController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopScoreController.xib; sourceTree = "<group>"; };
@@ -1779,12 +1749,9 @@
 				CA60753013D55EE200E0D0DC /* Components */,
 				CA6075E013D55EE200E0D0DC /* CoreData */,
 				CA6075EC13D55EE200E0D0DC /* Help.txt */,
-				CA6075ED13D55EE200E0D0DC /* HTTPServer */,
-				CA60760113D55EE200E0D0DC /* LiteManager */,
 				CA60760413D55EE200E0D0DC /* Location */,
 				CA60760913D55EE200E0D0DC /* PlaceCommon */,
 				CA60767C13D55EE200E0D0DC /* Resource */,
-				CA60768F13D55EE200E0D0DC /* Search */,
 				CA60769D13D55EE200E0D0DC /* SNS */,
 				CA6076AA13D55EE200E0D0DC /* SpecialCharacters.txt */,
 				CA6076AB13D55EE200E0D0DC /* UIUtils */,
@@ -1847,7 +1814,6 @@
 				CA60753113D55EE200E0D0DC /* About */,
 				CA60754C13D55EE200E0D0DC /* Contact */,
 				CA60755013D55EE200E0D0DC /* CountryPicker */,
-				CA60755913D55EE200E0D0DC /* DesktopShortcut */,
 				CA60755F13D55EE200E0D0DC /* EGOTableViewPullRefresh */,
 				CA60757313D55EE200E0D0DC /* GoogleTranslation */,
 				CA60757613D55EE200E0D0DC /* HJCacheClasses */,
@@ -1919,17 +1885,6 @@
 				CA60755813D55EE200E0D0DC /* SelectCountryController.xib */,
 			);
 			path = CountryPicker;
-			sourceTree = "<group>";
-		};
-		CA60755913D55EE200E0D0DC /* DesktopShortcut */ = {
-			isa = PBXGroup;
-			children = (
-				CA60755A13D55EE200E0D0DC /* CreateDesktopShortcut.h */,
-				CA60755B13D55EE200E0D0DC /* CreateDesktopShortcut.m */,
-				CA60755C13D55EE200E0D0DC /* DesktopHTTPResponseHandler.h */,
-				CA60755D13D55EE200E0D0DC /* DesktopHTTPResponseHandler.m */,
-			);
-			path = DesktopShortcut;
 			sourceTree = "<group>";
 		};
 		CA60755F13D55EE200E0D0DC /* EGOTableViewPullRefresh */ = {
@@ -2123,27 +2078,6 @@
 				CA6075E413D55EE200E0D0DC /* PPDataManager.m */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		CA6075ED13D55EE200E0D0DC /* HTTPServer */ = {
-			isa = PBXGroup;
-			children = (
-				CA6075EE13D55EE200E0D0DC /* HTTPResponseHandler.h */,
-				CA6075EF13D55EE200E0D0DC /* HTTPResponseHandler.m */,
-				CA6075F013D55EE200E0D0DC /* HTTPServer.h */,
-				CA6075F113D55EE200E0D0DC /* HTTPServer.m */,
-				CA6075F213D55EE200E0D0DC /* SynthesizeSingleton.h */,
-			);
-			path = HTTPServer;
-			sourceTree = "<group>";
-		};
-		CA60760113D55EE200E0D0DC /* LiteManager */ = {
-			isa = PBXGroup;
-			children = (
-				CA60760213D55EE200E0D0DC /* LiteManager.h */,
-				CA60760313D55EE200E0D0DC /* LiteManager.m */,
-			);
-			path = LiteManager;
 			sourceTree = "<group>";
 		};
 		CA60760413D55EE200E0D0DC /* Location */ = {
@@ -2367,23 +2301,6 @@
 				CA60768E13D55EE200E0D0DC /* alert2.caf */,
 			);
 			path = Sounds;
-			sourceTree = "<group>";
-		};
-		CA60768F13D55EE200E0D0DC /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				CA60769013D55EE200E0D0DC /* BasicSearch.h */,
-				CA60769113D55EE200E0D0DC /* BasicSearch.m */,
-				CA60769213D55EE200E0D0DC /* ImageSearch.h */,
-				CA60769313D55EE200E0D0DC /* ImageSearch.m */,
-				CA60769413D55EE200E0D0DC /* ImageSearchResult.h */,
-				CA60769513D55EE200E0D0DC /* ImageSearchResult.m */,
-				CA60769613D55EE200E0D0DC /* LocalSearch.h */,
-				CA60769713D55EE200E0D0DC /* LocalSearch.m */,
-				CA60769813D55EE200E0D0DC /* LocalSearchResult.h */,
-				CA60769913D55EE200E0D0DC /* LocalSearchResult.m */,
-			);
-			path = Search;
 			sourceTree = "<group>";
 		};
 		CA60769D13D55EE200E0D0DC /* SNS */ = {
@@ -3682,8 +3599,6 @@
 				CA6079A513D55EE200E0D0DC /* CountryDataManager.m in Sources */,
 				CA6079A613D55EE200E0D0DC /* CountryPicker.m in Sources */,
 				CA6079A813D55EE200E0D0DC /* SelectCountryController.m in Sources */,
-				CA6079AA13D55EE200E0D0DC /* CreateDesktopShortcut.m in Sources */,
-				CA6079AB13D55EE200E0D0DC /* DesktopHTTPResponseHandler.m in Sources */,
 				CA6079AD13D55EE200E0D0DC /* PullToRefreshTableViewController.m in Sources */,
 				CA6079AE13D55EE200E0D0DC /* RootViewController.m in Sources */,
 				CA6079AF13D55EE200E0D0DC /* EGORefreshTableHeaderView.m in Sources */,
@@ -3715,9 +3630,6 @@
 				CA6079E413D55EE200E0D0DC /* TextEditorViewController.m in Sources */,
 				CA6079E613D55EE200E0D0DC /* CoreDataUtil.m in Sources */,
 				CA6079E713D55EE200E0D0DC /* PPDataManager.m in Sources */,
-				CA6079EC13D55EE200E0D0DC /* HTTPResponseHandler.m in Sources */,
-				CA6079ED13D55EE200E0D0DC /* HTTPServer.m in Sources */,
-				CA6079F413D55EE200E0D0DC /* LiteManager.m in Sources */,
 				CA6079F513D55EE200E0D0DC /* MapViewUtil.m in Sources */,
 				CA6079F613D55EE200E0D0DC /* PPLoationManager.m in Sources */,
 				CA6079F713D55EE200E0D0DC /* AppManager.m in Sources */,
@@ -3750,11 +3662,6 @@
 				CA607A1E13D55EE200E0D0DC /* AppService.m in Sources */,
 				CA607A2013D55EE200E0D0DC /* LocationService.m in Sources */,
 				CA607A2213D55EE200E0D0DC /* PlaceSNSService.m in Sources */,
-				CA607A3513D55EE200E0D0DC /* BasicSearch.m in Sources */,
-				CA607A3613D55EE200E0D0DC /* ImageSearch.m in Sources */,
-				CA607A3713D55EE200E0D0DC /* ImageSearchResult.m in Sources */,
-				CA607A3813D55EE200E0D0DC /* LocalSearch.m in Sources */,
-				CA607A3913D55EE200E0D0DC /* LocalSearchResult.m in Sources */,
 				CA607A3B13D55EE200E0D0DC /* CommonSNSRequest.m in Sources */,
 				CA607A3C13D55EE200E0D0DC /* SNSServiceHandler.m in Sources */,
 				CA607A3D13D55EE200E0D0DC /* QQWeiboRequest.m in Sources */,
@@ -4381,12 +4288,13 @@
 		CADF6BB713DAA2360060F438 /* MainDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				CAB1107F14354BAB009DBB8D /* MainDataModel 5.xcdatamodel */,
 				CABC831D142C23BF008037A0 /* MainDataModel 4.xcdatamodel */,
 				CACC311E1400B1FE00EAD9F0 /* MainDataModel 3.xcdatamodel */,
 				CA91BFFC13F6805C00A9E449 /* MainDataModel 2.xcdatamodel */,
 				CADF6BB913DAA2360060F438 /* MainDataModel.xcdatamodel */,
 			);
-			currentVersion = CABC831D142C23BF008037A0 /* MainDataModel 4.xcdatamodel */;
+			currentVersion = CAB1107F14354BAB009DBB8D /* MainDataModel 5.xcdatamodel */;
 			path = MainDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
