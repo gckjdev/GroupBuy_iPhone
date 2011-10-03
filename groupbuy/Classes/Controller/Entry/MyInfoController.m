@@ -12,7 +12,6 @@
 #import "User.h"
 #import "UserService.h"
 #import "HJManagedImageV.h"
-#import "UserService.h"
 #import "ContollerConstants.h"
 #import "FileUtil.h"
 #import "PlaceSNSService.h"
@@ -22,6 +21,7 @@
 #import "CityPickerViewController.h"
 #import "PasswordInputController.h"
 #import "NewUserRegisterController.h"
+#import "GroupBuyUserService.h"
 
 enum{
     
@@ -522,7 +522,7 @@ enum{
                 case ROW_NICKNAME:
                 {
                     if ([newText length] == 0){
-                        [self popupMessage:NSLS(@"kNickNameNotNull") title:@""];
+                        [self popupMessage:@"昵称不能为空吧" title:@""];
                         return;
                     }
                     [userService updateUserNickName:newText];
@@ -568,6 +568,7 @@ enum{
                     vc.delegate = self;
                     vc.inputText = [[userService user] nickName];
                     vc.navigationItem.title = NSLS(@"kEnterNickNameTitle");
+                    vc.allowNull = NO;
                     [vc setBackgroundImageName:@"background.png"];
                     [self.navigationController pushViewController:vc animated:YES];
                     [vc release];
@@ -577,7 +578,8 @@ enum{
                 case ROW_PASSWORD:
                 {
                     if ([GlobalGetUserService() hasBindEmail]){
-                        PasswordInputController* vc = [[PasswordInputController alloc] init];
+                        NSString* password = [[GlobalGetUserService() user] password];
+                        PasswordInputController* vc = [[PasswordInputController alloc] initWithPassword:password delegate:self];
                         vc.canReturn = YES;
                         vc.navigationItem.title = NSLS(@"修改密码");
                         [vc setBackgroundImageName:@"background.png"];
@@ -698,10 +700,14 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 {
     // send request to server
     UserService *userService = GlobalGetUserService();
-    [userService updateUserToServer:self successHandler:^(PPViewController* viewController){        
-        MyInfoController *vc = (MyInfoController*)viewController;        
-        [vc.dataTableView reloadData];
-        [vc updateImageView];
+    [userService groupBuyUpdateUser:self successHandler:^(PPViewController* viewController, int result){   
+        if (result == 0){
+            [userService updateUserPasswordByNewPassword];
+            
+            MyInfoController *vc = (MyInfoController*)viewController;        
+            [vc.dataTableView reloadData];
+            [vc updateImageView];
+        }
     }];
 }
 
@@ -759,6 +765,12 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
     [navgivationController pushViewController:infoController animated:YES];
     [infoController release];
     return infoController;
+}
+
+- (void)didPasswordChange:(NSString *)newPassword
+{   
+    NSLog(@"new password = %@", newPassword);
+    [GlobalGetUserService() setNewPassword:newPassword];
 }
 
 @end

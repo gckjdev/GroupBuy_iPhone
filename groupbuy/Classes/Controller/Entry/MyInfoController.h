@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PPTableViewController.h"
 #import "HJManagedImageV.h"
+#import "PasswordInputController.h"
 
-@interface MyInfoController : PPTableViewController <UIActionSheetDelegate> {
+@interface MyInfoController : PPTableViewController <UIActionSheetDelegate, PasswordInputControllerDelegate> {
     IBOutlet UILabel         *loginIdLabel;
     IBOutlet UILabel         *loginIdTypeLabel;
     IBOutlet UIImageView     *avatarView;           // useless
