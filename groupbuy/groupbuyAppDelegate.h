@@ -90,6 +90,8 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 - (void)removeMainView;
 - (void)dismissRegisterView;
 
+
+
 @end
 
 

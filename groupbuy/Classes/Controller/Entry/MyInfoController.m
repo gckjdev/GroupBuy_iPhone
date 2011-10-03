@@ -19,10 +19,13 @@
 #import "SelectItemViewController.h"
 #import "TextEditorViewController.h"
 #import "VariableConstants.h"
+#import "CityPickerViewController.h"
+#import "PasswordInputController.h"
 
 enum{
     
     SECTION_INFO,
+    SECTION_SETTING,
     SECTION_SNS,
     SECTION_NUM
     
@@ -30,9 +33,17 @@ enum{
 
 enum{
     ROW_NICKNAME,
+    ROW_PASSWORD,
+    ROW_INFO_NUM,
+    
+    // not used now
     ROW_GENDER,
     ROW_MOBILE,
-    ROW_INFO_NUM    
+};
+
+enum{
+    ROW_CITY,
+    ROW_SETTING_NUM
 };
 
 enum{
@@ -52,15 +63,14 @@ enum{
 @synthesize nicknameLabel;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization.
+        self.navigationItem.hidesBackButton = YES;
     }
     return self;
 }
-*/
 
 enum{
     ROW_MALE,
@@ -132,16 +142,17 @@ enum{
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
+    self.navigationItem.title = @"我的设置";
+    logoutButton.hidden = YES;
+    [self setBackgroundImageName:@"background.png"];
+    
     [super viewDidLoad];
     
     [self updateLoginId];
     [self updateImageView];
     [self initLogoutButton];
     
-    [self setNavigationRightButton:NSLS(@"Save") action:@selector(clickSave:)];
-    
-    self.dataTableView.backgroundColor = [UIColor whiteColor];
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self setNavigationRightButton:NSLS(@"Save") action:@selector(clickSave:)];    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -202,11 +213,14 @@ enum{
     
     switch (section) {
         case SECTION_INFO:
-            return @"";
+            return @"基本信息";
             
         case SECTION_SNS:
-            return @"";
+            return @"绑定账户";
             
+        case SECTION_SETTING:
+            return @"主要设置";
+
         default:            
             return 0;
     }
@@ -237,11 +251,14 @@ enum{
 {    
     switch (indexPath.section) {
         case SECTION_INFO:
-            return 60;
+            return 44;
             
         case SECTION_SNS:
-            return 60;
+            return 44;
             
+        case SECTION_SETTING:
+            return 44;
+
         default:            
             return 0;
     }
@@ -264,6 +281,9 @@ enum{
         case SECTION_SNS:
             return ROW_SNS_NUM;
             break;
+
+        case SECTION_SETTING:
+            return ROW_SETTING_NUM;
             
         default:            
             return 0;
@@ -274,10 +294,35 @@ enum{
 {
     UserService *userService = GlobalGetUserService();
     cell.textLabel.text = NSLS(@"kNickName");
-    cell.detailTextLabel.text = [[userService user] nickName];
+    
+    NSString* nickName = [[userService user] nickName];
+    if ([nickName length] == 0){
+        cell.detailTextLabel.text = @"未设置";        
+    }
+    else{
+        cell.detailTextLabel.text = [[userService user] nickName];        
+    }    
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
+
+- (void)setPasswordCell:(UITableViewCell*)cell
+{
+    UserService *userService = GlobalGetUserService();
+    
+    NSString* password = [[userService user] password];
+    if ([password length] == 0){
+        cell.textLabel.text = @"密码";
+        cell.detailTextLabel.text = @"未注册";        
+    }
+    else{
+        cell.textLabel.text = @"修改密码";
+        cell.detailTextLabel.text = @"";        
+    }    
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+}
+
 
 - (void)setMobileCell:(UITableViewCell*)cell
 {
@@ -317,6 +362,12 @@ enum{
     }
 }
 
+- (void)setCityCell:(UITableViewCell*)cell
+{
+    cell.textLabel.text = @"城市";    
+    cell.detailTextLabel.text = [GlobalGetLocationService() getDefaultCity];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;    
+}
 
 - (void)setSinaCell:(UITableViewCell*)cell
 {
@@ -367,6 +418,10 @@ enum{
                 case ROW_NICKNAME:
                     [self setNickNameCell:cell];
                     break;
+                    
+                case ROW_PASSWORD:
+                    [self setPasswordCell:cell];
+                    break;                    
 
                 case ROW_MOBILE:
                     [self setMobileCell:cell];
@@ -377,6 +432,16 @@ enum{
                     break;
 
                 default:
+                    break;
+            }
+        }
+            break;
+
+        case SECTION_SETTING:
+        {
+            switch (indexPath.row) {
+                case ROW_CITY:
+                    [self setCityCell:cell];
                     break;
             }
         }
@@ -409,6 +474,15 @@ enum{
 	
 	return cell;
 	
+}
+
+- (void)clickCity
+{
+    NSString* city = [GlobalGetLocationService() getDefaultCity];
+    CityPickerViewController* vc = [[CityPickerViewController alloc] initWithCityName:city hasLeftButton:YES];
+    vc.delegate = GlobalGetLocationService();
+    [self.navigationController pushViewController:vc animated:YES];
+    [vc release];
 }
 
 - (void)clickBindSina
@@ -493,12 +567,23 @@ enum{
                     vc.delegate = self;
                     vc.inputText = [[userService user] nickName];
                     vc.navigationItem.title = NSLS(@"kEnterNickNameTitle");
-                    vc.view.backgroundColor = [UIColor whiteColor]; // to be removed
+                    [vc setBackgroundImageName:@"background.png"];
                     [self.navigationController pushViewController:vc animated:YES];
                     [vc release];
                 }
                     break;
                     
+                case ROW_PASSWORD:
+                {
+                    // TODO go to set password controller
+                    PasswordInputController* vc = [[PasswordInputController alloc] init];
+                    vc.canReturn = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
+                    [vc release];
+                    
+                }
+                    break;
+
                 case ROW_MOBILE:
                 {
                     UserService* userService = GlobalGetUserService();                    
@@ -535,6 +620,16 @@ enum{
                     break;
 
                 default:
+                    break;
+            }
+        }
+            break;
+
+        case SECTION_SETTING:
+        {
+            switch (indexPath.row) {
+                case ROW_CITY:
+                    [self clickCity];
                     break;
             }
         }
@@ -651,5 +746,12 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
     }
 }
 
++ (MyInfoController*)show:(UINavigationController*)navgivationController
+{
+    MyInfoController* infoController = [[MyInfoController alloc] init];
+    [navgivationController pushViewController:infoController animated:YES];
+    [infoController release];
+    return infoController;
+}
 
 @end

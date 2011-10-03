@@ -29,4 +29,6 @@
 - (IBAction)clickLogout:(id)sender;
 - (IBAction)clickAvatar:(id)sender;
 
++ (MyInfoController*)show:(UINavigationController*)navgivationController;
+
 @end

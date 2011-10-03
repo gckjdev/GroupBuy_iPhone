@@ -413,6 +413,8 @@
 		CA943D3213EF803E001ED96D /* magnifier_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA943D3013EF803E001ED96D /* magnifier_24@2x.png */; };
 		CA943D3513EFCC42001ED96D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEC13D5634800E0D0DC /* InfoPlist.strings */; };
 		CA943D3613EFCC42001ED96D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA607BEE13D5634800E0D0DC /* Localizable.strings */; };
+		CA97773314399E0D00D33429 /* PasswordInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97773114399E0D00D33429 /* PasswordInputController.m */; };
+		CA97773414399E0D00D33429 /* PasswordInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA97773214399E0D00D33429 /* PasswordInputController.xib */; };
 		CAA01A4513E64D640002986A /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA01A4313E64D630002986A /* SettingsController.m */; };
 		CAA01A4613E64D640002986A /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4413E64D630002986A /* SettingsController.xib */; };
 		CAA01A4D13E658890002986A /* folder_bookmark_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4713E658880002986A /* folder_bookmark_24.png */; };
@@ -1238,6 +1240,9 @@
 		CA943D3013EF803E001ED96D /* magnifier_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifier_24@2x.png"; sourceTree = "<group>"; };
 		CA943D3313EFCC42001ED96D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = groupbuy/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		CA943D3413EFCC42001ED96D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = groupbuy/en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		CA97773014399E0D00D33429 /* PasswordInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordInputController.h; sourceTree = "<group>"; };
+		CA97773114399E0D00D33429 /* PasswordInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordInputController.m; sourceTree = "<group>"; };
+		CA97773214399E0D00D33429 /* PasswordInputController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordInputController.xib; sourceTree = "<group>"; };
 		CAA01A4213E64D630002986A /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		CAA01A4313E64D630002986A /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		CAA01A4413E64D630002986A /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
@@ -1808,6 +1813,7 @@
 		CA60753013D55EE200E0D0DC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CA97772F14399E0D00D33429 /* Password */,
 				CA08741C13E679F100F808E3 /* TelPicker */,
 				CADE8F2F13E6789B00B48DB8 /* ShowAddress */,
 				CA9204C113E4FB7D00DBA17C /* CityPicker */,
@@ -2827,6 +2833,16 @@
 			path = CityPicker;
 			sourceTree = "<group>";
 		};
+		CA97772F14399E0D00D33429 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				CA97773014399E0D00D33429 /* PasswordInputController.h */,
+				CA97773114399E0D00D33429 /* PasswordInputController.m */,
+				CA97773214399E0D00D33429 /* PasswordInputController.xib */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
 		CADE8F2F13E6789B00B48DB8 /* ShowAddress */ = {
 			isa = PBXGroup;
 			children = (
@@ -3545,6 +3561,7 @@
 				CAF4CC2D142ECC6D001D5B4A /* TaobaoSearchController.xib in Resources */,
 				CAF4CC2F142ECC6D001D5B4A /* TaobaoSearchResultCell.xib in Resources */,
 				CAF4CC31142ECC6D001D5B4A /* TaobaoSearchResultController.xib in Resources */,
+				CA97773414399E0D00D33429 /* PasswordInputController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3903,6 +3920,7 @@
 				CA2550611432295F005E8903 /* ASIInputStream.m in Sources */,
 				CA2550621432295F005E8903 /* ASINetworkQueue.m in Sources */,
 				CA2550631432295F005E8903 /* ASIWebPageRequest.m in Sources */,
+				CA97773314399E0D00D33429 /* PasswordInputController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
