@@ -21,6 +21,7 @@
 #import "VariableConstants.h"
 #import "CityPickerViewController.h"
 #import "PasswordInputController.h"
+#import "NewUserRegisterController.h"
 
 enum{
     
@@ -575,12 +576,18 @@ enum{
                     
                 case ROW_PASSWORD:
                 {
-                    // TODO go to set password controller
-                    PasswordInputController* vc = [[PasswordInputController alloc] init];
-                    vc.canReturn = YES;
-                    [self.navigationController pushViewController:vc animated:YES];
-                    [vc release];
-                    
+                    if ([GlobalGetUserService() hasBindEmail]){
+                        PasswordInputController* vc = [[PasswordInputController alloc] init];
+                        vc.canReturn = YES;
+                        vc.navigationItem.title = NSLS(@"修改密码");
+                        [vc setBackgroundImageName:@"background.png"];
+                        [vc setNavigationLeftButton:NSLS(@"Back") action:@selector(clickBack:)];
+                        [self.navigationController pushViewController:vc animated:YES];
+                        [vc release];                        
+                    }
+                    else{
+                        [NewUserRegisterController showController:nil password:nil superController:self];
+                    }                    
                 }
                     break;
 
