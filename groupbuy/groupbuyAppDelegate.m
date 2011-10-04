@@ -163,7 +163,19 @@ enum
 {
     TAB_TOP_SCORE = 0,
     TAB_SHOPPING = 3,    
+    TAB_MY_INFO = 4
 };
+
+- (void)updateMyInfoTab
+{
+    // TODO
+    if ([userService hasBindAccount]){
+        
+    }
+    else{
+        
+    }
+}
 
 - (void)initTabViewControllers
 {
@@ -435,16 +447,16 @@ enum
 	[MobClick appTerminated];
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    NSString *host = [url host];
-    if ([host isEqualToString:@"sina"]) {        
-        [snsService sinaParseAuthorizationResponseURL:[url query]];
-    } else if ([host isEqualToString:@"qq"]) {
-        [snsService qqParseAuthorizationResponseURL:[url query]];
-    }
-    
-    return YES;
-}
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+//    NSString *host = [url host];
+//    if ([host isEqualToString:@"sina"]) {        
+//        [snsService sinaParseAuthorizationResponseURL:[url query]];
+//    } else if ([host isEqualToString:@"qq"]) {
+//        [snsService qqParseAuthorizationResponseURL:[url query]];
+//    }
+//    
+//    return YES;
+//}
 
 #pragma mark - User Service Delegate
 - (void)checkDeviceResult:(int)result

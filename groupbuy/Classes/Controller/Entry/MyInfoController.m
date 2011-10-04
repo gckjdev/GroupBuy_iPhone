@@ -14,7 +14,6 @@
 #import "HJManagedImageV.h"
 #import "ContollerConstants.h"
 #import "FileUtil.h"
-#import "PlaceSNSService.h"
 #import "SelectItemViewController.h"
 #import "TextEditorViewController.h"
 #import "VariableConstants.h"
@@ -22,6 +21,8 @@
 #import "PasswordInputController.h"
 #import "NewUserRegisterController.h"
 #import "GroupBuyUserService.h"
+#import "GroupBuyNetworkConstants.h"
+#import "GroupBuySNSService.h"
 
 enum{
     
@@ -492,7 +493,7 @@ enum{
     if ([userService hasUserBindSina])
         return;
     
-    PlaceSNSService *snsService = GlobalGetSNSService();
+    GroupBuySNSService *snsService = GlobalGetGroupBuySNSService();
     [snsService sinaInitiateLogin:self];
 }
 
@@ -502,7 +503,7 @@ enum{
     if ([userService hasUserBindQQ])
         return;
     
-    PlaceSNSService *snsService = GlobalGetSNSService();
+    GroupBuySNSService *snsService = GlobalGetGroupBuySNSService();
     [snsService qqInitiateLogin:self];    
 }
 
@@ -699,15 +700,17 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 - (void)clickSave:(id)sender
 {
     // send request to server
+    [self showActivityWithText:@"保存数据中..."];
     UserService *userService = GlobalGetUserService();
     [userService groupBuyUpdateUser:self successHandler:^(PPViewController* viewController, int result){   
+        [self hideActivity];
         if (result == 0){
             [userService updateUserPasswordByNewPassword];
             
             MyInfoController *vc = (MyInfoController*)viewController;        
             [vc.dataTableView reloadData];
             [vc updateImageView];
-        }
+        }        
     }];
 }
 
