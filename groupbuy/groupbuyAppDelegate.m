@@ -703,8 +703,7 @@ enum
         
         NSString *itemId = [[payload objectForKey:@"aps"] valueForKey:@"ii"];				
         [self updateShoppingTabBadge:@"新"];        
-        [userShopService requestItemMatchCount:itemId tableViewController:shoppingListController];
-        
+        [userShopService requestItemMatchCount:itemId];
 	}	
 }
 
