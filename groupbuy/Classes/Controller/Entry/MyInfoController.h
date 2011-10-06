@@ -18,6 +18,8 @@
     IBOutlet UILabel         *nicknameLabel;
     HJManagedImageV *avatarImageView;
     UIButton *logoutButton;
+    
+    int action;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel         *loginIdLabel;
@@ -31,5 +33,8 @@
 - (IBAction)clickAvatar:(id)sender;
 
 + (MyInfoController*)show:(UINavigationController*)navgivationController;
+
+- (IBAction)clickFeedback:(id)sender;
+- (IBAction)clickSendAppLink:(id)sender;
 
 @end

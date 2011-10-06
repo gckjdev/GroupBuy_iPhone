@@ -24,11 +24,21 @@
 #import "GroupBuyNetworkConstants.h"
 #import "GroupBuySNSService.h"
 
+#import "CommonProductListController.h"
+#import "ProductPriceDataLoader.h"
+
+enum{
+    ACTION_SELECT_AVATAR,
+    ACTION_SHARE_APP
+};
+
 enum{
     
     SECTION_INFO,
-    SECTION_SETTING,
+//    SECTION_SETTING,
     SECTION_SNS,
+    SECTION_HISTORY,
+    SECTION_FEEDBACK,
     SECTION_NUM
     
 };
@@ -36,6 +46,7 @@ enum{
 enum{
     ROW_NICKNAME,
     ROW_PASSWORD,
+    ROW_CITY,
     ROW_INFO_NUM,
     
     // not used now
@@ -44,9 +55,21 @@ enum{
 };
 
 enum{
-    ROW_CITY,
-    ROW_SETTING_NUM
+    ROW_FEEDBACK,
+    ROW_SHARE,
+    ROW_FEEDBACK_NUM
 };
+
+enum{
+    ROW_FAVORITE,
+    ROW_HISTORY,
+    ROW_HISTORY_NUM
+};
+
+//enum{
+//    ROW_CITY,
+//    ROW_SETTING_NUM
+//};
 
 enum{
     ROW_SINA,
@@ -222,9 +245,15 @@ enum{
         case SECTION_SNS:
             return @"绑定账户";
             
-        case SECTION_SETTING:
-            return @"主要设置";
+//        case SECTION_SETTING:
+//            return @"主要设置";
 
+        case SECTION_HISTORY:
+            return @"访问记录";
+            
+        case SECTION_FEEDBACK:
+            return @"服务支持";
+            
         default:            
             return 0;
     }
@@ -260,11 +289,8 @@ enum{
         case SECTION_SNS:
             return 44;
             
-        case SECTION_SETTING:
-            return 44;
-
         default:            
-            return 0;
+            return 44;
     }
 }
 
@@ -286,8 +312,11 @@ enum{
             return ROW_SNS_NUM;
             break;
 
-        case SECTION_SETTING:
-            return ROW_SETTING_NUM;
+        case SECTION_FEEDBACK:
+            return ROW_FEEDBACK_NUM;
+            
+        case SECTION_HISTORY:
+            return ROW_HISTORY_NUM;
             
         default:            
             return 0;
@@ -373,6 +402,13 @@ enum{
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;    
 }
 
+- (void)setCellInfo:(UITableViewCell*)cell text:(NSString*)text
+{
+    cell.textLabel.text = text;    
+    cell.detailTextLabel.text = @"";
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;        
+}
+
 - (void)setSinaCell:(UITableViewCell*)cell
 {
     UserService *userService = GlobalGetUserService();
@@ -435,21 +471,43 @@ enum{
                     [self setGenderCell:cell];
                     break;
 
+                case ROW_CITY:
+                    [self setCityCell:cell];
+                    break;
+
                 default:
                     break;
             }
         }
             break;
 
-        case SECTION_SETTING:
+        case SECTION_HISTORY:
         {
             switch (indexPath.row) {
-                case ROW_CITY:
-                    [self setCityCell:cell];
+                case ROW_HISTORY:
+                    [self setCellInfo:cell text:@"团购浏览记录"];
+                    break;
+                    
+                case ROW_FAVORITE:
+                    [self setCellInfo:cell text:@"团购收藏记录"];
                     break;
             }
         }
             break;
+            
+        case SECTION_FEEDBACK:
+        {
+            switch (indexPath.row) {
+                case ROW_FEEDBACK:
+                    [self setCellInfo:cell text:@"问题反馈，支持和建议"];
+                    break;
+                    
+                case ROW_SHARE:
+                    [self setCellInfo:cell text:@"分享应用给朋友"];
+                    break;
+            }
+        }
+            break;            
             
         case SECTION_SNS:
         {
@@ -642,21 +700,84 @@ enum{
                 }
                     break;
 
+                case ROW_CITY:
+                    [self clickCity];
+                    break;
+
                 default:
                     break;
             }
         }
             break;
+            
+            //	CommonProductListController* favorController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+            //					 viewTitle:@"收藏"				 
+            //					 viewImage:@"folder_bookmark_24.png"
+            //			  hasNavController:YES			
+            //			   viewControllers:controllers];	
+            //    favorController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
+            //    
+            //    CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+            //					 viewTitle:@"历史"				 
+            //					 viewImage:@"storage.png"
+            //			  hasNavController:YES			
+            //			   viewControllers:controllers];	
+            //    historyController.dataLoader = [[ProductHistoryDataLoader alloc] init];
+            //    
+            //    [UIUtils addViewController:[SettingsController alloc]
+            //					 viewTitle:@"设置"				 
+            //					 viewImage:@"gear_24.png"
+            //			  hasNavController:YES			
+            //			   viewControllers:controllers];	
+            //        
+            //	[UIUtils addViewController:[FeedbackController alloc]
+            //					 viewTitle:@"反馈"
+            //					 viewImage:@"help_24.png"
+            //			  hasNavController:YES			
+            //			   viewControllers:controllers];	
+            
 
-        case SECTION_SETTING:
+        case SECTION_HISTORY:
         {
             switch (indexPath.row) {
-                case ROW_CITY:
-                    [self clickCity];
+                case ROW_HISTORY:
+                {
+                    CommonProductListController* vc = [[CommonProductListController alloc] init];
+                    vc.dataLoader = [[[ProductHistoryDataLoader alloc] init] autorelease];
+                    vc.navigationItem.title = @"历史记录";
+                    [self.navigationController pushViewController:vc animated:YES];
+                    [vc release];
+                    
+                }
+                    break;
+                    
+                case ROW_FAVORITE:
+                {
+                    CommonProductListController* vc = [[CommonProductListController alloc] init];
+                    vc.dataLoader = [[[ProductFavoriteDataLoader alloc] init] autorelease];
+                    vc.navigationItem.title = @"收藏";
+                    [self.navigationController pushViewController:vc animated:YES];
+                    [vc release];                    
+                }
                     break;
             }
         }
             break;
+            
+        case SECTION_FEEDBACK:
+        {
+            switch (indexPath.row) {
+                case ROW_FEEDBACK:
+                    [self clickFeedback:nil];
+                    break;
+                    
+                case ROW_SHARE:
+                    [self clickSendAppLink:nil];
+                    break;
+            }
+        }
+            break;            
+            
             
         case SECTION_SNS:
         {
@@ -730,6 +851,7 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 - (IBAction)clickAvatar:(id)sender
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:NSLS(@"Cancel") destructiveButtonTitle:nil otherButtonTitles:NSLS(@"kSelectFromAlbum"), NSLS(@"kTakePhoto"), nil];
+    action = ACTION_SELECT_AVATAR;
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
     [actionSheet release];
 }
@@ -753,27 +875,7 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    enum{
-        BUTTON_SELECT_ALBUM,
-        BUTTON_TAKE_PHOTO,
-        BUTTON_CANCEL
-    };
-    
-    switch (buttonIndex) {
-        case BUTTON_SELECT_ALBUM:
-            [self selectPhoto];
-            break;
-            
-        case BUTTON_TAKE_PHOTO:
-            [self takePhoto];
-            break;
 
-        default:
-            break;
-    }
-}
 
 + (MyInfoController*)show:(UINavigationController*)navgivationController
 {
@@ -791,6 +893,87 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
     if ([newPassword length] > 0){
         [self popupHappyMessage:@"别忘了点击右上角的［保存］按钮保存密码修改哦" title:nil];
     }
+}
+
+- (IBAction)clickFeedback:(id)sender
+{
+    [self sendEmailTo:[NSArray arrayWithObject:@"zz2010.support@gmail.com"] 
+		 ccRecipients:nil 
+		bccRecipients:nil 
+			  subject:NSLS(@"kFeedbackSubject")
+				 body:NSLS(@"") 
+			   isHTML:NO 
+			 delegate:self];
+}
+
+- (IBAction)clickSendAppLink:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:NSLS(@"Cancel") destructiveButtonTitle:nil otherButtonTitles:NSLS(@"kSendBySMS"), NSLS(@"kSendByEmail"), nil];
+    
+    action = ACTION_SHARE_APP;
+
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+    [actionSheet release];
+}
+
+- (void)handleSendAppLinkClick:(NSInteger)buttonIndex
+{
+    NSString* appLink = [UIUtils getAppLink:kAppId];
+    NSString* body = [NSString stringWithFormat:NSLS(@"kSendAppLinkBody"), appLink];
+    NSString* subject = NSLS(@"kSendAppLinkSubject");
+    
+    enum{
+        BUTTON_SEND_BY_SMS,
+        BUTTON_SEND_BY_EMAIL,
+        BUTTON_CANCEL
+    };
+    
+    switch (buttonIndex) {
+        case BUTTON_SEND_BY_SMS:
+            [self sendSms:@"" body:body];
+            break;
+            
+        case BUTTON_SEND_BY_EMAIL:
+            [self sendEmailTo:nil ccRecipients:nil bccRecipients:nil subject:subject body:body isHTML:NO delegate:self];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)handleSelectAvatar:(int)buttonIndex
+{
+    enum{
+        BUTTON_SELECT_ALBUM,
+        BUTTON_TAKE_PHOTO,
+        BUTTON_CANCEL
+    };
+    
+    switch (buttonIndex) {
+        case BUTTON_SELECT_ALBUM:
+            [self selectPhoto];
+            break;
+            
+        case BUTTON_TAKE_PHOTO:
+            [self takePhoto];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (action == ACTION_SHARE_APP){
+        [self handleSendAppLinkClick:buttonIndex];
+    }
+    else {
+        [self handleSelectAvatar:buttonIndex];
+    }
+         
 }
 
 @end
