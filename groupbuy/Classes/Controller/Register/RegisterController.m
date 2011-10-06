@@ -209,4 +209,13 @@ enum{
     [userService loginUserWithEmail:loginIdField.text password:loginPasswordTextField.text viewController:self];
 }
 
+- (void)actionDone:(int)resultCode
+{
+    if (resultCode == 0){
+        self.navigationItem.hidesBackButton = YES;
+        self.navigationController.navigationItem.hidesBackButton = YES;
+        [MyInfoController show:self.navigationController];
+    }
+}
+
 @end

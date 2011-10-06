@@ -441,6 +441,8 @@
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
 		CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACECC931408ECAE00C90A99 /* ShoppingListCell.m */; };
 		CACECC961408ECAE00C90A99 /* ShoppingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */; };
+		CAD20DC5143D94B4004DF88F /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD20DC2143D94B4004DF88F /* NSString+MD5Addition.m */; };
+		CAD20DC6143D94B4004DF88F /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD20DC4143D94B4004DF88F /* UIDevice+IdentifierAddition.m */; };
 		CADDC6D613E438D70030F9FC /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D413E438D70030F9FC /* button.png */; };
 		CADDC6D713E438D70030F9FC /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D513E438D70030F9FC /* button@2x.png */; };
 		CADE8F3513E6789B00B48DB8 /* AnnotationPin.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE8F3113E6789B00B48DB8 /* AnnotationPin.m */; };
@@ -1278,6 +1280,10 @@
 		CACECC921408ECAE00C90A99 /* ShoppingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListCell.h; sourceTree = "<group>"; };
 		CACECC931408ECAE00C90A99 /* ShoppingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListCell.m; sourceTree = "<group>"; };
 		CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingListCell.xib; sourceTree = "<group>"; };
+		CAD20DC1143D94B4004DF88F /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		CAD20DC2143D94B4004DF88F /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		CAD20DC3143D94B4004DF88F /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		CAD20DC4143D94B4004DF88F /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 		CADDC6D413E438D70030F9FC /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		CADDC6D513E438D70030F9FC /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		CADE8F3013E6789B00B48DB8 /* AnnotationPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationPin.h; sourceTree = "<group>"; };
@@ -2379,6 +2385,7 @@
 		CA6076BA13D55EE200E0D0DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CAD20DC0143D94B4004DF88F /* UIDeviceAdditions */,
 				CA707B661406064500FB9990 /* Reachability.m */,
 				CA6076BB13D55EE200E0D0DC /* ActionSelector.h */,
 				CA6076BC13D55EE200E0D0DC /* ActionSelector.m */,
@@ -2841,6 +2848,17 @@
 				CA97773214399E0D00D33429 /* PasswordInputController.xib */,
 			);
 			path = Password;
+			sourceTree = "<group>";
+		};
+		CAD20DC0143D94B4004DF88F /* UIDeviceAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				CAD20DC1143D94B4004DF88F /* NSString+MD5Addition.h */,
+				CAD20DC2143D94B4004DF88F /* NSString+MD5Addition.m */,
+				CAD20DC3143D94B4004DF88F /* UIDevice+IdentifierAddition.h */,
+				CAD20DC4143D94B4004DF88F /* UIDevice+IdentifierAddition.m */,
+			);
+			path = UIDeviceAdditions;
 			sourceTree = "<group>";
 		};
 		CADE8F2F13E6789B00B48DB8 /* ShowAddress */ = {
@@ -3921,6 +3939,8 @@
 				CA2550621432295F005E8903 /* ASINetworkQueue.m in Sources */,
 				CA2550631432295F005E8903 /* ASIWebPageRequest.m in Sources */,
 				CA97773314399E0D00D33429 /* PasswordInputController.m in Sources */,
+				CAD20DC5143D94B4004DF88F /* NSString+MD5Addition.m in Sources */,
+				CAD20DC6143D94B4004DF88F /* UIDevice+IdentifierAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

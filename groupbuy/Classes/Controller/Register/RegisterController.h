@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PPViewController.h"
+#import "GroupBuyUserService.h"
 
-@interface RegisterController : PPViewController {
+@interface RegisterController : PPViewController <GroupBuyUserServiceDelegate> {
     UITextField *loginIdField;
     NSString *token;
     NSString *tokenSecret;

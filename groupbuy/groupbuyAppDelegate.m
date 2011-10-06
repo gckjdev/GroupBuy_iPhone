@@ -655,13 +655,8 @@ enum
     // Get a hex string from the device token with no spaces or < >	
 	[self saveDeviceToken:deviceToken];    
     
-    if ([userService user] == nil){
-        // user not registered yet, device token will be carried by registration request        
-    }
-    else{
-        // user already register
-        [userService updateGroupBuyUserDeviceToken:[self getDeviceToken]];
-    }
+    // user already register
+    [userService updateGroupBuyUserDeviceToken:[self getDeviceToken]];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {

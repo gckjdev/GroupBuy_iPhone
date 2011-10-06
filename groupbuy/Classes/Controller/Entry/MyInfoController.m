@@ -148,6 +148,8 @@ enum{
     logoutButton.hidden = YES;
     [self setBackgroundImageName:@"background.png"];
     
+    self.navigationItem.hidesBackButton = YES;
+    
     [super viewDidLoad];
     
     [self updateLoginId];
@@ -315,7 +317,7 @@ enum{
     NSString* password = [[userService user] password];
     if ([password length] == 0){
         cell.textLabel.text = @"密码";
-        cell.detailTextLabel.text = @"未注册";        
+        cell.detailTextLabel.text = @"电子邮件未注册";        
     }
     else{
         cell.textLabel.text = @"修改密码";
@@ -487,6 +489,13 @@ enum{
     [vc release];
 }
 
+- (void)actionDone:(int)resultCode
+{
+    if (resultCode == 0){
+        [[self dataTableView] reloadData];
+    }
+}
+
 - (void)clickBindSina
 {
     UserService *userService = GlobalGetUserService();
@@ -527,6 +536,10 @@ enum{
                         return;
                     }
                     [userService updateUserNickName:newText];
+
+                    if ([newText length] > 0){
+                        [self popupHappyMessage:@"别忘了点击右上角的［保存］按钮保存修改哦" title:nil];
+                    }
                 }
                     break;
                     
@@ -765,7 +778,7 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 + (MyInfoController*)show:(UINavigationController*)navgivationController
 {
     MyInfoController* infoController = [[MyInfoController alloc] init];
-    [navgivationController pushViewController:infoController animated:YES];
+    [navgivationController pushViewController:infoController animated:NO];
     [infoController release];
     return infoController;
 }
@@ -774,6 +787,10 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 {   
     NSLog(@"new password = %@", newPassword);
     [GlobalGetUserService() setNewPassword:newPassword];
+
+    if ([newPassword length] > 0){
+        [self popupHappyMessage:@"别忘了点击右上角的［保存］按钮保存密码修改哦" title:nil];
+    }
 }
 
 @end
