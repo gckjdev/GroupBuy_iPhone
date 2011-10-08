@@ -867,7 +867,7 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     if (image != nil){
         [self setUserAvatar:image];
     }
