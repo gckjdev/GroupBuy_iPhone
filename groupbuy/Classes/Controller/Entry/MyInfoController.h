@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "PPTableViewController.h"
 #import "HJManagedImageV.h"
+#import "PasswordInputController.h"
 
-@interface MyInfoController : PPTableViewController <UIActionSheetDelegate> {
+@interface MyInfoController : PPTableViewController <UIActionSheetDelegate, PasswordInputControllerDelegate> {
     IBOutlet UILabel         *loginIdLabel;
     IBOutlet UILabel         *loginIdTypeLabel;
     IBOutlet UIImageView     *avatarView;           // useless
     IBOutlet UILabel         *nicknameLabel;
     HJManagedImageV *avatarImageView;
     UIButton *logoutButton;
+    
+    int action;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel         *loginIdLabel;
@@ -28,5 +31,10 @@
 
 - (IBAction)clickLogout:(id)sender;
 - (IBAction)clickAvatar:(id)sender;
+
++ (MyInfoController*)show:(UINavigationController*)navgivationController;
+
+- (IBAction)clickFeedback:(id)sender;
+- (IBAction)clickSendAppLink:(id)sender;
 
 @end

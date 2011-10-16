@@ -58,9 +58,10 @@
 
 NSString* GlobalGetServerURL()
 {
+//   return @"http://192.168.1.101:8000/api/i?";
 
-   return @"http://192.168.1.101:8000/api/i?";
-//    return @"http://www.dipan100.com:8000/api/i?";
+//   return @"http://192.168.1.188:8000/api/i?";
+    return @"http://www.dipan100.com:8000/api/i?";
 
 }
 
@@ -163,10 +164,23 @@ enum
 {
     TAB_TOP_SCORE = 0,
     TAB_SHOPPING = 3,    
+    TAB_MY_INFO = 4
 };
+
+- (void)updateMyInfoTab
+{
+    // TODO
+    if ([userService hasBindAccount]){
+        
+    }
+    else{
+        
+    }
+}
 
 - (void)initTabViewControllers
 {
+    
     tabBarController.delegate = self;
     
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
@@ -197,21 +211,35 @@ enum
     
     shoppingListController.tabIndex = TAB_SHOPPING;
     
-	
-	[UIUtils addViewController:[RegisterController alloc]
-					 viewTitle:@"我"
-					 viewImage:@"man_24.png"
-			  hasNavController:YES			
-			   viewControllers:controllers];	
+    if ([userService hasBindAccount]){
+        [UIUtils addViewController:[MyInfoController alloc]
+                         viewTitle:@"我"
+                         viewImage:@"man_24.png"
+                  hasNavController:YES			
+                   viewControllers:controllers];	        
+    }
+    else{
+        [UIUtils addViewController:[RegisterController alloc]
+                         viewTitle:@"我"
+                         viewImage:@"man_24.png"
+                  hasNavController:YES			
+                   viewControllers:controllers];	
+    }
 
-//	CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+//	CommonProductListController* favorController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 //					 viewTitle:@"收藏"				 
 //					 viewImage:@"folder_bookmark_24.png"
 //			  hasNavController:YES			
 //			   viewControllers:controllers];	
-//    historyController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
+//    favorController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
 //    
-//
+//    CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+//					 viewTitle:@"历史"				 
+//					 viewImage:@"storage.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
+//    historyController.dataLoader = [[ProductHistoryDataLoader alloc] init];
+//    
 //    [UIUtils addViewController:[SettingsController alloc]
 //					 viewTitle:@"设置"				 
 //					 viewImage:@"gear_24.png"
@@ -420,16 +448,16 @@ enum
 	[MobClick appTerminated];
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    NSString *host = [url host];
-    if ([host isEqualToString:@"sina"]) {        
-        [snsService sinaParseAuthorizationResponseURL:[url query]];
-    } else if ([host isEqualToString:@"qq"]) {
-        [snsService qqParseAuthorizationResponseURL:[url query]];
-    }
-    
-    return YES;
-}
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+//    NSString *host = [url host];
+//    if ([host isEqualToString:@"sina"]) {        
+//        [snsService sinaParseAuthorizationResponseURL:[url query]];
+//    } else if ([host isEqualToString:@"qq"]) {
+//        [snsService qqParseAuthorizationResponseURL:[url query]];
+//    }
+//    
+//    return YES;
+//}
 
 #pragma mark - User Service Delegate
 - (void)checkDeviceResult:(int)result
@@ -440,6 +468,7 @@ enum
     if (defaultCity == nil) {
         CityPickerViewController *cityController = [[CityPickerViewController alloc]initWithCityName:defaultCity hasLeftButton:NO];
         cityController.delegate = locationService;
+        cityController.hidesBottomBarWhenPushed = YES;
         [[[tabBarController viewControllers] objectAtIndex:0] pushViewController:cityController animated:YES];  
         [cityController release];
     }
@@ -627,13 +656,8 @@ enum
     // Get a hex string from the device token with no spaces or < >	
 	[self saveDeviceToken:deviceToken];    
     
-    if ([userService user] == nil){
-        // user not registered yet, device token will be carried by registration request        
-    }
-    else{
-        // user already register
-        [userService updateGroupBuyUserDeviceToken:[self getDeviceToken]];
-    }
+    // user already register
+    [userService updateGroupBuyUserDeviceToken:[self getDeviceToken]];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
@@ -687,8 +711,7 @@ enum
         
         NSString *itemId = [[payload objectForKey:@"aps"] valueForKey:@"ii"];				
         [self updateShoppingTabBadge:@"新"];        
-        [userShopService requestItemMatchCount:itemId tableViewController:shoppingListController];
-        
+        [userShopService requestItemMatchCount:itemId];
 	}	
 }
 

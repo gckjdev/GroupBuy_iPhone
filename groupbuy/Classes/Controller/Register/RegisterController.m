@@ -13,6 +13,7 @@
 #import "GroupBuyUserService.h"
 #import "NewUserRegisterController.h"
 #import "GroupBuySNSService.h"
+#import "MyInfoController.h"
 
 enum{
     SELECT_BOY,
@@ -52,6 +53,12 @@ enum{
     self.view.frame = frame;
         
     [super viewDidLoad];
+    
+    if ([GlobalGetUserService() hasBindAccount]){
+        MyInfoController* infoController = [[MyInfoController alloc] init];
+        [self.navigationController pushViewController:infoController animated:NO];
+        [infoController release];
+    }
 }
 
 /*
@@ -200,6 +207,15 @@ enum{
     
     UserService* userService = GlobalGetUserService();
     [userService loginUserWithEmail:loginIdField.text password:loginPasswordTextField.text viewController:self];
+}
+
+- (void)actionDone:(int)resultCode
+{
+    if (resultCode == 0){
+        self.navigationItem.hidesBackButton = YES;
+        self.navigationController.navigationItem.hidesBackButton = YES;
+        [MyInfoController show:self.navigationController];
+    }
 }
 
 @end

@@ -12,28 +12,64 @@
 #import "User.h"
 #import "UserService.h"
 #import "HJManagedImageV.h"
-#import "UserService.h"
 #import "ContollerConstants.h"
 #import "FileUtil.h"
-#import "PlaceSNSService.h"
 #import "SelectItemViewController.h"
 #import "TextEditorViewController.h"
 #import "VariableConstants.h"
+#import "CityPickerViewController.h"
+#import "PasswordInputController.h"
+#import "NewUserRegisterController.h"
+#import "GroupBuyUserService.h"
+#import "GroupBuyNetworkConstants.h"
+#import "GroupBuySNSService.h"
+
+#import "CommonProductListController.h"
+#import "ProductPriceDataLoader.h"
+
+enum{
+    ACTION_SELECT_AVATAR,
+    ACTION_SHARE_APP
+};
 
 enum{
     
     SECTION_INFO,
+//    SECTION_SETTING,
     SECTION_SNS,
+    SECTION_HISTORY,
+    SECTION_FEEDBACK,
     SECTION_NUM
     
 };
 
 enum{
     ROW_NICKNAME,
+    ROW_PASSWORD,
+    ROW_CITY,
+    ROW_INFO_NUM,
+    
+    // not used now
     ROW_GENDER,
     ROW_MOBILE,
-    ROW_INFO_NUM    
 };
+
+enum{
+    ROW_FEEDBACK,
+    ROW_SHARE,
+    ROW_FEEDBACK_NUM
+};
+
+enum{
+    ROW_FAVORITE,
+    ROW_HISTORY,
+    ROW_HISTORY_NUM
+};
+
+//enum{
+//    ROW_CITY,
+//    ROW_SETTING_NUM
+//};
 
 enum{
     ROW_SINA,
@@ -52,15 +88,14 @@ enum{
 @synthesize nicknameLabel;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization.
+        self.navigationItem.hidesBackButton = YES;
     }
     return self;
 }
-*/
 
 enum{
     ROW_MALE,
@@ -132,16 +167,19 @@ enum{
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
+    self.navigationItem.title = @"我的设置";
+    logoutButton.hidden = YES;
+    [self setBackgroundImageName:@"background.png"];
+    
+    self.navigationItem.hidesBackButton = YES;
+    
     [super viewDidLoad];
     
     [self updateLoginId];
     [self updateImageView];
     [self initLogoutButton];
     
-    [self setNavigationRightButton:NSLS(@"Save") action:@selector(clickSave:)];
-    
-    self.dataTableView.backgroundColor = [UIColor whiteColor];
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self setNavigationRightButton:NSLS(@"Save") action:@selector(clickSave:)];    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -202,10 +240,19 @@ enum{
     
     switch (section) {
         case SECTION_INFO:
-            return @"";
+            return @"基本信息";
             
         case SECTION_SNS:
-            return @"";
+            return @"绑定账户";
+            
+//        case SECTION_SETTING:
+//            return @"主要设置";
+
+        case SECTION_HISTORY:
+            return @"访问记录";
+            
+        case SECTION_FEEDBACK:
+            return @"服务支持";
             
         default:            
             return 0;
@@ -237,13 +284,13 @@ enum{
 {    
     switch (indexPath.section) {
         case SECTION_INFO:
-            return 60;
+            return 44;
             
         case SECTION_SNS:
-            return 60;
+            return 44;
             
         default:            
-            return 0;
+            return 44;
     }
 }
 
@@ -264,6 +311,12 @@ enum{
         case SECTION_SNS:
             return ROW_SNS_NUM;
             break;
+
+        case SECTION_FEEDBACK:
+            return ROW_FEEDBACK_NUM;
+            
+        case SECTION_HISTORY:
+            return ROW_HISTORY_NUM;
             
         default:            
             return 0;
@@ -274,10 +327,35 @@ enum{
 {
     UserService *userService = GlobalGetUserService();
     cell.textLabel.text = NSLS(@"kNickName");
-    cell.detailTextLabel.text = [[userService user] nickName];
+    
+    NSString* nickName = [[userService user] nickName];
+    if ([nickName length] == 0){
+        cell.detailTextLabel.text = @"未设置";        
+    }
+    else{
+        cell.detailTextLabel.text = [[userService user] nickName];        
+    }    
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
+
+- (void)setPasswordCell:(UITableViewCell*)cell
+{
+    UserService *userService = GlobalGetUserService();
+    
+    NSString* password = [[userService user] password];
+    if ([password length] == 0){
+        cell.textLabel.text = @"密码";
+        cell.detailTextLabel.text = @"电子邮件未注册";        
+    }
+    else{
+        cell.textLabel.text = @"修改密码";
+        cell.detailTextLabel.text = @"";        
+    }    
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+}
+
 
 - (void)setMobileCell:(UITableViewCell*)cell
 {
@@ -317,6 +395,19 @@ enum{
     }
 }
 
+- (void)setCityCell:(UITableViewCell*)cell
+{
+    cell.textLabel.text = @"城市";    
+    cell.detailTextLabel.text = [GlobalGetLocationService() getDefaultCity];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;    
+}
+
+- (void)setCellInfo:(UITableViewCell*)cell text:(NSString*)text
+{
+    cell.textLabel.text = text;    
+    cell.detailTextLabel.text = @"";
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;        
+}
 
 - (void)setSinaCell:(UITableViewCell*)cell
 {
@@ -367,6 +458,10 @@ enum{
                 case ROW_NICKNAME:
                     [self setNickNameCell:cell];
                     break;
+                    
+                case ROW_PASSWORD:
+                    [self setPasswordCell:cell];
+                    break;                    
 
                 case ROW_MOBILE:
                     [self setMobileCell:cell];
@@ -376,11 +471,43 @@ enum{
                     [self setGenderCell:cell];
                     break;
 
+                case ROW_CITY:
+                    [self setCityCell:cell];
+                    break;
+
                 default:
                     break;
             }
         }
             break;
+
+        case SECTION_HISTORY:
+        {
+            switch (indexPath.row) {
+                case ROW_HISTORY:
+                    [self setCellInfo:cell text:@"团购浏览记录"];
+                    break;
+                    
+                case ROW_FAVORITE:
+                    [self setCellInfo:cell text:@"团购收藏记录"];
+                    break;
+            }
+        }
+            break;
+            
+        case SECTION_FEEDBACK:
+        {
+            switch (indexPath.row) {
+                case ROW_FEEDBACK:
+                    [self setCellInfo:cell text:@"问题反馈，支持和建议"];
+                    break;
+                    
+                case ROW_SHARE:
+                    [self setCellInfo:cell text:@"分享应用给朋友"];
+                    break;
+            }
+        }
+            break;            
             
         case SECTION_SNS:
         {
@@ -411,13 +538,29 @@ enum{
 	
 }
 
+- (void)clickCity
+{
+    NSString* city = [GlobalGetLocationService() getDefaultCity];
+    CityPickerViewController* vc = [[CityPickerViewController alloc] initWithCityName:city hasLeftButton:YES];
+    vc.delegate = GlobalGetLocationService();
+    [self.navigationController pushViewController:vc animated:YES];
+    [vc release];
+}
+
+- (void)actionDone:(int)resultCode
+{
+    if (resultCode == 0){
+        [[self dataTableView] reloadData];
+    }
+}
+
 - (void)clickBindSina
 {
     UserService *userService = GlobalGetUserService();
     if ([userService hasUserBindSina])
         return;
     
-    PlaceSNSService *snsService = GlobalGetSNSService();
+    GroupBuySNSService *snsService = GlobalGetGroupBuySNSService();
     [snsService sinaInitiateLogin:self];
 }
 
@@ -427,7 +570,7 @@ enum{
     if ([userService hasUserBindQQ])
         return;
     
-    PlaceSNSService *snsService = GlobalGetSNSService();
+    GroupBuySNSService *snsService = GlobalGetGroupBuySNSService();
     [snsService qqInitiateLogin:self];    
 }
 
@@ -447,10 +590,14 @@ enum{
                 case ROW_NICKNAME:
                 {
                     if ([newText length] == 0){
-                        [self popupMessage:NSLS(@"kNickNameNotNull") title:@""];
+                        [self popupMessage:@"昵称不能为空吧" title:@""];
                         return;
                     }
                     [userService updateUserNickName:newText];
+
+                    if ([newText length] > 0){
+                        [self popupHappyMessage:@"别忘了点击右上角的［保存］按钮保存修改哦" title:nil];
+                    }
                 }
                     break;
                     
@@ -493,12 +640,31 @@ enum{
                     vc.delegate = self;
                     vc.inputText = [[userService user] nickName];
                     vc.navigationItem.title = NSLS(@"kEnterNickNameTitle");
-                    vc.view.backgroundColor = [UIColor whiteColor]; // to be removed
+                    vc.allowNull = NO;
+                    [vc setBackgroundImageName:@"background.png"];
                     [self.navigationController pushViewController:vc animated:YES];
                     [vc release];
                 }
                     break;
                     
+                case ROW_PASSWORD:
+                {
+                    if ([GlobalGetUserService() hasBindEmail]){
+                        NSString* password = [[GlobalGetUserService() user] password];
+                        PasswordInputController* vc = [[PasswordInputController alloc] initWithPassword:password delegate:self];
+                        vc.canReturn = YES;
+                        vc.navigationItem.title = NSLS(@"修改密码");
+                        [vc setBackgroundImageName:@"background.png"];
+                        [vc setNavigationLeftButton:NSLS(@"Back") action:@selector(clickBack:)];
+                        [self.navigationController pushViewController:vc animated:YES];
+                        [vc release];                        
+                    }
+                    else{
+                        [NewUserRegisterController showController:nil password:nil superController:self];
+                    }                    
+                }
+                    break;
+
                 case ROW_MOBILE:
                 {
                     UserService* userService = GlobalGetUserService();                    
@@ -534,11 +700,84 @@ enum{
                 }
                     break;
 
+                case ROW_CITY:
+                    [self clickCity];
+                    break;
+
                 default:
                     break;
             }
         }
             break;
+            
+            //	CommonProductListController* favorController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+            //					 viewTitle:@"收藏"				 
+            //					 viewImage:@"folder_bookmark_24.png"
+            //			  hasNavController:YES			
+            //			   viewControllers:controllers];	
+            //    favorController.dataLoader = [[ProductFavoriteDataLoader alloc] init];
+            //    
+            //    CommonProductListController* historyController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
+            //					 viewTitle:@"历史"				 
+            //					 viewImage:@"storage.png"
+            //			  hasNavController:YES			
+            //			   viewControllers:controllers];	
+            //    historyController.dataLoader = [[ProductHistoryDataLoader alloc] init];
+            //    
+            //    [UIUtils addViewController:[SettingsController alloc]
+            //					 viewTitle:@"设置"				 
+            //					 viewImage:@"gear_24.png"
+            //			  hasNavController:YES			
+            //			   viewControllers:controllers];	
+            //        
+            //	[UIUtils addViewController:[FeedbackController alloc]
+            //					 viewTitle:@"反馈"
+            //					 viewImage:@"help_24.png"
+            //			  hasNavController:YES			
+            //			   viewControllers:controllers];	
+            
+
+        case SECTION_HISTORY:
+        {
+            switch (indexPath.row) {
+                case ROW_HISTORY:
+                {
+                    CommonProductListController* vc = [[CommonProductListController alloc] init];
+                    vc.dataLoader = [[[ProductHistoryDataLoader alloc] init] autorelease];
+                    vc.navigationItem.title = @"历史记录";
+                    [self.navigationController pushViewController:vc animated:YES];
+                    [vc release];
+                    
+                }
+                    break;
+                    
+                case ROW_FAVORITE:
+                {
+                    CommonProductListController* vc = [[CommonProductListController alloc] init];
+                    vc.dataLoader = [[[ProductFavoriteDataLoader alloc] init] autorelease];
+                    vc.navigationItem.title = @"收藏";
+                    [self.navigationController pushViewController:vc animated:YES];
+                    [vc release];                    
+                }
+                    break;
+            }
+        }
+            break;
+            
+        case SECTION_FEEDBACK:
+        {
+            switch (indexPath.row) {
+                case ROW_FEEDBACK:
+                    [self clickFeedback:nil];
+                    break;
+                    
+                case ROW_SHARE:
+                    [self clickSendAppLink:nil];
+                    break;
+            }
+        }
+            break;            
+            
             
         case SECTION_SNS:
         {
@@ -595,17 +834,24 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 - (void)clickSave:(id)sender
 {
     // send request to server
+    [self showActivityWithText:@"保存数据中..."];
     UserService *userService = GlobalGetUserService();
-    [userService updateUserToServer:self successHandler:^(PPViewController* viewController){        
-        MyInfoController *vc = (MyInfoController*)viewController;        
-        [vc.dataTableView reloadData];
-        [vc updateImageView];
+    [userService groupBuyUpdateUser:self successHandler:^(PPViewController* viewController, int result){   
+        [self hideActivity];
+        if (result == 0){
+            [userService updateUserPasswordByNewPassword];
+            
+            MyInfoController *vc = (MyInfoController*)viewController;        
+            [vc.dataTableView reloadData];
+            [vc updateImageView];
+        }        
     }];
 }
 
 - (IBAction)clickAvatar:(id)sender
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:NSLS(@"Cancel") destructiveButtonTitle:nil otherButtonTitles:NSLS(@"kSelectFromAlbum"), NSLS(@"kTakePhoto"), nil];
+    action = ACTION_SELECT_AVATAR;
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
     [actionSheet release];
 }
@@ -621,7 +867,7 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     if (image != nil){
         [self setUserAvatar:image];
     }
@@ -629,7 +875,74 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+
+
++ (MyInfoController*)show:(UINavigationController*)navgivationController
+{
+    MyInfoController* infoController = [[MyInfoController alloc] init];
+    [navgivationController pushViewController:infoController animated:NO];
+    [infoController release];
+    return infoController;
+}
+
+- (void)didPasswordChange:(NSString *)newPassword
+{   
+    NSLog(@"new password = %@", newPassword);
+    [GlobalGetUserService() setNewPassword:newPassword];
+
+    if ([newPassword length] > 0){
+        [self popupHappyMessage:@"别忘了点击右上角的［保存］按钮保存密码修改哦" title:nil];
+    }
+}
+
+- (IBAction)clickFeedback:(id)sender
+{
+    [self sendEmailTo:[NSArray arrayWithObject:@"zz2010.support@gmail.com"] 
+		 ccRecipients:nil 
+		bccRecipients:nil 
+			  subject:NSLS(@"kFeedbackSubject")
+				 body:NSLS(@"") 
+			   isHTML:NO 
+			 delegate:self];
+}
+
+- (IBAction)clickSendAppLink:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:NSLS(@"Cancel") destructiveButtonTitle:nil otherButtonTitles:NSLS(@"kSendBySMS"), NSLS(@"kSendByEmail"), nil];
+    
+    action = ACTION_SHARE_APP;
+
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+    [actionSheet release];
+}
+
+- (void)handleSendAppLinkClick:(NSInteger)buttonIndex
+{
+    NSString* appLink = [UIUtils getAppLink:kAppId];
+    NSString* body = [NSString stringWithFormat:NSLS(@"kSendAppLinkBody"), appLink];
+    NSString* subject = NSLS(@"kSendAppLinkSubject");
+    
+    enum{
+        BUTTON_SEND_BY_SMS,
+        BUTTON_SEND_BY_EMAIL,
+        BUTTON_CANCEL
+    };
+    
+    switch (buttonIndex) {
+        case BUTTON_SEND_BY_SMS:
+            [self sendSms:@"" body:body];
+            break;
+            
+        case BUTTON_SEND_BY_EMAIL:
+            [self sendEmailTo:nil ccRecipients:nil bccRecipients:nil subject:subject body:body isHTML:NO delegate:self];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)handleSelectAvatar:(int)buttonIndex
 {
     enum{
         BUTTON_SELECT_ALBUM,
@@ -645,11 +958,22 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
         case BUTTON_TAKE_PHOTO:
             [self takePhoto];
             break;
-
+            
         default:
             break;
     }
+    
 }
 
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (action == ACTION_SHARE_APP){
+        [self handleSendAppLinkClick:buttonIndex];
+    }
+    else {
+        [self handleSelectAvatar:buttonIndex];
+    }
+         
+}
 
 @end

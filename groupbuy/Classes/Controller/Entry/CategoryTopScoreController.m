@@ -63,7 +63,7 @@ enum TOP_SCORE_TYPE {
     
     self.navigationItem.title = self.categoryName;
     
-    NSArray *titleArray = [NSArray arrayWithObjects:@"0－10元", @"10元以上", @"发布日期", @"距离远近", nil];
+    NSArray *titleArray = [NSArray arrayWithObjects:@"0－10元", @"10元以上", @"发布日期", @"周边附近", nil];
     self.titleSegControl = [[[UISegmentedControl alloc] initWithItems:titleArray] autorelease];
     titleSegControl.segmentedControlStyle = UISegmentedControlStyleBar;
     titleSegControl.selectedSegmentIndex = 1;

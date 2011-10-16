@@ -59,7 +59,7 @@ enum TOP_SCORE_TYPE {
       @"0－10元",
       @"10元以上",
       @"发布日期",
-      @"距离远近",
+      @"周边附近",
       nil]
     defaultSelectIndex:1];    
 
