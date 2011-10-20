@@ -35,6 +35,9 @@
 		CA1A9D8413DD68790072926A /* PPWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D8213DD68790072926A /* PPWebViewController.xib */; };
 		CA1A9D8813DD6D420072926A /* ProductCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1A9D8613DD6D410072926A /* ProductCategoryController.m */; };
 		CA1A9D8913DD6D420072926A /* ProductCategoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D8713DD6D420072926A /* ProductCategoryController.xib */; };
+		CA220EE9144FEB9E005AFDC5 /* PPSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CA220EE8144FEB9E005AFDC5 /* PPSegmentControl.m */; };
+		CA220EED144FF7F4005AFDC5 /* GroupBuyControllerExt.m in Sources */ = {isa = PBXBuildFile; fileRef = CA220EEC144FF7F4005AFDC5 /* GroupBuyControllerExt.m */; };
+		CA220EF1144FFA83005AFDC5 /* GroupBuyCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA220EF0144FFA83005AFDC5 /* GroupBuyCommonViewController.m */; };
 		CA254EE714322257005E8903 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA254EE614322257005E8903 /* MobileCoreServices.framework */; };
 		CA254EF71432245C005E8903 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA254EF61432245C005E8903 /* libxml2.dylib */; };
 		CA254EF91432249B005E8903 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA254EF81432249B005E8903 /* libz.dylib */; };
@@ -627,6 +630,12 @@
 		CA1A9D8513DD6D410072926A /* ProductCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategoryController.h; sourceTree = "<group>"; };
 		CA1A9D8613DD6D410072926A /* ProductCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategoryController.m; sourceTree = "<group>"; };
 		CA1A9D8713DD6D420072926A /* ProductCategoryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCategoryController.xib; sourceTree = "<group>"; };
+		CA220EE7144FEB9E005AFDC5 /* PPSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSegmentControl.h; sourceTree = "<group>"; };
+		CA220EE8144FEB9E005AFDC5 /* PPSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSegmentControl.m; sourceTree = "<group>"; };
+		CA220EEB144FF7F4005AFDC5 /* GroupBuyControllerExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyControllerExt.h; sourceTree = "<group>"; };
+		CA220EEC144FF7F4005AFDC5 /* GroupBuyControllerExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuyControllerExt.m; sourceTree = "<group>"; };
+		CA220EEF144FFA83005AFDC5 /* GroupBuyCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyCommonViewController.h; sourceTree = "<group>"; };
+		CA220EF0144FFA83005AFDC5 /* GroupBuyCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuyCommonViewController.m; sourceTree = "<group>"; };
 		CA254EE614322257005E8903 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CA254EF61432245C005E8903 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CA254EF81432249B005E8903 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1593,6 +1602,33 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		CA220EE6144FEB74005AFDC5 /* PPSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				CA220EE7144FEB9E005AFDC5 /* PPSegmentControl.h */,
+				CA220EE8144FEB9E005AFDC5 /* PPSegmentControl.m */,
+			);
+			path = PPSegmentControl;
+			sourceTree = "<group>";
+		};
+		CA220EEA144FF7BE005AFDC5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA220EEB144FF7F4005AFDC5 /* GroupBuyControllerExt.h */,
+				CA220EEC144FF7F4005AFDC5 /* GroupBuyControllerExt.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CA220EEE144FFA38005AFDC5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CA220EEF144FFA83005AFDC5 /* GroupBuyCommonViewController.h */,
+				CA220EF0144FFA83005AFDC5 /* GroupBuyCommonViewController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		CA254F781432295F005E8903 /* asi-http-request */ = {
 			isa = PBXGroup;
 			children = (
@@ -1819,6 +1855,7 @@
 		CA60753013D55EE200E0D0DC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CA220EE6144FEB74005AFDC5 /* PPSegmentControl */,
 				CA97772F14399E0D00D33429 /* Password */,
 				CA08741C13E679F100F808E3 /* TelPicker */,
 				CADE8F2F13E6789B00B48DB8 /* ShowAddress */,
@@ -2989,6 +3026,8 @@
 		CADF6BBB13DAA4810060F438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CA220EEE144FFA38005AFDC5 /* Common */,
+				CA220EEA144FF7BE005AFDC5 /* Utils */,
 				CAF4CC22142ECC6D001D5B4A /* TaobaoSearch */,
 				CA25E7251425F50A0056EB11 /* LocationCell.h */,
 				CA25E7261425F50A0056EB11 /* LocationCell.m */,
@@ -3941,6 +3980,9 @@
 				CA97773314399E0D00D33429 /* PasswordInputController.m in Sources */,
 				CAD20DC5143D94B4004DF88F /* NSString+MD5Addition.m in Sources */,
 				CAD20DC6143D94B4004DF88F /* UIDevice+IdentifierAddition.m in Sources */,
+				CA220EE9144FEB9E005AFDC5 /* PPSegmentControl.m in Sources */,
+				CA220EED144FF7F4005AFDC5 /* GroupBuyControllerExt.m in Sources */,
+				CA220EF1144FFA83005AFDC5 /* GroupBuyCommonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -350,6 +350,9 @@ enum
     
     [self showViewByUserStatus];
     
+//#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_5_0 
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"top_live.png"] forBarMetrics:UIBarMetricsDefault];
+//#endif  
     
     [window makeKeyAndVisible];
 	
