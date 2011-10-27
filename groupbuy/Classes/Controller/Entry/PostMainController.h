@@ -8,22 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PPTableViewController.h"
-#import "NearbyPostController.h"
-#import "FollowPostController.h"
-#import "PrivateMessageListController.h"
-#import "AtMePostController.h"
 
-@class PrivateMessageUserController;
-@class PublicTimelinePostController;
 @class CommonProductListController;
 @class ProductCategoryController;
 
 @interface PostMainController : PPViewController {
-    NearbyPostController    *nearbyPostController;
-    FollowPostController    *followPostController;
-    AtMePostController      *atMePostController;
-    PrivateMessageUserController *privateMessageController;
-    PublicTimelinePostController *latestPostController;
     
     CommonProductListController *priceController;
     CommonProductListController *rebateController;
@@ -33,12 +22,6 @@
     ProductCategoryController *todayController;
     
 }
-
-@property (nonatomic, retain) NearbyPostController    *nearbyPostController;
-@property (nonatomic, retain) FollowPostController    *followPostController;
-@property (nonatomic, retain) PrivateMessageUserController *privateMessageController;
-@property (nonatomic, retain) AtMePostController      *atMePostController;
-@property (nonatomic, retain) PublicTimelinePostController *latestPostController;
 
 @property (nonatomic, retain) CommonProductListController *priceController;
 @property (nonatomic, retain) CommonProductListController *rebateController;

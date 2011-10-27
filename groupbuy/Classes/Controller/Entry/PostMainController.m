@@ -10,10 +10,6 @@
 #import "Post.h"
 #import "PostManager.h"
 #import "UserManager.h"
-#import "NearbyPostController.h"
-#import "CreatePostController.h"
-#import "PrivateMessageUserController.h"
-#import "PublicTimelinePostController.h"
 #import "CommonProductListController.h"
 #import "ProductPriceDataLoader.h"
 #import "ProductCategoryController.h"
@@ -30,11 +26,6 @@ enum SELECT_POST_TYPE {
 
 @implementation PostMainController
 
-@synthesize nearbyPostController;
-@synthesize followPostController;
-@synthesize privateMessageController;
-@synthesize atMePostController;
-@synthesize latestPostController;
 @synthesize priceController;
 @synthesize categoryController;
 @synthesize distanceController;
@@ -53,11 +44,6 @@ enum SELECT_POST_TYPE {
 
 - (void)dealloc
 {
-    [nearbyPostController release];
-    [followPostController release];
-    [privateMessageController release];
-    [atMePostController release];
-    [latestPostController release];
     [priceController release];
     [categoryController release];
     [distanceController release];
@@ -78,73 +64,6 @@ enum SELECT_POST_TYPE {
 }
 
 #pragma mark - View lifecycle
-
-- (void)showNearbyPost
-{
-    if (self.nearbyPostController == nil){
-        self.nearbyPostController = [[[NearbyPostController alloc] init] autorelease];
-        self.nearbyPostController.superController = self;
-        self.nearbyPostController.view.frame = self.view.bounds;        
-        [self.view addSubview:nearbyPostController.view];                
-    }
-    
-    [self.view bringSubviewToFront:nearbyPostController.view];
-    [nearbyPostController viewDidAppear:NO];
-}
-
-- (void)showLatestPost
-{
-    if (self.latestPostController == nil){
-        self.latestPostController = [[[PublicTimelinePostController alloc] init] autorelease];
-        self.latestPostController.superController = self;
-        self.latestPostController.view.frame = self.view.bounds;        
-        [self.view addSubview:latestPostController.view];                
-    }
-    
-    [self.view bringSubviewToFront:latestPostController.view];
-    [latestPostController viewDidAppear:NO];
-}
-
-- (void)showFollowPost
-{
-    if (self.followPostController == nil){
-        self.followPostController = [[[FollowPostController alloc] init] autorelease];
-        self.followPostController.superController = self;
-        self.followPostController.view.frame = self.view.bounds;        
-        [self.view addSubview:followPostController.view];        
-    }
-    
-    [self.view bringSubviewToFront:followPostController.view];
-    [followPostController viewDidAppear:NO];
-}
-
-- (void)showAtMePost
-{
-    if (self.atMePostController == nil){
-        self.atMePostController = [[[AtMePostController alloc] init] autorelease];
-        self.atMePostController.superController = self;
-        self.atMePostController.view.frame = self.view.bounds;        
-        [self.view addSubview:atMePostController.view];                
-    }
-    
-    [self.view bringSubviewToFront:atMePostController.view];
-    [atMePostController viewDidAppear:NO];    
-}
-
-
-- (void)showPrivateMessage
-{
-    if (self.privateMessageController == nil){
-        self.privateMessageController = [[[PrivateMessageUserController alloc] init] autorelease];
-        self.privateMessageController.superController = self;
-        self.privateMessageController.view.frame = self.view.bounds;        
-        [self.view addSubview:privateMessageController.view];                
-    }
-
-    [self.view bringSubviewToFront:privateMessageController.view];
-    [privateMessageController viewDidAppear:NO];
-
-}
 
 - (void)showProductByPrice
 {
@@ -339,16 +258,6 @@ enum SELECT_POST_TYPE {
         [self showProductByRebate];
     }
 }
-
-- (void)clickCreatePost:(id)sender
-{
-    CreatePostController* vc = [[CreatePostController alloc] init];
-    vc.place = nil;
-    vc.navigationItem.title = NSLS(@"kCreatePostTitle");
-    [self.navigationController pushViewController:vc animated:YES];
-    [vc release];
-}
-
 @end
 
 
