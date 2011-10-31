@@ -17,6 +17,7 @@
 #import "AppManager.h"
 #import "UserService.h"
 #import "CategoryService.h"
+#import "PPTabBarController.h"
 
 // TODO remove all depedency class header files
 
@@ -36,10 +37,10 @@
 #define MAKE_FRIEND_PLACEID @"GroupBuy"
 
 @interface groupbuyAppDelegate : PPApplication <UIApplicationDelegate, UITabBarControllerDelegate, MobClickDelegate, EnterPlaceAppDelegate,
-LocalDataServiceDelegate, UserServiceDelegate> {
+LocalDataServiceDelegate, UserServiceDelegate, CityPickerDelegate> {
     
     UIWindow			*window;
-    UITabBarController	*tabBarController;
+    PPTabBarController	*tabBarController;
 	CoreDataManager		*dataManager;	
     
     LocalDataService    *localDataService;
@@ -63,7 +64,7 @@ LocalDataServiceDelegate, UserServiceDelegate> {
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow				*window;
-@property (nonatomic, retain) IBOutlet UITabBarController	*tabBarController;
+@property (nonatomic, retain) IBOutlet PPTabBarController	*tabBarController;
 @property (nonatomic, retain) CoreDataManager				*dataManager;
 @property (nonatomic, retain) LocalDataService              *localDataService;
 @property (nonatomic, retain) LocationService               *locationService;

@@ -9,6 +9,8 @@
 #import "groupbuyAppDelegate.h"
 #import "UIUtils.h"
 #import "ReviewRequest.h"
+#import "DeviceDetection.h"
+#import "UINavigationBarExt.h"
 
 // optional header files
 #import "AboutViewController.h"
@@ -189,25 +191,25 @@ enum
     
 	[UIUtils addViewController:[TopScoreController alloc]
 					 viewTitle:@"总排行"
-					 viewImage:@"chart_bar_down.png"
+					 viewImage:@"tu_06.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
 	[UIUtils addViewController:[CategoryController alloc]
 					 viewTitle:@"分类排行"
-					 viewImage:@"app_globe_24.png"
+					 viewImage:@"tu_07.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
     
 	[UIUtils addViewController:[SearchProductController alloc]
 					 viewTitle:@"时下最热"				 
-					 viewImage:@"brightness.png"
+					 viewImage:@"tu_10.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 	
 	shoppingListController = (ShoppingListController*)[UIUtils addViewController:[ShoppingListController alloc]
 					 viewTitle:@"团购通知"				 
-					 viewImage:@"cart_24.png"
+					 viewImage:@"tu_12.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];
     
@@ -216,17 +218,24 @@ enum
     if ([userService hasBindAccount]){
         [UIUtils addViewController:[MyInfoController alloc]
                          viewTitle:@"我"
-                         viewImage:@"man_24.png"
+                         viewImage:@"tu_13.png"
                   hasNavController:YES			
                    viewControllers:controllers];	        
     }
     else{
         [UIUtils addViewController:[RegisterController alloc]
                          viewTitle:@"我"
-                         viewImage:@"man_24.png"
+                         viewImage:@"tu_13.png"
                   hasNavController:YES			
                    viewControllers:controllers];	
     }
+    
+    [self.tabBarController setSelectedImageArray:[NSArray arrayWithObjects:
+                                                  @"tu_21.png", 
+                                                  @"tu_22.png", 
+                                                  @"tu_23.png", 
+                                                  @"tu_24.png", 
+                                                  @"tu_25.png", nil]];
 
 //	CommonProductListController* favorController = (CommonProductListController*)[UIUtils addViewController:[CommonProductListController alloc]
 //					 viewTitle:@"收藏"				 
@@ -255,7 +264,7 @@ enum
 //			   viewControllers:controllers];	
 	
 	tabBarController.viewControllers = controllers;
-    tabBarController.selectedIndex = TAB_TOP_SCORE;
+    tabBarController.selectedIndex = TAB_TOP_SCORE;        
 	
 	[controllers release];
 }
@@ -327,6 +336,10 @@ enum
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     [application setApplicationIconBadgeNumber:0];
+    [tabBarController setBarBackground:@"tu_209.png"];
+    [tabBarController setTextColor:[UIColor colorWithRed:194/255.0 green:188/255.0 blue:180/255.0 alpha:1.0]
+                   selectTextColor:[UIColor colorWithRed:210/255.0 green:217/255.0 blue:133/255.0 alpha:1.0]];
+    tabBarController.buttonStyle = TAB_BUTTON_STYLE_ICON;
     
 	NSLog(@"Application starts, launch option = %@", [launchOptions description]);	
 	
@@ -345,13 +358,9 @@ enum
     [self initAppService];    
     [self initProductService];
     [self initUserShopService];
-    [self initCategoryService];
+    [self initCategoryService];        
     
     [self showViewByUserStatus];
-    
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_5_0 
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbar.png"] forBarMetrics:UIBarMetricsDefault];
-#endif  
     
     [window makeKeyAndVisible];
 	
@@ -466,6 +475,32 @@ enum
 //    return YES;
 //}
 
+- (void)clearNavigationBar
+{
+    if ([DeviceDetection isOS5]){
+        [[UINavigationBar appearance] setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+    }
+    else{
+        GlobalSetNavBarBackground(@"");
+    }    
+}
+
+- (void)setNavigationBar
+{
+    if ([DeviceDetection isOS5]){
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbar.png"] forBarMetrics:UIBarMetricsDefault];
+    }
+    else{
+        GlobalSetNavBarBackground(@"navigationbar.png");
+    }
+}
+
+-(void) dealWithPickedCity:(NSString *)city
+{
+    [locationService setDefaultCity:city];
+    [self setNavigationBar];
+}
+
 #pragma mark - User Service Delegate
 - (void)checkDeviceResult:(int)result
 {
@@ -473,11 +508,17 @@ enum
 
     NSString *defaultCity = [locationService getDefaultCity];    
     if (defaultCity == nil) {
+        
+        [self clearNavigationBar];
+        
         CityPickerViewController *cityController = [[CityPickerViewController alloc]initWithCityName:defaultCity hasLeftButton:NO];
-        cityController.delegate = locationService;
+        cityController.delegate = self;
         cityController.hidesBottomBarWhenPushed = YES;
         [[[tabBarController viewControllers] objectAtIndex:0] pushViewController:cityController animated:YES];  
         [cityController release];
+    }
+    else{
+        [self setNavigationBar];
     }
 }
 
@@ -549,6 +590,7 @@ enum
 	[self initTabViewControllers];
     [tabBarController.view removeFromSuperview];
 	[window addSubview:tabBarController.view];
+    [tabBarController viewDidAppear:NO];
 }
 
 - (void)removeMainView {

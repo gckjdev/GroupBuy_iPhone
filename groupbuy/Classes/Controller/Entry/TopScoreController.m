@@ -8,7 +8,7 @@
 
 #import "TopScoreController.h"
 #import "ProductPriceDataLoader.h"
-
+#import "DeviceDetection.h"
 
 enum TOP_SCORE_TYPE {
     TOP_0_10,
@@ -63,6 +63,11 @@ enum TOP_SCORE_TYPE {
       nil]
     defaultSelectIndex:1];    
 
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    if ([DeviceDetection isOS5]){
+        [self clickSegControl:self.titleSegControl];
+    }
     
     [super viewDidLoad];
 }
@@ -93,7 +98,8 @@ enum TOP_SCORE_TYPE {
         self.belowTenController.dataLoader = dataLoader;
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];
-        self.belowTenController.view.frame = self.view.bounds;        
+        self.belowTenController.view.frame = self.view.bounds;     
+        self.belowTenController.view.backgroundColor = [UIColor clearColor];
         [self.view addSubview:self.belowTenController.view];                
     }
     
@@ -112,6 +118,7 @@ enum TOP_SCORE_TYPE {
         self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
                                         titleSegControl.selectedSegmentIndex];
         self.aboveTenController.view.frame = self.view.bounds;        
+        self.aboveTenController.view.backgroundColor = [UIColor clearColor];
         [self.view addSubview:self.aboveTenController.view];                
     }
     
