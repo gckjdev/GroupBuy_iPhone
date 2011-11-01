@@ -98,6 +98,8 @@
     controller.categoryId = categoryId;
     controller.categoryName = categoryName;
     
+    [controller setNavigationLeftButton:nil imageName:@"tu_63.png" action:@selector(clickBack:)];
+    
     [self.navigationController pushViewController:controller animated:YES];
 }
 
