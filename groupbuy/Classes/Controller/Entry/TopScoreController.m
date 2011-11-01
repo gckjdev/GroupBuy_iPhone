@@ -8,6 +8,7 @@
 
 #import "TopScoreController.h"
 #import "ProductPriceDataLoader.h"
+#import "PPSegmentControl.h"
 #import "DeviceDetection.h"
 
 enum TOP_SCORE_TYPE {
@@ -54,19 +55,33 @@ enum TOP_SCORE_TYPE {
 
 - (void)viewDidLoad
 {
-    [self createNavigationTitleToolbar:
+    NSArray *titleArray = 
      [NSArray arrayWithObjects:
       @"0－10元",
       @"10元以上",
       @"发布日期",
       @"周边附近",
-      nil]
-    defaultSelectIndex:1];    
+      nil];  
+        
+    UIImage *bgImage = [[UIImage imageNamed:@"tu_46.png"] stretchableImageWithLeftCapWidth:11 topCapHeight:0];
+    UIImage *selectImage = [[UIImage imageNamed:@"tu_39-15.png"] stretchableImageWithLeftCapWidth:11 topCapHeight:0];
+    self.titlePPSegControl = [[PPSegmentControl alloc] initWithItems:titleArray defaultSelectIndex:1 bgImage:bgImage selectedImage:selectImage];
+    [self.titlePPSegControl  setSegmentFrame:CGRectMake(0, 0, 305, 23)];
+    [self.titlePPSegControl  setSelectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:134/255 green:148/255 blue:67/255 alpha:1]];
+    [self.titlePPSegControl  setUnselectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:111/255 green:104/255 blue:94/255 alpha:1]];
+    [self.titlePPSegControl  setSelectedSegmentFrame:CGRectMake(0, 0, titlePPSegControl.buttonWidth, 32) image:selectImage];
+    [self.titlePPSegControl  setViewController:self];
+
+    [self.titlePPSegControl setXOffset:0 YOffset:10];
+    self.navigationItem.titleView = self.titlePPSegControl;     
+    [self.titlePPSegControl  setClickActionBlock:(^(PPSegmentControl* segControl, UIViewController* viewController){
+        [(TopScoreController *)viewController clickSegControl:segControl];
+    })];   
 
     self.view.backgroundColor = [UIColor clearColor];
     
     if ([DeviceDetection isOS5]){
-        [self clickSegControl:self.titleSegControl];
+        [self clickSegControl:self.titlePPSegControl];
     }
     
     [super viewDidLoad];
@@ -96,8 +111,10 @@ enum TOP_SCORE_TYPE {
         ProductTopScoreBelowTenDataLoader *dataLoader = [[[ProductTopScoreBelowTenDataLoader alloc] init] autorelease];
         dataLoader.categoryId = self.categoryId;
         self.belowTenController.dataLoader = dataLoader;
-        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
-                                        titleSegControl.selectedSegmentIndex];
+        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];
+        self.belowTenController.view.frame = self.view.bounds;        
+        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:
+                                        [titlePPSegControl selectedSegmentIndex]];
         self.belowTenController.view.frame = self.view.bounds;     
         self.belowTenController.view.backgroundColor = [UIColor clearColor];
         [self.view addSubview:self.belowTenController.view];                
@@ -115,8 +132,7 @@ enum TOP_SCORE_TYPE {
         ProductTopScoreAboveTenDataLoader *dataLoader = [[[ProductTopScoreAboveTenDataLoader alloc] init] autorelease];
         dataLoader.categoryId = self.categoryId;
         self.aboveTenController.dataLoader = dataLoader;
-        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
-                                        titleSegControl.selectedSegmentIndex];
+        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];
         self.aboveTenController.view.frame = self.view.bounds;        
         self.aboveTenController.view.backgroundColor = [UIColor clearColor];
         [self.view addSubview:self.aboveTenController.view];                
@@ -134,8 +150,7 @@ enum TOP_SCORE_TYPE {
         ProductStartDateDataLoader *dataLoader = [[[ProductStartDateDataLoader alloc] init] autorelease];
         dataLoader.categoryId = self.categoryId;
         self.topNewController.dataLoader = dataLoader;
-        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
-                                        titleSegControl.selectedSegmentIndex];
+        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];
         self.topNewController.view.frame = self.view.bounds;        
         [self.view addSubview:self.topNewController.view];                
     }
@@ -152,8 +167,7 @@ enum TOP_SCORE_TYPE {
         ProductDistanceDataLoader *dataLoader = [[[ProductDistanceDataLoader alloc] init] autorelease];
         dataLoader.categoryId = self.categoryId;
         self.distanceController.dataLoader = dataLoader;
-        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
-                                        titleSegControl.selectedSegmentIndex];        
+        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];       
         self.distanceController.view.frame = self.view.bounds;        
         [self.view addSubview:distanceController.view];                
     }
@@ -165,16 +179,16 @@ enum TOP_SCORE_TYPE {
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self clickSegControl:self.titleSegControl];
+    [self clickSegControl:self.titlePPSegControl];
     [super viewDidAppear:animated];
 }
 
 - (void)clickSegControl:(id)sender
 {
     
-    UISegmentedControl* segControl = sender;
+    PPSegmentControl* segControl = sender;
     
-    switch (segControl.selectedSegmentIndex) {
+    switch ([segControl selectedSegmentIndex]) {
 
         case TOP_0_10:
             [self showTopZeroTen];
