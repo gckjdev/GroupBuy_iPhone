@@ -17,7 +17,7 @@ enum TOP_SCORE_TYPE {
     TOP_DISTANCE
 };
 
-#define TOP_Y       40
+#define TOP_Y       25
 
 @implementation CategoryTopScoreController
 
@@ -68,7 +68,7 @@ enum TOP_SCORE_TYPE {
     UIImage *bgImage = [[UIImage imageNamed:@"tu_46.png"] stretchableImageWithLeftCapWidth:11 topCapHeight:0];
     UIImage *selectImage = [[UIImage imageNamed:@"tu_39-15.png"] stretchableImageWithLeftCapWidth:11 topCapHeight:0];
     self.titlePPSegControl = [[PPSegmentControl alloc] initWithItems:titleArray defaultSelectIndex:1 bgImage:bgImage selectedImage:selectImage];
-    [self.titlePPSegControl  setSegmentFrame:CGRectMake(0, 5, 320, 23)];
+    [self.titlePPSegControl  setSegmentFrame:CGRectMake(7, 5, 320-7*2, 23)];
     [self.titlePPSegControl  setSelectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:134/255 green:148/255 blue:67/255 alpha:1]];
     [self.titlePPSegControl  setUnselectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:111/255 green:104/255 blue:94/255 alpha:1]];
     [self.titlePPSegControl  setSelectedSegmentFrame:CGRectMake(0, 0, titlePPSegControl.buttonWidth, 32) image:selectImage];
@@ -77,7 +77,10 @@ enum TOP_SCORE_TYPE {
     [self.titlePPSegControl  setClickActionBlock:(^(PPSegmentControl* segControl, UIViewController* viewController){
         [(CategoryTopScoreController *)viewController clickSegControl:segControl];
     })];   
+    
+    
     [self.view addSubview:self.titlePPSegControl];
+    [self clickSegControl:titlePPSegControl];
     
 }
 

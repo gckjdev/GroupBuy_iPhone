@@ -150,7 +150,7 @@
     [cell setAccessoryView:accessoryView];
    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
+        
     return cell;
 }
 

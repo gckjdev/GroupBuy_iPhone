@@ -79,10 +79,9 @@ enum TOP_SCORE_TYPE {
     })];   
 
     self.view.backgroundColor = [UIColor clearColor];
+    [self setBackgroundImageName:@"background.png"];
     
-    if ([DeviceDetection isOS5]){
-        [self clickSegControl:self.titlePPSegControl];
-    }
+    [self clickSegControl:self.titlePPSegControl];
     
     [super viewDidLoad];
 }
