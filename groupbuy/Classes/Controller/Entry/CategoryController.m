@@ -103,6 +103,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
 	UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
@@ -114,23 +115,41 @@
     //cell.textLabel.text = name;
     //cell.detailTextLabel.text = [NSString stringWithFormat:@"(%@)               ", number];
     
+    int cellHeight = 56;
+    
     UILabel *nameLabel = [[UILabel alloc] init];
-    nameLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:22];
+    nameLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
     CGSize size = [name sizeWithFont:nameLabel.font];
-    CGFloat x = 10;
-    CGFloat y = (56 - size.height) / 2;
+    CGFloat x = 26;
+    CGFloat y = (cellHeight - size.height) / 2;
     nameLabel.frame = CGRectMake(x, y, size.width, size.height);
     nameLabel.text = name;
+    nameLabel.textColor = [UIColor colorWithRed:111/255.0 green:104/255.0 blue:94/255.0 alpha:1.0];
     [cell.contentView addSubview:nameLabel];
+    [nameLabel release];
     
     x = x + size.width + 5;
     UILabel *numberLabel = [[UILabel alloc] init];
-    numberLabel.textColor = [UIColor grayColor];
+    numberLabel.textColor = [UIColor colorWithRed:207/255.0 green:207/255.0 blue:207/255.0 alpha:1.0];
     size = [number sizeWithFont:numberLabel.font];
-    y = (56 - size.height) / 2;
+    y = (cellHeight - size.height) / 2;
     numberLabel.frame = CGRectMake(x, y, size.width, size.height);
     numberLabel.text = number;
+    numberLabel.font = [UIFont systemFontOfSize:12];
     [cell.contentView addSubview:numberLabel];
+    [numberLabel release];
+    
+    // add line image
+    UIImage* dotlineImage = [UIImage imageNamed:@"tu_179.png"];
+    UIImageView* dotlineImageView = [[UIImageView alloc] initWithImage:dotlineImage];
+    dotlineImageView.frame = CGRectMake(7, cellHeight - dotlineImage.size.height, cell.contentView.bounds.size.width-7*2, dotlineImage.size.height);
+    [cell.contentView addSubview:dotlineImageView];
+    [dotlineImageView release];
+    
+    self.accessoryView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tu_105-51.png"]] autorelease];
+    [cell setAccessoryView:accessoryView];
+   
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
