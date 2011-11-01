@@ -9,6 +9,7 @@
 #import "TopScoreController.h"
 #import "ProductPriceDataLoader.h"
 #import "PPSegmentControl.h"
+#import "DeviceDetection.h"
 
 enum TOP_SCORE_TYPE {
     TOP_0_10,
@@ -76,6 +77,13 @@ enum TOP_SCORE_TYPE {
     [self.titlePPSegControl  setClickActionBlock:(^(PPSegmentControl* segControl, UIViewController* viewController){
         [(TopScoreController *)viewController clickSegControl:segControl];
     })];   
+
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    if ([DeviceDetection isOS5]){
+        [self clickSegControl:self.titlePPSegControl];
+    }
+    
     [super viewDidLoad];
 }
 
@@ -105,6 +113,10 @@ enum TOP_SCORE_TYPE {
         self.belowTenController.dataLoader = dataLoader;
         self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];
         self.belowTenController.view.frame = self.view.bounds;        
+        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:
+                                        [titlePPSegControl selectedSegmentIndex]];
+        self.belowTenController.view.frame = self.view.bounds;     
+        self.belowTenController.view.backgroundColor = [UIColor clearColor];
         [self.view addSubview:self.belowTenController.view];                
     }
     
@@ -122,6 +134,7 @@ enum TOP_SCORE_TYPE {
         self.aboveTenController.dataLoader = dataLoader;
         self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];
         self.aboveTenController.view.frame = self.view.bounds;        
+        self.aboveTenController.view.backgroundColor = [UIColor clearColor];
         [self.view addSubview:self.aboveTenController.view];                
     }
     
