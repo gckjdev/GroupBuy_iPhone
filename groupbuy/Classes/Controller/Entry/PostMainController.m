@@ -71,8 +71,9 @@ enum SELECT_POST_TYPE {
         self.priceController = [[[CommonProductListController alloc] init] autorelease];        
         self.priceController.superController = self;
         self.priceController.dataLoader = [[[ProductPriceDataLoader alloc] init] autorelease];
-        self.priceController.type = [titleSegControl titleForSegmentAtIndex:
-                                                titleSegControl.selectedSegmentIndex];
+        self.priceController.type = [titlePPSegControl titleForSegmentAtIndex:
+                                                [titlePPSegControl selectedSegmentIndex]];
+
         self.priceController.view.frame = self.view.bounds;        
         [self.view addSubview:priceController.view];                
     }
@@ -88,8 +89,9 @@ enum SELECT_POST_TYPE {
         self.rebateController = [[[CommonProductListController alloc] init] autorelease];        
         self.rebateController.superController = self;
         self.rebateController.dataLoader = [[[ProductRebateDataLoader alloc] init] autorelease];
-        self.rebateController.type = [titleSegControl titleForSegmentAtIndex:
-                                     titleSegControl.selectedSegmentIndex];        
+       
+        self.rebateController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];   
+        
         self.rebateController.view.frame = self.view.bounds;        
         [self.view addSubview:rebateController.view];                
     }
@@ -105,8 +107,7 @@ enum SELECT_POST_TYPE {
         self.distanceController = [[[CommonProductListController alloc] init] autorelease];        
         self.distanceController.superController = self;
         self.distanceController.dataLoader = [[[ProductDistanceDataLoader alloc] init] autorelease];
-        self.distanceController.type = [titleSegControl titleForSegmentAtIndex:
-                                      titleSegControl.selectedSegmentIndex];        
+        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];       
         self.distanceController.view.frame = self.view.bounds;        
         [self.view addSubview:distanceController.view];                
     }
@@ -122,8 +123,7 @@ enum SELECT_POST_TYPE {
         self.boughtController = [[[CommonProductListController alloc] init] autorelease];        
         self.boughtController.superController = self;
         self.boughtController.dataLoader = [[[ProductBoughtDataLoader alloc] init] autorelease];
-        self.boughtController.type = [titleSegControl titleForSegmentAtIndex:
-                                        titleSegControl.selectedSegmentIndex];                
+        self.boughtController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];               
         self.boughtController.view.frame = self.view.bounds;        
         [self.view addSubview:boughtController.view];                
     }
@@ -169,7 +169,7 @@ enum SELECT_POST_TYPE {
 //    self.navigationItem.rightBarButtonItem = newPostButton;
 //    [newPostButton release];
     
-    [self createNavigationTitleToolbar:
+    [self createDefaultNavigationTitleToolbar:
                     [NSArray arrayWithObjects:
                      @"今日",
                      @"所有",
@@ -186,7 +186,7 @@ enum SELECT_POST_TYPE {
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self clickSegControl:self.titleSegControl];
+    [self clickSegControl:self.titlePPSegControl];
     [super viewDidAppear:animated];
 }
 
@@ -235,23 +235,23 @@ enum SELECT_POST_TYPE {
 - (void)clickSegControl:(id)sender
 {
     
-    UISegmentedControl* segControl = sender;
+    PPSegmentControl* segControl = sender;
     
-    [GroupBuyReport reportSegControlClick:segControl];
-
-    if (segControl.selectedSegmentIndex == SELECT_BOUGHT){
+    [GroupBuyReport reportPPSegControlClick:segControl];
+    NSInteger index = [segControl selectedSegmentIndex];
+    if (index == SELECT_BOUGHT){
         [self showProductByBought];
     }
-    else if (segControl.selectedSegmentIndex == SELECT_TODAY){
+    else if (index == SELECT_TODAY){
         [self showProductByToday];
     }
-    else if (segControl.selectedSegmentIndex == SELECT_CATEGORY){
+    else if (index == SELECT_CATEGORY){
         [self showProductByCategory];
     }
-    else if (segControl.selectedSegmentIndex == SELECT_PRICE){
+    else if (index == SELECT_PRICE){
         [self showProductByPrice];
     }    
-    else if (segControl.selectedSegmentIndex == SELECT_DISTANCE){
+    else if (index == SELECT_DISTANCE){
         [self showProductByDistance];
     }
     else{
