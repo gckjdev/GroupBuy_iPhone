@@ -67,8 +67,8 @@ enum TOP_SCORE_TYPE {
     UIImage *selectImage = [[UIImage imageNamed:@"tu_39-15.png"] stretchableImageWithLeftCapWidth:6 topCapHeight:0];
     self.titlePPSegControl = [[PPSegmentControl alloc] initWithItems:titleArray defaultSelectIndex:1 bgImage:bgImage selectedImage:selectImage];
     [self.titlePPSegControl  setSegmentFrame:CGRectMake(0, 0, 305, 23)];
-    [self.titlePPSegControl  setSelectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:134/255 green:148/255 blue:67/255 alpha:1]];
-    [self.titlePPSegControl  setUnselectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:111/255 green:104/255 blue:94/255 alpha:1]];
+    [self.titlePPSegControl  setSelectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:134/255.0 green:148/255.0 blue:67/255.0 alpha:1.0]];
+    [self.titlePPSegControl  setUnselectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:111/255.0 green:104/255.0 blue:94/255.0 alpha:1]];
     [self.titlePPSegControl  setSelectedSegmentFrame:CGRectMake(0, 0, titlePPSegControl.buttonWidth, 32) image:selectImage];
     [self.titlePPSegControl  setViewController:self];
 
