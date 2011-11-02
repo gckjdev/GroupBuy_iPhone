@@ -63,8 +63,8 @@ enum TOP_SCORE_TYPE {
       @"周边附近",
       nil];  
         
-    UIImage *bgImage = [[UIImage imageNamed:@"tu_46.png"] stretchableImageWithLeftCapWidth:11 topCapHeight:0];
-    UIImage *selectImage = [[UIImage imageNamed:@"tu_39-15.png"] stretchableImageWithLeftCapWidth:11 topCapHeight:0];
+    UIImage *bgImage = [[UIImage imageNamed:@"tu_46.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
+    UIImage *selectImage = [[UIImage imageNamed:@"tu_39-15.png"] stretchableImageWithLeftCapWidth:6 topCapHeight:0];
     self.titlePPSegControl = [[PPSegmentControl alloc] initWithItems:titleArray defaultSelectIndex:1 bgImage:bgImage selectedImage:selectImage];
     [self.titlePPSegControl  setSegmentFrame:CGRectMake(0, 0, 305, 23)];
     [self.titlePPSegControl  setSelectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:134/255 green:148/255 blue:67/255 alpha:1]];
@@ -102,6 +102,16 @@ enum TOP_SCORE_TYPE {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)onlyShowView:(UIView *)view
+{
+    [self.belowTenController.view setHidden:YES];
+    [self.aboveTenController.view setHidden:YES];
+    [self.topNewController.view setHidden:YES];
+    [self.distanceController.view setHidden:YES];
+    [view setHidden:NO];
+    [self.view bringSubviewToFront:view];
+}
+
 - (void)showTopZeroTen
 {
     if (self.belowTenController == nil){
@@ -118,8 +128,8 @@ enum TOP_SCORE_TYPE {
         self.belowTenController.view.backgroundColor = [UIColor clearColor];
         [self.view addSubview:self.belowTenController.view];                
     }
-    
-    [self.view bringSubviewToFront:self.belowTenController.view];
+    [self onlyShowView:self.belowTenController.view];
+    //[self.view bringSubviewToFront:self.belowTenController.view];
     [self.belowTenController viewDidAppear:NO];
 }
 
@@ -136,8 +146,8 @@ enum TOP_SCORE_TYPE {
         self.aboveTenController.view.backgroundColor = [UIColor clearColor];
         [self.view addSubview:self.aboveTenController.view];                
     }
-    
-    [self.view bringSubviewToFront:self.aboveTenController.view];
+    [self onlyShowView:self.aboveTenController.view];
+    //[self.view bringSubviewToFront:self.aboveTenController.view];
     [self.aboveTenController viewDidAppear:NO];
 }
 
@@ -153,8 +163,8 @@ enum TOP_SCORE_TYPE {
         self.topNewController.view.frame = self.view.bounds;        
         [self.view addSubview:self.topNewController.view];                
     }
-    
-    [self.view bringSubviewToFront:self.topNewController.view];
+    [self onlyShowView:self.topNewController.view];
+    //[self.view bringSubviewToFront:self.topNewController.view];
     [self.topNewController viewDidAppear:NO];
 }
 
@@ -170,8 +180,8 @@ enum TOP_SCORE_TYPE {
         self.distanceController.view.frame = self.view.bounds;        
         [self.view addSubview:distanceController.view];                
     }
-    
-    [self.view bringSubviewToFront:distanceController.view];
+    [self onlyShowView:self.distanceController.view];
+    //[self.view bringSubviewToFront:distanceController.view];
     [distanceController viewDidAppear:NO];
     
 }
