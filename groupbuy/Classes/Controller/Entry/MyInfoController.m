@@ -169,6 +169,7 @@ enum{
     
     self.navigationItem.title = @"我的设置";
     [self setGroupBuyNavigationTitle:self.navigationItem.title];
+    [self setGroupBuyNavigationRightButton:@"保存" action:@selector(clickSave:)];
 
     logoutButton.hidden = YES;
     [self setBackgroundImageName:@"background.png"];
@@ -180,8 +181,6 @@ enum{
     [self updateLoginId];
     [self updateImageView];
     [self initLogoutButton];
-    
-    [self setNavigationRightButton:NSLS(@"Save") action:@selector(clickSave:)];    
 }
 
 - (void)viewDidAppear:(BOOL)animated
