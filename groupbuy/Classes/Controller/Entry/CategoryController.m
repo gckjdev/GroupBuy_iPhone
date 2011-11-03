@@ -12,6 +12,7 @@
 #import "CategoryTopScoreController.h"
 #import "GroupBuyNetworkConstants.h"
 #import "groupbuyAppDelegate.h"
+#import "GroupBuyControllerExt.h"
 
 @implementation CategoryController
 
@@ -148,8 +149,7 @@
     [cell.contentView addSubview:dotlineImageView];
     [dotlineImageView release];
     
-    self.accessoryView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tu_105-51.png"]] autorelease];
-    [cell setAccessoryView:accessoryView];
+    [cell setAccessoryView:[PPViewController groupbuyAccessoryView]];
    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
         

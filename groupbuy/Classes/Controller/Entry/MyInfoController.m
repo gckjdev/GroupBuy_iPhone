@@ -26,6 +26,7 @@
 
 #import "CommonProductListController.h"
 #import "ProductPriceDataLoader.h"
+#import "GroupBuyControllerExt.h"
 
 enum{
     ACTION_SELECT_AVATAR,
@@ -261,15 +262,27 @@ enum{
     
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//	return [self getSectionView:tableView section:section];
-//}
+#define SECTION_HEIGHT 25
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//	return sectionImageHeight;
-//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{    
+    UIView* view = [[[UIView alloc] init] autorelease];
+    view.backgroundColor = [UIColor clearColor];
+    
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 200, SECTION_HEIGHT)];
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor colorWithRed:190/255.0 green:184/255.0 blue:175/255.0 alpha:1.0];
+    label.font = [UIFont boldSystemFontOfSize:12];
+    label.text = [self tableView:tableView titleForHeaderInSection:section];
+    [view addSubview:label];
+    [label release];
+	return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+	return SECTION_HEIGHT;
+}
 
 //- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 //{
@@ -338,6 +351,8 @@ enum{
     }    
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryView = [PPViewController groupbuyAccessoryView];
+
 }
 
 - (void)setPasswordCell:(UITableViewCell*)cell
@@ -355,6 +370,8 @@ enum{
     }    
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryView = [PPViewController groupbuyAccessoryView];
+
 }
 
 
@@ -365,6 +382,8 @@ enum{
     cell.detailTextLabel.text = [[userService user] mobile];    
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryView = [PPViewController groupbuyAccessoryView];
+
 }
 
 - (void)setGenderCell:(UITableViewCell*)cell
@@ -374,6 +393,8 @@ enum{
     cell.detailTextLabel.text = [self genderTextByGender:[[userService user] gender]];    
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryView = [PPViewController groupbuyAccessoryView];
+
 }
 
 - (NSString*)getBindText:(BOOL)bindFlag
@@ -401,13 +422,17 @@ enum{
     cell.textLabel.text = @"城市";    
     cell.detailTextLabel.text = [GlobalGetLocationService() getDefaultCity];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;    
+    cell.accessoryView = [PPViewController groupbuyAccessoryView];
+
 }
 
 - (void)setCellInfo:(UITableViewCell*)cell text:(NSString*)text
 {
     cell.textLabel.text = text;    
     cell.detailTextLabel.text = @"";
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;        
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;   
+    cell.accessoryView = [PPViewController groupbuyAccessoryView];
+
 }
 
 - (void)setSinaCell:(UITableViewCell*)cell
@@ -417,7 +442,14 @@ enum{
     
     BOOL bindFlag = [userService hasUserBindSina];
     cell.detailTextLabel.text = [self getBindText:bindFlag];
-    cell.accessoryType = [self getBindAccessoryType:bindFlag];    
+    if (bindFlag){
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.accessoryView = nil;
+    }
+    else{
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.accessoryView = [PPViewController groupbuyAccessoryView];
+    }
 }
 
 - (void)setQQCell:(UITableViewCell*)cell
@@ -427,7 +459,14 @@ enum{
     
     BOOL bindFlag = [userService hasUserBindQQ];
     cell.detailTextLabel.text = [self getBindText:bindFlag];
-    cell.accessoryType = [self getBindAccessoryType:bindFlag];    
+    if (bindFlag){
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.accessoryView = nil;
+    }
+    else{
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.accessoryView = [PPViewController groupbuyAccessoryView];
+    }
     
 }
 
@@ -438,10 +477,16 @@ enum{
     
     BOOL bindFlag = [userService hasUserBindRenren];
     cell.detailTextLabel.text = [self getBindText:bindFlag];
-    cell.accessoryType = [self getBindAccessoryType:bindFlag];    
+    if (bindFlag){
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.accessoryView = nil;
+    }
+    else{
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.accessoryView = [PPViewController groupbuyAccessoryView];
+    }
     
 }
-
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -451,6 +496,9 @@ enum{
 	if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
 	}
+    
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.accessoryView = nil;
 	
     switch (indexPath.section) {
         case SECTION_INFO:
@@ -534,6 +582,11 @@ enum{
         default:            
             break;
     }        
+    
+    cell.textLabel.textColor = [UIColor colorWithRed:111/255.0 green:104/255.0 blue:94/255.0 alpha:1.0];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+    cell.detailTextLabel.textColor = [UIColor colorWithRed:163/255.0 green:155/255.0 blue:143/255.0 alpha:1.0];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
 	
 	return cell;
 	

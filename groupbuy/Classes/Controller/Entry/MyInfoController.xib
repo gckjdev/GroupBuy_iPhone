@@ -63,7 +63,7 @@
 						<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
 						<float key="IBUIRowHeight">44</float>
 						<float key="IBUISectionHeaderHeight">10</float>
-						<float key="IBUISectionFooterHeight">10</float>
+						<float key="IBUISectionFooterHeight">1</float>
 					</object>
 					<object class="IBUILabel" id="581395272">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -71,7 +71,7 @@
 						<string key="NSFrame">{{131, 18}, {170, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="197299049"/>
+						<reference key="NSNextKeyView" ref="839655419"/>
 						<reference key="IBUIBackgroundColor" ref="812035777"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -92,7 +92,7 @@
 							<int key="traits">0</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="1071917601">
+						<object class="NSFont" key="IBUIFont" id="583261246">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
@@ -138,7 +138,7 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="331352226">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="769590913">
 							<string key="name">Helvetica-Bold</string>
 							<string key="family">Helvetica</string>
 							<int key="traits">2</int>
@@ -156,7 +156,7 @@
 						<string key="NSFrame">{{20, 18}, {50, 50}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="935684441"/>
+						<reference key="NSNextKeyView" ref="505145926"/>
 						<reference key="IBUIBackgroundColor" ref="812035777"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -168,10 +168,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="178430951"/>
-						<reference key="IBUIFontDescription" ref="331352226"/>
+						<reference key="IBUIFontDescription" ref="769590913"/>
 						<reference key="IBUIFont" ref="123995191"/>
 					</object>
-					<object class="IBUIImageView" id="197299049">
+					<object class="IBUIImageView" id="839655419">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{49, 47}, {28, 28}}</string>
@@ -185,7 +185,7 @@
 							<string key="NSResourceName">tu_164.png</string>
 						</object>
 					</object>
-					<object class="IBUILabel" id="935684441">
+					<object class="IBUILabel" id="505145926">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{87, 18}, {42, 21}}</string>
@@ -210,7 +210,7 @@
 							<int key="type">1</int>
 							<double key="pointSize">15</double>
 						</object>
-						<reference key="IBUIFont" ref="1071917601"/>
+						<reference key="IBUIFont" ref="583261246"/>
 					</object>
 				</object>
 				<string key="NSFrame">{{0, 64}, {320, 367}}</string>
@@ -321,8 +321,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="804614291"/>
 							<reference ref="742215703"/>
-							<reference ref="197299049"/>
-							<reference ref="935684441"/>
+							<reference ref="839655419"/>
+							<reference ref="505145926"/>
 							<reference ref="581395272"/>
 							<reference ref="518480667"/>
 							<reference ref="599249118"/>
@@ -359,12 +359,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">28</int>
-						<reference key="object" ref="197299049"/>
+						<reference key="object" ref="839655419"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">29</int>
-						<reference key="object" ref="935684441"/>
+						<reference key="object" ref="505145926"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>
