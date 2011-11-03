@@ -2659,6 +2659,47 @@
 			path = Password;
 			sourceTree = "<group>";
 		};
+		CAD0480014622C2D0071F8B4 /* ShoppingItem */ = {
+			isa = PBXGroup;
+			children = (
+				887A5C8213FF89CC00FF3457 /* AddShoppingItemController.h */,
+				887A5C8313FF89CC00FF3457 /* AddShoppingItemController.m */,
+				887A5C8413FF89CC00FF3457 /* AddShoppingItemController.xib */,
+				887A5C8713FF89EF00FF3457 /* ShoppingListController.h */,
+				887A5C8813FF89EF00FF3457 /* ShoppingListController.m */,
+				887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */,
+				CACECC921408ECAE00C90A99 /* ShoppingListCell.h */,
+				CACECC931408ECAE00C90A99 /* ShoppingListCell.m */,
+				CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */,
+				887A5C8D13FF94C600FF3457 /* ShoppingCategoryCell.h */,
+				887A5C8E13FF94C600FF3457 /* ShoppingCategoryCell.m */,
+				887A5C8F13FF94C600FF3457 /* ShoppingCategoryCell.xib */,
+				CA134585140743D70009C5C6 /* ShoppingSubCategoryCell.h */,
+				CA134586140743D80009C5C6 /* ShoppingSubCategoryCell.m */,
+				CA134587140743D80009C5C6 /* ShoppingSubCategoryCell.xib */,
+				887A5C9213FF95EB00FF3457 /* ShoppingKeywordCell.h */,
+				887A5C9313FF95EB00FF3457 /* ShoppingKeywordCell.m */,
+				887A5C9413FF95EB00FF3457 /* ShoppingKeywordCell.xib */,
+				887A5C9713FF961900FF3457 /* ShoppingValidPeriodCell.h */,
+				887A5C9813FF961900FF3457 /* ShoppingValidPeriodCell.m */,
+				887A5C9913FF961900FF3457 /* ShoppingValidPeriodCell.xib */,
+				887A5C9C13FF964C00FF3457 /* SliderCell.h */,
+				887A5C9D13FF964C00FF3457 /* SliderCell.m */,
+				887A5C9E13FF964C00FF3457 /* SliderCell.xib */,
+			);
+			name = ShoppingItem;
+			sourceTree = "<group>";
+		};
+		CAD0480114622C750071F8B4 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CA1A9D7A13DD4E1F0072926A /* ProductDetailController.h */,
+				CA1A9D7B13DD4E1F0072926A /* ProductDetailController.m */,
+				CA1A9D7C13DD4E1F0072926A /* ProductDetailController.xib */,
+			);
+			name = ProductDetail;
+			sourceTree = "<group>";
+		};
 		CAD20DC0143D94B4004DF88F /* UIDeviceAdditions */ = {
 			isa = PBXGroup;
 			children = (
@@ -2798,6 +2839,8 @@
 		CADF6BBB13DAA4810060F438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CAD0480114622C750071F8B4 /* ProductDetail */,
+				CAD0480014622C2D0071F8B4 /* ShoppingItem */,
 				CA220EEE144FFA38005AFDC5 /* Common */,
 				CA220EEA144FF7BE005AFDC5 /* Utils */,
 				CAF4CC22142ECC6D001D5B4A /* TaobaoSearch */,
@@ -2824,39 +2867,12 @@
 				CADF6BC313DAA5770060F438 /* ProductTextCell.xib */,
 				CADF6BD813DB00CC0060F438 /* ProductPriceDataLoader.h */,
 				CADF6BD913DB00CC0060F438 /* ProductPriceDataLoader.m */,
-				CA1A9D7A13DD4E1F0072926A /* ProductDetailController.h */,
-				CA1A9D7B13DD4E1F0072926A /* ProductDetailController.m */,
-				CA1A9D7C13DD4E1F0072926A /* ProductDetailController.xib */,
 				CA1A9D8513DD6D410072926A /* ProductCategoryController.h */,
 				CA1A9D8613DD6D410072926A /* ProductCategoryController.m */,
 				CA1A9D8713DD6D420072926A /* ProductCategoryController.xib */,
 				CA3D08F613ED08D8003778D6 /* SearchProductController.h */,
 				CA3D08F713ED08D8003778D6 /* SearchProductController.m */,
 				CA3D08F813ED08D8003778D6 /* SearchProductController.xib */,
-				887A5C8213FF89CC00FF3457 /* AddShoppingItemController.h */,
-				887A5C8313FF89CC00FF3457 /* AddShoppingItemController.m */,
-				887A5C8413FF89CC00FF3457 /* AddShoppingItemController.xib */,
-				887A5C8713FF89EF00FF3457 /* ShoppingListController.h */,
-				887A5C8813FF89EF00FF3457 /* ShoppingListController.m */,
-				887A5C8913FF89EF00FF3457 /* ShoppingListController.xib */,
-				CACECC921408ECAE00C90A99 /* ShoppingListCell.h */,
-				CACECC931408ECAE00C90A99 /* ShoppingListCell.m */,
-				CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */,
-				887A5C8D13FF94C600FF3457 /* ShoppingCategoryCell.h */,
-				887A5C8E13FF94C600FF3457 /* ShoppingCategoryCell.m */,
-				887A5C8F13FF94C600FF3457 /* ShoppingCategoryCell.xib */,
-				CA134585140743D70009C5C6 /* ShoppingSubCategoryCell.h */,
-				CA134586140743D80009C5C6 /* ShoppingSubCategoryCell.m */,
-				CA134587140743D80009C5C6 /* ShoppingSubCategoryCell.xib */,
-				887A5C9213FF95EB00FF3457 /* ShoppingKeywordCell.h */,
-				887A5C9313FF95EB00FF3457 /* ShoppingKeywordCell.m */,
-				887A5C9413FF95EB00FF3457 /* ShoppingKeywordCell.xib */,
-				887A5C9713FF961900FF3457 /* ShoppingValidPeriodCell.h */,
-				887A5C9813FF961900FF3457 /* ShoppingValidPeriodCell.m */,
-				887A5C9913FF961900FF3457 /* ShoppingValidPeriodCell.xib */,
-				887A5C9C13FF964C00FF3457 /* SliderCell.h */,
-				887A5C9D13FF964C00FF3457 /* SliderCell.m */,
-				887A5C9E13FF964C00FF3457 /* SliderCell.xib */,
 				CA73498614208D04005C3CEE /* NewUserRegisterController.h */,
 				CA73498714208D04005C3CEE /* NewUserRegisterController.m */,
 				CA73498814208D04005C3CEE /* NewUserRegisterController.xib */,
