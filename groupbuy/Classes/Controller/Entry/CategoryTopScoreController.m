@@ -61,7 +61,8 @@ enum TOP_SCORE_TYPE {
 
     [super viewDidLoad];
     
-    self.navigationItem.title = self.categoryName;
+//    self.navigationItem.title = self.categoryName;
+    [self setGroupBuyNavigationTitle:self.categoryName];
     
     NSArray *titleArray = [NSArray arrayWithObjects:@"0－10元", @"10元以上", @"发布日期", @"周边附近", nil];
     

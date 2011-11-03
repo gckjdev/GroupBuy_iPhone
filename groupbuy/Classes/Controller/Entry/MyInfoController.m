@@ -168,6 +168,8 @@ enum{
 - (void)viewDidLoad {
     
     self.navigationItem.title = @"我的设置";
+    [self setGroupBuyNavigationTitle:self.navigationItem.title];
+
     logoutButton.hidden = YES;
     [self setBackgroundImageName:@"background.png"];
     
