@@ -430,6 +430,8 @@
 		CABCB5A113ED100D00F9BD2A /* SearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCB5A013ED100C00F9BD2A /* SearchHistory.m */; };
 		CACECC951408ECAE00C90A99 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACECC931408ECAE00C90A99 /* ShoppingListCell.m */; };
 		CACECC961408ECAE00C90A99 /* ShoppingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */; };
+		CAD0480514622ED40071F8B4 /* ProductDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD0480314622ED40071F8B4 /* ProductDetailCell.m */; };
+		CAD0480614622ED40071F8B4 /* ProductDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD0480414622ED40071F8B4 /* ProductDetailCell.xib */; };
 		CAD20DC5143D94B4004DF88F /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD20DC2143D94B4004DF88F /* NSString+MD5Addition.m */; };
 		CAD20DC6143D94B4004DF88F /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD20DC4143D94B4004DF88F /* UIDevice+IdentifierAddition.m */; };
 		CADDC6D613E438D70030F9FC /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = CADDC6D413E438D70030F9FC /* button.png */; };
@@ -1219,6 +1221,9 @@
 		CACECC921408ECAE00C90A99 /* ShoppingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListCell.h; sourceTree = "<group>"; };
 		CACECC931408ECAE00C90A99 /* ShoppingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListCell.m; sourceTree = "<group>"; };
 		CACECC941408ECAE00C90A99 /* ShoppingListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingListCell.xib; sourceTree = "<group>"; };
+		CAD0480214622ED30071F8B4 /* ProductDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailCell.h; sourceTree = "<group>"; };
+		CAD0480314622ED40071F8B4 /* ProductDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailCell.m; sourceTree = "<group>"; };
+		CAD0480414622ED40071F8B4 /* ProductDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailCell.xib; sourceTree = "<group>"; };
 		CAD20DC1143D94B4004DF88F /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
 		CAD20DC2143D94B4004DF88F /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		CAD20DC3143D94B4004DF88F /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
@@ -2696,6 +2701,9 @@
 				CA1A9D7A13DD4E1F0072926A /* ProductDetailController.h */,
 				CA1A9D7B13DD4E1F0072926A /* ProductDetailController.m */,
 				CA1A9D7C13DD4E1F0072926A /* ProductDetailController.xib */,
+				CAD0480214622ED30071F8B4 /* ProductDetailCell.h */,
+				CAD0480314622ED40071F8B4 /* ProductDetailCell.m */,
+				CAD0480414622ED40071F8B4 /* ProductDetailCell.xib */,
 			);
 			name = ProductDetail;
 			sourceTree = "<group>";
@@ -3434,6 +3442,7 @@
 				CA9CAECB145FE9D500D4AE85 /* tu_197@2x.png in Resources */,
 				CA9CAECC145FE9D500D4AE85 /* tu_201@2x.png in Resources */,
 				CA9CAECD145FE9D500D4AE85 /* tu_203@2x.png in Resources */,
+				CAD0480614622ED40071F8B4 /* ProductDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3757,6 +3766,7 @@
 				CA220EED144FF7F4005AFDC5 /* GroupBuyControllerExt.m in Sources */,
 				CA220EF1144FFA83005AFDC5 /* GroupBuyCommonViewController.m in Sources */,
 				CA8A379C145E3A8F0035ECB8 /* UINavigationBarExt.m in Sources */,
+				CAD0480514622ED40071F8B4 /* ProductDetailCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
