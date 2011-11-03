@@ -56,6 +56,7 @@
 
 - (void)viewDidLoad
 {
+    [self setGroupBuyNavigationTitle:@"分类排行"];
     [self setBackgroundImageName:@"background.png"];
     [super viewDidLoad];
 
@@ -98,11 +99,7 @@
     controller.categoryId = categoryId;
     controller.categoryName = categoryName;
     
-    [controller setNavigationLeftButton:nil 
-                              imageName:@"tu_63.png" 
-                                 action:@selector(clickBack:)
-                           hasEdgeInSet:YES];
-    
+    [controller setGroupBuyNavigationBackButton];    
     [self.navigationController pushViewController:controller animated:YES];
 }
 
