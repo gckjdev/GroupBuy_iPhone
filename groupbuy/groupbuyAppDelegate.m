@@ -477,22 +477,12 @@ enum
 
 - (void)clearNavigationBar
 {
-    if ([DeviceDetection isOS5]){
-        [[UINavigationBar appearance] setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-    }
-    else{
-        GlobalSetNavBarBackground(@"");
-    }    
+    GlobalSetNavBarBackground(nil);
 }
 
 - (void)setNavigationBar
 {
-    if ([DeviceDetection isOS5]){
-        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbar.png"] forBarMetrics:UIBarMetricsDefault];
-    }
-    else{
-        GlobalSetNavBarBackground(@"navigationbar.png");
-    }
+    GlobalSetNavBarBackground(@"navigationbar.png");
 }
 
 -(void) dealWithPickedCity:(NSString *)city
@@ -505,20 +495,23 @@ enum
 - (void)checkDeviceResult:(int)result
 {
     [self addMainView];
+    
 
     NSString *defaultCity = [locationService getDefaultCity];    
     if (defaultCity == nil) {
         
-        [self clearNavigationBar];
+//        [self clearNavigationBar];
         
         CityPickerViewController *cityController = [[CityPickerViewController alloc]initWithCityName:defaultCity hasLeftButton:NO];
         cityController.delegate = self;
-        cityController.hidesBottomBarWhenPushed = YES;
+//        cityController.useForGroupBuy = NO;
+//        cityController.hidesBottomBarWhenPushed = NO;
+        [cityController enableGroupBuySettings];
         [[[tabBarController viewControllers] objectAtIndex:0] pushViewController:cityController animated:YES];  
         [cityController release];
     }
     else{
-        [self setNavigationBar];
+
     }
 }
 
@@ -586,6 +579,9 @@ enum
 }
 
 - (void)addMainView {
+    
+    [self setNavigationBar];
+    
     // Init tab bar and window
 	[self initTabViewControllers];
     [tabBarController.view removeFromSuperview];

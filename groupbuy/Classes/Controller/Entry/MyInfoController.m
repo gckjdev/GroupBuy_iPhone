@@ -27,6 +27,15 @@
 #import "CommonProductListController.h"
 #import "ProductPriceDataLoader.h"
 #import "GroupBuyControllerExt.h"
+#import "UIImageUtil.h"
+#import "UITableViewCellUtil.h"
+#import "UINavigationBarExt.h"
+
+#define FIRST_CELL_IMAGE    @"tu_56.png"
+#define MIDDLE_CELL_IMAGE   @"tu_69.png"
+#define LAST_CELL_IMAGE     @"tu_86.png"
+
+#define TABLE_VIEW_FRAME        CGRectMake(8, 8, 304, 300)
 
 enum{
     ACTION_SELECT_AVATAR,
@@ -81,11 +90,13 @@ enum{
 
 @implementation MyInfoController
 @synthesize avatarImageView;
+@synthesize tableBackgroundImageView;
 @synthesize logoutButton;
 
 @synthesize loginIdLabel;
 @synthesize loginIdTypeLabel;
 @synthesize avatarView;
+@synthesize topBackgroundImageView;
 @synthesize nicknameLabel;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -169,9 +180,17 @@ enum{
 - (void)viewDidLoad {
     
     self.navigationItem.title = @"我的设置";
+    
     [self setGroupBuyNavigationTitle:self.navigationItem.title];
     [self setGroupBuyNavigationRightButton:@"保存" action:@selector(clickSave:)];
+    
+//    [self setFirstCellImageByView:[UIImage strectchableImageView:@"tu_56.png" viewWidth:300]];
+//    [self setMiddleCellImageByView:[UIImage strectchableImageView:@"tu_69.png" viewWidth:300]];
+//    [self setLastCellImageByView:[UIImage strectchableImageView:@"tu_68.png" viewWidth:300]];
 
+    [self.topBackgroundImageView setImage:[UIImage strectchableTopImageName:@"tu_201.png"]];
+    [self.tableBackgroundImageView setImage:[UIImage strectchableTopImageName:@"tu_203.png"]];
+    
     logoutButton.hidden = YES;
     [self setBackgroundImageName:@"background.png"];
     
@@ -186,6 +205,8 @@ enum{
 
 - (void)viewDidAppear:(BOOL)animated
 {
+//    GlobalSetNavBarBackground(@"navigationbar.png");
+    
     [self updateImageView];
     [super viewDidAppear:animated];
 }
@@ -208,6 +229,10 @@ enum{
 - (void)viewDidUnload {
     [self setAvatarImageView:nil];
     [self setLogoutButton:nil];
+    [topBackgroundImageView release];
+    topBackgroundImageView = nil;
+    [self setTopBackgroundImageView:nil];
+    [self setTableBackgroundImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -217,6 +242,9 @@ enum{
 - (void)dealloc {
     [avatarImageView release];
     [logoutButton release];
+    [topBackgroundImageView release];
+    [topBackgroundImageView release];
+    [tableBackgroundImageView release];
     [super dealloc];
 }
 
@@ -262,14 +290,14 @@ enum{
     
 }
 
-#define SECTION_HEIGHT 25
+#define SECTION_HEIGHT 40
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {    
     UIView* view = [[[UIView alloc] init] autorelease];
     view.backgroundColor = [UIColor clearColor];
     
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 200, SECTION_HEIGHT)];
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 200, SECTION_HEIGHT)];
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor colorWithRed:190/255.0 green:184/255.0 blue:175/255.0 alpha:1.0];
     label.font = [UIFont boldSystemFontOfSize:12];
@@ -296,16 +324,7 @@ enum{
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {    
-    switch (indexPath.section) {
-        case SECTION_INFO:
-            return 44;
-            
-        case SECTION_SNS:
-            return 44;
-            
-        default:            
-            return 44;
-    }
+    return 74/2;    // the height of background image
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -585,9 +604,19 @@ enum{
     
     cell.textLabel.textColor = [UIColor colorWithRed:111/255.0 green:104/255.0 blue:94/255.0 alpha:1.0];
     cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.detailTextLabel.textColor = [UIColor colorWithRed:163/255.0 green:155/255.0 blue:143/255.0 alpha:1.0];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
-	
+    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+
+    int count = [self tableView:self.dataTableView numberOfRowsInSection:indexPath.section];
+    [cell setCellBackgroundForRow:indexPath.row rowCount:count singleCellImage:nil firstCellImage:FIRST_CELL_IMAGE  middleCellImage:MIDDLE_CELL_IMAGE lastCellImage:LAST_CELL_IMAGE cellWidth:300];
+
+//    CGRect frame = cell.frame;
+//    frame.size.width = 200;
+//    frame.origin.x = 100;
+//    cell.frame = frame;    
+    
 	return cell;
 	
 }
@@ -596,9 +625,16 @@ enum{
 {
     NSString* city = [GlobalGetLocationService() getDefaultCity];
     CityPickerViewController* vc = [[CityPickerViewController alloc] initWithCityName:city hasLeftButton:YES];
-    vc.delegate = GlobalGetLocationService();
+    vc.delegate = self;
+    [vc enableGroupBuySettings];    
     [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController presentModalViewController:vc animated:YES];
     [vc release];
+}
+
+-(void) dealWithPickedCity:(NSString *)city
+{
+    [GlobalGetLocationService() setDefaultCity:city];    
 }
 
 - (void)actionDone:(int)resultCode
@@ -695,6 +731,9 @@ enum{
                     vc.inputText = [[userService user] nickName];
                     vc.navigationItem.title = NSLS(@"kEnterNickNameTitle");
                     vc.allowNull = NO;
+                    vc.noRoundRect = YES;
+                    [vc setGroupBuyNavigationBackButton];
+                    [vc setGroupBuyNavigationTitle:vc.navigationItem.title];
                     [vc setBackgroundImageName:@"background.png"];
                     [self.navigationController pushViewController:vc animated:YES];
                     [vc release];
@@ -709,7 +748,13 @@ enum{
                         vc.canReturn = YES;
                         vc.navigationItem.title = NSLS(@"修改密码");
                         [vc setBackgroundImageName:@"background.png"];
-                        [vc setNavigationLeftButton:NSLS(@"Back") action:@selector(clickBack:)];
+                        [vc setGroupBuyNavigationBackButton];
+                        [vc setGroupBuyNavigationTitle:vc.navigationItem.title];
+                        [vc setCellBackgroundFirstCellImage:FIRST_CELL_IMAGE
+                                            middleCellImage:MIDDLE_CELL_IMAGE
+                                              lastCellImage:LAST_CELL_IMAGE];
+                        [vc setTableViewFrame:CGRectMake(8, 8, 304, 300)];
+                        [vc setButtonBackgroundImage:@"tu_126-53.png"];
                         [self.navigationController pushViewController:vc animated:YES];
                         [vc release];                        
                     }
@@ -799,6 +844,9 @@ enum{
                     CommonProductListController* vc = [[CommonProductListController alloc] init];
                     vc.dataLoader = [[[ProductHistoryDataLoader alloc] init] autorelease];
                     vc.navigationItem.title = @"历史记录";
+                    [vc setBackgroundImageName:@"background.png"];
+                    [vc setGroupBuyNavigationBackButton];            
+                    [vc setGroupBuyNavigationTitle:vc.navigationItem.title];
                     [self.navigationController pushViewController:vc animated:YES];
                     [vc release];
                     
@@ -810,6 +858,9 @@ enum{
                     CommonProductListController* vc = [[CommonProductListController alloc] init];
                     vc.dataLoader = [[[ProductFavoriteDataLoader alloc] init] autorelease];
                     vc.navigationItem.title = @"收藏";
+                    [vc setBackgroundImageName:@"background.png"];
+                    [vc setGroupBuyNavigationBackButton];    
+                    [vc setGroupBuyNavigationTitle:vc.navigationItem.title];
                     [self.navigationController pushViewController:vc animated:YES];
                     [vc release];                    
                 }
@@ -949,8 +1000,49 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
     }
 }
 
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{		
+	NSLog(@"<sendSms> result=%d", result);	
+    GlobalSetNavBarBackground(@"navigationbar.png");
+	[self dismissModalViewControllerAnimated:YES];
+
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
+{	
+	NSString* text = nil;
+	
+	// Notifies users about errors associated with the interface
+	switch (result)
+	{
+		case MFMailComposeResultCancelled:
+			text = @"<MFMailComposeViewController.didFinishWithResult> Result: canceled";
+			break;
+		case MFMailComposeResultSaved:
+			text = @"<MFMailComposeViewController.didFinishWithResult> Result: saved";
+			break;
+		case MFMailComposeResultSent:
+			text = @"<MFMailComposeViewController.didFinishWithResult> Result: sent";
+			break;
+		case MFMailComposeResultFailed:
+			text = @"<MFMailComposeViewController.didFinishWithResult> Result: failed";
+			break;
+		default:
+			text = @"<MFMailComposeViewController.didFinishWithResult> Result: not sent";
+			break;
+	}
+	
+	NSLog(@"%@", text);
+    GlobalSetNavBarBackground(@"navigationbar.png");    
+	[self dismissModalViewControllerAnimated:YES];
+    
+}
+
+
 - (IBAction)clickFeedback:(id)sender
-{
+{    
+    GlobalSetNavBarBackground(nil);
+    
     [self sendEmailTo:[NSArray arrayWithObject:@"zz2010.support@gmail.com"] 
 		 ccRecipients:nil 
 		bccRecipients:nil 
@@ -984,11 +1076,17 @@ SaveUserSuccessHandler saveSuccessHandler = ^(PPViewController* viewController){
     
     switch (buttonIndex) {
         case BUTTON_SEND_BY_SMS:
+        {
+            GlobalSetNavBarBackground(nil);
             [self sendSms:@"" body:body];
+        }
             break;
             
         case BUTTON_SEND_BY_EMAIL:
+        {
+            GlobalSetNavBarBackground(nil);
             [self sendEmailTo:nil ccRecipients:nil bccRecipients:nil subject:subject body:body isHTML:NO delegate:self];
+        }
             break;
             
         default:
