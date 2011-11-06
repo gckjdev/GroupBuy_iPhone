@@ -548,6 +548,10 @@
 		CAE655D213DEBCB200182C79 /* reload_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655C913DEBCB200182C79 /* reload_24.png */; };
 		CAE655D313DEBCB200182C79 /* reload_48.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CA13DEBCB200182C79 /* reload_48.png */; };
 		CAE655D413DEBCB200182C79 /* reload_64.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE655CB13DEBCB200182C79 /* reload_64.png */; };
+		CAF45E89146682C700C6B65B /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF45E79146682C700C6B65B /* NSAttributedString+Attributes.m */; };
+		CAF45E8A146682C700C6B65B /* OHAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF45E7B146682C700C6B65B /* OHAttributedLabel.m */; };
+		CAF45E8B146682C700C6B65B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CAF45E7C146682C700C6B65B /* README.md */; };
+		CAF45E901466864000C6B65B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF45E8F1466863F00C6B65B /* CoreText.framework */; };
 		CAF4CC2C142ECC6D001D5B4A /* TaobaoSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4CC24142ECC6D001D5B4A /* TaobaoSearchController.m */; };
 		CAF4CC2D142ECC6D001D5B4A /* TaobaoSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF4CC25142ECC6D001D5B4A /* TaobaoSearchController.xib */; };
 		CAF4CC2E142ECC6D001D5B4A /* TaobaoSearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF4CC27142ECC6D001D5B4A /* TaobaoSearchResultCell.m */; };
@@ -1436,6 +1440,12 @@
 		CAE655C913DEBCB200182C79 /* reload_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_24.png; sourceTree = "<group>"; };
 		CAE655CA13DEBCB200182C79 /* reload_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_48.png; sourceTree = "<group>"; };
 		CAE655CB13DEBCB200182C79 /* reload_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload_64.png; sourceTree = "<group>"; };
+		CAF45E78146682C700C6B65B /* NSAttributedString+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Attributes.h"; sourceTree = "<group>"; };
+		CAF45E79146682C700C6B65B /* NSAttributedString+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Attributes.m"; sourceTree = "<group>"; };
+		CAF45E7A146682C700C6B65B /* OHAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHAttributedLabel.h; sourceTree = "<group>"; };
+		CAF45E7B146682C700C6B65B /* OHAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHAttributedLabel.m; sourceTree = "<group>"; };
+		CAF45E7C146682C700C6B65B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		CAF45E8F1466863F00C6B65B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		CAF4CC23142ECC6D001D5B4A /* TaobaoSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaobaoSearchController.h; sourceTree = "<group>"; };
 		CAF4CC24142ECC6D001D5B4A /* TaobaoSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaobaoSearchController.m; sourceTree = "<group>"; };
 		CAF4CC25142ECC6D001D5B4A /* TaobaoSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaobaoSearchController.xib; sourceTree = "<group>"; };
@@ -1467,6 +1477,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF45E901466864000C6B65B /* CoreText.framework in Frameworks */,
 				CA254EF91432249B005E8903 /* libz.dylib in Frameworks */,
 				CA254EF71432245C005E8903 /* libxml2.dylib in Frameworks */,
 				CA254EE714322257005E8903 /* MobileCoreServices.framework in Frameworks */,
@@ -1720,6 +1731,7 @@
 		CA5D136813D55A9F003CB28C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAF45E8F1466863F00C6B65B /* CoreText.framework */,
 				CA254EF81432249B005E8903 /* libz.dylib */,
 				CA254EF61432245C005E8903 /* libxml2.dylib */,
 				CA254EE614322257005E8903 /* MobileCoreServices.framework */,
@@ -1797,6 +1809,7 @@
 		CA6071C313D55EE000E0D0DC /* Common_Iphone */ = {
 			isa = PBXGroup;
 			children = (
+				CAF45E68146682B900C6B65B /* OHAttributedLabel */,
 				CA7A1EC91403AE84005651D6 /* JSON */,
 				CAE655BE13DE982400182C79 /* MobClick */,
 				CA1A9D7F13DD68790072926A /* WebView */,
@@ -3115,6 +3128,19 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		CAF45E68146682B900C6B65B /* OHAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				CAF45E78146682C700C6B65B /* NSAttributedString+Attributes.h */,
+				CAF45E79146682C700C6B65B /* NSAttributedString+Attributes.m */,
+				CAF45E7A146682C700C6B65B /* OHAttributedLabel.h */,
+				CAF45E7B146682C700C6B65B /* OHAttributedLabel.m */,
+				CAF45E7C146682C700C6B65B /* README.md */,
+			);
+			name = OHAttributedLabel;
+			path = ../OHAttributedLabel;
+			sourceTree = "<group>";
+		};
 		CAF4CC22142ECC6D001D5B4A /* TaobaoSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -3447,6 +3473,7 @@
 				CA9CAECD145FE9D500D4AE85 /* tu_203@2x.png in Resources */,
 				CAD0480614622ED40071F8B4 /* ProductDetailCell.xib in Resources */,
 				CABB72381462D4C4005A5F5B /* user_bg@2x.png in Resources */,
+				CAF45E8B146682C700C6B65B /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3771,6 +3798,8 @@
 				CA220EF1144FFA83005AFDC5 /* GroupBuyCommonViewController.m in Sources */,
 				CA8A379C145E3A8F0035ECB8 /* UINavigationBarExt.m in Sources */,
 				CAD0480514622ED40071F8B4 /* ProductDetailCell.m in Sources */,
+				CAF45E89146682C700C6B65B /* NSAttributedString+Attributes.m in Sources */,
+				CAF45E8A146682C700C6B65B /* OHAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
