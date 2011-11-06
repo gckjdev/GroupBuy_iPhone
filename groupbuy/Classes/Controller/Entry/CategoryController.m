@@ -123,7 +123,7 @@
     UILabel *nameLabel = [[UILabel alloc] init];
     nameLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
     CGSize size = [name sizeWithFont:nameLabel.font];
-    CGFloat x = 26;
+    CGFloat x = 10;
     CGFloat y = (cellHeight - size.height) / 2;
     nameLabel.frame = CGRectMake(x, y, size.width, size.height);
     nameLabel.text = name;
