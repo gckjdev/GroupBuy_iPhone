@@ -21,6 +21,10 @@
     UITextField *loginPasswordTextField;
 }
 
+@property (retain, nonatomic) IBOutlet UIImageView *accountBackgroundView;
+@property (retain, nonatomic) IBOutlet UIButton *loginButton;
+@property (retain, nonatomic) IBOutlet UIButton *newAccountButton;
+
 @property (nonatomic, retain) IBOutlet UITextField *loginIdField;
 @property (nonatomic, retain) NSString *token;
 @property (nonatomic, retain) NSString *tokenSecret;

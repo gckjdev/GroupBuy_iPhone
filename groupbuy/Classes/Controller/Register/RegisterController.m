@@ -14,6 +14,8 @@
 #import "NewUserRegisterController.h"
 #import "GroupBuySNSService.h"
 #import "MyInfoController.h"
+#import "UIImageUtil.h"
+#import "GroupBuyControllerExt.h"
 
 enum{
     SELECT_BOY,
@@ -28,6 +30,9 @@ enum{
 @synthesize genderLabel;
 @synthesize gender;
 
+@synthesize accountBackgroundView;
+@synthesize loginButton;
+@synthesize newAccountButton;
 @synthesize loginIdField;
 @synthesize token;
 @synthesize tokenSecret;
@@ -46,11 +51,18 @@ enum{
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 
-    [self setBackgroundImageName:@"background.png"];
+//    [self setBackgroundImageName:@"background.png"];
     
-    CGRect frame = self.view.frame;
-    frame.origin.y = DEFAULT_Y;
-    self.view.frame = frame;
+//    CGRect frame = self.view.frame;
+//    frame.origin.y = DEFAULT_Y;
+//    self.view.frame = frame;
+    
+    [self.loginIdField setBackground:[UIImage strectchableImageName:FIRST_CELL_IMAGE]];
+    [self.loginPasswordTextField setBackground:[UIImage strectchableImageName:LAST_CELL_IMAGE]];
+    [self.accountBackgroundView setImage:[UIImage strectchableTopImageName:@"tu_203.png"]];
+    [self.loginButton setBackgroundImage:[UIImage strectchableImageName:@"tu_129.png"] forState:UIControlStateNormal];
+    [self.newAccountButton setBackgroundImage:[UIImage strectchableImageName:@"tu_133.png"] forState:UIControlStateNormal];
+    [self setGroupBuyNavigationTitle:self.tabBarItem.title];
         
     [super viewDidLoad];
     
@@ -80,6 +92,9 @@ enum{
     [self setGenderSegControl:nil];
     [self setGenderLabel:nil];
     [self setLoginPasswordTextField:nil];
+    [self setLoginButton:nil];
+    [self setNewAccountButton:nil];
+    [self setAccountBackgroundView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -95,6 +110,9 @@ enum{
     [tokenSecret release];
     [gender release];
     [loginPasswordTextField release];
+    [loginButton release];
+    [newAccountButton release];
+    [accountBackgroundView release];
     [super dealloc];
 }
 

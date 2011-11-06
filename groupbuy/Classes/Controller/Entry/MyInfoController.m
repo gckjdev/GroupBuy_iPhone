@@ -612,6 +612,8 @@ enum{
     int count = [self tableView:self.dataTableView numberOfRowsInSection:indexPath.section];
     [cell setCellBackgroundForRow:indexPath.row rowCount:count singleCellImage:nil firstCellImage:FIRST_CELL_IMAGE  middleCellImage:MIDDLE_CELL_IMAGE lastCellImage:LAST_CELL_IMAGE cellWidth:300];
 
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
 //    CGRect frame = cell.frame;
 //    frame.size.width = 200;
 //    frame.origin.x = 100;

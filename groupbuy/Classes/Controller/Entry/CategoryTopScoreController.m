@@ -9,6 +9,7 @@
 #import "CategoryTopScoreController.h"
 #import "ProductPriceDataLoader.h"
 #import "PPSegmentControl.h"
+#import "UIImageUtil.h"
 
 enum TOP_SCORE_TYPE {
     TOP_0_10,
@@ -66,8 +67,9 @@ enum TOP_SCORE_TYPE {
     
     NSArray *titleArray = [NSArray arrayWithObjects:@"0－10元", @"10元以上", @"发布日期", @"周边附近", nil];
     
-    UIImage *bgImage = [[UIImage imageNamed:@"tu_46.png"] stretchableImageWithLeftCapWidth:11 topCapHeight:0];
-    UIImage *selectImage = [[UIImage imageNamed:@"tu_39-15.png"] stretchableImageWithLeftCapWidth:11 topCapHeight:0];
+    UIImage *bgImage = [UIImage strectchableImageName:@"tu_46.png"];
+    UIImage *selectImage = [UIImage strectchableImageName:@"tu_39-15.png"];
+    
     self.titlePPSegControl = [[PPSegmentControl alloc] initWithItems:titleArray defaultSelectIndex:1 bgImage:bgImage selectedImage:selectImage];
     [self.titlePPSegControl  setSegmentFrame:CGRectMake(7, 5, 320-7*2, 23)];
     [self.titlePPSegControl  setSelectedTextFont:[UIFont systemFontOfSize:12] color:[UIColor colorWithRed:134/255.0 green:148/255.0 blue:67/255.0 alpha:1]];
