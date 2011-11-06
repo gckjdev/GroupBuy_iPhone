@@ -103,6 +103,16 @@ enum TOP_SCORE_TYPE {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)onlyShowView:(UIView *)view
+{
+    [self.belowTenController.view setHidden:YES];
+    [self.aboveTenController.view setHidden:YES];
+    [self.topNewController.view setHidden:YES];
+    [self.distanceController.view setHidden:YES];
+    [view setHidden:NO];
+    [self.view bringSubviewToFront:view];
+}
+
 - (void)showTopZeroTen
 {
     if (self.belowTenController == nil){
@@ -118,7 +128,7 @@ enum TOP_SCORE_TYPE {
         [self.view addSubview:self.belowTenController.view];                
     }
     
-    [self.view bringSubviewToFront:self.belowTenController.view];
+    [self onlyShowView:self.belowTenController.view];
     [self.belowTenController viewDidAppear:NO];
 }
 
@@ -137,7 +147,7 @@ enum TOP_SCORE_TYPE {
         [self.view addSubview:self.aboveTenController.view];                
     }
     
-    [self.view bringSubviewToFront:self.aboveTenController.view];
+    [self onlyShowView:self.aboveTenController.view];
     [self.aboveTenController viewDidAppear:NO];
 }
 
@@ -156,7 +166,7 @@ enum TOP_SCORE_TYPE {
         [self.view addSubview:self.topNewController.view];                
     }
     
-    [self.view bringSubviewToFront:self.topNewController.view];
+    [self onlyShowView:self.topNewController.view];
     [self.topNewController viewDidAppear:NO];
 }
 
@@ -175,7 +185,7 @@ enum TOP_SCORE_TYPE {
         [self.view addSubview:distanceController.view];                
     }
     
-    [self.view bringSubviewToFront:distanceController.view];
+    [self onlyShowView:self.distanceController.view];
     [distanceController viewDidAppear:NO];
     
 }
