@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PPViewController.h"
 #import "CommonProductListController.h"
+#import "PPSegmentControl.h"
 
 @interface TopScoreController : PPViewController {
     NSString *categoryId;

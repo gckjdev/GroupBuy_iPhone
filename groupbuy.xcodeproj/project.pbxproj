@@ -2712,6 +2712,12 @@
 				887A5C9C13FF964C00FF3457 /* SliderCell.h */,
 				887A5C9D13FF964C00FF3457 /* SliderCell.m */,
 				887A5C9E13FF964C00FF3457 /* SliderCell.xib */,
+				CA25E7251425F50A0056EB11 /* LocationCell.h */,
+				CA25E7261425F50A0056EB11 /* LocationCell.m */,
+				CA25E7271425F50A0056EB11 /* LocationCell.xib */,
+				CA25E7281425F50A0056EB11 /* PPMKMapViewController.h */,
+				CA25E7291425F50A0056EB11 /* PPMKMapViewController.m */,
+				CA25E72A1425F50A0056EB11 /* PPMKMapViewController.xib */,
 			);
 			name = ShoppingItem;
 			sourceTree = "<group>";
@@ -2873,12 +2879,6 @@
 				CA220EEE144FFA38005AFDC5 /* Common */,
 				CA220EEA144FF7BE005AFDC5 /* Utils */,
 				CAF4CC22142ECC6D001D5B4A /* TaobaoSearch */,
-				CA25E7251425F50A0056EB11 /* LocationCell.h */,
-				CA25E7261425F50A0056EB11 /* LocationCell.m */,
-				CA25E7271425F50A0056EB11 /* LocationCell.xib */,
-				CA25E7281425F50A0056EB11 /* PPMKMapViewController.h */,
-				CA25E7291425F50A0056EB11 /* PPMKMapViewController.m */,
-				CA25E72A1425F50A0056EB11 /* PPMKMapViewController.xib */,
 				FB70BF0714134FA000ACA7A1 /* CommentTableViewCell.h */,
 				FB70BF0814134FA000ACA7A1 /* CommentTableViewCell.m */,
 				FB70BF0B1413500200ACA7A1 /* CommentTableViewCell.xib */,

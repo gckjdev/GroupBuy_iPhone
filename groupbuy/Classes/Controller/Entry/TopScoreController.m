@@ -70,13 +70,11 @@ enum TOP_SCORE_TYPE {
     [self.titlePPSegControl  setSelectedTextFont:[UIFont boldSystemFontOfSize:12] color:[UIColor colorWithRed:134/255.0 green:148/255.0 blue:67/255.0 alpha:1.0]];
     [self.titlePPSegControl  setUnselectedTextFont:[UIFont boldSystemFontOfSize:12] color:[UIColor colorWithRed:111/255.0 green:104/255.0 blue:94/255.0 alpha:1]];
     [self.titlePPSegControl  setSelectedSegmentFrame:CGRectMake(0, 0, titlePPSegControl.buttonWidth, 32) image:selectImage];
-    [self.titlePPSegControl  setViewController:self];
+    [self.titlePPSegControl setDelegate:self];
 
-    [self.titlePPSegControl setXOffset:0 YOffset:10];
+//    [self.titlePPSegControl setXOffset:0 YOffset:10];
     self.navigationItem.titleView = self.titlePPSegControl;     
-    [self.titlePPSegControl  setClickActionBlock:(^(PPSegmentControl* segControl, UIViewController* viewController){
-        [(TopScoreController *)viewController clickSegControl:segControl];
-    })];   
+
 
     self.view.backgroundColor = [UIColor clearColor];
     [self setBackgroundImageName:@"background.png"];

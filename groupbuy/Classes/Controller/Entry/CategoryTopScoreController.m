@@ -75,13 +75,8 @@ enum TOP_SCORE_TYPE {
     [self.titlePPSegControl  setSelectedTextFont:[UIFont boldSystemFontOfSize:12] color:[UIColor colorWithRed:134/255.0 green:148/255.0 blue:67/255.0 alpha:1]];
     [self.titlePPSegControl  setUnselectedTextFont:[UIFont boldSystemFontOfSize:12] color:[UIColor colorWithRed:111/255.0 green:104/255.0 blue:94/255.0 alpha:1]];
     [self.titlePPSegControl  setSelectedSegmentFrame:CGRectMake(0, 0, titlePPSegControl.buttonWidth, 32) image:selectImage];
-    [self.titlePPSegControl  setViewController:self];
     
-    [self.titlePPSegControl  setClickActionBlock:(^(PPSegmentControl* segControl, UIViewController* viewController){
-        [(CategoryTopScoreController *)viewController clickSegControl:segControl];
-    })];   
-    
-    
+    [self.titlePPSegControl setDelegate:self];
     [self.view addSubview:self.titlePPSegControl];
     [self clickSegControl:titlePPSegControl];
     
