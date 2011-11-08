@@ -65,18 +65,25 @@ enum TOP_SCORE_TYPE {
         
     UIImage *bgImage = [[UIImage imageNamed:@"tu_46.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
     UIImage *selectImage = [[UIImage imageNamed:@"tu_39-15.png"] stretchableImageWithLeftCapWidth:6 topCapHeight:0];
-    self.titlePPSegControl = [[PPSegmentControl alloc] initWithItems:titleArray defaultSelectIndex:1 bgImage:bgImage selectedImage:selectImage];
-    [self.titlePPSegControl  setSegmentFrame:CGRectMake(0, 0, 305, 23)];
-    [self.titlePPSegControl  setSelectedTextFont:[UIFont boldSystemFontOfSize:12] color:[UIColor colorWithRed:134/255.0 green:148/255.0 blue:67/255.0 alpha:1.0]];
-    [self.titlePPSegControl  setUnselectedTextFont:[UIFont boldSystemFontOfSize:12] color:[UIColor colorWithRed:111/255.0 green:104/255.0 blue:94/255.0 alpha:1]];
-    [self.titlePPSegControl  setSelectedSegmentFrame:CGRectMake(0, 0, titlePPSegControl.buttonWidth, 32) image:selectImage];
+    self.titlePPSegControl = [[PPSegmentControl alloc]initWithItems:titleArray defaultSelectIndex:1 frame:CGRectMake(0, 0, 306, 33)];
+    
+    [self.titlePPSegControl setBackgroundImage:bgImage];
+    [self.titlePPSegControl setSelectedSegmentImage:selectImage];
+    [self.titlePPSegControl setTextFont:[UIFont boldSystemFontOfSize:12]];
+    [self.titlePPSegControl setSelectedSegmentTextFont:[UIFont boldSystemFontOfSize:12]];
+    
+    [self.titlePPSegControl setTextColor:
+     [UIColor colorWithRed:111/255.0 green:104/255.0 blue:94/255.0 alpha:1]];
+    [self.titlePPSegControl setSelectedSegmentTextColor:
+     [UIColor colorWithRed:134/255.0 green:148/255.0 blue:67/255.0 alpha:1.0]];
+
     [self.titlePPSegControl setDelegate:self];
-
-//    [self.titlePPSegControl setXOffset:0 YOffset:10];
+    [self.titlePPSegControl setContentOffset:0 y:8];
+    
     self.navigationItem.titleView = self.titlePPSegControl;     
-
-
+    
     self.view.backgroundColor = [UIColor clearColor];
+    
     [self setBackgroundImageName:@"background.png"];
     
     [self clickSegControl:self.titlePPSegControl];
