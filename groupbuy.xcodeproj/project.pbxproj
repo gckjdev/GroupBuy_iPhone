@@ -413,6 +413,7 @@
 		CAA01A5113E658890002986A /* home_24.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4B13E658880002986A /* home_24.png */; };
 		CAA01A5213E658890002986A /* home_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA01A4C13E658890002986A /* home_24@2x.png */; };
 		CAA46EF013F3734B00688E64 /* libMobClickLibrary_1.6.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */; };
+		CAB17430146A177E00F0F248 /* tu_182@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB1742F146A177E00F0F248 /* tu_182@2x.png */; };
 		CAB6A705141A6792007E6253 /* TopScoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A703141A6792007E6253 /* TopScoreController.m */; };
 		CAB6A706141A6792007E6253 /* TopScoreController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB6A704141A6792007E6253 /* TopScoreController.xib */; };
 		CAB858CD145D9835007F0E64 /* cell_left_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB858CC145D981D007F0E64 /* cell_left_bg.png */; };
@@ -1204,6 +1205,8 @@
 		CAA01A4C13E658890002986A /* home_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_24@2x.png"; sourceTree = "<group>"; };
 		CAA46EEF13F3734B00688E64 /* libMobClickLibrary_1.6.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary_1.6.4.a; sourceTree = "<group>"; };
 		CAB1107F14354BAB009DBB8D /* MainDataModel 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MainDataModel 5.xcdatamodel"; sourceTree = "<group>"; };
+		CAB1742F146A177E00F0F248 /* tu_182@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tu_182@2x.png"; path = "png@2x/tu_182@2x.png"; sourceTree = "<group>"; };
+		CAB17431146A20D700F0F248 /* MainDataModel 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MainDataModel 6.xcdatamodel"; sourceTree = "<group>"; };
 		CAB6A702141A6792007E6253 /* TopScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopScoreController.h; sourceTree = "<group>"; };
 		CAB6A703141A6792007E6253 /* TopScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopScoreController.m; sourceTree = "<group>"; };
 		CAB6A704141A6792007E6253 /* TopScoreController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopScoreController.xib; sourceTree = "<group>"; };
@@ -1529,6 +1532,7 @@
 		CA0AAEBB13E3BA830050F143 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CAB1742F146A177E00F0F248 /* tu_182@2x.png */,
 				CABB72371462D4C4005A5F5B /* user_bg@2x.png */,
 				CA9CAE7E145FE9CF00D4AE85 /* tu_03@2x.png */,
 				CA9CAE7F145FE9CF00D4AE85 /* tu_32@2x.png */,
@@ -3479,6 +3483,7 @@
 				CAD0480614622ED40071F8B4 /* ProductDetailCell.xib in Resources */,
 				CABB72381462D4C4005A5F5B /* user_bg@2x.png in Resources */,
 				CAF45E8B146682C700C6B65B /* README.md in Resources */,
+				CAB17430146A177E00F0F248 /* tu_182@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3928,7 +3933,10 @@
 		CA5D13A013D55A9F003CB28C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lingzhe Peng (9WG829Y3AG)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3941,14 +3949,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-ObjC";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0786A49F-72CD-44A2-A4FC-7CB42678D2FE";
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		CA5D13A113D55A9F003CB28C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -3966,7 +3977,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3997,7 +4011,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4073,7 +4090,10 @@
 		CAA46EF313F37EDE00688E64 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lingzhe Peng";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -4092,7 +4112,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lingzhe Peng";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4182,13 +4205,14 @@
 		CADF6BB713DAA2360060F438 /* MainDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				CAB17431146A20D700F0F248 /* MainDataModel 6.xcdatamodel */,
 				CAB1107F14354BAB009DBB8D /* MainDataModel 5.xcdatamodel */,
 				CABC831D142C23BF008037A0 /* MainDataModel 4.xcdatamodel */,
 				CACC311E1400B1FE00EAD9F0 /* MainDataModel 3.xcdatamodel */,
 				CA91BFFC13F6805C00A9E449 /* MainDataModel 2.xcdatamodel */,
 				CADF6BB913DAA2360060F438 /* MainDataModel.xcdatamodel */,
 			);
-			currentVersion = CAB1107F14354BAB009DBB8D /* MainDataModel 5.xcdatamodel */;
+			currentVersion = CAB17431146A20D700F0F248 /* MainDataModel 6.xcdatamodel */;
 			path = MainDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
