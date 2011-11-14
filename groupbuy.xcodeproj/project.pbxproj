@@ -3937,6 +3937,7 @@
 					armv7,
 					armv6,
 				);
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lingzhe Peng (9WG829Y3AG)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lingzhe Peng (9WG829Y3AG)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3948,6 +3949,7 @@
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "0786A49F-72CD-44A2-A4FC-7CB42678D2FE";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0786A49F-72CD-44A2-A4FC-7CB42678D2FE";
 				SDKROOT = iphoneos;
 			};
@@ -3960,7 +3962,8 @@
 					armv7,
 					armv6,
 				);
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lingzhe Peng";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lingzhe Peng";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -3969,6 +3972,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "1076F36F-D188-4344-B07B-EBC019562BCA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1076F36F-D188-4344-B07B-EBC019562BCA";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -4094,6 +4099,7 @@
 					armv7,
 					armv6,
 				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lingzhe Peng";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lingzhe Peng";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -4103,6 +4109,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "1076F36F-D188-4344-B07B-EBC019562BCA";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1076F36F-D188-4344-B07B-EBC019562BCA";
 				SDKROOT = iphoneos;
 			};
