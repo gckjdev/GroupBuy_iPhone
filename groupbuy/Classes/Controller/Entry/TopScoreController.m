@@ -49,6 +49,39 @@ enum TOP_SCORE_TYPE {
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+    switch (self.titlePPSegControl.selectedSegmentIndex) {
+        case TOP_0_10:
+        {
+            self.aboveTenController = nil;
+            self.distanceController = nil;
+            self.topNewController = nil;
+        }
+            break;
+        case TOP_10:
+        {
+            self.belowTenController = nil;
+            self.distanceController = nil;
+            self.topNewController = nil;            
+        }
+            break;
+        case TOP_NEW:
+        {
+            self.belowTenController = nil;
+            self.aboveTenController = nil;
+            self.distanceController = nil;
+        }
+            break;
+        case TOP_DISTANCE:
+        {
+            self.belowTenController = nil;
+            self.aboveTenController = nil;
+            self.topNewController = nil;            
+        }
+            break;
+            
+        default:
+            break;
+    } 
 }
 
 #pragma mark - View lifecycle
