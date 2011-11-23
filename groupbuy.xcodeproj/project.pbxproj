@@ -22,6 +22,7 @@
 		887A5C9B13FF961900FF3457 /* ShoppingValidPeriodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9913FF961900FF3457 /* ShoppingValidPeriodCell.xib */; };
 		887A5C9F13FF964C00FF3457 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9D13FF964C00FF3457 /* SliderCell.m */; };
 		887A5CA013FF964C00FF3457 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9E13FF964C00FF3457 /* SliderCell.xib */; };
+		CA02437F147CAE0300F0B491 /* ActionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CA02437E147CAE0300F0B491 /* ActionHandler.m */; };
 		CA08742013E679F100F808E3 /* TelPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA08741E13E679F100F808E3 /* TelPickerViewController.m */; };
 		CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA08741F13E679F100F808E3 /* TelPickerViewController.xib */; };
 		CA0AAEBF13E3BA840050F143 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0AAEBD13E3BA840050F143 /* background@2x.png */; };
@@ -36,7 +37,6 @@
 		CA1A9D8813DD6D420072926A /* ProductCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1A9D8613DD6D410072926A /* ProductCategoryController.m */; };
 		CA1A9D8913DD6D420072926A /* ProductCategoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D8713DD6D420072926A /* ProductCategoryController.xib */; };
 		CA1DD95C1479485F0004F913 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1DD95A1479485F0004F913 /* libGoogleAdMobAds.a */; };
-		CA1DD95D1479485F0004F913 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CA1DD95B1479485F0004F913 /* README.txt */; };
 		CA1DD960147948770004F913 /* AdViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1DD95F147948770004F913 /* AdViewUtils.m */; };
 		CA220EE9144FEB9E005AFDC5 /* PPSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CA220EE8144FEB9E005AFDC5 /* PPSegmentControl.m */; };
 		CA220EED144FF7F4005AFDC5 /* GroupBuyControllerExt.m in Sources */ = {isa = PBXBuildFile; fileRef = CA220EEC144FF7F4005AFDC5 /* GroupBuyControllerExt.m */; };
@@ -561,6 +561,8 @@
 		887A5C9C13FF964C00FF3457 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
 		887A5C9D13FF964C00FF3457 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
 		887A5C9E13FF964C00FF3457 /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
+		CA02437D147CAE0300F0B491 /* ActionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionHandler.h; sourceTree = "<group>"; };
+		CA02437E147CAE0300F0B491 /* ActionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionHandler.m; sourceTree = "<group>"; };
 		CA08741D13E679F100F808E3 /* TelPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelPickerViewController.h; sourceTree = "<group>"; };
 		CA08741E13E679F100F808E3 /* TelPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelPickerViewController.m; sourceTree = "<group>"; };
 		CA08741F13E679F100F808E3 /* TelPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelPickerViewController.xib; sourceTree = "<group>"; };
@@ -588,7 +590,6 @@
 		CA1DD9581479485F0004F913 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
 		CA1DD9591479485F0004F913 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
 		CA1DD95A1479485F0004F913 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
-		CA1DD95B1479485F0004F913 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CA1DD95E147948770004F913 /* AdViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewUtils.h; sourceTree = "<group>"; };
 		CA1DD95F147948770004F913 /* AdViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewUtils.m; sourceTree = "<group>"; };
 		CA220EE7144FEB9E005AFDC5 /* PPSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSegmentControl.h; sourceTree = "<group>"; };
@@ -1437,6 +1438,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA02437C147CAE0300F0B491 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				CA02437D147CAE0300F0B491 /* ActionHandler.h */,
+				CA02437E147CAE0300F0B491 /* ActionHandler.m */,
+			);
+			name = Action;
+			path = Controller/Action;
+			sourceTree = "<group>";
+		};
 		CA08741C13E679F100F808E3 /* TelPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1558,7 +1569,6 @@
 				CA1DD9581479485F0004F913 /* GADRequest.h */,
 				CA1DD9591479485F0004F913 /* GADRequestError.h */,
 				CA1DD95A1479485F0004F913 /* libGoogleAdMobAds.a */,
-				CA1DD95B1479485F0004F913 /* README.txt */,
 			);
 			path = GoogleAdMobAdsSDK;
 			sourceTree = "<group>";
@@ -2622,6 +2632,7 @@
 		CADF6B6C13DA9ACB0060F438 /* GroupBuyCommon */ = {
 			isa = PBXGroup;
 			children = (
+				CA02437C147CAE0300F0B491 /* Action */,
 				CA3E546D13E530010013C33C /* Report */,
 				CA0AAEBB13E3BA830050F143 /* Resource */,
 				CADF6BBB13DAA4810060F438 /* Controller */,
@@ -3300,7 +3311,6 @@
 				CAF45E8B146682C700C6B65B /* README.md in Resources */,
 				CAB17430146A177E00F0F248 /* tu_182@2x.png in Resources */,
 				CAAF0918147615D900B0D916 /* TaobaoProductTextCell.xib in Resources */,
-				CA1DD95D1479485F0004F913 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3628,6 +3638,7 @@
 				CA0C4D8F1467746900E80454 /* NumberUtil.m in Sources */,
 				CAAF0917147615D900B0D916 /* TaobaoProductTextCell.m in Sources */,
 				CA1DD960147948770004F913 /* AdViewUtils.m in Sources */,
+				CA02437F147CAE0300F0B491 /* ActionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
