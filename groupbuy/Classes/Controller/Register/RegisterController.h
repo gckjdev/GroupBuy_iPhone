@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PPViewController.h"
 #import "GroupBuyUserService.h"
+#import "CityPickerViewController.h"
 
-@interface RegisterController : PPViewController <GroupBuyUserServiceDelegate> {
+@interface RegisterController : PPViewController <GroupBuyUserServiceDelegate,CityPickerDelegate> {
     UITextField *loginIdField;
     NSString *token;
     NSString *tokenSecret;

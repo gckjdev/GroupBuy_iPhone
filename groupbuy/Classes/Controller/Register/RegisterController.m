@@ -57,6 +57,8 @@ enum{
 //    frame.origin.y = DEFAULT_Y;
 //    self.view.frame = frame;
     
+    [self setGroupBuyNavigationRightButton:@"城市" action:@selector(clickCity)];
+    
     [self.loginIdField setBackground:[UIImage strectchableImageName:FIRST_CELL_IMAGE]];
     [self.loginPasswordTextField setBackground:[UIImage strectchableImageName:LAST_CELL_IMAGE]];
     [self.accountBackgroundView setImage:[UIImage strectchableTopImageName:@"tu_203.png"]];
@@ -234,6 +236,22 @@ enum{
         self.navigationController.navigationItem.hidesBackButton = YES;
         [MyInfoController show:self.navigationController];
     }
+}
+
+- (void)clickCity
+{
+    NSString* city = [GlobalGetLocationService() getDefaultCity];
+    CityPickerViewController* vc = [[CityPickerViewController alloc] initWithCityName:city hasLeftButton:YES];
+    vc.delegate = self;
+    [vc enableGroupBuySettings];    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    [vc release];
+}
+
+-(void) dealWithPickedCity:(NSString *)city
+{
+    [GlobalGetLocationService() setDefaultCity:city];    
 }
 
 @end
