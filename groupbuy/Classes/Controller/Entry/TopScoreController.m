@@ -93,7 +93,6 @@ enum TOP_SCORE_TYPE {
       @"0－10元",
       @"10元以上",
       @"发布日期",
-      @"周边附近",
       nil];  
         
     UIImage *bgImage = [[UIImage imageNamed:@"tu_46.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
@@ -206,23 +205,23 @@ enum TOP_SCORE_TYPE {
     [self.topNewController viewDidAppear:NO];
 }
 
-- (void)showProductByDistance
-{
-    if (self.distanceController == nil){
-        self.distanceController = [[[CommonProductListController alloc] init] autorelease];        
-        self.distanceController.superController = self;
-        ProductDistanceDataLoader *dataLoader = [[[ProductDistanceDataLoader alloc] init] autorelease];
-        dataLoader.categoryId = self.categoryId;
-        self.distanceController.dataLoader = dataLoader;
-        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];       
-        self.distanceController.view.frame = self.view.bounds;        
-        [self.view addSubview:distanceController.view];                
-    }
-    [self onlyShowView:self.distanceController.view];
-    //[self.view bringSubviewToFront:distanceController.view];
-    [distanceController viewDidAppear:NO];
-    
-}
+//- (void)showProductByDistance
+//{
+//    if (self.distanceController == nil){
+//        self.distanceController = [[[CommonProductListController alloc] init] autorelease];        
+//        self.distanceController.superController = self;
+//        ProductDistanceDataLoader *dataLoader = [[[ProductDistanceDataLoader alloc] init] autorelease];
+//        dataLoader.categoryId = self.categoryId;
+//        self.distanceController.dataLoader = dataLoader;
+//        self.distanceController.type = [titlePPSegControl titleForSegmentAtIndex:[titlePPSegControl selectedSegmentIndex]];       
+//        self.distanceController.view.frame = self.view.bounds;        
+//        [self.view addSubview:distanceController.view];                
+//    }
+//    [self onlyShowView:self.distanceController.view];
+//    //[self.view bringSubviewToFront:distanceController.view];
+//    [distanceController viewDidAppear:NO];
+//    
+//}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -245,9 +244,6 @@ enum TOP_SCORE_TYPE {
             break;
         case TOP_NEW:
             [self showTopNew];
-            break;
-        case TOP_DISTANCE:
-            [self showProductByDistance];
             break;
         default:
             break;
