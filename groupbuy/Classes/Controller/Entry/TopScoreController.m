@@ -92,7 +92,7 @@ enum TOP_SCORE_TYPE {
      [NSArray arrayWithObjects:
       @"0－10元",
       @"10元以上",
-      @"发布日期",
+      @"今日团购",
       nil];  
         
     UIImage *bgImage = [[UIImage imageNamed:@"tu_46.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
