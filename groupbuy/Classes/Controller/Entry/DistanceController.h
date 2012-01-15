@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPViewController.h"
+#import "CommonProductListController.h"
 
-@interface DistanceController : UIViewController
+@interface DistanceController : PPViewController{
+    CommonProductListController *distanceController;
+}
+
+@property (nonatomic, retain) CommonProductListController *distanceController;
 
 @end

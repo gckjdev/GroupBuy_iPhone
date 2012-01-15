@@ -22,6 +22,11 @@
 		887A5C9B13FF961900FF3457 /* ShoppingValidPeriodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9913FF961900FF3457 /* ShoppingValidPeriodCell.xib */; };
 		887A5C9F13FF964C00FF3457 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887A5C9D13FF964C00FF3457 /* SliderCell.m */; };
 		887A5CA013FF964C00FF3457 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9E13FF964C00FF3457 /* SliderCell.xib */; };
+		A313E1FB14C2B5C80079BA64 /* DistanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A313E1F914C2B5C80079BA64 /* DistanceController.m */; };
+		A313E1FC14C2B5C80079BA64 /* DistanceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A313E1FA14C2B5C80079BA64 /* DistanceController.xib */; };
+		A3E3908D14C26DBD00A8A7A6 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3E3908B14C26DBD00A8A7A6 /* ReviewRequest.strings */; };
+		A3E3909414C26DC800A8A7A6 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3E3908F14C26DC800A8A7A6 /* ReviewRequest.strings */; };
+		A3E3909514C26DC800A8A7A6 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3E3909214C26DC800A8A7A6 /* ReviewRequest.strings */; };
 		CA024386147CCF2700F0B491 /* ActionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CA024385147CCF2700F0B491 /* ActionHandler.m */; };
 		CA08742013E679F100F808E3 /* TelPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA08741E13E679F100F808E3 /* TelPickerViewController.m */; };
 		CA08742113E679F100F808E3 /* TelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA08741F13E679F100F808E3 /* TelPickerViewController.xib */; };
@@ -197,7 +202,6 @@
 		CA607A4713D55EE200E0D0DC /* ActionSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076BC13D55EE200E0D0DC /* ActionSelector.m */; };
 		CA607A4813D55EE200E0D0DC /* ArrayOfCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076BE13D55EE200E0D0DC /* ArrayOfCharacters.m */; };
 		CA607A4913D55EE200E0D0DC /* DeviceDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076C013D55EE200E0D0DC /* DeviceDetection.m */; };
-		CA607A4A13D55EE200E0D0DC /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA6076C113D55EE200E0D0DC /* ReviewRequest.strings */; };
 		CA607A4B13D55EE200E0D0DC /* FileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076C413D55EE200E0D0DC /* FileUtil.m */; };
 		CA607A4C13D55EE200E0D0DC /* FontUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076C613D55EE200E0D0DC /* FontUtils.m */; };
 		CA607A4D13D55EE200E0D0DC /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6076C813D55EE200E0D0DC /* GTMBase64.m */; };
@@ -561,6 +565,12 @@
 		887A5C9C13FF964C00FF3457 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
 		887A5C9D13FF964C00FF3457 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
 		887A5C9E13FF964C00FF3457 /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
+		A313E1F814C2B5C80079BA64 /* DistanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceController.h; sourceTree = "<group>"; };
+		A313E1F914C2B5C80079BA64 /* DistanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceController.m; sourceTree = "<group>"; };
+		A313E1FA14C2B5C80079BA64 /* DistanceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DistanceController.xib; sourceTree = "<group>"; };
+		A3E3908C14C26DBD00A8A7A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ReviewRequest.strings; sourceTree = "<group>"; };
+		A3E3909014C26DC800A8A7A6 /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = ReviewRequest.strings; sourceTree = "<group>"; };
+		A3E3909314C26DC800A8A7A6 /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = ReviewRequest.strings; sourceTree = "<group>"; };
 		CA024384147CCF2700F0B491 /* ActionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionHandler.h; sourceTree = "<group>"; };
 		CA024385147CCF2700F0B491 /* ActionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionHandler.m; sourceTree = "<group>"; };
 		CA08741D13E679F100F808E3 /* TelPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelPickerViewController.h; sourceTree = "<group>"; };
@@ -869,7 +879,6 @@
 		CA6076BE13D55EE200E0D0DC /* ArrayOfCharacters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayOfCharacters.m; sourceTree = "<group>"; };
 		CA6076BF13D55EE200E0D0DC /* DeviceDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetection.h; sourceTree = "<group>"; };
 		CA6076C013D55EE200E0D0DC /* DeviceDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetection.m; sourceTree = "<group>"; };
-		CA6076C213D55EE200E0D0DC /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ReviewRequest.strings; sourceTree = "<group>"; };
 		CA6076C313D55EE200E0D0DC /* FileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtil.h; sourceTree = "<group>"; };
 		CA6076C413D55EE200E0D0DC /* FileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtil.m; sourceTree = "<group>"; };
 		CA6076C513D55EE200E0D0DC /* FontUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontUtils.h; sourceTree = "<group>"; };
@@ -896,8 +905,6 @@
 		CA6076DB13D55EE200E0D0DC /* TimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtils.m; sourceTree = "<group>"; };
 		CA6076DC13D55EE200E0D0DC /* UIImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageUtil.h; sourceTree = "<group>"; };
 		CA6076DD13D55EE200E0D0DC /* UIImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageUtil.m; sourceTree = "<group>"; };
-		CA6076DE13D55EE200E0D0DC /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = zh_Hans.lproj/ReviewRequest.strings; sourceTree = "<group>"; };
-		CA6076DF13D55EE200E0D0DC /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/ReviewRequest.strings; sourceTree = "<group>"; };
 		CA6076E313D55EE200E0D0DC /* TextViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewExt.h; sourceTree = "<group>"; };
 		CA6076E413D55EE200E0D0DC /* TextViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewExt.m; sourceTree = "<group>"; };
 		CA6076E513D55EE200E0D0DC /* UIBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBackgroundView.h; sourceTree = "<group>"; };
@@ -1438,6 +1445,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3E3908A14C26DBD00A8A7A6 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A3E3908B14C26DBD00A8A7A6 /* ReviewRequest.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		A3E3908E14C26DC800A8A7A6 /* zh_Hans.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A3E3908F14C26DC800A8A7A6 /* ReviewRequest.strings */,
+			);
+			path = zh_Hans.lproj;
+			sourceTree = "<group>";
+		};
+		A3E3909114C26DC800A8A7A6 /* zh_Hant.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A3E3909214C26DC800A8A7A6 /* ReviewRequest.strings */,
+			);
+			path = zh_Hant.lproj;
+			sourceTree = "<group>";
+		};
 		CA024383147CCF2700F0B491 /* Action */ = {
 			isa = PBXGroup;
 			children = (
@@ -2280,6 +2311,9 @@
 		CA6076BA13D55EE200E0D0DC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A3E3908E14C26DC800A8A7A6 /* zh_Hans.lproj */,
+				A3E3909114C26DC800A8A7A6 /* zh_Hant.lproj */,
+				A3E3908A14C26DBD00A8A7A6 /* en.lproj */,
 				CA8A379A145E3A8F0035ECB8 /* UINavigationBarExt.h */,
 				CA8A379B145E3A8F0035ECB8 /* UINavigationBarExt.m */,
 				CAD20DC0143D94B4004DF88F /* UIDeviceAdditions */,
@@ -2290,7 +2324,6 @@
 				CA6076BE13D55EE200E0D0DC /* ArrayOfCharacters.m */,
 				CA6076BF13D55EE200E0D0DC /* DeviceDetection.h */,
 				CA6076C013D55EE200E0D0DC /* DeviceDetection.m */,
-				CA6076C113D55EE200E0D0DC /* ReviewRequest.strings */,
 				CA6076C313D55EE200E0D0DC /* FileUtil.h */,
 				CA6076C413D55EE200E0D0DC /* FileUtil.m */,
 				CA6076C513D55EE200E0D0DC /* FontUtils.h */,
@@ -2447,6 +2480,9 @@
 				FBB014F3141C98C7003A31A8 /* CategoryTopScoreController.h */,
 				FBB014F4141C98C7003A31A8 /* CategoryTopScoreController.m */,
 				FBB014F5141C98C8003A31A8 /* CategoryTopScoreController.xib */,
+				A313E1F814C2B5C80079BA64 /* DistanceController.h */,
+				A313E1F914C2B5C80079BA64 /* DistanceController.m */,
+				A313E1FA14C2B5C80079BA64 /* DistanceController.xib */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -3147,7 +3183,6 @@
 				CA6079EB13D55EE200E0D0DC /* Help.txt in Resources */,
 				CA607A0713D55EE200E0D0DC /* Server_Interface.txt in Resources */,
 				CA607A3F13D55EE200E0D0DC /* SpecialCharacters.txt in Resources */,
-				CA607A4A13D55EE200E0D0DC /* ReviewRequest.strings in Resources */,
 				CA607B1113D562B700E0D0DC /* FeedbackController.xib in Resources */,
 				CA607B1313D562B700E0D0DC /* InfoMainController.xib in Resources */,
 				CA607B1513D562B700E0D0DC /* InviteController.xib in Resources */,
@@ -3310,6 +3345,10 @@
 				CAF45E8B146682C700C6B65B /* README.md in Resources */,
 				CAB17430146A177E00F0F248 /* tu_182@2x.png in Resources */,
 				CAAF0918147615D900B0D916 /* TaobaoProductTextCell.xib in Resources */,
+				A3E3908D14C26DBD00A8A7A6 /* ReviewRequest.strings in Resources */,
+				A3E3909414C26DC800A8A7A6 /* ReviewRequest.strings in Resources */,
+				A3E3909514C26DC800A8A7A6 /* ReviewRequest.strings in Resources */,
+				A313E1FC14C2B5C80079BA64 /* DistanceController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3638,6 +3677,7 @@
 				CAAF0917147615D900B0D916 /* TaobaoProductTextCell.m in Sources */,
 				CA1DD960147948770004F913 /* AdViewUtils.m in Sources */,
 				CA024386147CCF2700F0B491 /* ActionHandler.m in Sources */,
+				A313E1FB14C2B5C80079BA64 /* DistanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3660,6 +3700,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A3E3908B14C26DBD00A8A7A6 /* ReviewRequest.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3E3908C14C26DBD00A8A7A6 /* en */,
+			);
+			name = ReviewRequest.strings;
+			sourceTree = "<group>";
+		};
+		A3E3908F14C26DC800A8A7A6 /* ReviewRequest.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3E3909014C26DC800A8A7A6 /* zh_Hans */,
+			);
+			name = ReviewRequest.strings;
+			sourceTree = "<group>";
+		};
+		A3E3909214C26DC800A8A7A6 /* ReviewRequest.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3E3909314C26DC800A8A7A6 /* zh_Hant */,
+			);
+			name = ReviewRequest.strings;
+			sourceTree = "<group>";
+		};
 		CA5D137B13D55A9F003CB28C /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3718,16 +3782,6 @@
 				CA60757213D55EE200E0D0DC /* zh-Hant */,
 			);
 			name = EGORefresh.strings;
-			sourceTree = "<group>";
-		};
-		CA6076C113D55EE200E0D0DC /* ReviewRequest.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA6076C213D55EE200E0D0DC /* English */,
-				CA6076DE13D55EE200E0D0DC /* zh_Hans */,
-				CA6076DF13D55EE200E0D0DC /* zh_Hant */,
-			);
-			name = ReviewRequest.strings;
 			sourceTree = "<group>";
 		};
 		CA607BEC13D5634800E0D0DC /* InfoPlist.strings */ = {
