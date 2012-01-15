@@ -54,6 +54,7 @@
 #import "TopScoreController.h"
 
 #import "CategoryController.h"
+#import "DistanceController.h"
 
 #define kDbFileName			@"AppDB"
 
@@ -205,13 +206,19 @@ enum
 	NSMutableArray* controllers = [[NSMutableArray alloc] init];
     
 	[UIUtils addViewController:[TopScoreController alloc]
-					 viewTitle:@"总排行"
+					 viewTitle:@"团购排行"
 					 viewImage:@"tu_06.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
 
-	[UIUtils addViewController:[CategoryController alloc]
-					 viewTitle:@"分类排行"
+//	[UIUtils addViewController:[CategoryController alloc]
+//					 viewTitle:@"分类排行"
+//					 viewImage:@"tu_07.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
+    
+	[UIUtils addViewController:[DistanceController alloc]
+					 viewTitle:@"周边团购"
 					 viewImage:@"tu_07.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
