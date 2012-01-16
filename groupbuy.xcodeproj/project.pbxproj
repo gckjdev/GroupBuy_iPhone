@@ -24,6 +24,8 @@
 		887A5CA013FF964C00FF3457 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887A5C9E13FF964C00FF3457 /* SliderCell.xib */; };
 		A313E1FB14C2B5C80079BA64 /* DistanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A313E1F914C2B5C80079BA64 /* DistanceController.m */; };
 		A313E1FC14C2B5C80079BA64 /* DistanceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A313E1FA14C2B5C80079BA64 /* DistanceController.xib */; };
+		A3B87E5A14C3C35900FA35C0 /* GuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B87E5814C3C35900FA35C0 /* GuideController.m */; };
+		A3B87E5B14C3C35900FA35C0 /* GuideController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B87E5914C3C35900FA35C0 /* GuideController.xib */; };
 		A3E3908D14C26DBD00A8A7A6 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3E3908B14C26DBD00A8A7A6 /* ReviewRequest.strings */; };
 		A3E3909414C26DC800A8A7A6 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3E3908F14C26DC800A8A7A6 /* ReviewRequest.strings */; };
 		A3E3909514C26DC800A8A7A6 /* ReviewRequest.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3E3909214C26DC800A8A7A6 /* ReviewRequest.strings */; };
@@ -568,6 +570,9 @@
 		A313E1F814C2B5C80079BA64 /* DistanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceController.h; sourceTree = "<group>"; };
 		A313E1F914C2B5C80079BA64 /* DistanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceController.m; sourceTree = "<group>"; };
 		A313E1FA14C2B5C80079BA64 /* DistanceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DistanceController.xib; sourceTree = "<group>"; };
+		A3B87E5714C3C35900FA35C0 /* GuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideController.h; sourceTree = "<group>"; };
+		A3B87E5814C3C35900FA35C0 /* GuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideController.m; sourceTree = "<group>"; };
+		A3B87E5914C3C35900FA35C0 /* GuideController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideController.xib; sourceTree = "<group>"; };
 		A3E3908C14C26DBD00A8A7A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ReviewRequest.strings; sourceTree = "<group>"; };
 		A3E3909014C26DC800A8A7A6 /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = ReviewRequest.strings; sourceTree = "<group>"; };
 		A3E3909314C26DC800A8A7A6 /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = ReviewRequest.strings; sourceTree = "<group>"; };
@@ -2815,6 +2820,9 @@
 				CA3D08F613ED08D8003778D6 /* SearchProductController.h */,
 				CA3D08F713ED08D8003778D6 /* SearchProductController.m */,
 				CA3D08F813ED08D8003778D6 /* SearchProductController.xib */,
+				A3B87E5714C3C35900FA35C0 /* GuideController.h */,
+				A3B87E5814C3C35900FA35C0 /* GuideController.m */,
+				A3B87E5914C3C35900FA35C0 /* GuideController.xib */,
 				CA73498614208D04005C3CEE /* NewUserRegisterController.h */,
 				CA73498714208D04005C3CEE /* NewUserRegisterController.m */,
 				CA73498814208D04005C3CEE /* NewUserRegisterController.xib */,
@@ -3349,6 +3357,7 @@
 				A3E3909414C26DC800A8A7A6 /* ReviewRequest.strings in Resources */,
 				A3E3909514C26DC800A8A7A6 /* ReviewRequest.strings in Resources */,
 				A313E1FC14C2B5C80079BA64 /* DistanceController.xib in Resources */,
+				A3B87E5B14C3C35900FA35C0 /* GuideController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3678,6 +3687,7 @@
 				CA1DD960147948770004F913 /* AdViewUtils.m in Sources */,
 				CA024386147CCF2700F0B491 /* ActionHandler.m in Sources */,
 				A313E1FB14C2B5C80079BA64 /* DistanceController.m in Sources */,
+				A3B87E5A14C3C35900FA35C0 /* GuideController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
