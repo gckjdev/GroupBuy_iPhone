@@ -56,6 +56,8 @@
 #import "CategoryController.h"
 #import "DistanceController.h"
 
+#import "GuideController.h"
+
 #define kDbFileName			@"AppDB"
 
 NSString* GlobalGetServerURL()
@@ -223,11 +225,17 @@ enum
 			  hasNavController:YES			
 			   viewControllers:controllers];	
     
-	[UIUtils addViewController:[SearchProductController alloc]
-					 viewTitle:@"时下最热"				 
+	[UIUtils addViewController:[GuideController alloc]
+					 viewTitle:@"团购导航"				 
 					 viewImage:@"tu_10.png"
 			  hasNavController:YES			
-			   viewControllers:controllers];	
+			   viewControllers:controllers];
+    
+//	[UIUtils addViewController:[SearchProductController alloc]
+//					 viewTitle:@"时下最热"				 
+//					 viewImage:@"tu_10.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];	
 	
 	shoppingListController = (ShoppingListController*)[UIUtils addViewController:[ShoppingListController alloc]
 					 viewTitle:@"团购通知"				 
