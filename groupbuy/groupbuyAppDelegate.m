@@ -212,12 +212,6 @@ enum
 					 viewImage:@"tu_06.png"
 			  hasNavController:YES			
 			   viewControllers:controllers];	
-
-//	[UIUtils addViewController:[CategoryController alloc]
-//					 viewTitle:@"分类排行"
-//					 viewImage:@"tu_07.png"
-//			  hasNavController:YES			
-//			   viewControllers:controllers];	
     
 	[UIUtils addViewController:[DistanceController alloc]
 					 viewTitle:@"周边团购"
@@ -231,6 +225,11 @@ enum
 			  hasNavController:YES			
 			   viewControllers:controllers];
     
+//	[UIUtils addViewController:[CategoryController alloc]
+//					 viewTitle:@"分类排行"
+//					 viewImage:@"tu_07.png"
+//			  hasNavController:YES			
+//			   viewControllers:controllers];
 //	[UIUtils addViewController:[SearchProductController alloc]
 //					 viewTitle:@"时下最热"				 
 //					 viewImage:@"tu_10.png"
@@ -396,7 +395,7 @@ enum
 	
     // update config data
     [appService startAppUpdate];
-    [productService updateKeywords];
+//    [productService updateKeywords];
     
 	// Ask For Review
 	// self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
