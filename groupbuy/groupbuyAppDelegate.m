@@ -185,6 +185,8 @@ UserShopItemService* GlobalGetUserShopItemService()
 enum
 {
     TAB_TOP_SCORE = 0,
+    TAB_NEARBY,
+    TAB_PORTAL,
     TAB_SHOPPING = 3,    
     TAB_MY_INFO = 4
 };
@@ -293,7 +295,7 @@ enum
 //			   viewControllers:controllers];	
 	
 	tabBarController.viewControllers = controllers;
-    tabBarController.selectedIndex = TAB_TOP_SCORE;        
+    tabBarController.selectedIndex = TAB_PORTAL;        
 	
 	[controllers release];
 }
