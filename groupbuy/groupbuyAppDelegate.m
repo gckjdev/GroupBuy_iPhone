@@ -57,6 +57,7 @@
 #import "DistanceController.h"
 
 #import "GuideController.h"
+#import "ReviewRequest.h"
 
 #define kDbFileName			@"AppDB"
 
@@ -399,8 +400,9 @@ enum
     [appService startAppUpdate];
 //    [productService updateKeywords];
     
+    
 	// Ask For Review
-	// self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
+	self.reviewRequest = [ReviewRequest startReviewRequest:kAppId appName:GlobalGetAppName() isTest:NO];
     
     if (![self isPushNotificationEnable]){
         [self bindDevice];
